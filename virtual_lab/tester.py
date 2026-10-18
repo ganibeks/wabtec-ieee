@@ -54,7 +54,7 @@ def verdict(tiles: list[Tile], limits: str) -> dict:
     if not tiles:
         reason, detail = "NOT VERIFIED", "No simulated check available for this run"
     elif ok and limits == "SLIDE":
-        reason, detail = "PASS", ""
+        reason, detail = "PASS", f"All {len(tiles)} simulated checks inside the Wabtec slide 5/8 values"
     elif ok:
         reason, detail = "PASS", "All tests inside " + ("approved" if limits == "APPROVED" else "DEMO") + " limits"
     elif failed:

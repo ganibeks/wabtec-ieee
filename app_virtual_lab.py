@@ -248,12 +248,11 @@ st.markdown(BRAND, unsafe_allow_html=True)
 if stale:
     st.warning("Sidebar inputs changed since the last run. The verdict below is still for the previous run — press RUN again.")
 cls = "pass" if v["verdict"] == "PASS" else ("nopass" if v["reason"] == "FAILED" else "unverified")
-verdict_detail = f'<div class="vsub">{v["detail"]}</div>' if v["detail"] else ""
 st.markdown(f"""
 <div class="vbox {cls}">
   <div class="vbig">{v['verdict']}</div>
   <div>
-    {verdict_detail}
+    <div class="vsub">{v['detail']}</div>
     <div class="vsmall">{subject} · simulation only, not a hardware decision</div>
   </div>
 </div>
