@@ -1,0 +1,79 @@
+{
+  "serial": "WB-2026-IGBT-088",
+  "module": "FAULT (IGBT): Gate-oxide degradation: 10 ohm gate-emitter leakage [injected, severity ASSUMED]",
+  "module_id": "fault:igbt_gate_leak",
+  "run": "dynamic_20261018_002042_974",
+  "verdict": "NO-PASS",
+  "reason": "FAILED",
+  "detail": "Failed: Gate drive ±15 V",
+  "hardware_decision": "INCONCLUSIVE",
+  "data_source": "SIMULATED",
+  "safety_confirmed": {
+    "Test-cell door closed, interlock OK": true,
+    "E-stop released and tested": true,
+    "DC link discharged < 50 V (panel reading)": true,
+    "PPE worn: insulating gloves, face shield": true,
+    "Module locked in fixture, terminals torqued": true
+  },
+  "checks": [
+    {
+      "check": "Gate drive ±15 V",
+      "value": -4.054067592721536,
+      "unit": "V",
+      "state": "OUT_OF_LIMIT",
+      "limit": "+15 / −15 V (SLIDE 5/8); tolerance 0.02 V = model check in analyze_dynamic.m"
+    },
+    {
+      "check": "Turn-on threshold",
+      "value": 6.3504,
+      "unit": "V",
+      "state": "IN_LIMIT",
+      "limit": "+4 … +7 V (SLIDE 8)"
+    },
+    {
+      "check": "Max di/dt",
+      "value": 1322.8540880571675,
+      "unit": "A/µs",
+      "state": "IN_LIMIT",
+      "limit": "≤ 5000 A/µs (SLIDE 5)"
+    },
+    {
+      "check": "Diode forward",
+      "value": 0.500001199993676,
+      "unit": "V",
+      "state": "IN_LIMIT",
+      "limit": "0.2 … 0.8 V (SLIDE 5)"
+    },
+    {
+      "check": "Diode reverse",
+      "value": 0.030000000000000002,
+      "unit": "µA",
+      "state": "IN_LIMIT",
+      "limit": "open (SLIDE 5)"
+    },
+    {
+      "check": "Driver power",
+      "value": 0.66685266096199,
+      "unit": "W",
+      "state": "IN_LIMIT",
+      "limit": "≤ 20 W (SLIDE 5)"
+    },
+    {
+      "check": "DESAT detection",
+      "value": 7.599999999999999,
+      "unit": "µs",
+      "state": "IN_LIMIT",
+      "limit": "trips during the short circuit"
+    },
+    {
+      "check": "DESAT gate turn-off",
+      "value": 1.9438458656285016,
+      "unit": "µs",
+      "state": "IN_LIMIT",
+      "limit": "≤ 10 µs after detection (SLIDE 5/8 + slide 8 notes)"
+    }
+  ],
+  "id": "20261018_100415_837_WB-2026-IGBT-088",
+  "saved": "2026-10-18 10:04:15",
+  "report_file": "20261018_100415_837_WB-2026-IGBT-088.html"
+}

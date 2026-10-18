@@ -1,0 +1,83 @@
+{
+  "schema": "testcell.traction_fault.igbt_gate_leak.v1",
+  "provenance": "Mitsubishi CM1500HC-66XB datasheet HVM-1147-B (Dec 2025) typical values where available; representative traction module, not a confirmed Wabtec part; fixture/load values assumed; INJECTED FAULT (igbt_gate_leak), severity ASSUMED",
+  "device": "Mitsubishi CM1500HC-66XB (representative, not a confirmed Wabtec part) WITH INJECTED FAULT: Gate-oxide degradation: 10 ohm gate-emitter leakage",
+  "allowedKinds": [
+    "dynamic_rl"
+  ],
+  "gateOn_V": 15,
+  "gateOff_V": -15,
+  "Vth_V": 6.3,
+  "IcCalibration_A": 1500,
+  "Tcal_C": 25,
+  "VceCalibration_V": 2.6,
+  "Tsecond_C": 125,
+  "VceSecond_V": 3.2,
+  "leakageCalibrationVoltage_V": 3300,
+  "leakageSecond_A": 0.004,
+  "leakageEG_eV": 0.98091520854138736,
+  "leakageCalibration_A": 1.1501079949162614E-7,
+  "datasheetTypical150C": {
+    "VCEsat_V": 3.3,
+    "ICES_A": 0.026
+  },
+  "Cies_F": 1.64E-7,
+  "Coes_F": 1.1E-8,
+  "Cres_F": 1.4E-9,
+  "transit_s": 2E-7,
+  "Rc_Ohm": 4.5E-5,
+  "Re_Ohm": 4.5E-5,
+  "RgInternal_Ohm": 0.5,
+  "RgateExternal_Ohm": 0,
+  "RdriverOn_Ohm": 2,
+  "RdriverOff_Ohm": 27,
+  "driverDelay_s": 5E-8,
+  "bus_V": 1800,
+  "strayL_H": 1E-7,
+  "strayR_Ohm": 0.0001,
+  "loadL_H": 0.0003,
+  "loadR_Ohm": 0.01,
+  "diodeVf_V": 0.5,
+  "diodeRon_Ohm": 0.0012,
+  "diodeGoff_S": 1E-8,
+  "diodeC_F": 1.1E-8,
+  "pulseEdges_s": [
+    4.9999999999999996E-5,
+    0.0003,
+    0.00039999999999999996,
+    0.0005
+  ],
+  "dynamicStop_s": 0.0015,
+  "dynamicMaxStep_s": 2E-7,
+  "relTol": 1E-6,
+  "absTol": 1E-9,
+  "seed": 2026,
+  "dynamicSolver": "ode15s",
+  "protectionReference_s": 1E-5,
+  "datasheetLimits": {
+    "VGEth_min_V": 5.8,
+    "VGEth_max_V": 6.8,
+    "VGEth_VCE_V": 10,
+    "VGEth_IC_A": 0.15,
+    "ICES_max_A": 0.003,
+    "ICES_VCE_V": 3300,
+    "VCEsat_max150_V": 3.7,
+    "VCEsat_IC_A": 1500,
+    "source": "Mitsubishi CM1500HC-66XB datasheet HVM-1147-B (Dec 2025) min/max; representative device, not Wabtec acceptance"
+  },
+  "modelLimitations": [
+    "Freewheel diode has NO reverse recovery (datasheet Qrr 880 uC, Erec 1.05 J at 25 C not modelled): turn-on overshoot and Eon underestimated",
+    "transit_s (tail current) is ASSUMED",
+    "Fixed 25 C device temperature; no self-heating",
+    "Ideal sensors and source"
+  ],
+  "hardwareDecision": "INCONCLUSIVE",
+  "faultRge_Ohm": 10,
+  "fault": {
+    "id": "igbt_gate_leak",
+    "component": "IGBT",
+    "description": "Gate-oxide degradation: 10 ohm gate-emitter leakage",
+    "severity": "ASSUMED",
+    "purpose": "tester demonstration; not a model of a measured failed module"
+  }
+}

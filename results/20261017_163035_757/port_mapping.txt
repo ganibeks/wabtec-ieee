@@ -1,0 +1,52 @@
+
+igbt_baseline/IGBT_illustrative
+
+LConn1 [536 250]
+RConn1 [614 230]
+RConn2 [614 270]
+
+igbt_baseline/Gate_Driver
+
+LConn1 [326 270]
+RConn1 [424 250]
+RConn2 [424 285]
+
+igbt_baseline/Supply_12V_illustrative
+
+LConn1 [155 86]
+RConn1 [155 154]
+
+igbt_baseline/Load_100Ohm_illustrative
+
+LConn1 [276 105]
+RConn1 [354 105]
+
+igbt_baseline/Collector_Current
+
+LConn1 [436 105]
+RConn1 [494 95]
+RConn2 [494 115]
+
+igbt_baseline/Vce_Sensor
+
+LConn1 [720 176]
+RConn1 [710 244]
+RConn2 [730 244]
+
+igbt_baseline/Vge_Sensor
+
+LConn1 [470 346]
+RConn1 [460 414]
+RConn2 [480 414]
+
+igbt_baseline/Reference
+
+LConn1 [580 456]
+
+igbt_baseline/Solver
+disp('f(x) = 0')
+RConn1 [234 430]
+
+igbt_baseline/Logic_to_PS
+
+RConn1 [254 260]

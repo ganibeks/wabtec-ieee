@@ -1,0 +1,13 @@
+TARGETED COMPILE PASS: dynamic_r
+dynamic_r: PASS; peak Vce 50.323 V, Ic 22.785 A, energy residual 1.09e-08, convergence 0.00428
+TARGETED COMPILE PASS: dynamic_rl
+{Error using assert
+Inductive current did not commutate into diode.
+
+Error in testcell.analyze_dynamic (line 24)
+ assert(r.freewheel_min_current_A>0.1 && r.freewheel_Ic_to_IL_ratio<.01,'Inductive current did not commutate into diode.');
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in testcell.run_dynamic (line 11)
+r=testcell.analyze_dynamic(out,p,kind{1});
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

@@ -1,0 +1,102 @@
+{
+  "dynamic_rl": {
+    "scope": "Assumed device numerical validation; no hardware acceptance",
+    "hardware_decision": "INCONCLUSIVE",
+    "record_complete": true,
+    "record_start_s": 0,
+    "record_end_s": 0.0015,
+    "kcl_max_A": 7.72161001805216E-9,
+    "bus_kcl_max_A": 7.72161001805216E-9,
+    "bus_energy_J": 880.06517904121938,
+    "load_resistor_energy_J": 55.445262714703269,
+    "stray_resistor_energy_J": 0.071999043142922048,
+    "dut_collector_terminal_energy_J": 128.10088359912348,
+    "dut_gate_terminal_energy_J": 0.0073749971698023418,
+    "diode_terminal_energy_J": 6.81020117661256,
+    "stray_stored_energy_change_J": -4.6208516266022064E-20,
+    "load_stored_energy_change_J": 689.63730936758975,
+    "inductor_flux_relative_error": 3.9973822486990079E-7,
+    "freewheel_min_current_A": 1568.4699932723545,
+    "freewheel_Ic_to_IL_ratio": 0.0011506101380946779,
+    "energy_balance_error_J": -0.00047685995264146186,
+    "energy_balance_relative_error": 5.4184617684905275E-7,
+    "on_gate_max_error_V": 2.4999769452433949,
+    "off_gate_max_error_V": 10.94593676774447,
+    "gate_plateaus_ok": false,
+    "gate_plateau_note": "injected fault run: gate plateau recorded, not asserted",
+    "peak_Vce_V": 1821.8143064404117,
+    "peak_Ic_A": 2223.3409360448641,
+    "peak_Ig_A": 7.6169450087429,
+    "events": [
+      {
+        "command_time_s": 4.9999999999999996E-5,
+        "window_s": [
+          4.7999999999999994E-5,
+          6.5E-5
+        ],
+        "on_event": true,
+        "gross_collector_terminal_energy_J": 0.01886589934739857,
+        "gate_charge_C": 2.2287995946434E-5,
+        "gate_terminal_energy_J": 0.0002580034332363869,
+        "Vce_transition_10_90_s": 8.8791619889037573E-7,
+        "command_to_Vce_transition_s": 6.6444832984414819E-7,
+        "Ic_transition_10_90_s": null,
+        "current_clearance_1percent_s": null
+      },
+      {
+        "command_time_s": 0.0003,
+        "window_s": [
+          0.000298,
+          0.00037999999999999997
+        ],
+        "on_event": false,
+        "gross_collector_terminal_energy_J": 49.062225495481513,
+        "gate_charge_C": -3.1221856059846889E-5,
+        "gate_terminal_energy_J": 0.00014695004115537795,
+        "Vce_transition_10_90_s": 1.5270002711550393E-5,
+        "command_to_Vce_transition_s": 6.1954613727489968E-6,
+        "Ic_transition_10_90_s": 2.1922443080754444E-5,
+        "current_clearance_1percent_s": 6.9494699677786652E-5
+      },
+      {
+        "command_time_s": 0.00039999999999999996,
+        "window_s": [
+          0.00039799999999999997,
+          0.00041499999999999995
+        ],
+        "on_event": true,
+        "gross_collector_terminal_energy_J": 7.7149708750974924,
+        "gate_charge_C": 2.2228422032422611E-5,
+        "gate_terminal_energy_J": 0.00026388488526406896,
+        "Vce_transition_10_90_s": 3.5331871835076888E-6,
+        "command_to_Vce_transition_s": 1.7930960928590266E-6,
+        "Ic_transition_10_90_s": 9.611414935129306E-7,
+        "current_clearance_1percent_s": null
+      },
+      {
+        "command_time_s": 0.0005,
+        "window_s": [
+          0.000498,
+          0.00058
+        ],
+        "on_event": false,
+        "gross_collector_terminal_energy_J": 69.765820546182738,
+        "gate_charge_C": -3.1257804035641576E-5,
+        "gate_terminal_energy_J": 0.00014679088947554012,
+        "Vce_transition_10_90_s": 1.5304748338261097E-5,
+        "command_to_Vce_transition_s": 6.1036814676480779E-6,
+        "Ic_transition_10_90_s": 2.1900144359874251E-5,
+        "current_clearance_1percent_s": 6.9139990671360447E-5
+      }
+    ],
+    "energy_interpretation": "Gross event terminal integrals include conduction and reactive transfer; not calibrated Eon/Eoff dissipation.",
+    "status": "PASS",
+    "half_step_event_energy_relative_errors": [
+      1.2865760928675479E-5,
+      4.6964841594497894E-6,
+      2.5082123518368575E-6,
+      4.06074531277432E-6
+    ],
+    "fine_max_step_s": 1E-7
+  }
+}

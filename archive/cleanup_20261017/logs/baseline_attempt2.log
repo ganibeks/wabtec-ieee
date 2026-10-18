@@ -1,0 +1,9 @@
+{Error using build_baseline>setByPrompt (line 72)
+Cannot uniquely identify driver parameter: On-state gate-source voltage
+
+Error in build_baseline (line 18)
+setByPrompt(d,'On-state gate-source voltage','15');
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+[Warning: Unable to close the model 'igbt_baseline' because it has been changed. To save changes, use close_system('igbt_baseline',1). To discard changes, use
+close_system('igbt_baseline',0).] 

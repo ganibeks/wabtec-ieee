@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "scope": "Detailed executable electrical diagrams; RL re-simulated; DESAT layout compiled and initialized only",
+  "rl_model": "results\\detailed_simulink_20261017_221616_239\\build02\\igbt_test_cell_detailed.slx",
+  "desat_model": "results\\detailed_simulink_20261017_221616_239\\build02\\igbt_desat_detailed.slx",
+  "rl_source": "C:\\Users\\ganib\\OneDrive\\Документы\\Wabtec_IGBT_Test_Cell\\results\\dynamic_20261017_195453_347",
+  "desat_source": "C:\\Users\\ganib\\OneDrive\\Документы\\Wabtec_IGBT_Test_Cell\\results\\desat_test_traction_20261017_212553_145",
+  "hardware_decision": "INCONCLUSIVE"
+}

@@ -1,0 +1,514 @@
+
+BLOCK ee_lib/Semiconductors &
+Converters/N-Channel IGBT
+ComponentPath = ee.semiconductors.n_igbt
+ComponentVariants = ["ee.semiconductors.n_igbt","ee.semiconductors.n_igbt_thermal","ee.semiconductors.igbt_event_based","ee.semiconductors.igbt_event_based_thermal"]
+ComponentVariantNames = ["physmod:ee:library:comments:semiconductors:n_igbt_sscx:fullIVAndCapacitanceCharacteristicsNoThermalPort","physmod:ee:library:comments:semiconductors:n_igbt_sscx:fullIVAndCapacitanceCharacteristicsShowThermalPort","physmod:ee:library:comments:semiconductors:n_igbt_sscx:simplifiedIVCharacteristicsAndEventbasedTimingNoThermalPort","physmod:ee:library:comments:semiconductors:n_igbt_sscx:simplifiedIVCharacteristicsAndEventbasedTimingShowThermalPort"]
+ClassName = Simscape variant
+SchemaVersion = 1
+model_type = ee.enum.igbt.parameterization.equation
+model_type_unit = 1
+Ices = 2
+Ices_unit = mA
+Vces = 600
+Vces_unit = V
+Vth = 6
+Vth_unit = V
+Vce_sat = 2.6
+Vce_sat_unit = V
+Ice_sat = 400
+Ice_sat_unit = A
+Vge_sat = 10
+Vge_sat_unit = V
+Tmeas = 25
+Tmeas_unit = degC
+Vge_vec = [-1, 0, 2, 3, 5, 6, 7, 8, 10, 12, 15, 18, 20]
+Vge_vec_unit = V
+Vce_vec = [0, .25, .5, .75, 1, 1.26, 1.51, 1.76, 2.01, 2.26, 2.51, 2.76, 3.01, 3.27, 3.52, 3.77, 4.02, 4.27, 4.52, 4.77]
+Vce_vec_unit = V
+T_vec = [25, 125]
+T_vec_unit = degC
+Ic_mat = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 0, 0, 0, .81, 3.13, 4.97, 6.03, 6.53, 6.84, 7.01, 7.19, 7.32, 7.44, 7.55, 7.67, 7.78, 7.89, 8, 8.07, 8.07; 0, 0, 0, 1.07, 5.5, 12.93, 22.09, 29.14, 35.27, 38.97, 41.37, 43.08, 44.52, 45.45, 46.28, 46.85, 47.41, 47.76, 48.06, 48.36; 0, 0, 0, 1.1, 6.99, 16.51, 28.38, 41.53, 55.76, 69.08, 80.5, 89.56, 96.13, 101.45, 105.15, 107.99, 110.09, 111.87, 113.54, 114.95; 0, 0, 0, 1.36, 6.26, 17.43, 33.6, 50.43, 71.75, 93.61, 114.64, 134.42, 151.44, 164.25, 177.06, 189.88, 202.69, 215.51, 228.32, 241.14; 0, 0, 0, 1.42, 6.4, 18.7, 36.19, 55.23, 79.71, 106.22, 131.28, 156.62, 182.79, 208.97, 235.15, 261.32, 287.5, 313.67, 339.85, 366.02; 0, 0, 0, 1.45, 6.81, 20.01, 39.61, 60.63, 88.74, 117.7, 147.16, 191.87, 237.14, 282.42, 327.69, 372.96, 418.23, 463.5, 508.77, 554.04; 0, 0, 0, 1.49, 6.97, 20.55, 41.34, 64.15, 94.91, 126.1, 170.16, 233.77, 297.38, 360.98, 424.59, 488.19, 551.8, 615.4, 679.01, 742.62; 0, 0, 0, 1.5, 7.5, 20.96, 42.17, 66.19, 98.34, 131.14, 187.84, 263.46, 339.09, 414.72, 490.34, 565.97, 641.6, 717.22, 792.85, 868.48]
+Ic_mat_unit = A
+Ic_mat_3D = zeros(13, 20, 2)
+Ic_mat_3D_unit = A
+C_param = ee.enum.igbt.capacitanceParam.fixedciss
+C_param_unit = 1
+C_GE = 23.7
+C_GE_unit = nF
+C_GC = 2.7
+C_GC_unit = nF
+C_CE = 0
+C_CE_unit = nF
+C_ies = 26.4
+C_ies_unit = nF
+C_res = 2.7
+C_res_unit = nF
+C_oes = 0
+C_oes_unit = nF
+C_GE_vec = [25, 31, 26.5, 24.9, 25, 24.9, 24.6, 24.7, 24.8]
+C_GE_vec_unit = nF
+C_GC_vec = [55, 9, 5.5, 3.1, 2.5, 2.1, 1.9, 1.8, 1.7]
+C_GC_vec_unit = nF
+C_Vge_vec = 0
+C_Vge_vec_unit = V
+C_CE_vec = [5, 11, 6.5, 4.9, 3.5, 2.7, 2.1, 1.7, 1.4]
+C_CE_vec_unit = nF
+C_ies_vec = [80, 40, 32, 28, 27.5, 27, 26.5, 26.5, 26.5]
+C_ies_vec_unit = nF
+C_res_vec = [55, 9, 5.5, 3.1, 2.5, 2.1, 1.9, 1.8, 1.7]
+C_res_vec_unit = nF
+C_oes_vec = [60, 20, 12, 8, 6, 4.8, 4, 3.5, 3.1]
+C_oes_vec_unit = nF
+C_Vce_vec = [0, 1, 2, 5, 10, 15, 20, 25, 30]
+C_Vce_vec_unit = V
+charge_linearity_param = ee.enum.igbt.cgcLinearity.constant
+charge_linearity_param_unit = 1
+C_OX = 20
+C_OX_unit = nF
+V_C_OX = -5
+V_C_OX_unit = V
+TF = 0
+TF_unit = us
+TT = 0
+TT_unit = us
+LeadRc = 0
+LeadRc_unit = Ohm
+LeadRe = 0
+LeadRe_unit = Ohm
+LeadRg = 0
+LeadRg_unit = Ohm
+LC = 0
+LC_unit = nH
+LE = 0
+LE_unit = nH
+LG = 0
+LG_unit = nH
+ec = 1
+ec_unit = 1
+VAF = 200
+VAF_unit = V
+RC = 0.001
+RC_unit = Ohm
+RE = 0.001
+RE_unit = Ohm
+RG = 0.001
+RG_unit = Ohm
+BF = 50
+BF_unit = 1
+T_param = ee.enum.igbt.temperatureParameterization.none
+T_param_unit = 1
+Ices_T2 = 100
+Ices_T2_unit = mA
+EG = 1.11
+EG_unit = eV
+Vce_sat_T2 = 3
+Vce_sat_T2_unit = V
+Tmeas2 = 125
+Tmeas2_unit = degC
+XTI = 3
+XTI_unit = 1
+BEX = -1.5
+BEX_unit = 1
+RG_alpha = 0
+RG_alpha_unit = 1/K
+Tdevice = 300
+Tdevice_unit = K
+Tdevice_3D = 25
+Tdevice_3D_unit = degC
+ig = 0
+ig_unit = A
+ic = 0
+ic_unit = A
+vge = 0
+vge_unit = V
+vce = 0
+vce_unit = V
+v_Cge = 0
+v_Cge_unit = V
+v_Cce = 0
+v_Cce_unit = V
+thermal_network_parameterization = ee.enum.thermalNetworkTopology.junctionCase
+thermal_network_parameterization_unit = 1
+Rth = [0, 10]
+Rth_unit = K/W
+Rth_Cauer = [1, 3, 10]
+Rth_Cauer_unit = K/W
+Rth_Foster = [.08, .14, .22, .16]
+Rth_Foster_unit = K/W
+thermal_mass_parameterization = ee.enum.thermalNetwork.timeconstant
+thermal_mass_parameterization_unit = 1
+thermal_mass = [0, 1]
+thermal_mass_unit = J/K
+thermal_mass_Cauer = [.1, .3, 1]
+thermal_mass_Cauer_unit = J/K
+thermal_mass_Foster = [.001, .005, .05, .5]
+thermal_mass_Foster_unit = J/K
+thermal_time_constant = [0, 10]
+thermal_time_constant_unit = s
+thermal_time_constant_Cauer = [1, 3, 10]
+thermal_time_constant_Cauer_unit = s
+thermal_time_constant_Foster = [7e-05, .0007, .01, .08]
+thermal_time_constant_Foster_unit = s
+thermal_mass_initial_temperatures = [25, 25]
+thermal_mass_initial_temperatures_unit = degC
+thermal_mass_initial_temperatures_Cauer = [25, 25, 25]
+thermal_mass_initial_temperatures_Cauer_unit = degC
+Tvec_initial_Foster = [25, 25, 25, 25]
+Tvec_initial_Foster_unit = degC
+Ic_vec1 = [0, 10, 50, 100, 200, 400, 600]
+Ic_vec1_unit = A
+Vce_vec1 = [0, 1.1, 1.3, 1.45, 1.75, 2.25, 2.7]
+Vce_vec1_unit = V
+Rmiller = 0.1
+Rmiller_unit = Ohm
+Goff = 1e-5
+Goff_unit = 1/Ohm
+t_on = 0.07
+t_on_unit = us
+t_rise = 0.7
+t_rise_unit = us
+t_off = 0.2
+t_off_unit = us
+t_fall = 0.5
+t_fall_unit = us
+v_meas = 300
+v_meas_unit = V
+vStartTurnOn = 1
+vStartTurnOn_unit = V
+tStartTurnOn = 0
+tStartTurnOn_unit = s
+vStartTurnOff = 0.5
+vStartTurnOff_unit = V
+tStartTurnOff = 0
+tStartTurnOff_unit = s
+Tj_vec1 = [298.15, 398.15]
+Tj_vec1_unit = K
+Vce_mat1 = [0, 1.1, 1.3, 1.45, 1.75, 2.25, 2.7; 0, 1, 1.15, 1.35, 1.7, 2.35, 3]
+Vce_mat1_unit = V
+Tj_vec_loss = [298.15, 398.15]
+Tj_vec_loss_unit = K
+Ic_vec_loss = [0, 10, 50, 100, 200, 400, 600]
+Ic_vec_loss_unit = A
+E_turn_on_mat1 = [0, .2, 1, 2, 4, 8, 15; 0, .3, 1.3, 2.5, 5, 11, 18] * 1e-3
+E_turn_on_mat1_unit = J
+E_turn_off_mat1 = [0, .3, 1.5, 3, 6, 15, 25; 0, .7, 3.3, 6.5, 13, 25, 35] * 1e-3
+E_turn_off_mat1_unit = J
+iStartTurnOff = 0
+iStartTurnOff_unit = A
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3340e+03
+       RConn: [3.3350e+03 3.3360e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+BLOCK ee_lib/Semiconductors &
+Converters/Diode
+ComponentPath = ee.semiconductors.diodes.ideal
+ComponentVariants = ["ee.semiconductors.diodes.ideal","ee.semiconductors.diodes.idealThermal","ee.semiconductors.diodes.physical"]
+ComponentVariantNames = ["physmod:ee:library:comments:semiconductors:diode_sscx:ideal","physmod:ee:library:comments:semiconductors:diode_sscx:idealWithThermalLosses","physmod:ee:library:comments:semiconductors:diode_sscx:detailedWithChargeDynamics"]
+ClassName = Simscape variant
+SchemaVersion = 1
+Vf = 0.6
+Vf_unit = V
+Ron = 0.3
+Ron_unit = Ohm
+Goff = 1e-8
+Goff_unit = S
+N_series = 1
+N_series_unit = 1
+N_parallel = 1
+N_parallel_unit = 1
+ZenerEnable = false
+ZenerEnable_unit = 1
+BV = 30
+BV_unit = V
+Rz = 0.3
+Rz_unit = Ohm
+enable_fault_composite = simscape.enum.onoff.off
+enable_fault_composite_unit = 1
+i = 0
+i_unit = A
+v = 0
+v_unit = V
+ModelType = ee.enum.diode.idealModelType.pwl
+ModelType_unit = 1
+TableType = ee.enum.diode.tableType.IfMat
+TableType_unit = 1
+IfMat = [.07, .12, .19, 1.75, 4.24, 7.32, 11.2; .16, .3, .72, 2.14, 5.02, 8.35, 13.12]
+IfMat_unit = A
+VfMat = [.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85; .58, .68, .75, 1.1, 1.38, 1.77, 2.27, 2.7]
+VfMat_unit = V
+TjVec = [25, 125]
+TjVec_unit = degC
+VfVec = [.5, .7, .9, 1.3, 1.7, 2.1, 2.5]
+VfVec_unit = V
+IfVec = [.1, .2, .5, 1, 2, 4, 7, 10]
+IfVec_unit = A
+IrMat = [1e-06, 2e-06, 5e-06, 1e-05, 2.5e-05, 5e-05, .0001; 2e-06, 5e-06, 1e-05, 4e-05, 8e-05, .0002, .0005]
+IrMat_unit = A
+VrMat = [10, 100, 200, 250, 300, 325, 350; 10, 70, 160, 220, 270, 300, 320]
+VrMat_unit = V
+VrVec = [10, 20, 40, 50, 70, 80, 100]
+VrVec_unit = V
+IrVec = [1e-06, 2e-06, 5e-06, 1e-05, 2e-05, 5e-05, .0001]
+IrVec_unit = A
+rec_loss_model = ee.enum.diode.reverseRecoveryModelTabulateUpTo3D.fixed
+rec_loss_model_unit = 1
+ErecVal = 0
+ErecVal_unit = J
+scaleWithIandV = true
+scaleWithIandV_unit = 1
+ErecMat = zeros(2, 3)
+ErecMat_unit = J
+ErecMat3D = zeros(2, 3, 2)
+ErecMat3D_unit = J
+TjrecVec = [25, 125]
+TjrecVec_unit = degC
+IfrecVec = [.1, 1, 10]
+IfrecVec_unit = A
+IrecVal = 10
+IrecVal_unit = A
+VrecVal = 10
+VrecVal_unit = V
+VrecVec = [0, 100]
+VrecVec_unit = V
+tFilter = 1 / 1000 / 100
+tFilter_unit = s
+thermal_network_parameterization = ee.enum.thermalNetworkTopology.junctionCase
+thermal_network_parameterization_unit = 1
+Rth = [0, 10]
+Rth_unit = K/W
+Rth_Cauer = [1, 3, 10]
+Rth_Cauer_unit = K/W
+Rth_Foster = [.08, .14, .22, .16]
+Rth_Foster_unit = K/W
+thermal_mass_parameterization = ee.enum.thermalNetwork.timeconstant
+thermal_mass_parameterization_unit = 1
+thermal_mass = [0, 1]
+thermal_mass_unit = J/K
+thermal_mass_Cauer = [.1, .3, 1]
+thermal_mass_Cauer_unit = J/K
+thermal_mass_Foster = [.001, .005, .05, .5]
+thermal_mass_Foster_unit = J/K
+thermal_time_constant = [0, 10]
+thermal_time_constant_unit = s
+thermal_time_constant_Cauer = [1, 3, 10]
+thermal_time_constant_Cauer_unit = s
+thermal_time_constant_Foster = [7e-05, .0007, .01, .08]
+thermal_time_constant_Foster_unit = s
+thermal_mass_initial_temperatures = [25, 25]
+thermal_mass_initial_temperatures_unit = degC
+thermal_mass_initial_temperatures_Cauer = [25, 25, 25]
+thermal_mass_initial_temperatures_Cauer_unit = degC
+thermal_mass_initial_temperatures_Foster = [25, 25, 25, 25]
+thermal_mass_initial_temperatures_Foster_unit = degC
+junction_thermal_mass = 0.01
+junction_thermal_mass_unit = J/K
+junction_temperature = 25
+junction_temperature_unit = degC
+ThermalPort = false
+ThermalPort_unit = 1
+ModelTypePhysical = ee.enum.diode.physicalModelType.exponential
+ModelTypePhysical_unit = 1
+prmExp = ee.enum.diode.expParam.useTwo
+prmExp_unit = 1
+I12 = [.0137, .545]
+I12_unit = A
+V12 = [.6, .7]
+V12_unit = V
+IS = 1e-12
+IS_unit = A
+ec = 1
+ec_unit = 1
+I1 = 0.0137
+I1_unit = A
+V1 = 0.6
+V1_unit = V
+RS = 0
+RS_unit = Ohm
+C_param = ee.enum.diode.capParam.fixed
+C_param_unit = 1
+CJ = 0
+CJ_unit = pF
+CJ0 = 5
+CJ0_unit = pF
+Vvec = [.1, 10, 100]
+Vvec_unit = V
+Cvec = [3.5, 1, .4]
+Cvec_unit = pF
+VJ = 1
+VJ_unit = V
+Mgrad = 0.5
+Mgrad_unit = 1
+FC = 0.5
+FC_unit = 1
+Q_param = ee.enum.diode.recoveryParam.off
+Q_param_unit = 1
+iRM = -7.15
+iRM_unit = A
+iF = 4
+iF_unit = A
+didt = -750
+didt_unit = A/us
+trr_factor = 3
+trr_factor_unit = 1
+trr = 115
+trr_unit = ns
+Qrr = 150
+Qrr_unit = nA*s
+Vr = -600
+Vr_unit = V
+Ls = 150
+Ls_unit = nH
+Erec = 0.03
+Erec_unit = J
+TT = 50
+TT_unit = ns
+tau = 100
+tau_unit = ns
+T_param = ee.enum.diode.temperatureParam.off
+T_param_unit = 1
+Tmeas = 25
+Tmeas_unit = degC
+I1_T2 = 0.245
+I1_T2_unit = A
+V1_T2 = 0.5
+V1_T2_unit = V
+IS_T2 = 1.25e-7
+IS_T2_unit = A
+Tmeas2 = 125
+Tmeas2_unit = degC
+EG_param = ee.enum.diode.egapParam.material_si
+EG_param_unit = 1
+EG = 1.11
+EG_unit = eV
+XTI_param = ee.enum.diode.xtiParam.pn
+XTI_param_unit = 1
+XTI = 3
+XTI_unit = 1
+dBVdT = 0
+dBVdT_unit = V/K
+Tdevice = 25
+Tdevice_unit = degC
+i_capacitor = 0
+i_capacitor_unit = A
+Qj = 0
+Qj_unit = C
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3380e+03
+       RConn: 3.3390e+03
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+BLOCK fl_lib/Electrical/Electrical Elements/Inductor
+ComponentPath = foundation.electrical.elements.inductor
+ComponentVariants = ["foundation.electrical.elements.inductor"]
+ComponentVariantNames = ["inductor"]
+ClassName = inductor
+SchemaVersion = 1
+l = 1e-6
+l_unit = H
+r = 0
+r_unit = Ohm
+g = 1e-9
+g_unit = 1/Ohm
+i = 0
+i_unit = A
+v = 0
+v_unit = V
+i_L = 0
+i_L_unit = A
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3410e+03
+       RConn: 3.3420e+03
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+BLOCK fl_lib/Electrical/Electrical Sources/Controlled Current Source
+ComponentPath = foundation.electrical.sources.controlled_current
+ComponentVariants = ["foundation.electrical.sources.controlled_current"]
+ComponentVariantNames = ["controlled_current"]
+ClassName = controlled_current
+SchemaVersion = 1
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3440e+03
+       RConn: [3.3450e+03 3.3460e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+BLOCK fl_lib/Thermal/Thermal Sources/Controlled Temperature Source
+ComponentPath = foundation.thermal.sources.controlled_temperature
+ComponentVariants = ["foundation.thermal.sources.controlled_temperature"]
+ComponentVariantNames = ["controlled_temperature"]
+ClassName = controlled_temperature
+SchemaVersion = 1
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3480e+03
+       RConn: [3.3490e+03 3.3500e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+BLOCK fl_lib/Thermal/Thermal Elements/Thermal Reference
+ComponentPath = foundation.thermal.elements.reference
+ComponentVariants = ["foundation.thermal.elements.reference"]
+ComponentVariantNames = ["reference"]
+ClassName = reference
+SchemaVersion = 1
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3520e+03
+       RConn: []
+    Ifaction: []
+       Reset: []
+       Event: []
+
+ee.enum.igbt.temperatureParameterization
+    none   
+    IcesVce
+    VceEG  
+
+ee.enum.igbt.capacitanceParam
+    fixedciss    
+    fixedcge     
+    tabulatedciss
+    tabluatedcge 
+
+ee.enum.igbt.parameterization
+    equation     
+    lookuptable2D
+    lookuptable3D
+

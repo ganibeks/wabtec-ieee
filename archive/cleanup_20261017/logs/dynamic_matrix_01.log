@@ -1,0 +1,4 @@
+{Error using testcell.run_dynamic
+Error: File: C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\+testcell\run_dynamic.m Line: 12 Column: 65
+Unmatched ')'. Check for missing '('.
+} 

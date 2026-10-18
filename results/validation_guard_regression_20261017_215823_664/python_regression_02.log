@@ -1,0 +1,14 @@
+test_missing_evidence_is_visible_and_prevents_headline_pass (test_dashboard_verdict.DashboardVerdictRegression.test_missing_evidence_is_visible_and_prevents_headline_pass) ... ok
+test_complete_simulated_checks_do_not_certify_hardware (test_verdict.VerdictRegression.test_complete_simulated_checks_do_not_certify_hardware) ... ok
+test_demo_limits_remain_demo (test_verdict.VerdictRegression.test_demo_limits_remain_demo) ... ok
+test_empty_set_cannot_pass (test_verdict.VerdictRegression.test_empty_set_cannot_pass) ... ok
+test_failed_check_remains_failed_even_with_pending_checks (test_verdict.VerdictRegression.test_failed_check_remains_failed_even_with_pending_checks) ... ok
+test_missing_required_check_cannot_pass (test_verdict.VerdictRegression.test_missing_required_check_cannot_pass) ... ok
+test_nonfinite_or_missing_value_cannot_pass (test_verdict.VerdictRegression.test_nonfinite_or_missing_value_cannot_pass) ... ok
+test_pending_or_unbounded_check_cannot_pass (test_verdict.VerdictRegression.test_pending_or_unbounded_check_cannot_pass) ... ok
+test_saved_rl_records_with_missing_protection_cannot_pass (test_verdict.VerdictRegression.test_saved_rl_records_with_missing_protection_cannot_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.787s
+
+OK

@@ -1,0 +1,25 @@
+nesl_utility/Array Connection
+nesl_utility/Connection Label
+nesl_utility/PS-Simulink
+Converter
+nesl_utility/Probe
+nesl_utility/Simscape
+Component
+nesl_utility/Simscape Bus
+nesl_utility/Simulink-PS
+Converter
+nesl_utility/Solver
+Configuration
+nesl_utility/Spectrum
+Analyzer
+nesl_utility/Variant Connector
+nesl_utility/Connection Port
+{Error using testcell.apply_device (line 3)
+N-Channel IGBT With Thermal Port block (mask) does not have a parameter named 'Tdevice'
+
+Error in testcell.probe_component (line 10)
+testcell.apply_device(q,testcell.parameters,25);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ - Show complete stack trace
+} 
+[Warning: Unable to close the model 'component_probe' because it has been changed. To save changes, use close_system('component_probe',1). To discard changes, use
+close_system('component_probe',0).] 

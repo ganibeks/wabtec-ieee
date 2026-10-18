@@ -1,0 +1,13 @@
+# Wabtec hackathon brief: internal document, not published
+references/NU IEEE 2026 IGBT test cell_AK_Final.pptx
+references/presentation_text.txt
+
+# caches and build outputs (regenerated)
+__pycache__/
+*.pyc
+slprj/
+*.slxc
+*.asv
+*.autosave
+virtual_lab/verify_out/
+firmware/build/

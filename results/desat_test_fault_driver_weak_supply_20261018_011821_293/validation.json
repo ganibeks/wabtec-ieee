@@ -1,0 +1,50 @@
+{
+  "bus_at_turn_on_V": 1799.9962642507548,
+  "peak_Ic_A": 17400.422799485044,
+  "peak_Ic_time_s": 2.885E-5,
+  "energy_source_J": 460.92460528681067,
+  "energy_device_J": 460.65223849031167,
+  "energy_balance_relative_error": 2.82582909934955E-6,
+  "final_Ic_A": 285.85586514919,
+  "datasheet_VCES_V": 3300,
+  "tripped": true,
+  "trip_time_s": 2.76E-5,
+  "trip_after_on_s": 7.5999999999999984E-6,
+  "ic_below_10pct_time_s": 5.2024625990636391E-5,
+  "desat_turnoff_s": 3.2024625990636392E-5,
+  "within_slide_10us": false,
+  "peak_Vce_after_trip_V": 1947.3994630750537,
+  "peak_Vce_within_VCES": true,
+  "sc_energy_J": 434.49082134642464,
+  "fault": {
+    "id": "driver_weak_supply",
+    "component": "DRIVER",
+    "description": "Gate-driver supply sag: +15 V output -> +12 V",
+    "severity": "ASSUMED",
+    "purpose": "tester demonstration; not a model of a measured failed module"
+  },
+  "half_step_relative_errors": [
+    0.00037984686744326444,
+    0.00011869861547677608
+  ],
+  "fine_max_step_s": 2.5E-8,
+  "config": {
+    "threshold_V": 9,
+    "blanking_s": 7.5E-6,
+    "sample_s": 5E-8,
+    "onAt_s": 2E-5,
+    "pulse_s": 3E-5,
+    "stop_s": 7E-5,
+    "maxStep_s": 5E-8,
+    "faultR_Ohm": 0,
+    "timeout_s": 300,
+    "precharge_s": 8E-6,
+    "precharge_from_V": 10
+  },
+  "config_provenance": "ASSUMED (threshold, blanking, detector sampling, pulse width); bus/stray/gate from parameter set",
+  "scope": "Type-I short circuit (turn-on into short through stray L) with closed-loop DESAT in the model. SIMULATED. Short-circuit current level NOT validated (equation-based IGBT calibrated on on-state/threshold data only); demonstrates protection loop timing, not device survival.",
+  "slide_spec": "Wabtec slides 5/8: Desat turn-off <= 10 us",
+  "datasheet_reference": "CM1500HC-66XB tpSC 10 us at VCC <= 2500 V, VGE = 15 V (Tj 150 C); not modelled as a failure limit",
+  "hardware_decision": "INCONCLUSIVE",
+  "status": "PASS"
+}

@@ -1,0 +1,667 @@
+    ps  
+    elec
+
+ee_lib/Semiconductors &
+Converters/IGBT
+(Ideal,
+Switching)
+    {'ComponentPath'                               }    {'ee.semiconductors.ideal.igbt'                                                     }
+    {'ComponentVariants'                           }    {'["ee.semiconductors.ideal.igbt","ee.semiconductors.ideal.igbt_thermal"]'          }
+    {'ComponentVariantNames'                       }    {'["physmod:ee:library:comments:semiconductors:igbts_sscx:NoThermalPort","physmod:…'}
+    {'ClassName'                                   }    {'Simscape variant'                                                                 }
+    {'SchemaVersion'                               }    {'1'                                                                                }
+    {'port_option'                                 }    {'ee.enum.controlport.ps'                                                           }
+    {'port_option_unit'                            }    {'1'                                                                                }
+    {'port_option_conf'                            }    {'compiletime'                                                                      }
+    {'Vf'                                          }    {'0.8'                                                                              }
+    {'Vf_unit'                                     }    {'V'                                                                                }
+    {'Vf_conf'                                     }    {'compiletime'                                                                      }
+    {'Ron'                                         }    {'0.001'                                                                            }
+    {'Ron_unit'                                    }    {'Ohm'                                                                              }
+    {'Ron_conf'                                    }    {'compiletime'                                                                      }
+    {'Goff'                                        }    {'1e-5'                                                                             }
+    {'Goff_unit'                                   }    {'1/Ohm'                                                                            }
+    {'Goff_conf'                                   }    {'compiletime'                                                                      }
+    {'Vth'                                         }    {'6'                                                                                }
+    {'Vth_unit'                                    }    {'V'                                                                                }
+    {'Vth_conf'                                    }    {'compiletime'                                                                      }
+    {'diode_param'                                 }    {'ee.enum.semiconductors.protectionDiode.external'                                  }
+    {'diode_param_unit'                            }    {'1'                                                                                }
+    {'diode_param_conf'                            }    {'compiletime'                                                                      }
+    {'diode_Vf'                                    }    {'0.8'                                                                              }
+    {'diode_Vf_unit'                               }    {'V'                                                                                }
+    {'diode_Vf_conf'                               }    {'compiletime'                                                                      }
+    {'diode_Ron'                                   }    {'0.001'                                                                            }
+    {'diode_Ron_unit'                              }    {'Ohm'                                                                              }
+    {'diode_Ron_conf'                              }    {'compiletime'                                                                      }
+    {'diode_Goff'                                  }    {'1e-5'                                                                             }
+    {'diode_Goff_unit'                             }    {'1/Ohm'                                                                            }
+    {'diode_Goff_conf'                             }    {'compiletime'                                                                      }
+    {'diode_C'                                     }    {'50e-9'                                                                            }
+    {'diode_C_unit'                                }    {'F'                                                                                }
+    {'diode_C_conf'                                }    {'compiletime'                                                                      }
+    {'diode_iRM'                                   }    {'-235'                                                                             }
+    {'diode_iRM_unit'                              }    {'A'                                                                                }
+    {'diode_iRM_conf'                              }    {'compiletime'                                                                      }
+    {'diode_iF'                                    }    {'300'                                                                              }
+    {'diode_iF_unit'                               }    {'A'                                                                                }
+    {'diode_iF_conf'                               }    {'compiletime'                                                                      }
+    {'diode_idot'                                  }    {'-50'                                                                              }
+    {'diode_idot_unit'                             }    {'A/us'                                                                             }
+    {'diode_idot_conf'                             }    {'compiletime'                                                                      }
+    {'diode_trr_param'                             }    {'ee.enum.converters.diodeReverseParam.trr_factor'                                  }
+    {'diode_trr_param_unit'                        }    {'1'                                                                                }
+    {'diode_trr_param_conf'                        }    {'compiletime'                                                                      }
+    {'diode_trr_factor'                            }    {'3'                                                                                }
+    {'diode_trr_factor_unit'                       }    {'1'                                                                                }
+    {'diode_trr_factor_conf'                       }    {'compiletime'                                                                      }
+    {'diode_trr'                                   }    {'15'                                                                               }
+    {'diode_trr_unit'                              }    {'us'                                                                               }
+    {'diode_trr_conf'                              }    {'compiletime'                                                                      }
+    {'diode_Qrr'                                   }    {'1500'                                                                             }
+    {'diode_Qrr_unit'                              }    {'s*uA'                                                                             }
+    {'diode_Qrr_conf'                              }    {'compiletime'                                                                      }
+    {'ice_specify'                                 }    {'off'                                                                              }
+    {'ice_priority'                                }    {'None'                                                                             }
+    {'ice'                                         }    {'0'                                                                                }
+    {'ice_unit'                                    }    {'A'                                                                                }
+    {'ice_nominal_specify'                         }    {'off'                                                                              }
+    {'ice_nominal_value'                           }    {'1'                                                                                }
+    {'ice_nominal_unit'                            }    {'A'                                                                                }
+    {'vce_specify'                                 }    {'off'                                                                              }
+    {'vce_priority'                                }    {'None'                                                                             }
+    {'vce'                                         }    {'0'                                                                                }
+    {'vce_unit'                                    }    {'V'                                                                                }
+    {'vce_nominal_specify'                         }    {'off'                                                                              }
+    {'vce_nominal_value'                           }    {'1'                                                                                }
+    {'vce_nominal_unit'                            }    {'V'                                                                                }
+    {'vge_specify'                                 }    {'off'                                                                              }
+    {'vge_priority'                                }    {'None'                                                                             }
+    {'vge'                                         }    {'0'                                                                                }
+    {'vge_unit'                                    }    {'V'                                                                                }
+    {'vge_nominal_specify'                         }    {'off'                                                                              }
+    {'vge_nominal_value'                           }    {'1'                                                                                }
+    {'vge_nominal_unit'                            }    {'V'                                                                                }
+    {'thermal_loss_option'                         }    {'ee.enum.converters.thermalLossOption.constantvalues'                              }
+    {'thermal_loss_option_unit'                    }    {'1'                                                                                }
+    {'thermal_loss_option_conf'                    }    {'compiletime'                                                                      }
+    {'Von_data'                                    }    {'[0, .1, .6, .8, 1, 1.3, 1.6, 2, 2.4; 0, .1, .7, 1, 1.2, 1.5, 1.9, 2.4, 2.8]'      }
+    {'Von_data_unit'                               }    {'V'                                                                                }
+    {'Von_data_conf'                               }    {'compiletime'                                                                      }
+    {'Tj'                                          }    {'[298.15, 398.15]'                                                                 }
+    {'Tj_unit'                                     }    {'K'                                                                                }
+    {'Tj_conf'                                     }    {'compiletime'                                                                      }
+    {'Iout_data'                                   }    {'[0, .1, 1, 5, 10, 20, 40, 70, 100]'                                               }
+    {'Iout_data_unit'                              }    {'A'                                                                                }
+    {'Iout_data_conf'                              }    {'compiletime'                                                                      }
+    {'tabulateWithVce'                             }    {'false'                                                                            }
+    {'tabulateWithVce_unit'                        }    {'1'                                                                                }
+    {'tabulateWithVce_conf'                        }    {'compiletime'                                                                      }
+    {'Eon_data'                                    }    {'[0, .0024, .024, .12, .2, .48, 1.04, 2.16, 3.24; 0, .003, .03, .15, .25, .6, 1.3…'}
+    {'Eon_data_unit'                               }    {'J'                                                                                }
+    {'Eon_data_conf'                               }    {'compiletime'                                                                      }
+    {'Eoff_data'                                   }    {'[0, .0007, .0066, .033, .066, .17, .33, .83, 1.5; 0, .001, .01, .05, .1, .25, .5…'}
+    {'Eoff_data_unit'                              }    {'J'                                                                                }
+    {'Eoff_data_conf'                              }    {'compiletime'                                                                      }
+    {'Eon_data_3D'                                 }    {'[zeros(2, 9, 3)]'                                                                 }
+    {'Eon_data_3D_unit'                            }    {'J'                                                                                }
+    {'Eon_data_3D_conf'                            }    {'compiletime'                                                                      }
+    {'Eoff_data_3D'                                }    {'[zeros(2, 9, 3)]'                                                                 }
+    {'Eoff_data_3D_unit'                           }    {'J'                                                                                }
+    {'Eoff_data_3D_conf'                           }    {'compiletime'                                                                      }
+    {'Tj_loss'                                     }    {'[298.15, 398.15]'                                                                 }
+    {'Tj_loss_unit'                                }    {'K'                                                                                }
+    {'Tj_loss_conf'                                }    {'compiletime'                                                                      }
+    {'Iout_data_loss'                              }    {'[0, .1, 1, 5, 10, 20, 40, 70, 100]'                                               }
+    {'Iout_data_loss_unit'                         }    {'A'                                                                                }
+    {'Iout_data_loss_conf'                         }    {'compiletime'                                                                      }
+    {'Vce_loss'                                    }    {'[0, 150, 300]'                                                                    }
+    {'Vce_loss_unit'                               }    {'V'                                                                                }
+    {'Vce_loss_conf'                               }    {'compiletime'                                                                      }
+    {'Eon_scalar'                                  }    {'22.86e-3'                                                                         }
+    {'Eon_scalar_unit'                             }    {'J'                                                                                }
+    {'Eon_scalar_conf'                             }    {'compiletime'                                                                      }
+    {'Eoff_scalar'                                 }    {'17.14e-3'                                                                         }
+    {'Eoff_scalar_unit'                            }    {'J'                                                                                }
+    {'Eoff_scalar_conf'                            }    {'compiletime'                                                                      }
+    {'Voff'                                        }    {'300'                                                                              }
+    {'Voff_unit'                                   }    {'V'                                                                                }
+    {'Voff_conf'                                   }    {'compiletime'                                                                      }
+    {'Iout_scalar'                                 }    {'600'                                                                              }
+    {'Iout_scalar_unit'                            }    {'A'                                                                                }
+    {'Iout_scalar_conf'                            }    {'compiletime'                                                                      }
+    {'useCurrentFromPreviousCycle'                 }    {'true'                                                                             }
+    {'useCurrentFromPreviousCycle_unit'            }    {'1'                                                                                }
+    {'useCurrentFromPreviousCycle_conf'            }    {'compiletime'                                                                      }
+    {'currentMeasDelay'                            }    {'0'                                                                                }
+    {'currentMeasDelay_unit'                       }    {'s'                                                                                }
+    {'currentMeasDelay_conf'                       }    {'compiletime'                                                                      }
+    {'useVoltageFromPreviousCycle'                 }    {'true'                                                                             }
+    {'useVoltageFromPreviousCycle_unit'            }    {'1'                                                                                }
+    {'useVoltageFromPreviousCycle_conf'            }    {'compiletime'                                                                      }
+    {'voltageMeasDelay'                            }    {'0'                                                                                }
+    {'voltageMeasDelay_unit'                       }    {'s'                                                                                }
+    {'voltageMeasDelay_conf'                       }    {'compiletime'                                                                      }
+    {'diodeModelType'                              }    {'ee.enum.converters.diodeModelType.pwl'                                            }
+    {'diodeModelType_unit'                         }    {'1'                                                                                }
+    {'diodeModelType_conf'                         }    {'compiletime'                                                                      }
+    {'diodeTableType'                              }    {'ee.enum.diode.tableType.IfMat'                                                    }
+    {'diodeTableType_unit'                         }    {'1'                                                                                }
+    {'diodeTableType_conf'                         }    {'compiletime'                                                                      }
+    {'diode_ReverseIVType'                         }    {'ee.enum.diode.diodeReverseIV.constant'                                            }
+    {'diode_ReverseIVType_unit'                    }    {'1'                                                                                }
+    {'diode_ReverseIVType_conf'                    }    {'compiletime'                                                                      }
+    {'diode_IfMat'                                 }    {'[.07, .12, .19, 1.75, 4.24, 7.32, 11.2; .16, .3, .72, 2.14, 4.02, 6.35, 9.12]'    }
+    {'diode_IfMat_unit'                            }    {'A'                                                                                }
+    {'diode_IfMat_conf'                            }    {'compiletime'                                                                      }
+    {'diode_VfMat'                                 }    {'[.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85; .58, .68, .75, 1.1, 1.38, 1.77, 2.2…'}
+    {'diode_VfMat_unit'                            }    {'V'                                                                                }
+    {'diode_VfMat_conf'                            }    {'compiletime'                                                                      }
+    {'diode_TjVec'                                 }    {'[25, 125]'                                                                        }
+    {'diode_TjVec_unit'                            }    {'degC'                                                                             }
+    {'diode_TjVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_VfVec'                                 }    {'[.5, .7, .9, 1.3, 1.7, 2.1, 2.5]'                                                 }
+    {'diode_VfVec_unit'                            }    {'V'                                                                                }
+    {'diode_VfVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_IfVec'                                 }    {'[.1, .2, .5, 1, 2, 4, 7, 10]'                                                     }
+    {'diode_IfVec_unit'                            }    {'A'                                                                                }
+    {'diode_IfVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_IrMat'                                 }    {'[1e-06, 2e-06, 5e-06, 1e-05, 2.5e-05, 5e-05, .0001; 2e-06, 5e-06, 1e-05, 4e-05, …'}
+    {'diode_IrMat_unit'                            }    {'A'                                                                                }
+    {'diode_IrMat_conf'                            }    {'compiletime'                                                                      }
+    {'diode_VrMat'                                 }    {'[10, 100, 200, 250, 300, 325, 350; 10, 70, 160, 220, 270, 300, 320]'              }
+    {'diode_VrMat_unit'                            }    {'V'                                                                                }
+    {'diode_VrMat_conf'                            }    {'compiletime'                                                                      }
+    {'diode_VrVec'                                 }    {'[10, 20, 40, 50, 70, 80, 100]'                                                    }
+    {'diode_VrVec_unit'                            }    {'V'                                                                                }
+    {'diode_VrVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_IrVec'                                 }    {'[1e-06, 2e-06, 5e-06, 1e-05, 2e-05, 5e-05, .0001]'                                }
+    {'diode_IrVec_unit'                            }    {'A'                                                                                }
+    {'diode_IrVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_Vr'                                    }    {'-600'                                                                             }
+    {'diode_Vr_unit'                               }    {'V'                                                                                }
+    {'diode_Vr_conf'                               }    {'compiletime'                                                                      }
+    {'diode_Ls'                                    }    {'150'                                                                              }
+    {'diode_Ls_unit'                               }    {'nH'                                                                               }
+    {'diode_Ls_conf'                               }    {'compiletime'                                                                      }
+    {'diode_Erec'                                  }    {'0.03'                                                                             }
+    {'diode_Erec_unit'                             }    {'J'                                                                                }
+    {'diode_Erec_conf'                             }    {'compiletime'                                                                      }
+    {'diode_rec_loss_model'                        }    {'ee.enum.diode.reverseRecoveryModelTabulateUpTo3D.fixed'                           }
+    {'diode_rec_loss_model_unit'                   }    {'1'                                                                                }
+    {'diode_rec_loss_model_conf'                   }    {'compiletime'                                                                      }
+    {'diode_ErecVal'                               }    {'0'                                                                                }
+    {'diode_ErecVal_unit'                          }    {'J'                                                                                }
+    {'diode_ErecVal_conf'                          }    {'compiletime'                                                                      }
+    {'diode_scaleWithIandV'                        }    {'true'                                                                             }
+    {'diode_scaleWithIandV_unit'                   }    {'1'                                                                                }
+    {'diode_scaleWithIandV_conf'                   }    {'compiletime'                                                                      }
+    {'diode_ErecMat'                               }    {'zeros(2, 3)'                                                                      }
+    {'diode_ErecMat_unit'                          }    {'J'                                                                                }
+    {'diode_ErecMat_conf'                          }    {'compiletime'                                                                      }
+    {'diodeErecMat3D'                              }    {'zeros(2, 3, 2)'                                                                   }
+    {'diodeErecMat3D_unit'                         }    {'J'                                                                                }
+    {'diodeErecMat3D_conf'                         }    {'compiletime'                                                                      }
+    {'diode_TjrecVec'                              }    {'[298.15, 398.15]'                                                                 }
+    {'diode_TjrecVec_unit'                         }    {'K'                                                                                }
+    {'diode_TjrecVec_conf'                         }    {'compiletime'                                                                      }
+    {'diode_IfrecVec'                              }    {'[.1, 1, 10]'                                                                      }
+    {'diode_IfrecVec_unit'                         }    {'A'                                                                                }
+    {'diode_IfrecVec_conf'                         }    {'compiletime'                                                                      }
+    {'diodeVrecVec'                                }    {'[0, 100]'                                                                         }
+    {'diodeVrecVec_unit'                           }    {'V'                                                                                }
+    {'diodeVrecVec_conf'                           }    {'compiletime'                                                                      }
+    {'diode_IrecVal'                               }    {'10'                                                                               }
+    {'diode_IrecVal_unit'                          }    {'A'                                                                                }
+    {'diode_IrecVal_conf'                          }    {'compiletime'                                                                      }
+    {'diode_VrecVal'                               }    {'10'                                                                               }
+    {'diode_VrecVal_unit'                          }    {'V'                                                                                }
+    {'diode_VrecVal_conf'                          }    {'compiletime'                                                                      }
+    {'diode_tFilter'                               }    {'1 / 1000 / 100'                                                                   }
+    {'diode_tFilter_unit'                          }    {'s'                                                                                }
+    {'diode_tFilter_conf'                          }    {'compiletime'                                                                      }
+    {'separateThermalPortForDiode'                 }    {'false'                                                                            }
+    {'separateThermalPortForDiode_unit'            }    {'1'                                                                                }
+    {'separateThermalPortForDiode_conf'            }    {'compiletime'                                                                      }
+    {'thermal_network_parameterization'            }    {'ee.enum.thermalNetworkTopology.external'                                          }
+    {'thermal_network_parameterization_unit'       }    {'1'                                                                                }
+    {'thermal_network_parameterization_conf'       }    {'compiletime'                                                                      }
+    {'Rth'                                         }    {'[.08, .5]'                                                                        }
+    {'Rth_unit'                                    }    {'K/W'                                                                              }
+    {'Rth_conf'                                    }    {'compiletime'                                                                      }
+    {'Rth_Cauer'                                   }    {'[.08, .1, .5]'                                                                    }
+    {'Rth_Cauer_unit'                              }    {'K/W'                                                                              }
+    {'Rth_Cauer_conf'                              }    {'compiletime'                                                                      }
+    {'Rth_Foster'                                  }    {'[.08, .14, .22, .16]'                                                             }
+    {'Rth_Foster_unit'                             }    {'K/W'                                                                              }
+    {'Rth_Foster_conf'                             }    {'compiletime'                                                                      }
+    {'thermal_mass_parameterization'               }    {'ee.enum.thermalNetwork.timeconstant'                                              }
+    {'thermal_mass_parameterization_unit'          }    {'1'                                                                                }
+    {'thermal_mass_parameterization_conf'          }    {'compiletime'                                                                      }
+    {'thermal_mass'                                }    {'[.01, .5]'                                                                        }
+    {'thermal_mass_unit'                           }    {'J/K'                                                                              }
+    {'thermal_mass_conf'                           }    {'compiletime'                                                                      }
+    {'thermal_mass_Cauer'                          }    {'[.01, .1, .5]'                                                                    }
+    {'thermal_mass_Cauer_unit'                     }    {'J/K'                                                                              }
+    {'thermal_mass_Cauer_conf'                     }    {'compiletime'                                                                      }
+    {'thermal_mass_Foster'                         }    {'[.001, .005, .05, .5]'                                                            }
+    {'thermal_mass_Foster_unit'                    }    {'J/K'                                                                              }
+    {'thermal_mass_Foster_conf'                    }    {'compiletime'                                                                      }
+    {'thermal_time_constant'                       }    {'[.001, .2]'                                                                       }
+    {'thermal_time_constant_unit'                  }    {'s'                                                                                }
+    {'thermal_time_constant_conf'                  }    {'compiletime'                                                                      }
+    {'thermal_time_constant_Cauer'                 }    {'[.001, .1, .2]'                                                                   }
+    {'thermal_time_constant_Cauer_unit'            }    {'s'                                                                                }
+    {'thermal_time_constant_Cauer_conf'            }    {'compiletime'                                                                      }
+    {'thermal_time_constant_Foster'                }    {'[7e-05, .0007, .01, .08]'                                                         }
+    {'thermal_time_constant_Foster_unit'           }    {'s'                                                                                }
+    {'thermal_time_constant_Foster_conf'           }    {'compiletime'                                                                      }
+    {'thermal_mass_initial_temperatures'           }    {'[25, 25]'                                                                         }
+    {'thermal_mass_initial_temperatures_unit'      }    {'degC'                                                                             }
+    {'thermal_mass_initial_temperatures_conf'      }    {'compiletime'                                                                      }
+    {'thermal_mass_initial_temperatures_Cauer'     }    {'[25, 25, 25]'                                                                     }
+    {'thermal_mass_initial_temperatures_Cauer_unit'}    {'degC'                                                                             }
+    {'thermal_mass_initial_temperatures_Cauer_conf'}    {'compiletime'                                                                      }
+    {'junction_thermal_mass'                       }    {'0.01'                                                                             }
+    {'junction_thermal_mass_unit'                  }    {'J/K'                                                                              }
+    {'junction_thermal_mass_conf'                  }    {'compiletime'                                                                      }
+    {'Tvec_initial_Foster'                         }    {'[25, 25, 25, 25]'                                                                 }
+    {'Tvec_initial_Foster_unit'                    }    {'degC'                                                                             }
+    {'Tvec_initial_Foster_conf'                    }    {'compiletime'                                                                      }
+    {'RthDiode'                                    }    {'[.03, .2]'                                                                        }
+    {'RthDiode_unit'                               }    {'K/W'                                                                              }
+    {'RthDiode_conf'                               }    {'compiletime'                                                                      }
+    {'RthCauerDiode'                               }    {'[.03, .1, .2]'                                                                    }
+    {'RthCauerDiode_unit'                          }    {'K/W'                                                                              }
+    {'RthCauerDiode_conf'                          }    {'compiletime'                                                                      }
+    {'RthFosterDiode'                              }    {'[.03, .2]'                                                                        }
+    {'RthFosterDiode_unit'                         }    {'K/W'                                                                              }
+    {'RthFosterDiode_conf'                         }    {'compiletime'                                                                      }
+    {'thermalMassDiode'                            }    {'[3, 25]'                                                                          }
+    {'thermalMassDiode_unit'                       }    {'J/K'                                                                              }
+    {'thermalMassDiode_conf'                       }    {'compiletime'                                                                      }
+    {'thermalMassCauerDiode'                       }    {'[3, 10, 25]'                                                                      }
+    {'thermalMassCauerDiode_unit'                  }    {'J/K'                                                                              }
+    {'thermalMassCauerDiode_conf'                  }    {'compiletime'                                                                      }
+    {'thermalMassFosterDiode'                      }    {'[33, 50]'                                                                         }
+    {'thermalMassFosterDiode_unit'                 }    {'J/K'                                                                              }
+    {'thermalMassFosterDiode_conf'                 }    {'compiletime'                                                                      }
+    {'thermalTauDiode'                             }    {'[.1, 5]'                                                                          }
+    {'thermalTauDiode_unit'                        }    {'s'                                                                                }
+    {'thermalTauDiode_conf'                        }    {'compiletime'                                                                      }
+    {'thermalTauCauerDiode'                        }    {'[.1, 1, 5]'                                                                       }
+    {'thermalTauCauerDiode_unit'                   }    {'s'                                                                                }
+    {'thermalTauCauerDiode_conf'                   }    {'compiletime'                                                                      }
+    {'thermalTauFosterDiode'                       }    {'[1, 10]'                                                                          }
+    {'thermalTauFosterDiode_unit'                  }    {'s'                                                                                }
+    {'thermalTauFosterDiode_conf'                  }    {'compiletime'                                                                      }
+    {'thermalMassInitTempDiode'                    }    {'[25, 25]'                                                                         }
+    {'thermalMassInitTempDiode_unit'               }    {'degC'                                                                             }
+    {'thermalMassInitTempDiode_conf'               }    {'compiletime'                                                                      }
+    {'thermalMassInitTempCauerDiode'               }    {'[25, 25, 25]'                                                                     }
+    {'thermalMassInitTempCauerDiode_unit'          }    {'degC'                                                                             }
+    {'thermalMassInitTempCauerDiode_conf'          }    {'compiletime'                                                                      }
+    {'junctionthermalMassDiode'                    }    {'0.1'                                                                              }
+    {'junctionthermalMassDiode_unit'               }    {'J/K'                                                                              }
+    {'junctionthermalMassDiode_conf'               }    {'compiletime'                                                                      }
+    {'TVecInitialFosterDiode'                      }    {'[25, 25]'                                                                         }
+    {'TVecInitialFosterDiode_unit'                 }    {'degC'                                                                             }
+    {'TVecInitialFosterDiode_conf'                 }    {'compiletime'                                                                      }
+    {'no_thermal_network'                          }    {'ee.enum.enable.no'                                                                }
+    {'no_thermal_network_unit'                     }    {'1'                                                                                }
+    {'no_thermal_network_conf'                     }    {'compiletime'                                                                      }
+    {'IGBT_junction_temperature_specify'           }    {'off'                                                                              }
+    {'IGBT_junction_temperature_priority'          }    {'None'                                                                             }
+    {'IGBT_junction_temperature'                   }    {'25'                                                                               }
+    {'IGBT_junction_temperature_unit'              }    {'degC'                                                                             }
+    {'IGBT_junction_temperature_nominal_specify'   }    {'off'                                                                              }
+    {'IGBT_junction_temperature_nominal_value'     }    {'1'                                                                                }
+    {'IGBT_junction_temperature_nominal_unit'      }    {'degC'                                                                             }
+    {'diode_junction_temperature_specify'          }    {'off'                                                                              }
+    {'diode_junction_temperature_priority'         }    {'None'                                                                             }
+    {'diode_junction_temperature'                  }    {'25'                                                                               }
+    {'diode_junction_temperature_unit'             }    {'degC'                                                                             }
+    {'diode_junction_temperature_nominal_specify'  }    {'off'                                                                              }
+    {'diode_junction_temperature_nominal_value'    }    {'1'                                                                                }
+    {'diode_junction_temperature_nominal_unit'     }    {'degC'                                                                             }
+    {'Qj_specify'                                  }    {'off'                                                                              }
+    {'Qj_priority'                                 }    {'None'                                                                             }
+    {'Qj'                                          }    {'0'                                                                                }
+    {'Qj_unit'                                     }    {'W'                                                                                }
+    {'Qj_nominal_specify'                          }    {'off'                                                                              }
+    {'Qj_nominal_value'                            }    {'1'                                                                                }
+    {'Qj_nominal_unit'                             }    {'W'                                                                                }
+    {'accumulatedSwitchingLosses_specify'          }    {'off'                                                                              }
+    {'accumulatedSwitchingLosses_priority'         }    {'None'                                                                             }
+    {'accumulatedSwitchingLosses'                  }    {'0'                                                                                }
+    {'accumulatedSwitchingLosses_unit'             }    {'J'                                                                                }
+
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3340e+03
+       RConn: [3.3350e+03 3.3360e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+  3×1 struct array with fields:
+
+    Type
+    Position
+    SrcBlock
+    SrcPort
+    DstBlock
+    DstPort
+
+fl_lib/Electrical/Electrical Sources/Controlled Voltage Source
+    {'ComponentPath'        }    {'foundation.electrical.sources.controlled_voltage'    }
+    {'ComponentVariants'    }    {'["foundation.electrical.sources.controlled_voltage"]'}
+    {'ComponentVariantNames'}    {'["controlled_voltage"]'                              }
+    {'ClassName'            }    {'controlled_voltage'                                  }
+    {'SchemaVersion'        }    {'1'                                                   }
+
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3380e+03
+       RConn: [3.3390e+03 3.3400e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+  3×1 struct array with fields:
+
+    Type
+    Position
+    SrcBlock
+    SrcPort
+    DstBlock
+    DstPort
+
+fl_lib/Electrical/Electrical Sources/DC Voltage Source
+    {'ComponentPath'        }    {'foundation.electrical.sources.dc_voltage'    }
+    {'ComponentVariants'    }    {'["foundation.electrical.sources.dc_voltage"]'}
+    {'ComponentVariantNames'}    {'["dc_voltage"]'                              }
+    {'ClassName'            }    {'dc_voltage'                                  }
+    {'SchemaVersion'        }    {'1'                                           }
+    {'v0'                   }    {'1'                                           }
+    {'v0_unit'              }    {'V'                                           }
+    {'v0_conf'              }    {'compiletime'                                 }
+
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3420e+03
+       RConn: 3.3430e+03
+    Ifaction: []
+       Reset: []
+       Event: []
+
+  2×1 struct array with fields:
+
+    Type
+    Position
+    SrcBlock
+    SrcPort
+    DstBlock
+    DstPort
+
+fl_lib/Electrical/Electrical Elements/Resistor
+    {'ComponentPath'        }    {'foundation.electrical.elements.resistor'    }
+    {'ComponentVariants'    }    {'["foundation.electrical.elements.resistor"]'}
+    {'ComponentVariantNames'}    {'["resistor"]'                               }
+    {'ClassName'            }    {'resistor'                                   }
+    {'SchemaVersion'        }    {'1'                                          }
+    {'R'                    }    {'1'                                          }
+    {'R_unit'               }    {'Ohm'                                        }
+    {'R_conf'               }    {'compiletime'                                }
+    {'i_specify'            }    {'off'                                        }
+    {'i_priority'           }    {'None'                                       }
+    {'i'                    }    {'0'                                          }
+    {'i_unit'               }    {'A'                                          }
+    {'i_nominal_specify'    }    {'off'                                        }
+    {'i_nominal_value'      }    {'1'                                          }
+    {'i_nominal_unit'       }    {'A'                                          }
+    {'v_specify'            }    {'off'                                        }
+    {'v_priority'           }    {'None'                                       }
+    {'v'                    }    {'0'                                          }
+    {'v_unit'               }    {'V'                                          }
+    {'v_nominal_specify'    }    {'off'                                        }
+    {'v_nominal_value'      }    {'1'                                          }
+    {'v_nominal_unit'       }    {'V'                                          }
+
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3450e+03
+       RConn: 3.3460e+03
+    Ifaction: []
+       Reset: []
+       Event: []
+
+  2×1 struct array with fields:
+
+    Type
+    Position
+    SrcBlock
+    SrcPort
+    DstBlock
+    DstPort
+
+fl_lib/Electrical/Electrical Sensors/Voltage Sensor
+    {'ComponentPath'        }    {'foundation.electrical.sensors.voltage'    }
+    {'ComponentVariants'    }    {'["foundation.electrical.sensors.voltage"]'}
+    {'ComponentVariantNames'}    {'["voltage"]'                              }
+    {'ClassName'            }    {'voltage'                                  }
+    {'SchemaVersion'        }    {'1'                                        }
+
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3480e+03
+       RConn: [3.3490e+03 3.3500e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+  3×1 struct array with fields:
+
+    Type
+    Position
+    SrcBlock
+    SrcPort
+    DstBlock
+    DstPort
+
+fl_lib/Electrical/Electrical Sensors/Current Sensor
+    {'ComponentPath'        }    {'foundation.electrical.sensors.current'    }
+    {'ComponentVariants'    }    {'["foundation.electrical.sensors.current"]'}
+    {'ComponentVariantNames'}    {'["current"]'                              }
+    {'ClassName'            }    {'current'                                  }
+    {'SchemaVersion'        }    {'1'                                        }
+
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3520e+03
+       RConn: [3.3530e+03 3.3540e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+  3×1 struct array with fields:
+
+    Type
+    Position
+    SrcBlock
+    SrcPort
+    DstBlock
+    DstPort
+
+nesl_utility/Simulink-PS
+Converter
+    {'PhysicalDomain'         }    {'network_engine_domain'}
+    {'SubClassName'           }    {'ps_input'             }
+    {'LeftPortType'           }    {'input'                }
+    {'RightPortType'          }    {'output'               }
+    {'PseudoPeriodic'         }    {'off'                  }
+    {'Frequencies'            }    {'[]'                   }
+    {'NoiseDistribution'      }    {'none'                 }
+    {'NoiseParameters'        }    {'[]'                   }
+    {'Unit'                   }    {'1'                    }
+    {'AffineConversion'       }    {'off'                  }
+    {'FilteringAndDerivatives'}    {'provide'              }
+    {'SimscapeFilterOrder'    }    {'1'                    }
+    {'InputFilterTimeConstant'}    {'0.001'                }
+    {'UdotUserProvided'       }    {'0'                    }
+
+      Inport: 3.3580e+03
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: []
+       RConn: 3.3840e+03
+    Ifaction: []
+       Reset: []
+       Event: []
+
+  2×1 struct array with fields:
+
+    Type
+    Position
+    SrcBlock
+    SrcPort
+    DstBlock
+    DstPort
+
+nesl_utility/PS-Simulink
+Converter
+    {'PhysicalDomain'  }    {'network_engine_domain'}
+    {'SubClassName'    }    {'ps_output'            }
+    {'LeftPortType'    }    {'input'                }
+    {'RightPortType'   }    {'output'               }
+    {'PseudoPeriodic'  }    {'off'                  }
+    {'Frequencies'     }    {'[]'                   }
+    {'VectorFormat'    }    {'inherit'              }
+    {'Unit'            }    {'inherit'              }
+    {'AffineConversion'}    {'off'                  }
+
+      Inport: []
+     Outport: 3.4010e+03
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.3980e+03
+       RConn: []
+    Ifaction: []
+       Reset: []
+       Event: []
+
+  2×1 struct array with fields:
+
+    Type
+    Position
+    SrcBlock
+    SrcPort
+    DstBlock
+    DstPort
+
+nesl_utility/Solver Configuration
+    {'PhysicalDomain'                              }    {'network_engine_domain'     }
+    {'SubClassName'                                }    {'solver'                    }
+    {'LeftPortType'                                }    {'input'                     }
+    {'RightPortType'                               }    {'generic'                   }
+    {'Tones'                                       }    {'[]'                        }
+    {'Harmonics'                                   }    {'[]'                        }
+    {'SimulateNoise'                               }    {'off'                       }
+    {'StateTraceIntervals'                         }    {'[]'                        }
+    {'StateTraceNumStoredSolves'                   }    {'[]'                        }
+    {'UseExpandedRuntimeScaling'                   }    {'on'                        }
+    {'AllowRtpsInLinearSolver'                     }    {'off'                       }
+    {'EnableNewtonIterationsInMomentumConservation'}    {'off'                       }
+    {'EnableDiffOffset'                            }    {'off'                       }
+    {'UseMatlabAlgebraicSolver'                    }    {'off'                       }
+    {'AllowModesOutsideEqnsInLinearSolver'         }    {'off'                       }
+    {'AllowSwitchedLinearSolver'                   }    {'off'                       }
+    {'AllowLocalDaeSwitchedLinearSolver'           }    {'off'                       }
+    {'StateTrace'                                  }    {'off'                       }
+    {'UseRobustSolverStackWithStablePartitioning'  }    {'off'                       }
+    {'Profile'                                     }    {'off'                       }
+    {'UseLocalSampling'                            }    {'off'                       }
+    {'EnableSwitchedLinearOptims'                  }    {'on'                        }
+    {'FrequencyDomain'                             }    {'off'                       }
+    {'UseCCode'                                    }    {'off'                       }
+    {'RelTol'                                      }    {'0.001'                     }
+    {'AbsTol'                                      }    {'0.001'                     }
+    {'MinStep'                                     }    {'1e-09'                     }
+    {'ToWorkspace'                                 }    {'off'                       }
+    {'RevertToSquareIcSolve'                       }    {'off'                       }
+    {'NumHomotopyIterations'                       }    {'100'                       }
+    {'PhasorMode'                                  }    {'off'                       }
+    {'PhasorModeNumHarmonics'                      }    {'1'                         }
+    {'ConsistencySolver'                           }    {'NEWTON_XTOL_AFTER_FTOL'    }
+    {'CanonicalOrdering'                           }    {'CANONICAL'                 }
+    {'OptimizeIntermediates'                       }    {'OPTIMIZED'                 }
+    {'MulticoreSolverChoice'                       }    {'BACKWARD_EULER'            }
+    {'IndexReductionMethod'                        }    {'DerivativeReplacement'     }
+    {'DoDC'                                        }    {'off'                       }
+    {'ResidualTolerance'                           }    {'1e-09'                     }
+    {'ConsistencyTolSource'                        }    {'GLOBAL'                    }
+    {'ConsistencyAbsTol'                           }    {'0.001'                     }
+    {'ConsistencyRelTol'                           }    {'0.001'                     }
+    {'ConsistencyTolFactor'                        }    {'0.001'                     }
+    {'UseLocalSolver'                              }    {'off'                       }
+    {'LocalSolverChoice'                           }    {'NE_BACKWARD_EULER_ADVANCER'}
+    {'ResolveIndetEquations'                       }    {'on'                        }
+    {'FunctionEvalNumThread'                       }    {'1'                         }
+    {'LocalSolverSampleTime'                       }    {'0.001'                     }
+    {'DoFixedCost'                                 }    {'off'                       }
+    {'MaxNonlinIter'                               }    {'3'                         }
+    {'MaxModeIter'                                 }    {'2'                         }
+    {'ComputeImpulses'                             }    {'off'                       }
+    {'ImpulseIterations'                           }    {'2'                         }
+    {'LinearAlgebra'                               }    {'auto'                      }
+    {'LinearAlgebraNumThread'                      }    {'0'                         }
+    {'EquationFormulation'                         }    {'NE_TIME_EF'                }
+    {'DelaysMemoryBudget'                          }    {'1024'                      }
+    {'AutomaticFiltering'                          }    {'on'                        }
+    {'FilteringTimeConstant'                       }    {'0.001'                     }
+    {'PartitionStorageMethod'                      }    {'AS_NEEDED'                 }
+    {'PartitionMemoryBudget'                       }    {'1024'                      }
+    {'PartitionMethod'                             }    {'BALANCED'                  }
+    {'MultibodyUseLocalSolver'                     }    {'off'                       }
+    {'MultibodyLocalSolverChoice'                  }    {'ODE1'                      }
+    {'MultibodyLocalSolverSampleTime'              }    {'0.001'                     }
+
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: []
+       RConn: 3.4070e+03
+    Ifaction: []
+       Reset: []
+       Event: []
+
+        Type: 'RConn1'
+    Position: [214 265]
+    SrcBlock: []
+     SrcPort: []
+    DstBlock: []
+     DstPort: []
+

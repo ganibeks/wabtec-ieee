@@ -1,0 +1,9 @@
+{Error using simscape.setBlockComponent
+Cannot set block component for 'thermal_probe/IGBT' because it is not a Simscape Component block.
+
+Error in testcell.inspect_thermal (line 6)
+simscape.setBlockComponent(q,'ee.semiconductors.n_igbt_thermal'); testcell.apply_device(q,p,25);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+[Warning: Unable to close the model 'thermal_probe' because it has been changed. To save changes, use close_system('thermal_probe',1). To discard changes, use
+close_system('thermal_probe',0).] 

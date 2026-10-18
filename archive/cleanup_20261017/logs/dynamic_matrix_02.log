@@ -1,0 +1,46 @@
+TARGETED COMPILE PASS: dynamic_r
+[Warning: Solver is encountering difficulty in simulating model 'tc_dynamic_r' at time 0.00030005000000000656. Simulink will continue to simulate with warnings. Please check the
+model for errors.] 
+[> In testcell.run_dynamic (line 9)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06599E-18 for 1 consecutive times at time 0.00030005.  Solver will continue the
+simulation with the step size restricted to 1.06599E-18 and using an effective relative error tolerance of 3.05108E-06, which is greater than the specified relative error
+tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system. Try tightening the
+error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min
+steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In testcell.run_dynamic (line 9)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_dynamic_r' at time 0.00035005000000000805. Simulink will continue to simulate
+with warnings. Please check the model for errors.] 
+[> In testcell.run_dynamic (line 9)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.24363E-18 for 1 consecutive times at time 0.00035005.
+Solver will continue the simulation with the step size restricted to 1.24363E-18 and using an effective relative error tolerance of 3.66992E-06,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In testcell.run_dynamic (line 9)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_dynamic_r' at time 0.00045005000000000517. Simulink will continue to simulate
+with warnings. Please check the model for errors.] 
+[> In testcell.run_dynamic (line 9)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.5989E-18 for 1 consecutive times at time 0.00045005.
+Solver will continue the simulation with the step size restricted to 1.5989E-18 and using an effective relative error tolerance of 4.95876E-06,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In testcell.run_dynamic (line 9)] 
+{Subscripted assignment between dissimilar structures.
+
+Error in testcell.analyze_dynamic (line 69)
+ r.events(k)=z;
+ ^^^^^^^^^^^
+Error in testcell.run_dynamic (line 10)
+ r=testcell.analyze_dynamic(out,p,kind{1});
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

@@ -1,0 +1,13 @@
+{
+  "threshold_V": 9,
+  "blanking_s": 7.5E-6,
+  "sample_s": 5E-8,
+  "onAt_s": 2E-5,
+  "pulse_s": 3E-5,
+  "stop_s": 7E-5,
+  "maxStep_s": 5E-8,
+  "faultR_Ohm": 0,
+  "timeout_s": 300,
+  "precharge_s": 8E-6,
+  "precharge_from_V": 10
+}

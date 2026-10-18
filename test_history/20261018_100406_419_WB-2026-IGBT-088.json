@@ -1,0 +1,79 @@
+{
+  "serial": "WB-2026-IGBT-088",
+  "module": "1.8 kV / 1.5 kA RL double pulse - CM1500HC-66XB (representative)",
+  "module_id": "traction_rl",
+  "run": "dynamic_20261017_195453_347",
+  "verdict": "PASS",
+  "reason": "PASS",
+  "detail": "All 8 simulated checks inside the Wabtec slide 5/8 values",
+  "hardware_decision": "INCONCLUSIVE",
+  "data_source": "SIMULATED",
+  "safety_confirmed": {
+    "Test-cell door closed, interlock OK": true,
+    "E-stop released and tested": true,
+    "DC link discharged < 50 V (panel reading)": true,
+    "PPE worn: insulating gloves, face shield": true,
+    "Module locked in fixture, terminals torqued": true
+  },
+  "checks": [
+    {
+      "check": "Gate drive ±15 V",
+      "value": 15.000022832663717,
+      "unit": "V",
+      "state": "IN_LIMIT",
+      "limit": "+15 / −15 V (SLIDE 5/8); tolerance 0.02 V = model check in analyze_dynamic.m"
+    },
+    {
+      "check": "Turn-on threshold",
+      "value": 6.3504,
+      "unit": "V",
+      "state": "IN_LIMIT",
+      "limit": "+4 … +7 V (SLIDE 8)"
+    },
+    {
+      "check": "Max di/dt",
+      "value": 1852.114055029972,
+      "unit": "A/µs",
+      "state": "IN_LIMIT",
+      "limit": "≤ 5000 A/µs (SLIDE 5)"
+    },
+    {
+      "check": "Diode forward",
+      "value": 0.500001199993676,
+      "unit": "V",
+      "state": "IN_LIMIT",
+      "limit": "0.2 … 0.8 V (SLIDE 5)"
+    },
+    {
+      "check": "Diode reverse",
+      "value": 0.030000000000000002,
+      "unit": "µA",
+      "state": "IN_LIMIT",
+      "limit": "open (SLIDE 5)"
+    },
+    {
+      "check": "Driver power",
+      "value": 0.22318775112198316,
+      "unit": "W",
+      "state": "IN_LIMIT",
+      "limit": "≤ 20 W (SLIDE 5)"
+    },
+    {
+      "check": "DESAT detection",
+      "value": 7.599999999999999,
+      "unit": "µs",
+      "state": "IN_LIMIT",
+      "limit": "trips during the short circuit"
+    },
+    {
+      "check": "DESAT gate turn-off",
+      "value": 1.9438458656285016,
+      "unit": "µs",
+      "state": "IN_LIMIT",
+      "limit": "≤ 10 µs after detection (SLIDE 5/8 + slide 8 notes)"
+    }
+  ],
+  "id": "20261018_100406_419_WB-2026-IGBT-088",
+  "saved": "2026-10-18 10:04:06",
+  "report_file": "20261018_100406_419_WB-2026-IGBT-088.html"
+}

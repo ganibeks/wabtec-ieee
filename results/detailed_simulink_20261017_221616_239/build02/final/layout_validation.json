@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Cosmetic final copies: compiled and initialized; full RL numerical evidence in parent rl_validation.json",
+  "hardware_decision": "INCONCLUSIVE",
+  "checks": {
+    "wabtec_igbt_test_cell": {
+      "compile": "PASS",
+      "initialization": "PASS",
+      "initialization_duration_s": 2E-6
+    },
+    "wabtec_igbt_desat_test": {
+      "compile": "PASS",
+      "initialization": "PASS",
+      "initialization_duration_s": 2E-6
+    }
+  }
+}

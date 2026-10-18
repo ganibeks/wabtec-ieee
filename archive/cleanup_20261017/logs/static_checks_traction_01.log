@@ -1,0 +1,15 @@
+STATIC CHECKS COMPILE PASS: static_v
+VGE(th) = 7.7954 V at Ic = 0.149925 A, Vce = 10.0000 V (datasheet 5.80..6.80 V)
+ICES(25 C) = 3.00549e-06 A at Vce = 3300.00 V
+ICES(125 C) = 0.00400289 A at Vce = 3300.00 V
+ICES(150 C) = 0.0260029 A at Vce = 3300.00 V
+STATIC CHECKS COMPILE PASS: static_i
+VCEsat(25 C) = 2.75331 V at Ic = 1500 A
+VCEsat(125 C) = 3.19970 V at Ic = 1500 A
+VCEsat(150 C) = 3.29959 V at Ic = 1500 A
+STATIC CHECKS PASS: C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\static_checks_20261017_193416_029
+
+folder =
+
+    'C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\static_checks_20261017_193416_029'
+

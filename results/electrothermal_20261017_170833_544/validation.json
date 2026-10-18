@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "hardware_decision": "INCONCLUSIVE",
+  "scope": "Short low-energy electrothermal run near 25 C; broad temperature range remains unvalidated",
+  "heat_energy_J": 2.0228525914606532E-6,
+  "thermal_stored_energy_J": 1.4248530533222947E-6,
+  "ambient_energy_J": 5.9712123560367575E-7,
+  "thermal_energy_relative_error": 0.00043419008304925035,
+  "junction_rise_K": 7.1186775585374562E-7,
+  "max_junction_C": 25.000478408851905,
+  "electrical": {
+    "scope": "Assumed device numerical validation; no hardware acceptance",
+    "hardware_decision": "INCONCLUSIVE",
+    "kcl_max_A": 0,
+    "bus_kcl_max_A": 0,
+    "bus_energy_J": 0.11458596986711989,
+    "load_resistor_energy_J": 0.096689447767594625,
+    "stray_resistor_energy_J": 0.00017555631172942775,
+    "dut_collector_terminal_energy_J": 0.012982770152958987,
+    "dut_gate_terminal_energy_J": 1.4159220058862518E-6,
+    "diode_terminal_energy_J": 0.004185356495298562,
+    "stray_stored_energy_change_J": 7.2908848882766652E-21,
+    "load_stored_energy_change_J": 0.00055284153905988548,
+    "inductor_flux_relative_error": 8.621312205979523E-8,
+    "freewheel_min_current_A": 7.572110708366119,
+    "freewheel_Ic_to_IL_ratio": 0.00018120780747023202,
+    "energy_balance_error_J": -2.39952160918655E-9,
+    "energy_balance_relative_error": 2.0940797655848843E-8,
+    "on_gate_max_error_V": 7.0631967528100859E-6,
+    "off_gate_max_error_V": 3.3096507578989076E-7,
+    "peak_Vce_V": 51.143168266112646,
+    "peak_Ic_A": 10.39489454901428,
+    "peak_Ig_A": 4.1666669309028128,
+    "events": [
+      {
+        "command_time_s": 4.9999999999999996E-5,
+        "window_s": [
+          4.7999999999999994E-5,
+          6.5E-5
+        ],
+        "on_event": true,
+        "gross_collector_terminal_energy_J": 2.163487596237857E-6,
+        "gate_charge_C": 1.6425785511362501E-7,
+        "gate_terminal_energy_J": 3.3532761474594481E-7,
+        "Vce_transition_10_90_s": 5.1278724895414778E-8,
+        "command_to_Vce_transition_s": 1.2122398601063469E-7,
+        "Ic_transition_10_90_s": null,
+        "current_clearance_1percent_s": null
+      },
+      {
+        "command_time_s": 0.0003,
+        "window_s": [
+          0.000298,
+          0.00037999999999999997
+        ],
+        "on_event": false,
+        "gross_collector_terminal_energy_J": 0.005006278729606406,
+        "gate_charge_C": -1.6431787250559485E-7,
+        "gate_terminal_energy_J": 3.6056620396875454E-7,
+        "Vce_transition_10_90_s": 1.6291102007181331E-6,
+        "command_to_Vce_transition_s": 1.4208899814274452E-7,
+        "Ic_transition_10_90_s": 2.1980104333278185E-5,
+        "current_clearance_1percent_s": 4.8362901939150789E-5
+      },
+      {
+        "command_time_s": 0.00039999999999999996,
+        "window_s": [
+          0.00039799999999999997,
+          0.00041499999999999995
+        ],
+        "on_event": true,
+        "gross_collector_terminal_energy_J": 0.00031807416315729638,
+        "gate_charge_C": 1.6434570985100628E-7,
+        "gate_terminal_energy_J": 3.6554335706296174E-7,
+        "Vce_transition_10_90_s": 1.8542829418721068E-7,
+        "command_to_Vce_transition_s": 8.9417455362110487E-7,
+        "Ic_transition_10_90_s": 6.44022493836115E-7,
+        "current_clearance_1percent_s": null
+      },
+      {
+        "command_time_s": 0.0005,
+        "window_s": [
+          0.000498,
+          0.00058
+        ],
+        "on_event": false,
+        "gross_collector_terminal_energy_J": 0.005610845909853438,
+        "gate_charge_C": -1.642949503975033E-7,
+        "gate_terminal_energy_J": 3.5871797661651393E-7,
+        "Vce_transition_10_90_s": 1.6336343523803195E-6,
+        "command_to_Vce_transition_s": 1.3773394163434441E-7,
+        "Ic_transition_10_90_s": 2.1980749188470379E-5,
+        "current_clearance_1percent_s": 4.827566828240887E-5
+      }
+    ],
+    "energy_interpretation": "Gross event terminal integrals include conduction and reactive transfer; not calibrated Eon/Eoff dissipation.",
+    "status": "PASS"
+  }
+}

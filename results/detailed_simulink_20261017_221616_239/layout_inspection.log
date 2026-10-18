@@ -1,0 +1,83 @@
+ANNOT Simulink.Annotation | KCL = IL - Ic - Id. Ideal sensor model; no ADC quantisation or noise.\nAuxiliary AC/DC, 24 V supply, optical isolation, CAN/USB and interlocks\nare not represented as hardware in this fixture. Hardware decision: INCONCLUSIVE.
+ANNOT Simulink.Annotation | Integral of Vce*Ic is collector TERMINAL energy.\nIt includes conduction and reactive transfer; not calibrated pure Eon/Eoff.
+ANNOT Simulink.Annotation | ON-1: 50..300 us | OFF: 300..400 us | ON-2: 400..500 us\nActual command edges above; driver includes propagation delay.\nOpen scopes after Run to inspect simulated signals.
+ANNOT Simulink.Annotation | Representative CM1500HC-66XB; NOT identified Wabtec module
+Equation-based full I-V and charge model; fixed 25 degC
+Vth input 6.3 V; calibration Vce 2.6 V at 1500 A / 25 degC
+Cies / Cres / Coes = 164 / 1.4 / 11 nF
+Transit time 0.2 us (ASSUMED); dynamic calibration remains incomplete
+ANNOT Simulink.Annotation | External Rg = 0 ohm
+Internal Rg = 0.5 ohm (ASSUMED)
+ANNOT Simulink.Annotation | VON = +15 V / VOFF = -15 V
+Ron / Roff = 2 / 27 ohm
+Propagation delay = 50 ns (ASSUMED)
+ANNOT Simulink.Annotation | Cdiode = 11 nF (ASSUMED)
+Diode: Vf 0.5 V + Ron 0.0012 ohm; NO reverse recovery
+ANNOT Simulink.Annotation | Lstray = 100 nH
+Rstray = 0.1 mOhm
+ANNOT Simulink.Annotation | Lload = 300 uH (ASSUMED)
+ANNOT Simulink.Annotation | Rload = 0.01 ohm (ASSUMED)
+ANNOT Simulink.Annotation | DC bus = 1800 V
+Ideal source; not a charger or finite DC link
+ANNOT Simulink.Annotation | 06  SCOPES / TERMINAL ENERGY / KCL
+ANNOT Simulink.Annotation | 05  MEASUREMENT / ACQUISITION
+ANNOT Simulink.Annotation | 04  TEST SEQUENCE / VIRTUAL CONTROLLER
+ANNOT Simulink.Annotation | 03  GATE DRIVER + DEVICE UNDER TEST
+ANNOT Simulink.Annotation | 02  POWER PATH + FREEWHEEL BRANCH
+ANNOT Simulink.Annotation | 01  DC SUPPLY / SOLVER
+ANNOT Simulink.Annotation | Executable RL double-pulse test. Expanded physical components, explicit pulse sequence, eight measurement channels and passive numerical monitors.
+ANNOT Simulink.Annotation | IGBT TEST CELL | DETAILED ELECTRICAL SCHEMATIC
+ANNOT Simulink.Annotation | Vswitch [V]  |  physical sensor -> ideal converter -> raw log
+ANNOT Simulink.Annotation | Ibus [A]  |  physical sensor -> ideal converter -> raw log
+ANNOT Simulink.Annotation | Id [A]  |  physical sensor -> ideal converter -> raw log
+ANNOT Simulink.Annotation | IL [A]  |  physical sensor -> ideal converter -> raw log
+ANNOT Simulink.Annotation | Ig [A]  |  physical sensor -> ideal converter -> raw log
+ANNOT Simulink.Annotation | Ic [A]  |  physical sensor -> ideal converter -> raw log
+ANNOT Simulink.Annotation | Vce [V]  |  physical sensor -> ideal converter -> raw log
+ANNOT Simulink.Annotation | Vge [V]  |  physical sensor -> ideal converter -> raw log
+ANNOT Simulink.Annotation | OFF at 500 us
+ANNOT Simulink.Annotation | ON at 400 us
+ANNOT Simulink.Annotation | OFF at 300 us
+ANNOT Simulink.Annotation | ON at 50 us
+ANNOT Simulink.Annotation | DUT
+ANNOT Simulink.Annotation | GateDrive
+ANNOT Simulink.Annotation | LoadBank
+ANNOT Simulink.Annotation | Supply
+ANNOT Simulink.Annotation | Measurements
+PORT Bus LConn 210 385
+PORT Bus RConn 210 530
+PORT IGBT LConn 1235 840
+PORT IGBT RConn 1395 805
+PORT IGBT RConn 1395 870
+PORT Driver LConn 675 820
+PORT Driver RConn 850 790
+PORT Driver RConn 850 845
+PORT FreewheelDiode LConn 1035 215
+PORT FreewheelDiode RConn 905 215
+PORT CommutationL LConn 1330 425
+PORT CommutationL RConn 1330 540
+PORT IbusSensor LConn 405 380
+PORT IbusSensor RConn 500 365
+PORT IbusSensor RConn 500 390
+PORT ILSensor LConn 635 380
+PORT ILSensor RConn 730 365
+PORT ILSensor RConn 730 390
+PORT IgSensor LConn 1065 810
+PORT IgSensor RConn 1155 800
+PORT IgSensor RConn 1155 820
+PORT IcSensor LConn 1330 585
+PORT IcSensor RConn 1315 665
+PORT IcSensor RConn 1340 665
+PORT IdSensor LConn 1230 220
+PORT IdSensor RConn 1135 205
+PORT IdSensor RConn 1135 230
+PORT VgeSensor LConn 1110 910
+PORT VgeSensor RConn 1095 1010
+PORT VgeSensor RConn 1120 1010
+PORT VceSensor LConn 1540 780
+PORT VceSensor RConn 1525 890
+PORT VceSensor RConn 1550 890
+PORT VswitchSensor LConn 1540 445
+PORT VswitchSensor RConn 1525 555
+PORT VswitchSensor RConn 1550 555
+PORT Ground LConn 1325 1100

@@ -1,0 +1,17 @@
+{
+  "scope": "DMM diode-mode emulation on the model freewheel diode (slide 5 check)",
+  "hardware_decision": "INCONCLUSIVE",
+  "test_current_A": 0.001,
+  "open_circuit_V": 3,
+  "test_conditions": "ASSUMED typical multimeter diode mode (1 mA, 3 V)",
+  "slide5_spec": "Free-wheeling diode 0.2 V to 0.8 V, reverse direction - open",
+  "forward_V": 1.10000119998767,
+  "forward_at_A": 0.0010000007249146628,
+  "forward_iterations": 39,
+  "reverse_V": -3,
+  "reverse_A": -3.0000000000000004E-8,
+  "reverse_open": true,
+  "forward_within_slide5": false,
+  "model_note": "Piecewise-linear diode: V(1 mA) = Vf + Ron*1mA = 1.1 V by construction; the result reflects the diode parameters.",
+  "status": "PASS"
+}

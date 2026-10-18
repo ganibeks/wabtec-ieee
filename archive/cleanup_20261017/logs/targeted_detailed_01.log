@@ -1,0 +1,5 @@
+{Error using testcell.targeted_checks (line 6)
+Invalid configuration for block 'tc_static_v/Supply/Sweep'. Unable to extrapolate output values after final workspace data value because interpolation is not enabled.
+Suggested Actions:
+    • Enable interpolation. - Fix
+} 

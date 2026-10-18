@@ -1,0 +1,10 @@
+[Warning: Automated layout might not improve upon original layout.] 
+[> In Simulink.BlockDiagram.arrangeSystem
+In testcell.export_presentation (line 15)] 
+{Error using Simulink.BlockDiagram.arrangeSystem
+Cannot perform command on locked subsystem.
+
+Error in testcell.export_presentation (line 15)
+ Simulink.BlockDiagram.arrangeSystem(subs{k});
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ - Show complete stack trace
+} 

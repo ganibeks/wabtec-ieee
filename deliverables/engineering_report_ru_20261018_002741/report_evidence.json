@@ -1,0 +1,167 @@
+{
+  "scope": "Report generation only; no new simulation or real hardware test",
+  "rl": {
+    "scope": "Assumed device numerical validation; no hardware acceptance",
+    "hardware_decision": "INCONCLUSIVE",
+    "record_complete": true,
+    "record_start_s": 0,
+    "record_end_s": 0.0015,
+    "kcl_max_A": 1.4578211249283157e-08,
+    "bus_kcl_max_A": 4.1894281821441837e-08,
+    "bus_energy_J": 888.031374128214,
+    "load_resistor_energy_J": 56.22963170804033,
+    "stray_resistor_energy_J": 0.07317977154376808,
+    "dut_collector_terminal_energy_J": 124.61477161421485,
+    "dut_gate_terminal_energy_J": 0.00013840868536579886,
+    "diode_terminal_energy_J": 6.896284817899994,
+    "stray_stored_energy_change_J": -4.61180878442752e-20,
+    "load_stored_energy_change_J": 700.2180717270516,
+    "inductor_flux_relative_error": 4.942958472760285e-07,
+    "freewheel_min_current_A": 1572.3734049782724,
+    "freewheel_Ic_to_IL_ratio": 0.0012378347640436594,
+    "energy_balance_error_J": -0.0005655105364894553,
+    "energy_balance_relative_error": 6.368136903323045e-07,
+    "on_gate_max_error_V": 2.3884718894251478e-05,
+    "off_gate_max_error_V": 0.00011745718705213903,
+    "peak_Vce_V": 1821.9723767274872,
+    "peak_Ic_A": 2240.2753892097917,
+    "peak_Ig_A": 12.000015266589916,
+    "events": [
+      {
+        "command_time_s": 4.9999999999999996e-05,
+        "window_s": [
+          4.7999999999999994e-05,
+          6.5e-05
+        ],
+        "on_event": true,
+        "gross_collector_terminal_energy_J": 0.01858660324286591,
+        "gate_charge_C": 7.438834657079296e-06,
+        "gate_terminal_energy_J": 3.8537200683882334e-05,
+        "Vce_transition_10_90_s": 6.981734241040492e-07,
+        "command_to_Vce_transition_s": 7.885303392607881e-07,
+        "Ic_transition_10_90_s": null,
+        "current_clearance_1percent_s": null
+      },
+      {
+        "command_time_s": 0.0003,
+        "window_s": [
+          0.000298,
+          0.00037999999999999997
+        ],
+        "on_event": false,
+        "gross_collector_terminal_energy_J": 49.18309096812302,
+        "gate_charge_C": -7.4399335928690105e-06,
+        "gate_terminal_energy_J": 2.5996086533088e-05,
+        "Vce_transition_10_90_s": 1.5294322922985504e-05,
+        "command_to_Vce_transition_s": 6.821181570841432e-06,
+        "Ic_transition_10_90_s": 2.1922914642388477e-05,
+        "current_clearance_1percent_s": 7.001457487598847e-05
+      },
+      {
+        "command_time_s": 0.00039999999999999996,
+        "window_s": [
+          0.00039799999999999997,
+          0.00041499999999999995
+        ],
+        "on_event": true,
+        "gross_collector_terminal_energy_J": 4.032852927186517,
+        "gate_charge_C": 7.4396040353965734e-06,
+        "gate_terminal_energy_J": 4.8032555037137165e-05,
+        "Vce_transition_10_90_s": 3.2791599419925593e-06,
+        "command_to_Vce_transition_s": 1.2001770649053018e-06,
+        "Ic_transition_10_90_s": 6.911950304489141e-07,
+        "current_clearance_1percent_s": null
+      },
+      {
+        "command_time_s": 0.0005,
+        "window_s": [
+          0.000498,
+          0.00058
+        ],
+        "on_event": false,
+        "gross_collector_terminal_energy_J": 70.28638684045558,
+        "gate_charge_C": -7.4397066973214195e-06,
+        "gate_terminal_energy_J": 2.5901600618001997e-05,
+        "Vce_transition_10_90_s": 1.537273672480512e-05,
+        "command_to_Vce_transition_s": 6.753853308545969e-06,
+        "Ic_transition_10_90_s": 2.1899849308215256e-05,
+        "current_clearance_1percent_s": 6.98274388698612e-05
+      }
+    ],
+    "energy_interpretation": "Gross event terminal integrals include conduction and reactive transfer; not calibrated Eon/Eoff dissipation.",
+    "status": "PASS",
+    "reference_relative_errors": {
+      "peak_Vce_V": 4.0805246779540064e-09,
+      "peak_Ic_A": 1.9602956787603712e-08,
+      "bus_energy_J": 2.2322705165125295e-07
+    },
+    "half_step_event_energy_relative_errors": [
+      1.1902784219402184e-05,
+      6.351994003565096e-06,
+      1.4880636739362422e-05,
+      1.1688049138877933e-05
+    ],
+    "passive_integrator_energy_J": 124.61230775947094
+  },
+  "desat": {
+    "tripped": true,
+    "trip_time_s": 2.76e-05,
+    "trip_after_on_s": 7.599999999999998e-06,
+    "peak_Ic_A": 17400.422799485044,
+    "peak_Ic_time_s": 2.885e-05,
+    "ic_below_10pct_time_s": 5.202462599063639e-05,
+    "desat_turnoff_s": 3.202462599063639e-05,
+    "within_slide_10us": false,
+    "peak_Vce_after_trip_V": 1947.3994630750537,
+    "datasheet_VCES_V": 3300,
+    "peak_Vce_within_VCES": true,
+    "sc_energy_J": 434.49082134642464,
+    "bus_at_turn_on_V": 1799.9962642507548,
+    "energy_source_J": 460.9246052868107,
+    "energy_device_J": 460.6522384903117,
+    "energy_balance_relative_error": 2.82582909934955e-06,
+    "final_Ic_A": 285.85586514919,
+    "half_step_relative_errors": [
+      0.00037984686744326444,
+      0.00011869861547677608
+    ],
+    "fine_max_step_s": 2.5e-08,
+    "config": {
+      "threshold_V": 9,
+      "blanking_s": 7.5e-06,
+      "sample_s": 5e-08,
+      "onAt_s": 2e-05,
+      "pulse_s": 3e-05,
+      "stop_s": 7e-05,
+      "maxStep_s": 5e-08,
+      "faultR_Ohm": 0,
+      "timeout_s": 300,
+      "precharge_s": 8e-06,
+      "precharge_from_V": 10
+    },
+    "config_provenance": "ASSUMED (threshold, blanking, detector sampling, pulse width); bus/stray/gate from parameter set",
+    "scope": "Type-I short circuit (turn-on into short through stray L) with closed-loop DESAT in the model. SIMULATED. Short-circuit current level NOT validated (equation-based IGBT calibrated on on-state/threshold data only); demonstrates protection loop timing, not device survival.",
+    "slide_spec": "Wabtec slides 5/8: Desat turn-off <= 10 us",
+    "datasheet_reference": "CM1500HC-66XB tpSC 10 us at VCC <= 2500 V, VGE = 15 V (Tj 150 C); not modelled as a failure limit",
+    "hardware_decision": "INCONCLUSIVE",
+    "status": "PASS"
+  },
+  "desat_csv_recomputed": {
+    "first_observed_FaultNow_s": 2.755e-05,
+    "latch_s": 2.76e-05,
+    "gate_below_6_3_V_s": 2.954151681856778e-05,
+    "current_clearance_s": 5.202462599063639e-05
+  },
+  "budget": {
+    "published_USD": "5896.13",
+    "custom_low_USD": 2530,
+    "custom_high_USD": 4850,
+    "smu_optional_USD": 7880
+  },
+  "source_sha256": {
+    "results\\detailed_simulink_20261017_221616_239\\build02\\rl_validation.json": "b88f16e6d31fd1b700c8913a6f970ab1581128d6ad78e03e3b15ab1a52b6efab",
+    "results\\desat_test_traction_20261018_000313_736\\validation.json": "c719028705401d6a1c4331b35e49def6e056e95c53c838ef016fcce15419ec25",
+    "results\\desat_test_traction_20261018_000313_736\\desat_waveforms.csv": "cd3e7e16221d25e874731cc111b260779515d95a086b3ed005c97ac41803693b",
+    "references\\NU IEEE 2026 IGBT test cell_AK_Final.pptx": "85ae5e16e96cba88a343f8d171894b0d10121fed24cab68777060bd33288c611"
+  }
+}

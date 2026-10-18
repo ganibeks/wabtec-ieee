@@ -1,0 +1,21 @@
+Run directory: C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\20261017_163035_757
+          on_gate_error_V: 0
+         off_gate_error_V: 0
+       on_current_error_A: 7.9920e-12
+           on_vce_error_V: 7.9920e-10
+        off_current_max_A: 1.2000e-07
+          off_vce_error_V: 1.2000e-05
+              kvl_error_V: 0
+               on_windows: 3
+              off_windows: 3
+    expected_on_current_A: 0.1119
+        expected_on_vce_V: 0.8112
+          source_energy_J: 0.0040
+      peak_source_power_W: 1.3427
+                   status: 'PASS'
+
+
+ans =
+
+    'C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\20261017_163035_757'
+

@@ -1,0 +1,16 @@
+{
+  "on_gate_error_V": 0,
+  "off_gate_error_V": 0,
+  "on_current_error_A": 7.9920098317032284E-12,
+  "on_vce_error_V": 7.99201260726079E-10,
+  "off_current_max_A": 1.1999988000499506E-7,
+  "off_vce_error_V": 1.1999988000610529E-5,
+  "kvl_error_V": 0,
+  "on_windows": 3,
+  "off_windows": 3,
+  "expected_on_current_A": 0.11188811188811189,
+  "expected_on_vce_V": 0.8111888111888117,
+  "source_energy_J": 0.00402663369235268,
+  "peak_source_power_W": 1.3426573427532467,
+  "status": "PASS"
+}

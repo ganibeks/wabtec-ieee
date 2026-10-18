@@ -1,0 +1,8 @@
+TARGETED COMPILE PASS: dynamic_rl
+dynamic_rl: PASS; peak Vce 51.143 V, Ic 10.395 A, energy residual 1.51e-08, convergence 0.0012
+DYNAMIC VALIDATION COMPLETE: C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\dynamic_20261017_165933_696
+
+ans =
+
+    'C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\dynamic_20261017_165933_696'
+

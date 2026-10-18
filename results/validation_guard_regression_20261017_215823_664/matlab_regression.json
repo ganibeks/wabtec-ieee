@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "scope": "Saved-data software regression; no new physical simulation",
+  "hardware_decision": "INCONCLUSIVE",
+  "cases": [
+    {
+      "name": "dynamic_20261017_165933_696_raw",
+      "status": "PASS",
+      "detail": "Complete healthy record accepted; physical metrics retained"
+    },
+    {
+      "name": "dynamic_20261017_165933_696_fine_raw",
+      "status": "PASS",
+      "detail": "Complete healthy record accepted; physical metrics retained"
+    },
+    {
+      "name": "dynamic_20261017_195453_347_raw",
+      "status": "PASS",
+      "detail": "Complete healthy record accepted; physical metrics retained"
+    },
+    {
+      "name": "dynamic_20261017_195453_347_fine_raw",
+      "status": "PASS",
+      "detail": "Complete healthy record accepted; physical metrics retained"
+    },
+    {
+      "name": "truncated_at_535us",
+      "status": "PASS",
+      "detail": "testcell:IncompleteRecord"
+    },
+    {
+      "name": "missing_end_of_experiment",
+      "status": "PASS",
+      "detail": "testcell:IncompleteRecord"
+    },
+    {
+      "name": "missing_initial_record",
+      "status": "PASS",
+      "detail": "testcell:IncompleteRecord"
+    },
+    {
+      "name": "single_channel_truncated",
+      "status": "PASS",
+      "detail": "testcell:IncompleteRecord"
+    },
+    {
+      "name": "missing_voltage_transition_samples",
+      "status": "PASS",
+      "detail": "testcell:RecordGap"
+    },
+    {
+      "name": "configured_stop_before_event_end",
+      "status": "PASS",
+      "detail": "testcell:InvalidRecordPlan"
+    },
+    {
+      "name": "complete_record_without_clearance",
+      "status": "PASS",
+      "detail": "testcell:UnresolvedClearance"
+    }
+  ]
+}

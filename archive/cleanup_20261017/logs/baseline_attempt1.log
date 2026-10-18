@@ -1,0 +1,5 @@
+{Error using build_baseline (line 7)
+block_diagram does not have a parameter named 'SimscapeLogType'
+} 
+[Warning: Unable to close the model 'igbt_baseline' because it has been changed. To save changes, use close_system('igbt_baseline',1). To discard changes, use
+close_system('igbt_baseline',0).] 

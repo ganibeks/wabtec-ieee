@@ -1,0 +1,9 @@
+﻿{
+    "status":  "PASS",
+    "scope":  "Software regression on saved simulation data; no new physical simulation",
+    "matlab_cases_passed":  11,
+    "python_cases_passed":  9,
+    "hardware_decision":  "INCONCLUSIVE",
+    "matlab_evidence":  "matlab_regression.json",
+    "python_evidence":  "python_regression_02.log"
+}

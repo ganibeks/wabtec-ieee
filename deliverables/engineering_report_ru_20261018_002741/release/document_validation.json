@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Document QA only; no new electrical simulation",
+  "pages": 20,
+  "all_pages_nonempty": true,
+  "cyrillic_readable": true,
+  "hyperlinks": 35,
+  "pdf_sha256": "8cc6b98cec9c13119b9b0e45bf704b578f387cfa8147f4d2ad9bf5597bf357f8",
+  "layout_check": {
+    "pages_expected": 20,
+    "overflow": []
+  }
+}

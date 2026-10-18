@@ -1,0 +1,5 @@
+310-320 us: min diode 5.00277 A, max Ic/IL 0.455525
+330-340 us: min diode 8.18271 A, max Ic/IL 0.0639263
+340-348 us: min diode 8.32116 A, max Ic/IL 0.0241196
+345-349 us: min diode 8.3129 A, max Ic/IL 0.0146312
+Warnings in RL simulation: 0

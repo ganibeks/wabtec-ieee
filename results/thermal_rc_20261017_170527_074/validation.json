@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Assumed thermal RC equation validation, not module thermal identification",
+  "hardware_decision": "INCONCLUSIVE",
+  "max_analytic_error_K": 1.1637517104645667E-5,
+  "energy_relative_error": 1.0125340698626436E-7,
+  "final_junction_C": 36.999987326162284,
+  "final_case_C": 34.999987556209078,
+  "time_constants_s": [
+    0.36302625268474681,
+    22.036973747315248
+  ]
+}

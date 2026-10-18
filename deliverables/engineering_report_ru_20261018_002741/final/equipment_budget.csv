@@ -1,0 +1,16 @@
+﻿category,item,quantity,unit_price_USD,total_low_USD,total_high_USD,source,as_of
+published,RIGOL DHO924,1,769.00,769.00,769.00,https://www.rigolna.com/products/rigol-digital-oscilloscopes/dho900/,18.10.2026
+published,RIGOL DP832,1,449.00,449.00,449.00,https://www.rigolna.com/products/dc-power-loads/dp800/dp821a/,18.10.2026
+published,RIGOL RP1025D,2,473.00,946.00,946.00,https://www.rigolna.com/products/digital-oscilloscopes/1000/,18.10.2026
+published,SIGLENT CP6030,1,2628.00,2628.00,2628.00,https://siglentna.com/product/cp6030-current-probe/,18.10.2026
+published,SIGLENT CPL5100,1,535.00,535.00,535.00,https://siglentna.com/product/cpl5100-current-probe/,18.10.2026
+published,RIGOL DM858,1,549.00,549.00,549.00,https://www.rigolna.com/products/digital-multimeters/dm800/,18.10.2026
+published,ST NUCLEO-G474RE,1,20.13,20.13,20.13,https://www.digikey.com/en/products/detail/stmicroelectronics/NUCLEO-G474RE/10231585,18.10.2026
+engineering_estimate,Драйвер / оптический OEM-адаптер + изолированное питание,1,,450,900,"Project estimate, not quotation",18.10.2026
+engineering_estimate,24 V AC/DC и низковольтное питание логики,1,,80,150,"Project estimate, not quotation",18.10.2026
+engineering_estimate,Матрица STATIC/PULSE и малотоковые соединения,1,,400,800,"Project estimate, not quotation",18.10.2026
+engineering_estimate,"R–L, диод, Cbus, заряд/разряд и предохранители",1,,350,650,"Project estimate, not quotation",18.10.2026
+engineering_estimate,"Корпус, E-stop, дверь, блокировки, силовые разрешения",1,,700,1200,"Project estimate, not quotation",18.10.2026
+engineering_estimate,"Оснастка DUT, Kelvin-контакты, шины",1,,350,700,"Project estimate, not quotation",18.10.2026
+engineering_estimate,"Кабели, переходники, первичная проверка/калибровка",1,,200,450,"Project estimate, not quotation",18.10.2026
+optional_static,Keithley 2450,1,7880,7880,7880,https://www.tek.com/en/products/keithley/source-measure-units/2400-graphical-series-sourcemeter,18.10.2026

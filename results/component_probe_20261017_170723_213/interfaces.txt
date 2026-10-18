@@ -1,0 +1,39 @@
+nesl_utility/Array Connection
+nesl_utility/Connection Label
+nesl_utility/PS-Simulink
+Converter
+nesl_utility/Probe
+nesl_utility/Simscape
+Component
+nesl_utility/Simscape Bus
+nesl_utility/Simulink-PS
+Converter
+nesl_utility/Solver
+Configuration
+nesl_utility/Spectrum
+Analyzer
+nesl_utility/Variant Connector
+nesl_utility/Connection Port
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: [352.0001 353.0001]
+       RConn: [354.0001 355.0001]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+LConn
+   456   145
+
+LConn
+   456   165
+
+RConn
+   524   145
+
+RConn
+   524   165
+

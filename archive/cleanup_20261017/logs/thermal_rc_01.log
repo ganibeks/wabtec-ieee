@@ -1,0 +1,13 @@
+{Error using testcell.wire (line 2)
+The points input must only create line connections that follow connection rules of the appropriate Physical Modeling domains
+
+Error in testcell.thermal_network>@(x,y)testcell.wire(m,x,y) (line 5)
+w=@(x,y)testcell.wire(m,x,y); ph=@testcell.ports;
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in testcell.thermal_network (line 19)
+ w(SEN.RConn(2),REF.LConn);
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in testcell.validate_thermal (line 7)
+net=testcell.thermal_network(m,th);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ - Show complete stack trace
+} 

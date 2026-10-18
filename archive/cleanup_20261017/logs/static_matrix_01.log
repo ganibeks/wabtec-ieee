@@ -1,0 +1,15 @@
+{Unrecognized function or variable 'range'.
+
+range requires one of the following:
+  Antenna Toolbox
+  Communications Toolbox
+  Fixed-Point Designer
+  Statistics and Machine Learning Toolbox
+
+Error in testcell.static_case (line 17)
+ row=table(string(label),T_C,gate,values(k),mean(voltage(ix)),mean(current(ix)),mean(gateV(ix)),range(current(ix)), ...
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in testcell.run_static (line 7)
+a=testcell.static_case(rig,p.VceCalibration_V+0.1*p.IcCalibration_A,15,25,'calibration_IV',folder);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

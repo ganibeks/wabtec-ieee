@@ -1,0 +1,12 @@
+{
+  "status": "PARTIAL",
+  "hardware_decision": "INCONCLUSIVE",
+  "numerical_checks": "PASS for the listed completed cases",
+  "voltage_fixture_points25C": 54,
+  "current_fixture_points": 8,
+  "Vce20A25C_V": 2.0000652763280042,
+  "Vce20A125C_V": 2.4000827790393942,
+  "prior_raw_folder": "C:\\Users\\ganib\\OneDrive\\Документы\\Wabtec_IGBT_Test_Cell\\results\\static_20261017_165422_423",
+  "blocked": "Intermediate-temperature voltage fixture numerical stiffness; stopped after three approaches",
+  "scope": "25 C output/leakage plus current-clamp and two-temperature calibration; not a complete temperature matrix"
+}

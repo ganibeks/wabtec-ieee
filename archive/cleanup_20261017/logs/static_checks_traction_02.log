@@ -1,0 +1,16 @@
+EG=0.9809 eV, Ices25=1.15e-07 A
+STATIC CHECKS COMPILE PASS: static_v
+VGE(th) = 6.3504 V at Ic = 0.149948 A, Vce = 10.0000 V (datasheet 5.80..6.80 V)
+ICES 25 C FAILED: ICES calibration recovery failed at 25 C
+ICES(125 C) = 0.00400289 A at Vce = 3300.00 V
+ICES(150 C) = 0.0260028 A at Vce = 3300.00 V
+STATIC CHECKS COMPILE PASS: static_i
+VCEsat(25 C) = 2.60029 V at Ic = 1500 A
+VCEsat(125 C) = 3.19971 V at Ic = 1500 A
+VCEsat(150 C) = 3.34807 V at Ic = 1500 A
+STATIC CHECKS PARTIAL: C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\static_checks_20261017_193726_230
+
+folder =
+
+    'C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\static_checks_20261017_193726_230'
+

@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IGBT Virtual Test Bench</title>
+<style>
+:root{
+  --bg:#ffffff; --panel:#ffffff; --panel2:#faf7f7; --line:#e8e1e1; --line2:#d9cfcf;
+  --text:#1a1414; --dim:#6b5f5f; --faint:#a39999; --amber:#b06a00; --green:#1f7a45; --red:#d0021b;
+  --cyan:#0a7ea4; --blue:#2f5fd0; --mag:#a335c4; --yellow:#a88400; --orange:#d2601a;
+  --accent:#d0021b; --accent-soft:#fdecee;
+  --mono:Consolas,"Cascadia Mono","DejaVu Sans Mono","Liberation Mono",Menlo,monospace;
+  --sans:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:13px/1.35 var(--sans)}
+body{padding:10px 14px 24px}
+button,select,input{font:inherit;color:var(--text)}
+.mono{font-family:var(--mono)}
+.dim{color:var(--dim)}
+/* header */
+header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:8px 12px;background:#ffffff;border-left:5px solid var(--accent);
+  border:1px solid var(--line);border-radius:6px}
+header h1{font-size:15px;letter-spacing:.14em;margin:0;font-weight:700;color:#1a1414;text-transform:uppercase}
+header h1 small{display:block;font-size:10.5px;letter-spacing:.08em;color:var(--dim);font-weight:400;text-transform:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;flex:1}
+.chip{font:11px/1 var(--mono);padding:5px 8px;border-radius:3px;border:1px solid var(--line2);background:#ffffff;white-space:nowrap}
+.chip b{font-weight:700}
+.chip.sim{border-color:#9fd3b4;color:#1f7a45}
+.chip.pass{border-color:#9fd3b4;color:var(--green)}
+.chip.partial{border-color:#e2c48a;color:var(--amber)}
+.chip.inc{border-color:#e2c48a;color:var(--amber)}
+.chip.assumed{border-color:#cbb6ee;color:#6b3fb3}
+.chip.ds{border-color:#a8cfe0;color:var(--cyan)}
+.dsel{display:flex;align-items:center;gap:6px}
+.dsel select{background:#ffffff;border:1px solid var(--line2);border-radius:3px;padding:5px 6px;max-width:440px}
+/* layout */
+.row{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.card{background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--text);border-radius:2px;padding:8px 10px;min-width:0}
+.card h2{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 6px;font-weight:700;display:flex;justify-content:space-between;gap:8px}
+.card h2 .tag{letter-spacing:.04em;text-transform:none;font-weight:400}
+#schemCard{flex:1.55 1 560px}
+#schemCard{display:none}   /* fixture schematic temporarily hidden (team decision 2026-10-18); remove this line to restore */
+#rackCard{flex:1 1 360px}
+svg#schem{width:100%;height:auto;display:block;background:radial-gradient(ellipse at 50% 40%,#ffffff 0%,#f7f3f3 80%);border-radius:4px}
+/* schematic */
+.w{fill:none;stroke:#c4b8b8;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
+.w.on{stroke:#8a7e7e}
+.w.loop{stroke:#d0021b;filter:url(#glow)}
+.flow{fill:none;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:3 11;opacity:0}
+.flow.vis{opacity:1}
+.cmp{fill:none;stroke:#3a3030;stroke-width:1.8;stroke-linejoin:round}
+.cmpf{fill:#3a3030}
+.lbl{font:10.5px var(--sans);fill:#5a4f4f}
+.lblb{font:600 11px var(--sans);fill:#1a1414}
+.val{font:10.5px var(--mono);fill:#1a1414}
+.probe{fill:none;stroke:#0a7ea4;stroke-width:1.2;stroke-dasharray:3 3;opacity:.75}
+.sub{fill:none;stroke-width:1;stroke-dasharray:5 4;opacity:.8}
+.subt{font:600 9.5px var(--sans);letter-spacing:.12em}
+.node{fill:#1a1414}
+/* physical bench drawing (dynamic fixtures) */
+.bb{fill:none;stroke:#9a5c2c;stroke-width:10;stroke-linejoin:round;stroke-linecap:round}
+.bb.on{stroke:#b26a33}
+.bb.loop{stroke:#d2803f;filter:url(#glow)}
+.bbh{fill:none;stroke:#f0bb8a;stroke-width:2;opacity:.45;stroke-linejoin:round;stroke-linecap:round;pointer-events:none}
+.flow.fb{stroke-width:3.4}
+.cab{fill:none;stroke:#15191f;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.cab.on{stroke:#1d232b}
+.cab.loop{stroke:#2a323d;filter:url(#glow)}
+.lead{fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.lbl.dk{fill:#3a3030}
+.screw{fill:#cfd4da;stroke:#6b737c;stroke-width:1}
+/* rack */
+.lamps{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:8px}
+.lamp{display:flex;align-items:center;gap:8px;padding:6px 8px;background:#ffffff;border:1px solid var(--line);border-radius:4px;cursor:help}
+.lamp i{width:14px;height:14px;border-radius:50%;background:#e6dede;box-shadow:inset 0 0 3px #000;flex:none}
+.lamp .ln{font:10px var(--sans);letter-spacing:.14em;color:var(--dim);width:42px}
+.lamp .ls{font:600 11.5px var(--mono);color:#1a1414}
+.lamp.g i{background:var(--green);box-shadow:0 0 8px var(--green)}
+.lamp.a i{background:var(--amber);box-shadow:0 0 8px var(--amber)}
+.lamp.r i{background:var(--red);box-shadow:0 0 8px var(--red)}
+.lamp.b i{background:#2f5fd0;box-shadow:0 0 8px #2f5fd0}
+.lamp.o i{background:#e6dede}
+.meters{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.dmm{background:#fbf8f8;border:1px solid #e8e1e1;border-radius:4px;padding:5px 7px 6px;position:relative;min-width:0}
+.dmm .mn{font:600 10px var(--sans);letter-spacing:.1em;display:flex;justify-content:space-between}
+.dmm .mv{font:600 17px var(--mono);color:#1a1414;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.dmm .md{font:9.5px var(--sans);color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dmm.der{border-style:dashed;border-color:#d6c9ee}
+.dmm.der .mn::after{content:"DERIVED";color:#7a4fd0;font-size:8.5px;letter-spacing:.12em}
+.dmm.na .mv{color:var(--faint)}
+.rackfoot{margin-top:6px;font-size:10.5px;color:var(--dim)}
+/* transport */
+#transport{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:10px;padding:8px 10px;background:var(--panel2);border:1px solid var(--line);border-radius:6px}
+.btn{background:#ffffff;border:1px solid var(--line2);border-radius:3px;padding:5px 10px;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:#d0021b}
+.btn.pri{background:#d0021b;border-color:#d0021b;color:#ffffff;min-width:76px;font-weight:600}
+.btn.ev{font-family:var(--mono);font-size:11.5px;padding:4px 8px}
+.btn.act{background:#fdecee;border-color:#d0021b}
+.grp{display:flex;align-items:center;gap:6px}
+.grp label{font-size:10.5px;color:var(--dim);letter-spacing:.08em;text-transform:uppercase}
+.grp select{background:#ffffff;border:1px solid var(--line2);border-radius:3px;padding:4px}
+#slider{flex:1 1 260px;accent-color:var(--accent)}
+.clock{font:600 13px var(--mono);padding:4px 8px;background:#fbf8f8;border:1px solid #e8e1e1;border-radius:3px;white-space:nowrap}
+.clock.sim{color:var(--accent);font-size:15px}
+.clock small{font-weight:400;color:var(--dim);font-size:10px;letter-spacing:.08em;margin-right:4px}
+/* scopes */
+#scopeCard{margin-top:10px}
+.scopebar{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-bottom:6px}
+#scopes{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;height:calc(100vh - 150px);min-height:520px;max-height:860px}
+.scope{position:relative;min-height:0;min-width:0;border:1px solid var(--line);display:flex;flex-direction:column}
+.scope canvas{display:block;width:100%;flex:1 1 0;min-height:0}
+.scope h3{margin:0;padding:6px 10px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;border-bottom:1px solid var(--line);background:var(--panel2)}
+.scope h3 .ch{font:700 12px var(--mono);color:var(--accent)}
+.scope h3 .nm{font:700 13px var(--sans);color:var(--text)}
+.scope h3 .lg{font:500 11px var(--mono);color:var(--dim);display:inline-flex;align-items:center;gap:5px}
+.scope h3 .lg i{display:inline-block;width:16px;height:3px}
+.scope h3 .lg i.dash{background:none!important;border-top:3px dashed currentColor;height:0}
+@media (max-width:900px){#scopes{grid-template-columns:1fr;grid-template-rows:none;height:auto;min-height:0}.scope canvas{height:230px;flex:none}}
+#overview{display:block;width:100%;height:46px;cursor:pointer;border-radius:3px;margin-top:4px}
+.chk{display:flex;gap:5px;align-items:center;font-size:11.5px}
+/* tables */
+.tbls{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.tbls .card{flex:1 1 440px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:11.5px}
+th,td{border-bottom:1px solid #eee6e6;padding:4px 6px;text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--dim);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;background:#faf7f7;position:sticky;top:0}
+td.n{font-family:var(--mono);text-align:right;white-space:nowrap}
+.ok{color:var(--green)} .bad{color:var(--red)} .warn{color:var(--amber)} .na{color:var(--faint)}
+.badge{font:600 10.5px var(--mono);padding:2px 6px;border-radius:3px;border:1px solid}
+.badge.ok{border-color:#9fd3b4} .badge.bad{border-color:#f0a6b0} .badge.warn{border-color:#e2c48a}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:3px 10px;font-size:11.5px}
+.kv div:nth-child(odd){color:var(--dim)}
+.kv .mono{word-break:break-all}
+ul.notes{margin:6px 0 0;padding-left:18px;font-size:11.5px}
+ul.notes li{margin:2px 0}
+.caveat{border-left:3px solid var(--amber);padding:6px 10px;background:#fff7e6;margin-top:8px;font-size:11.5px}
+/* static */
+#staticWrap .row .card{flex:1 1 380px}
+#staticWrap canvas{width:100%;display:block;border-radius:3px}
+.hide{display:none!important}
+#tip{position:fixed;pointer-events:none;z-index:9;background:#ffffff;border:1px solid var(--line2);padding:6px 8px;border-radius:4px;font-size:11px;max-width:380px;display:none}
+footer{margin-top:12px;font-size:10.5px;color:var(--faint)}
+</style>
+</head>
+<body>
+<script>/*__LAB_PAYLOAD__*/</script>
+
+<header>
+  <h1>IGBT Virtual Test Bench<small>Simscape double-pulse fixture · replay of solver-resolution simulation records</small></h1>
+  <div class="chips" id="chips"></div>
+  <div class="dsel"><span class="dim" style="font-size:10.5px;letter-spacing:.1em">DATASET</span><select id="dsSel"></select></div>
+</header>
+
+<div id="dynWrap">
+<div class="row">
+  <div class="card" id="schemCard">
+    <h2>Fixture schematic <span class="tag" id="schemTag"></span></h2>
+    <svg id="schem" viewBox="0 0 900 490" role="img" aria-label="Test fixture schematic"></svg>
+  </div>
+  <div class="card" id="rackCard">
+    <h2>Instrument rack <span class="tag">values at cursor · linear interpolation of full-resolution record</span></h2>
+    <div class="lamps" id="lamps"></div>
+    <div class="meters" id="meters"></div>
+    <div class="rackfoot" id="rackfoot"></div>
+  </div>
+</div>
+
+<div id="transport">
+  <button class="btn pri" id="bPlay" title="Space">▶ PLAY</button>
+  <button class="btn" id="bReset" title="Return to t = 0">⟲ RESET</button>
+  <button class="btn" id="bBack" title="← previous solver sample (Shift: 1/100 of view)">◀ step</button>
+  <button class="btn" id="bFwd" title="→ next solver sample (Shift: 1/100 of view)">step ▶</button>
+  <input type="range" id="slider" min="0" max="100000" value="0" aria-label="Timeline">
+  <div class="grp"><label>Mode</label><select id="mode">
+    <option value="adaptive">Adaptive slow-motion</option><option value="const">Constant rate</option></select></div>
+  <div class="grp"><label id="rateLbl">Base rate</label><select id="rate">
+    <option value="0.1">0.1 µs/s</option><option value="1">1 µs/s</option><option value="10">10 µs/s</option>
+    <option value="100" selected>100 µs/s</option><option value="1000">1000 µs/s</option></select></div>
+  <div class="grp"><label>Speed</label><select id="speed">
+    <option value="0.25">×0.25</option><option value="0.5">×0.5</option><option value="1" selected>×1</option>
+    <option value="2">×2</option><option value="4">×4</option></select></div>
+  <div class="grp" id="evBtns"></div>
+  <div class="clock sim" id="clkSim"><small>SIM t</small>0.0000 µs</div>
+  <div class="clock" id="clkWall"><small>WALL</small>0.0 s</div>
+  <div class="clock" id="clkSlow"><small>SLOW-MO</small>—</div>
+</div>
+
+<div class="card" id="scopeCard">
+  <h2>Oscilloscope <span class="tag">per-pixel min/max envelope of every solver sample · shared timebase and cursor</span></h2>
+  <div class="scopebar">
+    <div class="grp"><label>View</label>
+      <button class="btn ev act" data-win="full">Full</button><button class="btn ev" data-win="500">500 µs</button>
+      <button class="btn ev" data-win="100">100 µs</button><button class="btn ev" data-win="20">20 µs</button>
+      <button class="btn ev" data-win="5">5 µs</button><button class="btn ev" data-win="1">1 µs</button></div>
+    <label class="chk"><input type="checkbox" id="follow" checked> follow cursor</label>
+    <span class="dim" style="font-size:11px">wheel = zoom · drag = pan · click = seek · double-click = full record</span>
+    <span class="mono dim" id="tdiv" style="margin-left:auto;font-size:11px"></span>
+  </div>
+  <div id="scopes"></div>
+  <canvas id="overview" height="46"></canvas>
+</div>
+
+<div class="tbls">
+  <div class="card"><h2>Event metrics <span class="tag">MATLAB analyze_dynamic.m vs independent Python recomputation from CSV</span></h2>
+    <div class="tw" id="evTable"></div></div>
+  <div class="card"><h2>Validation checks <span class="tag">numerical model checks — NOT hardware acceptance limits</span></h2>
+    <div class="tw" id="valTable"></div></div>
+</div>
+</div>
+
+<div id="staticWrap" class="hide">
+  <div class="row">
+    <div class="card" style="flex:1 1 100%">
+      <h2>Curve tracer — solved DC operating points <span class="tag" id="stTag"></span></h2>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px">
+        <button class="btn" id="sPrev">◀ point</button><button class="btn pri" id="sPlay">▶ STEP</button><button class="btn" id="sNext">point ▶</button>
+        <select id="sCurve" style="background:#ffffff;border:1px solid var(--line2);border-radius:3px;padding:4px"></select>
+        <span class="mono" id="sIdx"></span>
+      </div>
+      <div class="meters" id="sMeters"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card"><h2>Output characteristics I<sub>C</sub>(V<sub>CE</sub>) per gate voltage <span class="tag">voltage fixture, 25 °C</span></h2><canvas id="cOut" height="300"></canvas></div>
+    <div class="card"><h2>V<sub>CE(sat)</sub> vs I<sub>C</sub> <span class="tag">current-clamp fixture, Vge = 15 V</span></h2><canvas id="cSat" height="300"></canvas></div>
+    <div class="card"><h2>Off-state leakage (log) <span class="tag">gate −15 V and 0 V, 25 °C</span></h2><canvas id="cLeak" height="300"></canvas></div>
+  </div>
+  <div class="tbls"><div class="card"><h2>Static validation.json</h2><div class="tw" id="sValTable"></div></div></div>
+</div>
+
+<div class="tbls">
+  <div class="card"><h2>Provenance</h2><div class="kv" id="prov"></div><ul class="notes" id="notes"></ul>
+    <div class="caveat" id="caveat"></div></div>
+  <div class="card"><h2>Excluded datasets <span class="tag">never displayed as valid</span></h2><div class="tw" id="exTable"></div></div>
+</div>
+<footer id="foot"></footer>
+<div id="tip"></div>
+
+<script>
+"use strict";
+(function(){
+const PAY = window.__LAB_PAYLOAD__;
+const $ = s => document.querySelector(s);
+const el = (tag, attrs, parent) => { const e = document.createElement(tag); if (attrs) for (const k in attrs) { if (k === "text") e.textContent = attrs[k]; else if (k === "html") e.innerHTML = attrs[k]; else e.setAttribute(k, attrs[k]); } if (parent) parent.appendChild(e); return e; };
+const SVGNS = "http://www.w3.org/2000/svg";
+const sv = (tag, attrs, parent) => { const e = document.createElementNS(SVGNS, tag); if (attrs) for (const k in attrs) { if (k === "text") e.textContent = attrs[k]; else e.setAttribute(k, attrs[k]); } if (parent) parent.appendChild(e); return e; };
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+if (!PAY || !PAY.datasets || !PAY.datasets.length) {
+  document.body.innerHTML = '<div style="padding:40px;font:14px sans-serif;color:#c77700">No payload injected. Build with virtual_lab/build_standalone.py or virtual_lab.component.render_virtual_lab().</div>';
+  return;
+}
+
+/* ---------------- decoding ---------------- */
+function b64bytes(b64){ const s = atob(b64); const u = new Uint8Array(s.length); for (let i = 0; i < s.length; i++) u[i] = s.charCodeAt(i); return u.buffer; }
+const cache = {};
+function decode(ds){
+  if (cache[ds.meta.id]) return cache[ds.meta.id];
+  const D = { ds, kind: ds.meta.kind, T: null, ch: {}, n: 0 };
+  if (ds.t_b64) {
+    D.T = new Float64Array(b64bytes(ds.t_b64)); D.n = D.T.length;
+    for (const k in ds.channels) D.ch[k] = new Float32Array(b64bytes(ds.channels[k].b64));
+    // DERIVED arrays (from simulated channels only)
+    const P = new Float64Array(D.n), E = new Float64Array(D.n);
+    const vce = D.ch.Vce, ic = D.ch.Ic;
+    for (let i = 0; i < D.n; i++) P[i] = vce[i] * ic[i];
+    for (let i = 1; i < D.n; i++) E[i] = E[i-1] + (D.T[i] - D.T[i-1]) * (P[i] + P[i-1]) / 2;
+    D.P = P; D.E = E;
+    if (ds.derived && ds.derived.VAK) D.VAK = new Float32Array(b64bytes(ds.derived.VAK.b64));
+    D.t0 = D.T[0]; D.t1 = D.T[D.n - 1];
+    let pmin = Infinity, pmax = -Infinity; for (let i = 0; i < D.n; i++) { if (P[i] < pmin) pmin = P[i]; if (P[i] > pmax) pmax = P[i]; }
+    D.Pmin = pmin; D.Pmax = pmax;
+    // normalisation ranges for adaptive playback and flow speeds
+    D.range = {}; for (const k in ds.channels) D.range[k] = Math.max(ds.channels[k].max - ds.channels[k].min, 1e-30);
+    const pk = k => ds.channels[k] ? Math.max(Math.abs(ds.channels[k].max), Math.abs(ds.channels[k].min)) : 0;
+    D.Ipow = Math.max(pk("Ic"), pk("IL"), pk("Id"), pk("Ibus"), 1e-30);
+    D.Igate = Math.max(pk("Ig"), 1e-30);
+  }
+  cache[ds.meta.id] = D; return D;
+}
+
+/* ---------------- interpolation (matches numpy.interp on the same arrays) ---------------- */
+function upper(T, t){ // first index with T[i] > t
+  let lo = 0, hi = T.length; while (lo < hi) { const m = (lo + hi) >> 1; if (T[m] <= t) lo = m + 1; else hi = m; } return lo; }
+function lower(T, t){ // first index with T[i] >= t
+  let lo = 0, hi = T.length; while (lo < hi) { const m = (lo + hi) >> 1; if (T[m] < t) lo = m + 1; else hi = m; } return lo; }
+function interpArr(T, Y, t){
+  const n = T.length; if (t <= T[0]) return Y[0]; if (t >= T[n-1]) return Y[n-1];
+  const j = upper(T, t) - 1; const dt = T[j+1] - T[j];
+  if (dt <= 0) return Y[j+1];
+  return Y[j] + (Y[j+1] - Y[j]) * ((t - T[j]) / dt);
+}
+
+/* ---------------- formatting ---------------- */
+const PFX = {"-15":"f","-12":"p","-9":"n","-6":"µ","-3":"m","0":"","3":"k","6":"M","9":"G"};
+function si(v, unit, sig){
+  sig = sig || 4;
+  if (v == null || !isFinite(v)) return "—";
+  if (v === 0) return "0.000 " + unit;
+  const a = Math.abs(v); let e = Math.floor(Math.log10(a) / 3) * 3; e = Math.max(-15, Math.min(9, e));
+  let m = v / Math.pow(10, e);
+  if (Math.abs(m) >= 999.95 && e < 9) { e += 3; m = v / Math.pow(10, e); }
+  const ip = Math.floor(Math.log10(Math.abs(m))) + 1; const dec = Math.max(0, sig - ip);
+  return m.toFixed(dec) + " " + PFX[String(e)] + unit;
+}
+const us = t => (t * 1e6).toFixed(4) + " µs";
+function sci(v){ if (v == null) return '<span class="na">—</span>'; if (typeof v === "string") return esc(v); if (!isFinite(v)) return '<span class="na">—</span>'; if (v === 0) return "0"; const a = Math.abs(v); return (a >= 1e-3 && a < 1e5) ? (+v.toPrecision(7)).toString() : v.toExponential(5); }
+
+/* ---------------- state ---------------- */
+const S = { D: null, t: 0, u: 0, playing: false, mode: "adaptive", rate: 100, speed: 1,
+            x0: 0, x1: 1, follow: true, wall: 0, last: 0, flowPhase: {}, stIdx: 0, stPlaying: false, stLast: 0 };
+
+/* ---------------- header / selector ---------------- */
+function buildSelector(){
+  const sel = $("#dsSel"); sel.innerHTML = "";
+  for (const ds of PAY.datasets) el("option", { value: ds.meta.id, text: `${ds.meta.label}  [${ds.meta.status}]` }, sel);
+  if (PAY.excluded && PAY.excluded.length) {
+    const og = el("optgroup", { label: "Excluded (not selectable)" }, sel);
+    for (const x of PAY.excluded) el("option", { value: "", disabled: "", text: `${x.id} — ${x.status}: ${x.reason}` }, og);
+  }
+  sel.onchange = () => { if (sel.value) select(sel.value); };
+}
+function chips(ds){
+  const m = ds.meta, c = $("#chips"); c.innerHTML = "";
+  const add = (cls, html, tip) => { const e = el("span", { class: "chip " + cls, html }, c); if (tip) e.title = tip; };
+  add("sim", "<b>SIMULATED</b>", "Data source: MATLAB/Simscape simulation record. Not MEASURED hardware data.");
+  add(m.status === "PASS" ? "pass" : "partial", "MODEL CHECKS <b>" + esc(m.status) + "</b>", "Status from the run's validation JSON");
+  add("inc", "HARDWARE <b>INCONCLUSIVE</b>", "No approved device-specific acceptance limits exist; numerical PASS is not hardware health.");
+  if (String(m.parameter_schema).indexOf("traction") >= 0) add("ds", "DEVICE: CM1500HC-66XB <b>DATASHEET typ</b> · REPRESENTATIVE", "Mitsubishi datasheet HVM-1147-B typical values; representative traction module, NOT a confirmed Wabtec part. Fixture/load values ASSUMED.");
+  else add("assumed", "DEVICE PARAMETERS <b>ASSUMED</b>", m.parameter_provenance || "Illustrative parameters");
+  add("", "RUN " + esc(m.run_folder.split(/[\\/]/).pop()), m.run_folder);
+}
+
+/* ---------------- schematic ---------------- */
+const SUBC = { Supply:"#c77700", LoadBank:"#a335c4", DUT:"#1f8a4c", GateDrive:"#a88400", Measurements:"#0a7ea4" };
+let WIRES = [];   // {path, flow, fn(readings)->I, scale:'pow'|'gate', loops:[]}
+let SCH = {};     // live text nodes
+function buildSchematic(D){
+  const svg = $("#schem"); svg.innerHTML = ""; WIRES = []; SCH = {};
+  const defs = sv("defs", null, svg);
+  const f = sv("filter", { id: "glow", filterUnits: "userSpaceOnUse", x: 0, y: 0, width: 900, height: 490 }, defs);   // bbox units would erase straight wires
+  sv("feGaussianBlur", { stdDeviation: "2.2", result: "b" }, f);
+  const mg = sv("feMerge", null, f); sv("feMergeNode", { in: "b" }, mg); sv("feMergeNode", { in: "SourceGraphic" }, mg);
+  const kind = D.kind, p = D.ds.params;
+  const gW = sv("g", null, svg), gF = sv("g", null, svg), gC = sv("g", null, svg), gL = sv("g", null, svg);
+  const text = (x, y, t, cls, anchor, parent) => sv("text", { x, y, class: cls || "lbl", "text-anchor": anchor || "start", text: t }, parent || gL);
+  function wire(d, key, fn, scale, loops, title, style){
+    // style: undefined = thin schematic wire, "bus" = copper busbar, "cable" = sheathed gate cable
+    const base = style === "bus" ? "bb" : style === "cable" ? "cab" : "w";
+    const w = sv("path", { d, class: base }, gW);
+    if (style === "bus") sv("path", { d, class: "bbh" }, gW);
+    if (style === "cable") sv("path", { d, class: "lead", stroke: "#c23b3b", "stroke-width": 1.4, "stroke-dasharray": "6 4" }, gW);
+    const fl = sv("path", { d, class: style === "bus" ? "flow fb" : "flow" }, gF);
+    const col = key && D.ds.channels[key] ? D.ds.channels[key].color : "#d0021b"; fl.setAttribute("stroke", col);
+    if (title) { const t1 = sv("title", { text: title }, w); }
+    const o = { w, fl, fn, scale, loops: loops || [], key }; if (fn) WIRES.push(o); return o;
+  }
+  const subBox = (x, y, wd, h, name) => { sv("rect", { x, y, width: wd, height: h, rx: 6, class: "sub", stroke: SUBC[name] }, gC); text(x + 6, y + 12, name.toUpperCase(), "subt", "start", gC).setAttribute("fill", SUBC[name]); };
+  const tagc = (x, y, name) => { text(x, y, name, "subt").setAttribute("fill", SUBC[name]); };
+  // component primitives
+  function resistor(x, y, horiz, label, sub){ const g = sv("g", null, gC); let d;
+    if (horiz) { d = `M${x-30} ${y} h8`; for (let i = 0; i < 6; i++) d += ` l4 ${i % 2 ? 7 : -7} l4 ${i % 2 ? -7 : 7}`; d += " h4"; }
+    else { d = `M${x} ${y-30} v8`; for (let i = 0; i < 6; i++) d += ` l${i % 2 ? 7 : -7} 4 l${i % 2 ? -7 : 7} 4`; d += " v4"; }
+    sv("rect", { x: horiz ? x-30 : x-10, y: horiz ? y-10 : y-30, width: horiz ? 60 : 20, height: horiz ? 20 : 60, fill: "#ffffff" }, g);
+    sv("path", { d, class: "cmp", stroke: SUBC[sub] }, g); if (label) text(x, y - 15, label, "lbl", "middle"); return g; }
+  function inductor(x, y, horiz, w, label, sub){ const g = sv("g", null, gC); const n = 4, seg = w / n;
+    sv("rect", { x: horiz ? x - w/2 : x-10, y: horiz ? y-12 : y - w/2, width: horiz ? w : 20, height: horiz ? 14 : w, fill: "#ffffff" }, g);
+    let d = horiz ? `M${x - w/2} ${y}` : `M${x} ${y - w/2}`;
+    for (let i = 0; i < n; i++) d += horiz ? ` a${seg/2} ${seg/2} 0 0 1 ${seg} 0` : ` a${seg/2} ${seg/2} 0 0 1 0 ${seg}`;
+    sv("path", { d, class: "cmp", stroke: SUBC[sub] }, g); if (label) { if (horiz) text(x, y - 17, label, "lbl", "middle"); else text(x + 16, y + 4, label, "lbl"); } return g; }
+  function sensor(x, y, name, key){ const g = sv("g", null, gC);
+    sv("circle", { cx: x, cy: y, r: 11, fill: "#ffffff", stroke: SUBC.Measurements, "stroke-width": 1.5 }, g);
+    sv("text", { x, y: y + 4, "text-anchor": "middle", class: "lblb", text: "A", fill: SUBC.Measurements }, g).setAttribute("style", "fill:" + SUBC.Measurements);
+    sv("title", { text: `${name} current sensor (Measurements subsystem) — positive reference along the arrow` }, g);
+    return g; }
+  function readout(x, y, key, anchor){ const t = text(x, y, "", "val", anchor || "start"); SCH[key] = t; return t; }
+  function source(x, y, label){ const g = sv("g", null, gC);
+    sv("circle", { cx: x, cy: y, r: 22, fill: "#ffffff", stroke: SUBC.Supply, "stroke-width": 1.8 }, g);
+    text(x, y - 6, "+", "lblb", "middle", g); text(x, y + 14, "−", "lblb", "middle", g);
+    text(x + 30, y - 4, label, "lblb", "start"); text(x + 30, y + 10, "ideal DC source", "lbl", "start"); return g; }
+  function diode(x, y){ // horizontal, anode right, cathode left (current flows right -> left)
+    const g = sv("g", null, gC); sv("rect", { x: x - 14, y: y - 12, width: 28, height: 24, fill: "#ffffff" }, g);
+    sv("path", { d: `M${x+12} ${y-10} L${x-8} ${y} L${x+12} ${y+10} Z`, class: "cmp", stroke: SUBC.LoadBank }, g);
+    sv("path", { d: `M${x-9} ${y-11} V${y+11}`, class: "cmp", stroke: SUBC.LoadBank, "stroke-width": 2.4 }, g);
+    sv("title", { text: "FreewheelDiode (LoadBank): anode at switch node SW, cathode at node P" }, g); return g; }
+  function cap(x, y){ const g = sv("g", null, gC); sv("rect", { x: x - 8, y: y - 12, width: 16, height: 24, fill: "#ffffff" }, g);
+    sv("path", { d: `M${x-4} ${y-10} V${y+10} M${x+4} ${y-10} V${y+10}`, class: "cmp", stroke: SUBC.LoadBank, "stroke-width": 2.2 }, g); return g; }
+  function igbt(x, y, label){ const g = sv("g", null, gC);
+    sv("circle", { cx: x - 6, cy: y, r: 26, fill: "#ffffff", stroke: "#2b3a4a" }, g);
+    sv("path", { d: `M${x-35} ${y} H${x-20} M${x-20} ${y-14} V${y+14} M${x-14} ${y-16} V${y+16} M${x-14} ${y-8} L${x} ${y-22} V${y-30} M${x-14} ${y+8} L${x} ${y+22} V${y+30}`, class: "cmp", stroke: SUBC.DUT }, g);
+    sv("path", { d: `M${x-6} ${y+17} L${x} ${y+22} L${x-7} ${y+23} Z`, class: "cmpf", fill: SUBC.DUT }, g);
+    text(x + 26, y - 30, "C", "lbl"); text(x + 26, y + 36, "E", "lbl"); text(x - 44, y - 6, "G", "lbl", "end");
+    text(x + 26, y - 2, label, "lblb"); return g; }
+  function ground(x, y){ sv("path", { d: `M${x} ${y} v6 M${x-10} ${y+6} h20 M${x-6} ${y+10} h12 M${x-2} ${y+14} h4`, class: "cmp", stroke: "#5a4f4f" }, gC); }
+  function vprobe(x, y, name, from, key){ // from: [x,y] node; minus to a local reference symbol
+    sv("path", { d: `M${from[0]} ${from[1]} L${from[0]} ${y} H${x - 11}`, class: "probe" }, gC);
+    sv("circle", { cx: x, cy: y, r: 11, fill: "#ffffff", stroke: SUBC.Measurements, "stroke-width": 1.4 }, gC);
+    text(x, y + 4, "V", "lblb", "middle").setAttribute("style", "fill:" + SUBC.Measurements);
+    sv("path", { d: `M${x} ${y + 11} V${y + 22}`, class: "probe" }, gC); ground(x, y + 22);
+    text(x + 15, y - 2, name, "lblb"); readout(x + 15, y + 11, key);
+  }
+  const node = (x, y, name) => { sv("circle", { cx: x, cy: y, r: 3.6, class: "node" }, gL); if (name) text(x + 6, y - 6, name, "lblb"); };
+  const R = k => r => r[k];
+
+  if (kind === "dynamic_rl" || kind === "dynamic_r") {
+    const hasL = kind === "dynamic_rl";
+    $("#schemTag").textContent = hasL ? "build_rig.m 'dynamic_rl' — low-side double pulse, R-L load, freewheel diode to +bus (physical view)"
+                                      : "build_rig.m 'dynamic_r' — same fixture without LoadL (physical view)";
+    const gradH = sv("linearGradient", { id: "hous", x1: "0", y1: "0", x2: "0", y2: "1" }, defs);
+    sv("stop", { offset: "0", "stop-color": "#4a5562" }, gradH); sv("stop", { offset: "1", "stop-color": "#2b323b" }, gradH);
+    const gradCu = sv("linearGradient", { id: "cu", x1: "0", y1: "0", x2: "0", y2: "1" }, defs);
+    sv("stop", { offset: "0", "stop-color": "#e0a46e" }, gradCu); sv("stop", { offset: "1", "stop-color": "#9a5c2c" }, gradCu);
+    const gradAl = sv("linearGradient", { id: "al", x1: "0", y1: "0", x2: "0", y2: "1" }, defs);
+    sv("stop", { offset: "0", "stop-color": "#c3cad2" }, gradAl); sv("stop", { offset: "1", "stop-color": "#7d8792" }, gradAl);
+    // ---- physical parts
+    const lt = e => { e.setAttribute("style", (e.getAttribute("style") || "") + ";fill:#e8edf2"); return e; };   // text printed on dark device housings
+    const screw = (x, y, r) => { sv("circle", { cx: x, cy: y, r: r || 6, class: "screw" }, gC);
+      sv("path", { d: `M${x - (r||6)*.55} ${y} H${x + (r||6)*.55} M${x} ${y - (r||6)*.55} V${y + (r||6)*.55}`, stroke: "#6b737c", "stroke-width": 1.2 }, gC); };
+    const bolt = (x, y, name) => { sv("polygon", { points: [0,1,2,3,4,5].map(i => `${x + 8*Math.cos(Math.PI/3*i + Math.PI/6)},${y + 8*Math.sin(Math.PI/3*i + Math.PI/6)}`).join(" "), fill: "#c9ced4", stroke: "#6b737c" }, gC);
+      sv("circle", { cx: x, cy: y, r: 3, fill: "#8a929b" }, gC); if (name) text(x + 10, y - 10, name, "lblb"); };
+    const ring = (x, y, vertical, r, name) => { const g = sv("g", null, gC);   // clamp-on current transducer around a conductor
+      sv("ellipse", { cx: x, cy: y, rx: vertical ? (r||14) : (r||14) * .45, ry: vertical ? (r||14) * .45 : (r||14), fill: "none", stroke: "#ffffff", "stroke-width": 8 }, g);
+      sv("ellipse", { cx: x, cy: y, rx: vertical ? (r||14) : (r||14) * .45, ry: vertical ? (r||14) * .45 : (r||14), fill: "none", stroke: SUBC.Measurements, "stroke-width": 4 }, g);
+      sv("title", { text: `${name}: current transducer around the conductor — positive reference along the flow arrow` }, g); return g; };
+    function supplyUnit(x, y){ const g = sv("g", null, gC);
+      sv("rect", { x, y, width: 116, height: 150, rx: 5, fill: "url(#hous)", stroke: "#5d6874" }, g);
+      sv("rect", { x: x + 10, y: y + 12, width: 96, height: 30, rx: 2, fill: "#06120b", stroke: "#1c3a26" }, g);
+      sv("text", { x: x + 58, y: y + 33, "text-anchor": "middle", class: "val", text: si(p.bus_V, "V", 4) }, g).setAttribute("style", "fill:#57f29a;font-size:14px");
+      lt(text(x + 58, y + 58, "HV DC SUPPLY", "lblb", "middle", g)); lt(text(x + 58, y + 72, "ideal source in model", "lbl", "middle", g));
+      for (const [ty, col, s] of [[26, "#d23a3a", "+"], [120, "#20262e", "−"]]) {
+        sv("circle", { cx: x + 116, cy: y + ty, r: 9, fill: col, stroke: "#9aa4ae" }, g); lt(text(x + 102, y + ty + 4, s, "lblb", "end", g)); }
+      for (let i = 0; i < 5; i++) sv("rect", { x: x + 14 + i * 19, y: y + 88, width: 12, height: 44, rx: 2, fill: "#20262e" }, g);   // vents
+      return g; }
+    function powerResistor(x, y, label){ const g = sv("g", null, gC);
+      sv("rect", { x: x - 34, y: y - 15, width: 68, height: 30, rx: 3, fill: "url(#al)", stroke: "#5d6874" }, g);
+      for (let i = -3; i <= 3; i++) sv("path", { d: `M${x + i * 8} ${y - 15} V${y + 15}`, stroke: "#6c7680", "stroke-width": 1.2 }, g);
+      screw(x - 30, y, 4); screw(x + 30, y, 4); text(x, y + 30, label, "lbl", "middle"); return g; }
+    function aircoil(x, y, len, label){ const g = sv("g", null, gC); const n = 9;
+      sv("rect", { x: x - len/2, y: y - 4, width: len, height: 8, fill: "#3a2e24" }, g);
+      for (let i = 0; i < n; i++) { const cx = x - len/2 + 5 + i * (len - 10) / (n - 1);
+        sv("ellipse", { cx, cy: y, rx: 4.2, ry: 15, fill: "none", stroke: "url(#cu)", "stroke-width": 3.4 }, g); }
+      text(x, y + 30, label, "lbl", "middle"); return g; }
+    function diodeModule(x, y){ const g = sv("g", null, gC);
+      sv("rect", { x: x - 44, y: y - 17, width: 88, height: 34, rx: 4, fill: "url(#hous)", stroke: "#5d6874" }, g);
+      sv("rect", { x: x - 40, y: y - 10, width: 14, height: 20, fill: "url(#cu)" }, g); sv("rect", { x: x + 26, y: y - 10, width: 14, height: 20, fill: "url(#cu)" }, g);
+      screw(x - 33, y, 5); screw(x + 33, y, 5);
+      sv("path", { d: `M${x + 9} ${y - 7} L${x - 5} ${y} L${x + 9} ${y + 7} Z M${x - 6} ${y - 8} V${y + 8}`, fill: "#3a3030", stroke: "#3a3030", "stroke-width": 1.4 }, g);
+      text(x - 33, y - 21, "K", "lbl", "middle"); text(x + 33, y - 21, "A", "lbl", "middle");
+      sv("title", { text: "FreewheelDiode (LoadBank): anode at switch node SW, cathode at node P" }, g); return g; }
+    function filmCap(x, y){ const g = sv("g", null, gC);
+      sv("rect", { x: x - 16, y: y - 9, width: 32, height: 18, rx: 4, fill: "#d9b23a", stroke: "#8a6f1c" }, g);
+      text(x, y + 3.5, "C", "lblb", "middle", g).setAttribute("style", "fill:#3b2f0a;font-size:10px"); return g; }
+    function igbtModule(cx, cy){ const g = sv("g", null, gC);
+      sv("rect", { x: cx - 92, y: cy - 86, width: 184, height: 172, rx: 6, fill: "#7c858f", stroke: "#a3abb3" }, g);          // base plate
+      for (const [dx, dy] of [[-82, -76], [82, -76], [-82, 76], [82, 76]]) sv("circle", { cx: cx + dx, cy: cy + dy, r: 5.5, fill: "#ffffff", stroke: "#4b545e" }, g);
+      sv("rect", { x: cx - 74, y: cy - 78, width: 148, height: 156, rx: 9, fill: "url(#hous)", stroke: "#66717d", "stroke-width": 1.4 }, g);   // housing
+      for (const yy of [cy - 61, cy + 61]) { sv("rect", { x: cx - 22, y: yy - 13, width: 44, height: 26, rx: 3, fill: "url(#cu)", stroke: "#7a4a24" }, g); screw(cx, yy, 7); }
+      lt(text(cx + 28, cy - 57, "C", "lblb")); lt(text(cx + 28, cy + 66, "E", "lblb"));
+      for (const [yy, n] of [[cy - 22, "G"], [cy + 2, "Es"]]) { sv("rect", { x: cx - 78, y: yy - 4, width: 10, height: 8, rx: 1, fill: "#d8b54a", stroke: "#7d6420" }, g);
+        lt(text(cx - 64, yy + 4, n, "lbl")); }
+      sv("rect", { x: cx - 44, y: cy - 30, width: 98, height: 56, rx: 3, fill: "#161c23", stroke: "#3c4652" }, g);       // nameplate
+      lt(text(cx + 5, cy - 15, "CM1500HC-66XB", "lblb", "middle", g)); lt(text(cx + 5, cy - 2, "3.3 kV · 1.5 kA · DUT", "lbl", "middle", g));
+      SCH.igbtState = lt(sv("text", { x: cx + 5, y: cy + 16, "text-anchor": "middle", class: "val", text: "" }, g));
+      sv("title", { text: "N-Channel IGBT (DUT subsystem), representative CM1500HC-66XB; main terminals C and E, auxiliary G and Es (Kelvin emitter)" }, g);
+      return g; }
+    function driverBoard(x, y){ const g = sv("g", null, gC);
+      sv("rect", { x, y, width: 122, height: 86, rx: 4, fill: "#0e3a26", stroke: "#2f7a52" }, g);
+      for (let i = 0; i < 5; i++) sv("path", { d: `M${x + 8} ${y + 54 + i * 5} H${x + 52}`, stroke: "#2b6a47", "stroke-width": 1 }, g);
+      sv("rect", { x: x + 58, y: y + 46, width: 28, height: 24, rx: 2, fill: "#0b0f12" }, g);
+      sv("rect", { x: x + 110, y: y + 24, width: 12, height: 40, rx: 2, fill: "#1b1f24", stroke: "#4b545e" }, g);
+      lt(text(x + 6, y + 15, "GATE DRIVER", "lblb", "start", g));
+      lt(text(x + 6, y + 29, `${p.gateOn_V > 0 ? "+" : ""}${p.gateOn_V} / ${p.gateOff_V} V`, "lbl", "start", g));
+      text(x + 6, y + 41, `R_on ${si(p.RdriverOn_Ohm, "Ω", 3)} · R_off ${si(p.RdriverOff_Ohm, "Ω", 3)}`, "lbl", "start", g).setAttribute("style", "font-size:9px;fill:#e8edf2");
+      return g; }
+    function diffProbe(x, y, name, key, plusD, minusD){
+      if (plusD) sv("path", { d: plusD, class: "lead", stroke: "#e04848" }, gC);
+      if (minusD) sv("path", { d: minusD, class: "lead", stroke: "#9aa4ae" }, gC);
+      sv("rect", { x: x - 32, y: y - 11, width: 64, height: 22, rx: 5, fill: "#11161c", stroke: SUBC.Measurements, "stroke-width": 1.3 }, gC);
+      text(x, y + 4, name, "lblb", "middle").setAttribute("style", "fill:" + SUBC.Measurements);
+      readout(x, y + 26, key, "middle");
+      sv("title", { text: `${name}: differential voltage probe (Measurements subsystem); red = +, grey = −` }, gC); }
+
+    // ---- conductors (path direction = positive sensor reference)
+    wire("M140 212 H200 V110 H260", "Ibus", R("Ibus"), "pow", ["on"], "Bus(+) → IbusSensor → node P   (Ibus)", "bus");
+    wire("M260 110 H620", "IL", R("IL"), "pow", ["on", "fw"], "P → ILSensor → LoadR" + (hasL ? " → LoadL" : "") + " → SW   (IL)", "bus");
+    wire("M620 110 V45 H260 V110", "Id", R("Id"), "pow", ["fw"], "SW → IdSensor → diode anode … cathode → P   (Id, includes DiodeC displacement)", "bus");
+    wire("M512 45 V16 H428 V45", null, null, null, [], "DiodeC in parallel with the diode (its current is inside Id)");
+    wire("M620 110 V279", "Ic", R("Ic"), "pow", ["on"], "SW → CommutationL (busbar loop) → IcSensor → collector terminal   (Ic)", "bus");
+    wire("M620 401 V455", "Ic", r => r.Ic + r.Ig, "pow", ["on"], "Emitter terminal → reference node   (Ie = Ic + Ig)", "bus");
+    wire("M620 455 H170 V306 H140", "Ibus", R("Ibus"), "pow", ["on"], "Reference node → bus(−) return   (Ibus)", "bus");
+    wire("M422 318 H542", "Ig", R("Ig"), "gate", [], "Driver out → gate cable → IgSensor → G terminal   (Ig)", "cable");
+    wire("M542 342 H422", "Ig", R("Ig"), "gate", [], "Es (Kelvin emitter) → gate cable → driver reference   (Ig return)", "cable");
+
+    // ---- parts
+    supplyUnit(24, 186); text(82, 352, "SUPPLY", "subt", "middle").setAttribute("fill", SUBC.Supply);
+    ring(230, 110, false, 14, "IbusSensor"); text(230, 88, "Ibus", "lbl", "middle"); readout(230, 140, "Ibus", "middle");
+    bolt(260, 110, "P");
+    ring(300, 110, false, 14, "ILSensor"); text(300, 88, "IL", "lbl", "middle"); readout(300, 140, "IL", "middle");
+    if (hasL) { powerResistor(390, 110, "LoadR " + si(p.loadR_Ohm, "Ω", 3)); aircoil(510, 110, 92, "LoadL " + si(p.loadL_H, "H", 3)); }
+    else powerResistor(450, 110, "LoadR " + si(p.loadR_Ohm, "Ω", 3));
+    text(450, 160, "LOADBANK", "subt", "middle").setAttribute("fill", SUBC.LoadBank);
+    bolt(620, 110, "SW");
+    ring(590, 45, false, 13, "IdSensor"); text(590, 24, "Id", "lbl", "middle"); readout(590, 76, "Id", "middle");
+    diodeModule(470, 45); text(470, 80, "Freewheel diode", "lbl", "middle"); readout(470, 94, "VAK", "middle");
+    filmCap(470, 16); text(420, 12, "DiodeC " + si(p.diodeC_F, "F", 3), "lbl", "end");
+    text(632, 162, "busbar loop", "lbl"); text(632, 175, "Ls " + si(p.strayL_H, "H", 3), "lbl");
+    ring(620, 222, true, 15, "IcSensor"); text(642, 218, "Ic", "lbl"); readout(642, 232, "Ic");
+    igbtModule(620, 340); text(530, 436, "DUT", "subt", "middle").setAttribute("fill", SUBC.DUT);
+    bolt(620, 455, ""); ground(650, 455); text(662, 470, "reference", "lbl"); readout(632, 438, "Ie");
+    driverBoard(300, 286); text(361, 386, "GATEDRIVE", "subt", "middle").setAttribute("fill", SUBC.GateDrive);
+    const cmdg = sv("g", null, gC); sv("rect", { x: 196, y: 300, width: 80, height: 30, rx: 3, fill: "#ffffff", stroke: SUBC.GateDrive, "stroke-dasharray": "3 2" }, cmdg);
+    text(236, 313, "CMD", "lblb", "middle"); text(236, 325, "model INPUT", "lbl", "middle");
+    sv("path", { d: "M276 315 H300", stroke: "#5a4f4f", "stroke-width": 1.4, fill: "none" }, gC);
+    SCH.cmd = text(236, 346, "", "val", "middle");
+    ring(486, 318, false, 9, "IgSensor"); text(486, 300, "Ig", "lbl", "middle"); readout(486, 364, "Ig", "middle");
+    // probes
+    diffProbe(472, 418, "Vge", "Vge", "M462 407 V392 H530 V321", "M482 407 V398 H536 V345");
+    diffProbe(800, 300, "Vce", "Vce", "M768 296 H690 V279 H634", "M768 304 H690 V401 H634");
+    diffProbe(800, 150, "Vswitch", "Vswitch", "M768 146 H650 V110 H632", null);
+    sv("path", { d: "M800 161 V176", class: "lead", stroke: "#9aa4ae" }, gC); ground(800, 176);
+    // legend
+    let lx = 735, ly = 392; text(lx, ly, "SUBSYSTEMS", "subt").setAttribute("fill", "#6b5f5f");
+    Object.keys(SUBC).forEach((k, i) => { sv("rect", { x: lx, y: ly + 7 + i * 14, width: 9, height: 9, fill: SUBC[k] }, gL); text(lx + 14, ly + 15 + i * 14, k, "lbl"); });
+  } else if (kind === "baseline") {
+    $("#schemTag").textContent = "build_baseline.m — source → 100 Ω → Ic sensor → ideal IGBT → source(−), driver direct to gate, no diode";
+    wire("M80 237 V120 H620 V280", "Ic", R("Ic"), "pow", ["on"], "Supply(+) → 100 Ω → Collector_Current sensor → collector   (Ic, series loop)");
+    wire("M620 340 V462 H80 V283", "Ic", R("Ic"), "pow", ["on"], "Emitter → supply(−) / reference   (same series current; Ig not logged)");
+    wire("M400 310 H585", null, null, null, [], "Driver output → gate (no gate resistor; Ig not logged in this model)");
+    wire("M360 363 V430 H620", null, null, null, [], "Driver reference → emitter");
+    subBox(36, 205, 160, 110, "Supply"); subBox(548, 262, 120, 98, "DUT"); subBox(180, 270, 240, 108, "GateDrive");
+    source(80, 260, "Supply 12 V");
+    resistor(350, 120, true, "Load 100 Ω (illustrative)", "LoadBank");
+    sensor(620, 200, "Collector_Current"); text(600, 204, "Ic", "lbl", "end"); readout(636, 212, "Ic");
+    igbt(620, 310, "IGBT (Ideal, Switching)");
+    node(620, 430, ""); ground(620, 466 - 4);
+    const gd = sv("g", null, gC); sv("rect", { x: 300, y: 285, width: 100, height: 78, rx: 4, fill: "#ffffff", stroke: SUBC.GateDrive, "stroke-width": 1.5 }, gd);
+    text(350, 308, "Gate Driver", "lblb", "middle"); text(350, 326, "+15 / −15 V", "lbl", "middle"); text(350, 342, "library defaults", "lbl", "middle");
+    const cmdg = sv("g", null, gC); sv("rect", { x: 196, y: 296, width: 80, height: 30, rx: 3, fill: "#ffffff", stroke: SUBC.GateDrive, "stroke-dasharray": "3 2" }, cmdg);
+    text(236, 309, "CMD", "lblb", "middle"); text(236, 321, "500 Hz pulse", "lbl", "middle"); SCH.cmd = text(236, 342, "", "val", "middle");
+    sv("path", { d: "M276 311 H300", stroke: "#5a4f4f", "stroke-width": 1.4, fill: "none" }, gC);
+    vprobe(555, 400, "Vge", [565, 310], "Vge");
+    vprobe(735, 300, "Vce", [620, 270], "Vce");
+    text(700, 110, "No freewheel diode, no inductance,", "lbl"); text(700, 124, "no gate capacitance (ideal switch)", "lbl");
+  }
+}
+function updateSchematic(r, st, dtWall){
+  const D = S.D, th = D.ds.thresholds;
+  const thrP = th.conduct_A, thrG = 0.01 * D.Igate;
+  const loopOn = st.igbtOn, loopFw = st.diodeOn;
+  for (const w of WIRES) {
+    const I = w.fn(r); const thr = w.scale === "gate" ? thrG : thrP; const ref = w.scale === "gate" ? D.Igate : D.Ipow;
+    const vis = Math.abs(I) > thr;
+    w.fl.classList.toggle("vis", vis);
+    const id = w.fl; const ph = (S.flowPhase[w.key + w.w.getAttribute("d")] || 0) - Math.sign(I) * 150 * Math.abs(I) / ref * dtWall;
+    S.flowPhase[w.key + w.w.getAttribute("d")] = ph % 1400;
+    if (vis) id.setAttribute("stroke-dashoffset", ph.toFixed(2));
+    const active = (w.loops.indexOf("on") >= 0 && loopOn && vis) || (w.loops.indexOf("fw") >= 0 && loopFw && vis);
+    w.w.classList.toggle("loop", active); w.w.classList.toggle("on", vis && !active);
+  }
+  const set = (k, v, u) => { if (SCH[k]) SCH[k].textContent = v == null ? "" : si(v, u); };
+  set("Ibus", r.Ibus, "A"); set("IL", r.IL, "A"); set("Id", r.Id, "A"); set("Ic", r.Ic, "A"); set("Ig", r.Ig, "A");
+  if (SCH.Ie) SCH.Ie.textContent = r.Ig != null ? "Ie " + si(r.Ic + r.Ig, "A") : "";
+  set("Vge", r.Vge, "V"); set("Vce", r.Vce, "V"); set("Vswitch", r.Vswitch, "V");
+  if (SCH.VAK) SCH.VAK.textContent = r.VAK != null ? "V_AK " + si(r.VAK, "V") : "";
+  if (SCH.cmd) SCH.cmd.textContent = "CMD = " + st.cmd;
+  if (SCH.igbtState) SCH.igbtState.textContent = st.igbt;
+}
+
+/* ---------------- readings + states ---------------- */
+function readings(t){
+  const D = S.D, r = { t };
+  for (const k in D.ch) r[k] = interpArr(D.T, D.ch[k], t);
+  r.P = interpArr(D.T, D.P, t); r.E = interpArr(D.T, D.E, t);
+  r.Pcursor = r.Vce * r.Ic;
+  if (D.VAK) r.VAK = interpArr(D.T, D.VAK, t); else if (r.Vswitch != null) r.VAK = r.Vswitch - D.ds.params.bus_V;
+  if (r.IL != null) r.KCL = r.IL - r.Ic - r.Id;
+  return r;
+}
+function cmdAt(t){ const E = S.D.ds.edges; let n = 0; for (const e of E) if (t >= e.t) n++; return n % 2 === 1 ? "ON" : "OFF"; }
+function states(r){
+  const th = S.D.ds.thresholds, thr = th.conduct_A, bus = th.bus_V;
+  const s = { cmd: cmdAt(r.t) };
+  s.gate = r.Vge >= th.Vth_V ? "ON-BIAS" : (r.Vge > 0 ? "CHARGING" : "OFF-BIAS");
+  if (r.Ic < -thr) s.igbt = "NEGATIVE Ic";
+  else if (r.Ic <= thr) s.igbt = "BLOCKING";
+  else if (r.Vce < th.vce_sat_frac * bus) s.igbt = "CONDUCTING-SAT";
+  else if (S.D.kind !== "baseline" && r.Vge < th.Vth_V) s.igbt = "TAIL CURRENT";
+  else s.igbt = "SWITCHING";
+  if (r.Id == null) s.diode = "N/A (no diode)";
+  else if (r.Id > thr) s.diode = "FREEWHEELING";
+  else if (r.Id < -thr) s.diode = "NEGATIVE Id";
+  else s.diode = "BLOCKING";
+  s.igbtOn = r.Ic > thr; s.diodeOn = r.Id != null && r.Id > thr;
+  return s;
+}
+
+/* ---------------- rack ---------------- */
+const METERS = [
+  ["Vge", "V", "gate-emitter"], ["Vce", "V", "collector-emitter"], ["Vswitch", "V", "switch node SW"], ["Ic", "A", "collector"],
+  ["IL", "A", "load branch"], ["Id", "A", "freewheel branch"], ["Ig", "A", "gate"], ["Ibus", "A", "bus source"],
+  ["P", "W", "Vce·Ic", true], ["E", "J", "∫Vce·Ic dt from 0", true], ["VAK", "V", "Vsw − Vbus (diode A-K)", true], ["KCL", "A", "IL − Ic − Id", true]];
+let MEL = {};
+function buildRack(D){
+  const m = $("#meters"); m.innerHTML = ""; MEL = {};
+  for (const [k, u, d, der] of METERS) {
+    const has = der ? (k === "P" || k === "E" || (k === "VAK" && D.ch.Vswitch) || (k === "KCL" && D.ch.IL)) : !!D.ch[k];
+    const c = D.ds.channels && D.ds.channels[k] ? D.ds.channels[k].color : "#7a4fd0";
+    const box = el("div", { class: "dmm" + (der ? " der" : "") + (has ? "" : " na") }, m);
+    const n = el("div", { class: "mn" }, box); el("span", { text: k === "E" ? "E_C" : k, style: "color:" + c }, n);
+    MEL[k] = el("div", { class: "mv", text: has ? "" : "not logged" }, box);
+    el("div", { class: "md", text: der ? d + " (from simulated channels)" : (D.ds.channels[k] ? D.ds.channels[k].desc : d) }, box);
+    box.title = der ? `DERIVED from simulated channels: ${d}` : (D.ds.channels[k] ? `SIMULATED · ${D.ds.channels[k].desc}` : "Not logged in this model");
+    MEL[k].dataset.has = has ? "1" : "";
+  }
+  const L = $("#lamps"); L.innerHTML = "";
+  const rules = D.ds.thresholds.rules;
+  for (const [k, n, tip] of [["gate", "GATE", rules.gate], ["igbt", "IGBT", rules.igbt], ["diode", "DIODE", rules.diode],
+                              ["cmd", "CMD", "Logic command reconstructed from the run's pulse edges (" + D.ds.meta.edges_source + "). This is the model INPUT, before driver delay."]]) {
+    const b = el("div", { class: "lamp o", id: "lamp_" + k }, L); el("i", null, b); el("span", { class: "ln", text: n }, b); el("span", { class: "ls", text: "—" }, b);
+    b.title = tip + "\nThreshold: " + rules.conduct_A;
+  }
+  $("#rackfoot").textContent = "Lamp rules use thresholds from the payload; hover a lamp for the rule. Threshold " + rules.conduct_A + ".";
+}
+const LAMPC = { "ON-BIAS": "g", "CHARGING": "a", "OFF-BIAS": "b", "CONDUCTING-SAT": "g", "TAIL CURRENT": "a", "SWITCHING": "a", "NEGATIVE Ic": "r",
+                "BLOCKING": "o", "FREEWHEELING": "g", "NEGATIVE Id": "r", "ON": "g", "OFF": "o" };
+function updateRack(r, s){
+  for (const [k, u] of METERS) if (MEL[k] && MEL[k].dataset.has) MEL[k].textContent = si(r[k === "P" ? "Pcursor" : k], u);
+  for (const k of ["gate", "igbt", "diode", "cmd"]) { const b = $("#lamp_" + k); if (!b) continue; b.className = "lamp " + (LAMPC[s[k]] || "o"); b.querySelector(".ls").textContent = s[k]; }
+}
+
+/* ---------------- scopes ---------------- */
+let SCOPES = [];
+const ML = 70, MR = 70;
+function scopeDefs(D){
+  const c = D.ds.channels, bus = D.ds.params.bus_V;
+  const tr = (k, dash) => ({ key: k, arr: D.ch[k], color: c[k].color, unit: c[k].unit, label: c[k].label, dash, min: c[k].min, max: c[k].max });
+  const P = { key: "P", arr: D.P, color: "#7a4fd0", unit: "W", label: "Vce·Ic (DERIVED)", min: D.Pmin, max: D.Pmax };
+  if (D.kind === "baseline") return [
+    { title: "CH1 gate", traces: [tr("Vge")] },
+    { title: "CH2 collector voltage", traces: [tr("Vce")], ref: { v: 12, label: "Vbus 12 V" } },
+    { title: "CH3 current", traces: [tr("Ic")] },
+    { title: "CH4 collector power", traces: [P] }];
+  return [
+    { title: "CH1 gate: Vge + Ig", ch: "CH1", name: "Gate drive", traces: [tr("Vge"), tr("Ig")] },
+    { title: "CH2 voltage: Vce, Vswitch (dashed)", ch: "CH2", name: "Collector and switch-node voltage", traces: [tr("Vce"), tr("Vswitch", true)], ref: { v: bus, label: "Vbus " + si(bus, "V", 4) } },
+    { title: "CH3 current: Ic, IL, Id", ch: "CH3", name: "Collector, load and diode current", traces: [tr("Ic"), tr("IL"), tr("Id")] },
+    { title: "CH4 collector terminal power Vce·Ic", ch: "CH4", name: "Collector power", traces: [P] }];
+}
+function nice(x){ const e = Math.pow(10, Math.floor(Math.log10(x))); const m = x / e; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 5 ? 5 : 10) * e; }
+function buildScopes(D){
+  const host = $("#scopes"); host.innerHTML = ""; SCOPES = [];
+  for (const def of scopeDefs(D)) {
+    const wrap = el("div", { class: "scope" }, host);
+    const [chTxt, nmTxt] = def.ch ? [def.ch, def.name] : def.title.split(/\s(.+)/);   // baseline defs keep "CHn text"
+    const hd = el("h3", null, wrap); el("span", { class: "ch", text: chTxt }, hd); el("span", { class: "nm", text: nmTxt }, hd);
+    for (const t of def.traces) { const lg = el("span", { class: "lg" }, hd); const sw = el("i", t.dash ? { class: "dash" } : null, lg);
+      sw.style.background = t.color; sw.style.color = t.color; lg.append(`${t.label}${t.unit ? " [" + t.unit + "]" : ""}`); }
+    const cv = el("canvas", { height: 230 }, wrap);
+    // one scale per unit inside the scope (channels of the same unit share V/div)
+    const units = {};
+    for (const t of def.traces) { const u = units[t.unit] || (units[t.unit] = { min: Infinity, max: -Infinity }); u.min = Math.min(u.min, t.min); u.max = Math.max(u.max, t.max); }
+    if (def.ref) { const u = units.V; u.min = Math.min(u.min, def.ref.v); u.max = Math.max(u.max, def.ref.v); }
+    for (const k in units) { const u = units[k]; let span = u.max - u.min; if (!(span > 0)) span = Math.max(Math.abs(u.max), 1e-12);
+      u.div = nice(span * 1.08 / 8); const mid = (u.max + u.min) / 2; u.center = Math.round(mid / u.div) * u.div;
+      while (u.center + 4 * u.div < u.max || u.center - 4 * u.div > u.min) u.div = nice(u.div * 1.01); }
+    const sc = { def, cv, units, base: null, baseKey: "" };
+    attachScopeMouse(sc); SCOPES.push(sc);
+  }
+}
+function sizeCanvas(cv){ const dpr = window.devicePixelRatio || 1; const w = cv.clientWidth, h = cv.clientHeight || +cv.getAttribute("height");
+  if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
+  return { w, h, dpr }; }
+function drawScopeBase(sc){
+  const D = S.D, cv = sc.cv; const { w, h, dpr } = sizeCanvas(cv);
+  const key = [w, h, dpr, S.x0, S.x1].join("|"); if (sc.baseKey === key && sc.base) return; sc.baseKey = key;
+  const off = sc.base && sc.base.width === cv.width && sc.base.height === cv.height ? sc.base : document.createElement("canvas");
+  off.width = cv.width; off.height = cv.height; const g = off.getContext("2d"); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.fillStyle = "#ffffff"; g.fillRect(0, 0, w, h);
+  const pw = w - ML - MR, ph = h - 18, top = 4; sc.geom = { pw, ph, top, w, h };
+  // grid 10 x 8
+  g.strokeStyle = "#efe8e8"; g.lineWidth = 1; g.beginPath();
+  for (let i = 0; i <= 10; i++) { const x = ML + Math.round(i * pw / 10) + .5; g.moveTo(x, top); g.lineTo(x, top + ph); }
+  for (let j = 0; j <= 8; j++) { const y = top + Math.round(j * ph / 8) + .5; g.moveTo(ML, y); g.lineTo(ML + pw, y); }
+  g.stroke(); g.strokeStyle = "#d9cfcf"; g.beginPath(); g.moveTo(ML + pw / 2 + .5, top); g.lineTo(ML + pw / 2 + .5, top + ph); g.moveTo(ML, top + ph / 2 + .5); g.lineTo(ML + pw, top + ph / 2 + .5); g.stroke();
+  const ymap = u => v => top + ph / 2 - (v - u.center) / u.div * (ph / 8);
+  // event markers
+  g.font = "10px " + getComputedStyle(document.body).getPropertyValue("--mono"); g.setLineDash([3, 4]);
+  for (const e of D.ds.edges) { if (e.t < S.x0 || e.t > S.x1) continue; const x = ML + (e.t - S.x0) / (S.x1 - S.x0) * pw;
+    g.strokeStyle = e.on ? "#1f7a45" : "#d0021b"; g.beginPath(); g.moveTo(x + .5, top); g.lineTo(x + .5, top + ph); g.stroke();
+    g.fillStyle = e.on ? "#1f7a45" : "#d0021b"; g.fillText(e.name, x + 3, top + 10); }
+  g.setLineDash([]);
+  if (sc.def.ref) { const y = ymap(sc.units.V)(sc.def.ref.v); g.strokeStyle = "#c77700"; g.globalAlpha = .55; g.setLineDash([6, 3]); g.beginPath(); g.moveTo(ML, y); g.lineTo(ML + pw, y); g.stroke(); g.setLineDash([]); g.globalAlpha = 1;
+    g.fillStyle = "#c77700"; g.fillText(sc.def.ref.label, ML + 4, y - 3); }
+  // traces: per-pixel min/max envelope over ALL samples in each column
+  g.save(); g.beginPath(); g.rect(ML, top, pw, ph); g.clip();
+  const T = D.T, span = S.x1 - S.x0;
+  for (const tr of sc.def.traces) {
+    const Y = tr.arr, ym = ymap(sc.units[tr.unit]);
+    g.strokeStyle = tr.color; g.lineWidth = 1.3; if (tr.dash) g.setLineDash([5, 3]); g.beginPath();
+    let first = true;
+    for (let px = 0; px < pw; px++) {
+      const ta = S.x0 + px / pw * span, tb = S.x0 + (px + 1) / pw * span;
+      const va = interpArr(T, Y, ta), vb = interpArr(T, Y, tb);
+      let mn = Math.min(va, vb), mx = Math.max(va, vb);
+      const i0 = lower(T, ta), i1 = upper(T, tb);
+      for (let i = i0; i < i1; i++) { const v = Y[i]; if (v < mn) mn = v; if (v > mx) mx = v; }
+      const x = ML + px;
+      if (first) { g.moveTo(x, ym(va)); first = false; } else g.lineTo(x, ym(va));
+      if (mx > mn) { g.lineTo(x, ym(mn)); g.lineTo(x, ym(mx)); }
+      g.lineTo(x + 1, ym(vb));
+    }
+    g.stroke(); g.setLineDash([]);
+  }
+  g.restore();
+  // labels
+  g.font = "10px " + getComputedStyle(document.body).getPropertyValue("--mono");
+  const ulist = Object.keys(sc.units);
+  ulist.forEach((u, idx) => { const U = sc.units[u]; const right = idx === 1; g.fillStyle = right ? "#6b5f5f" : "#6b5f5f"; g.textAlign = right ? "left" : "right";
+    for (let j = 0; j <= 8; j += 2) { const v = U.center + (4 - j) * U.div; const y = top + j * ph / 8; g.fillText(si(v, u, 3), right ? ML + pw + 4 : ML - 4, y + 3); }
+    g.fillStyle = "#b06a00"; g.fillText(si(U.div, u, 3) + "/div", right ? ML + pw + 4 : ML - 4, top + ph + 13); });
+  g.textAlign = "left";
+  const chs = sc.def.traces.map(t => t.label + (t.dash ? " (dashed)" : "")).join("  ");
+  sc.legend = chs; sc.base = off;
+}
+function drawScope(sc, r){
+  drawScopeBase(sc);
+  const cv = sc.cv, g = cv.getContext("2d"), { pw, ph, top, w, h } = sc.geom, dpr = window.devicePixelRatio || 1;
+  g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(sc.base, 0, 0); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const x = cursorX(); sc.cursorX = x;
+  if (x >= ML && x <= ML + pw) {
+    g.strokeStyle = "#d0021b"; g.lineWidth = 1.2; g.beginPath(); g.moveTo(Math.round(x) + .5, top); g.lineTo(Math.round(x) + .5, top + ph); g.stroke();
+    // cursor value labels
+    g.font = "600 10.5px " + getComputedStyle(document.body).getPropertyValue("--mono");
+    let ly = top + 14; const toRight = x < ML + pw - 150;
+    for (const tr of sc.def.traces) {
+      const v = tr.key === "P" ? r.Pcursor : r[tr.key]; const U = sc.units[tr.unit];
+      const yv = top + ph / 2 - (v - U.center) / U.div * (ph / 8);
+      g.fillStyle = tr.color; g.beginPath(); g.arc(x, Math.max(top, Math.min(top + ph, yv)), 3, 0, 6.3); g.fill();
+      const txt = tr.label.split(" ")[0] + " " + si(v, tr.unit); const tw = g.measureText(txt).width;
+      const lx = toRight ? x + 8 : x - 8 - tw; g.fillStyle = "rgba(255,255,255,.92)"; g.fillRect(lx - 3, ly - 10, tw + 6, 14); g.fillStyle = tr.color; g.fillText(txt, lx, ly); ly += 15;
+    }
+  }
+  // time axis labels
+  g.fillStyle = "#6b5f5f"; g.font = "10px " + getComputedStyle(document.body).getPropertyValue("--mono");
+  g.textAlign = "left"; g.fillText(us(S.x0), ML, h - 3); g.textAlign = "right"; g.fillText(us(S.x1), ML + pw, h - 3); g.textAlign = "left";
+}
+function cursorX(){ const sc = SCOPES[0]; const pw = sc && sc.geom ? sc.geom.pw : 1; return ML + (S.t - S.x0) / (S.x1 - S.x0) * pw; }
+function tAtX(sc, xCss){ const pw = sc.geom.pw; return S.x0 + (xCss - ML) / pw * (S.x1 - S.x0); }
+function attachScopeMouse(sc){
+  const cv = sc.cv; let drag = null;
+  cv.addEventListener("wheel", ev => { ev.preventDefault(); const rect = cv.getBoundingClientRect(); const tm = tAtX(sc, ev.clientX - rect.left);
+    const f = ev.deltaY > 0 ? 1.25 : 0.8; setView(tm - (tm - S.x0) * f, tm + (S.x1 - tm) * f, false); }, { passive: false });
+  cv.addEventListener("mousedown", ev => { drag = { x: ev.clientX, x0: S.x0, x1: S.x1, moved: false }; });
+  window.addEventListener("mousemove", ev => { if (!drag) return; const dx = ev.clientX - drag.x; if (Math.abs(dx) > 3) drag.moved = true;
+    if (drag.moved) { const dt = -dx / sc.geom.pw * (drag.x1 - drag.x0); setView(drag.x0 + dt, drag.x1 + dt, false); $("#follow").checked = false; S.follow = false; } });
+  window.addEventListener("mouseup", ev => { if (!drag) return; if (!drag.moved && ev.target === cv) { const rect = cv.getBoundingClientRect(); seek(tAtX(sc, ev.clientX - rect.left)); } drag = null; });
+  cv.addEventListener("dblclick", () => setWin("full"));
+}
+function setView(a, b, keepWidth){
+  const D = S.D; let w = b - a; const full = D.t1 - D.t0; const minW = 2e-9;
+  if (w > full) { a = D.t0; b = D.t1; } else { if (w < minW) { const c = (a + b) / 2; a = c - minW / 2; b = c + minW / 2; w = minW; }
+    if (a < D.t0) { b += D.t0 - a; a = D.t0; } if (b > D.t1) { a -= b - D.t1; b = D.t1; } }
+  S.x0 = a; S.x1 = b; $("#tdiv").textContent = "time/div " + si((b - a) / 10, "s", 3) + "   window " + si(b - a, "s", 3);
+  document.querySelectorAll("[data-win]").forEach(x => x.classList.remove("act"));
+}
+function setWin(win){
+  const D = S.D;
+  if (win === "full") setView(D.t0, D.t1); else { const w = +win * 1e-6; setView(S.t - w / 2, S.t + w / 2); }
+  document.querySelectorAll("[data-win]").forEach(x => x.classList.toggle("act", x.dataset.win === String(win)));
+  S.win = win;
+}
+function drawOverview(){
+  const D = S.D, cv = $("#overview"); const { w, h, dpr } = sizeCanvas(cv); const g = cv.getContext("2d"); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  if (!S.ovBase || S.ovKey !== w + "|" + dpr + "|" + D.ds.meta.id) {
+    const off = document.createElement("canvas"); off.width = cv.width; off.height = cv.height; const o = off.getContext("2d"); o.setTransform(dpr, 0, 0, dpr, 0, 0);
+    o.fillStyle = "#ffffff"; o.fillRect(0, 0, w, h); const pw = w - ML - MR;
+    const draw = (k, col) => { const Y = D.ch[k], c = D.ds.channels[k]; if (!Y) return; const lo = c.min, hi = c.max, sp = (hi - lo) || 1; o.strokeStyle = col; o.globalAlpha = .8; o.beginPath();
+      for (let px = 0; px < pw; px++) { const ta = D.t0 + px / pw * (D.t1 - D.t0), tb = D.t0 + (px + 1) / pw * (D.t1 - D.t0); let mn = interpArr(D.T, Y, ta), mx = mn;
+        for (let i = lower(D.T, ta), i1 = upper(D.T, tb); i < i1; i++) { if (Y[i] < mn) mn = Y[i]; if (Y[i] > mx) mx = Y[i]; }
+        const y1 = 4 + (1 - (mn - lo) / sp) * (h - 8), y2 = 4 + (1 - (mx - lo) / sp) * (h - 8); o.moveTo(ML + px + .5, y1); o.lineTo(ML + px + .5, Math.min(y2, y1 - .5)); }
+      o.stroke(); o.globalAlpha = 1; };
+    draw("Vce", D.ds.channels.Vce.color); draw("Ic", D.ds.channels.Ic.color);
+    o.font = "10px " + getComputedStyle(document.body).getPropertyValue("--mono");
+    for (const e of D.ds.edges) { const x = ML + (e.t - D.t0) / (D.t1 - D.t0) * pw; o.strokeStyle = e.on ? "#1f7a45" : "#d0021b"; o.beginPath(); o.moveTo(x + .5, 0); o.lineTo(x + .5, h); o.stroke(); o.fillStyle = e.on ? "#1f7a45" : "#d0021b"; o.fillText(e.name, x + 2, 10); }
+    o.fillStyle = "#6b5f5f"; o.fillText("OVERVIEW", 6, 14); o.fillText("Vce · Ic", 6, 28);
+    S.ovBase = off; S.ovKey = w + "|" + dpr + "|" + D.ds.meta.id;
+  }
+  g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(S.ovBase, 0, 0); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const pw = w - ML - MR, X = t => ML + (t - D.t0) / (D.t1 - D.t0) * pw;
+  g.fillStyle = "rgba(255,176,0,.12)"; g.strokeStyle = "rgba(255,176,0,.7)"; const a = X(S.x0), b = X(S.x1); g.fillRect(a, 0, Math.max(b - a, 1.5), h); g.strokeRect(a + .5, .5, Math.max(b - a, 1.5), h - 1);
+  g.strokeStyle = "#c77700"; g.beginPath(); g.moveTo(X(S.t) + .5, 0); g.lineTo(X(S.t) + .5, h); g.stroke();
+}
+$("#overview").addEventListener("click", ev => { const D = S.D, cv = $("#overview"); const rect = cv.getBoundingClientRect(); const pw = rect.width - ML - MR;
+  const t = D.t0 + (ev.clientX - rect.left - ML) / pw * (D.t1 - D.t0); seek(Math.max(D.t0, Math.min(D.t1, t)), true); });
+
+/* ---------------- playback ---------------- */
+function buildAdaptive(){
+  const D = S.D, n = D.n, W = new Float64Array(n), keys = Object.keys(D.ch);
+  const base = S.rate * 1e-6; // sim seconds per wall second
+  for (let i = 0; i < n - 1; i++) {
+    let mx = 0; for (const k of keys) { const d = Math.abs(D.ch[k][i + 1] - D.ch[k][i]) / D.range[k]; if (d > mx) mx = d; }
+    const wi = Math.max((D.T[i + 1] - D.T[i]) / base, 3 * mx); W[i + 1] = W[i] + wi;
+  }
+  D.W = W; D.Wkey = S.rate;
+}
+function uOfT(t){ const D = S.D; return interpArr(D.T, D.W, t); }
+function tOfU(u){ const D = S.D; return interpArr(D.W, D.T, u); }
+function slowFactor(){
+  const D = S.D;
+  if (S.mode === "const") return 1 / (S.rate * 1e-6 * S.speed);
+  const i = Math.max(0, Math.min(D.n - 2, upper(D.T, S.t) - 1)); const dt = D.T[i + 1] - D.T[i]; const dw = D.W[i + 1] - D.W[i];
+  return dt > 0 ? dw / dt / S.speed : Infinity;
+}
+function seek(t, center){
+  const D = S.D; S.t = Math.max(D.t0, Math.min(D.t1, t)); if (D.W) S.u = uOfT(S.t);
+  if (center || (S.follow && (S.t < S.x0 || S.t > S.x1))) { const w = S.x1 - S.x0; setView(S.t - w / 2, S.t + w / 2); }
+  render(0);
+}
+function play(){ if (S.D.kind === "static") return; if (S.t >= S.D.t1) seek(S.D.t0); S.playing = true; S.last = performance.now(); $("#bPlay").textContent = "❚❚ PAUSE"; }
+function pause(){ S.playing = false; $("#bPlay").textContent = "▶ PLAY"; }
+function tick(now){
+  const dtw = Math.min(0.1, (now - (S.lastFrame || now)) / 1000); S.lastFrame = now;
+  if (S.D && S.D.kind !== "static") {
+    if (S.playing) {
+      S.wall += dtw;
+      if (S.mode === "const") S.t += S.rate * 1e-6 * S.speed * dtw;
+      else { S.u += dtw * S.speed; S.t = tOfU(S.u); }
+      if (S.t >= S.D.t1) { S.t = S.D.t1; pause(); }
+      if (S.follow) { const w = S.x1 - S.x0; if (S.t > S.x0 + 0.85 * w || S.t < S.x0) setView(S.t - 0.15 * w, S.t + 0.85 * w); }
+    }
+    render(dtw);
+  } else if (S.D && S.stPlaying && now - S.stLast > 600) { S.stLast = now; stStep(1); }
+  requestAnimationFrame(tick);
+}
+function render(dtw){
+  const r = readings(S.t), s = states(r);
+  S.lastR = r; S.lastS = s;
+  updateRack(r, s); updateSchematic(r, s, dtw || 0);
+  for (const sc of SCOPES) drawScope(sc, r);
+  drawOverview();
+  $("#clkSim").innerHTML = "<small>SIM t</small>" + us(S.t);
+  $("#clkWall").innerHTML = "<small>WALL</small>" + S.wall.toFixed(1) + " s" + (S.mode === "adaptive" ? ` <small>/ ${(S.D.W[S.D.n - 1] / S.speed).toFixed(0)} s total</small>` : "");
+  const sf = slowFactor();
+  $("#clkSlow").innerHTML = "<small>SLOW-MO</small>" + (isFinite(sf) ? "×" + (sf >= 1e4 ? sf.toExponential(2) : sf.toFixed(1)) + ` <small>1 µs sim = ${si(sf * 1e-6, "s", 3)} wall</small>` : "∞ (zero-length step)");
+  $("#slider").value = Math.round((S.t - S.D.t0) / (S.D.t1 - S.D.t0) * 100000);
+}
+
+/* ---------------- tables ---------------- */
+function mvpCell(x){
+  if (!x || (!x.in_matlab && x.in_matlab !== undefined)) return x && x.python != null ? `<span class="na">MATLAB n/a</span> / ${sci(x.python)}` : '<span class="na">—</span>';
+  if (x.both_na) return '<span class="na">N/A (both)</span>';
+  const mark = x.match ? '<span class="ok">✓</span>' : (x.residual ? '<span class="warn" title="roundoff-level residual: CSV has 15 significant digits">≈</span>' : '<span class="bad">✗</span>');
+  return `${sci(x.matlab)}<br><span class="dim">${sci(x.python)}</span> ${mark}`;
+}
+function buildTables(ds){
+  const ev = $("#evTable");
+  if (ds.events && ds.events.length) {
+    const keys = [["Vce_transition_10_90_s", "Vce 10–90 %", "s"], ["Ic_transition_10_90_s", "Ic 10–90 %", "s"], ["command_to_Vce_transition_s", "cmd → Vce", "s"],
+                  ["current_clearance_1percent_s", "1 % Ic clearance", "s"], ["gross_collector_terminal_energy_J", "∫Vce·Ic (window)", "J"], ["gate_charge_C", "gate charge", "C"]];
+    let h = "<table><tr><th>Event</th>" + keys.map(k => `<th>${k[1]}</th>`).join("") + "</tr>";
+    for (const e of ds.events) h += `<tr><td class="mono">${e.name}<br><span class="dim">${us(e.t)}</span></td>` + keys.map(k => `<td class="n">${mvpCell(e.metrics[k[0]])}</td>`).join("") + "</tr>";
+    h += "</table><div class='dim' style='font-size:10.5px;margin-top:4px'>Top: MATLAB (validation JSON). Below: Python recomputation from CSV. ✓ = relative difference &lt; 1e-6. ≈ = roundoff residual. Analyzer version: " + esc(ds.meta.analyzer) + ".</div>";
+    ev.innerHTML = h;
+  } else ev.innerHTML = "<div class='dim'>No event metrics for this dataset (baseline uses plateau checks only).</div>";
+  const scal = (ds.matlab_vs_python || []).filter(r => r.event == null);
+  if (scal.length) { let h = "<table style='margin-top:8px'><tr><th>Record metric</th><th>MATLAB</th><th>Python</th><th></th></tr>";
+    for (const r of scal) h += `<tr><td class="mono">${esc(r.metric)}</td><td class="n">${sci(r.matlab)}</td><td class="n">${sci(r.python)}</td><td>${r.match ? '<span class="ok">✓</span>' : r.residual ? '<span class="warn" title="roundoff-level residual">≈ residual</span>' : '<span class="bad">✗</span>'}</td></tr>`;
+    ev.innerHTML += h + "</table>"; }
+  const vt = $("#valTable"); let h = "<table><tr><th>Criterion</th><th>Limit</th><th>MATLAB</th><th>Python</th><th>Result</th></tr>";
+  for (const r of ds.validation_rows || []) {
+    const ms = r.matlab_status === "PASS"; const res = (ms && r.pass_python !== false) ? '<span class="badge ok">PASS</span>' : (r.matlab_status ? `<span class="badge warn">${esc(r.matlab_status)}</span>` : "");
+    h += `<tr><td>${esc(r.criterion)}</td><td class="mono">${esc(r.limit)}</td><td class="n">${sci(r.matlab)}</td><td class="n">${r.pass_python == null ? '<span class="na">—</span>' : sci(r.python) + (r.pass_python ? ' <span class="ok">✓</span>' : ' <span class="bad">✗</span>')}</td><td>${res}</td></tr>`;
+  }
+  vt.innerHTML = h + "</table><div class='dim' style='font-size:10.5px;margin-top:4px'>MATLAB column from the run's validation JSON (status " + esc(ds.matlab_summary && ds.matlab_summary.status) + "). Python column re-evaluates the same assertions with the same limits.</div>";
+}
+function buildProv(ds){
+  const m = ds.meta, p = $("#prov");
+  const rows = [["Provenance", "SIMULATED (MATLAB/Simscape)"], ["Dataset", m.label + " (" + m.id + ")"], ["Run folder", m.run_folder], ["Timestamp", m.timestamp],
+    ["CSV", m.csv], ["CSV SHA-256", m.csv_sha256], ["Model file", m.model_file], ["Engine", m.engine], ["Parameter schema", m.parameter_schema],
+    ["Parameters", m.parameters_note], ["Pulse edges from", m.edges_source || "—"], ["Model check status", m.status], ["Hardware decision", "INCONCLUSIVE"]];
+  p.innerHTML = rows.map(([k, v]) => `<div>${esc(k)}</div><div class="${/SHA|folder|CSV/.test(k) ? "mono" : ""}">${esc(v)}</div>`).join("");
+  $("#notes").innerHTML = (m.notes || []).map(n => `<li>${esc(n)}</li>`).join("");
+  $("#caveat").innerHTML = "<b>Energy interpretation.</b> " + esc(m.energy_caveat);
+  let h = "<table><tr><th>ID</th><th>Status</th><th>Reason</th></tr>";
+  for (const x of PAY.excluded || []) h += `<tr><td class="mono">${esc(x.id)}</td><td><span class="badge warn">${esc(x.status)}</span></td><td>${esc(x.reason)}</td></tr>`;
+  $("#exTable").innerHTML = h + "</table>";
+  $("#foot").textContent = `Payload generated ${PAY.generated} by ${PAY.generator}. All displayed values come from simulation records or are derived from them (labelled DERIVED). No measured hardware data is shown.`;
+}
+
+/* ---------------- static curve tracer ---------------- */
+let ST = null;
+function buildStatic(ds){
+  const s = ds.static; const pts = [];
+  for (const c of s.output) c.Vce_V.forEach((v, i) => pts.push({ curve: c.experiment, kind: "output", T: c.T_C, gate: c.gate_V, force: c.force_V[i], Vce: v, Ic: c.Ic_A[i], Vge: c.Vge_V[i], settle: c.settling_A[i] }));
+  for (const r of s.saturation) pts.push({ curve: r.experiment, kind: "sat", T: r.temperature_C, gate: r.gate_command_V, force: r.force_command, Vce: r.Vce_V, Ic: r.Ic_A, Vge: r.Vge_V, settle: r.settling_range_A });
+  for (const c of s.leakage) c.Vce_V.forEach((v, i) => pts.push({ curve: c.experiment, kind: "leak", T: c.T_C, gate: c.gate_V, force: c.force_V[i], Vce: v, Ic: c.Ic_A[i], Vge: c.Vge_V[i], settle: c.settling_A[i] }));
+  ST = { ds, pts };
+  const sel = $("#sCurve"); sel.innerHTML = '<option value="">all curves</option>' + [...new Set(pts.map(p => p.curve))].map(c => `<option>${c}</option>`).join("");
+  sel.onchange = () => { const i = pts.findIndex(p => !sel.value || p.curve === sel.value); S.stIdx = Math.max(0, i); drawStatic(); };
+  $("#stTag").textContent = "status " + ds.meta.status + " · " + pts.length + " solved points · each point is an independent DC solution held 2 µs";
+  const m = $("#sMeters"); m.innerHTML = "";
+  for (const [k, u, d] of [["Vce", "V", "device collector-emitter"], ["Ic", "A", "collector current"], ["Vge", "V", "gate-emitter"], ["T", "°C", "device temperature (imposed)"],
+                            ["force", "", "fixture force command"], ["settle", "A", "Ic drift over 2 µs hold"]]) {
+    const b = el("div", { class: "dmm" }, m); el("div", { class: "mn", html: `<span style="color:#0a7ea4">${k}</span>` }, b); el("div", { class: "mv", id: "sm_" + k }, b); el("div", { class: "md", text: d }, b); }
+  let h = "<table><tr><th>Key</th><th>Value</th></tr>"; for (const r of ds.validation_rows) h += `<tr><td class="mono">${esc(r.criterion)}</td><td class="n">${sci(r.matlab)}</td></tr>`;
+  $("#sValTable").innerHTML = h + "</table>";
+  drawStatic();
+}
+function stStep(d){ const sel = $("#sCurve").value; const P = ST.pts; let i = S.stIdx;
+  for (let k = 0; k < P.length; k++) { i = (i + d + P.length) % P.length; if (!sel || P[i].curve === sel) break; } S.stIdx = i; drawStatic(); }
+function plot(cv, opt){
+  const { w, h, dpr } = sizeCanvas(cv); const g = cv.getContext("2d"); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.fillStyle = "#ffffff"; g.fillRect(0, 0, w, h); const L = 62, Rr = 12, Tt = 10, B = 34, pw = w - L - Rr, ph = h - Tt - B;
+  const fx = v => L + (v - opt.x0) / (opt.x1 - opt.x0) * pw;
+  const fy = opt.log ? v => Tt + (1 - (Math.log10(Math.max(v, 1e-30)) - opt.y0) / (opt.y1 - opt.y0)) * ph : v => Tt + (1 - (v - opt.y0) / (opt.y1 - opt.y0)) * ph;
+  g.strokeStyle = "#efe8e8"; g.beginPath(); g.font = "10px " + getComputedStyle(document.body).getPropertyValue("--mono"); g.fillStyle = "#6b5f5f";
+  for (let i = 0; i <= 5; i++) { const x = L + i * pw / 5, v = opt.x0 + i * (opt.x1 - opt.x0) / 5; g.moveTo(x + .5, Tt); g.lineTo(x + .5, Tt + ph); g.fillText(si(v, opt.xu, 3), x - 12, h - 18); }
+  for (let j = 0; j <= 4; j++) { const y = Tt + j * ph / 4, v = opt.y1 - j * (opt.y1 - opt.y0) / 4; g.moveTo(L, y + .5); g.lineTo(L + pw, y + .5); g.textAlign = "right"; g.fillText(opt.log ? si(Math.pow(10, v), opt.yu, 3) : si(v, opt.yu, 3), L - 4, y + 3); g.textAlign = "left"; }
+  g.stroke(); g.fillText(opt.xl, L + pw / 2 - 20, h - 4);
+  return { g, fx, fy };
+}
+const GCOL = { 5: "#2f5fd0", 7: "#0a7ea4", 10: "#1f8a4c", 15: "#a88400", "-15": "#d2601a", 0: "#a335c4" };
+function drawStatic(){
+  if (!ST) return; const P = ST.pts, cur = P[S.stIdx];
+  const out = P.filter(p => p.kind === "output"), sat = P.filter(p => p.kind === "sat"), leak = P.filter(p => p.kind === "leak");
+  const curveLines = (ctx, list, xk, yk, colorOf) => { const byC = {}; list.forEach(p => (byC[p.curve] = byC[p.curve] || []).push(p));
+    for (const c in byC) { const arr = byC[c].slice().sort((a, b) => a[xk] - b[xk]); ctx.g.strokeStyle = colorOf(arr[0]); ctx.g.lineWidth = 1.6; ctx.g.beginPath(); arr.forEach((p, i) => i ? ctx.g.lineTo(ctx.fx(p[xk]), ctx.fy(p[yk])) : ctx.g.moveTo(ctx.fx(p[xk]), ctx.fy(p[yk]))); ctx.g.stroke();
+      arr.forEach(p => { ctx.g.fillStyle = colorOf(p); ctx.g.beginPath(); ctx.g.arc(ctx.fx(p[xk]), ctx.fy(p[yk]), 2.6, 0, 6.3); ctx.g.fill(); });
+      const lp = arr[arr.length - 1]; ctx.g.fillStyle = colorOf(lp); ctx.g.fillText(arr[0].kind === "sat" ? `${arr[0].T} °C` : `Vge ${arr[0].gate} V`, ctx.fx(lp[xk]) - 52, ctx.fy(lp[yk]) - 6); } };
+  const hl = (ctx, p, xk, yk) => { ctx.g.strokeStyle = "#c77700"; ctx.g.lineWidth = 2; ctx.g.beginPath(); ctx.g.arc(ctx.fx(p[xk]), ctx.fy(p[yk]), 7, 0, 6.3); ctx.g.stroke(); };
+  let xm = Math.max(...out.map(p => p.Vce)) * 1.05, ym = Math.max(...out.map(p => p.Ic)) * 1.08;
+  let c1 = plot($("#cOut"), { x0: 0, x1: xm, y0: 0, y1: ym, xu: "V", yu: "A", xl: "Vce (V)" }); curveLines(c1, out, "Vce", "Ic", p => GCOL[p.gate] || "#ccc"); if (cur.kind === "output") hl(c1, cur, "Vce", "Ic");
+  let c2 = plot($("#cSat"), { x0: 0, x1: Math.max(...sat.map(p => p.Ic)) * 1.05, y0: 0, y1: Math.max(...sat.map(p => p.Vce)) * 1.1, xu: "A", yu: "V", xl: "Ic (A)" });
+  curveLines(c2, sat, "Ic", "Vce", p => p.T > 25 ? "#d2601a" : "#a88400"); if (cur.kind === "sat") hl(c2, cur, "Ic", "Vce");
+  const lmin = Math.min(...leak.map(p => p.Ic)), lmax = Math.max(...leak.map(p => p.Ic));
+  let c3 = plot($("#cLeak"), { x0: 0, x1: Math.max(...leak.map(p => p.Vce)) * 1.05, y0: Math.floor(Math.log10(lmin)) , y1: Math.ceil(Math.log10(lmax)), log: true, xu: "V", yu: "A", xl: "Vce (V)" });
+  curveLines(c3, leak, "Vce", "Ic", p => GCOL[p.gate] || "#ccc"); if (cur.kind === "leak") hl(c3, cur, "Vce", "Ic");
+  const set = (k, v, u) => { const e = $("#sm_" + k); if (e) e.textContent = u === "" ? String(v) : si(v, u); };
+  set("Vce", cur.Vce, "V"); set("Ic", cur.Ic, "A"); set("Vge", cur.Vge, "V"); $("#sm_T").textContent = cur.T + " °C"; set("force", cur.force + (cur.kind === "sat" ? " A" : " V"), ""); set("settle", cur.settle, "A");
+  $("#sIdx").textContent = `${cur.curve}  point ${S.stIdx + 1}/${P.length}`;
+}
+$("#sPrev").onclick = () => stStep(-1); $("#sNext").onclick = () => stStep(1);
+$("#sPlay").onclick = () => { S.stPlaying = !S.stPlaying; $("#sPlay").textContent = S.stPlaying ? "❚❚ PAUSE" : "▶ STEP"; };
+
+/* ---------------- dataset selection ---------------- */
+function select(id){
+  const ds = PAY.datasets.find(d => d.meta.id === id) || PAY.datasets[0];
+  pause(); S.stPlaying = false; $("#dsSel").value = ds.meta.id;
+  const D = decode(ds); S.D = D; S.wall = 0; S.ovBase = null;
+  chips(ds); buildProv(ds);
+  const isStatic = ds.meta.kind === "static";
+  $("#dynWrap").classList.toggle("hide", isStatic); $("#staticWrap").classList.toggle("hide", !isStatic);
+  if (isStatic) { S.stIdx = 0; buildStatic(ds); return; }
+  buildSchematic(D); buildRack(D); buildScopes(D); buildTables(ds); buildAdaptive();
+  const eb = $("#evBtns"); eb.innerHTML = "";
+  for (const e of ds.edges) { const b = el("button", { class: "btn ev", text: e.name, title: `${e.desc} — command at ${us(e.t)}` }, eb);
+    b.onclick = () => { const w = S.win && S.win !== "full" ? +S.win * 1e-6 : 20e-6; seek(e.t); setView(e.t - 0.2 * w, e.t + 0.8 * w); document.querySelectorAll("[data-win]").forEach(x => x.classList.toggle("act", +x.dataset.win * 1e-6 === w)); render(0); }; }
+  S.t = D.t0; S.u = 0; setWin("full"); render(0);
+}
+
+/* ---------------- controls ---------------- */
+$("#bPlay").onclick = () => S.playing ? pause() : play();
+$("#bReset").onclick = () => { pause(); S.wall = 0; seek(S.D.t0, false); if (S.win !== "full") setWin(S.win || "full"); };
+function stepSample(dir, big){ const D = S.D;
+  if (big) { seek(S.t + dir * (S.x1 - S.x0) / 100); return; }
+  let i = dir > 0 ? upper(D.T, S.t) : lower(D.T, S.t) - 1; while (i > 0 && i < D.n - 1 && D.T[i] === S.t) i += dir; seek(D.T[Math.max(0, Math.min(D.n - 1, i))]); }
+$("#bBack").onclick = ev => stepSample(-1, ev.shiftKey); $("#bFwd").onclick = ev => stepSample(1, ev.shiftKey);
+$("#slider").oninput = ev => { const D = S.D; seek(D.t0 + (+ev.target.value) / 100000 * (D.t1 - D.t0)); };
+$("#mode").onchange = ev => { S.mode = ev.target.value; $("#rateLbl").textContent = S.mode === "const" ? "Rate" : "Base rate"; if (S.D.W) S.u = uOfT(S.t); render(0); };
+$("#rate").onchange = ev => { S.rate = +ev.target.value; buildAdaptive(); S.u = uOfT(S.t); render(0); };
+$("#speed").onchange = ev => { S.speed = +ev.target.value; render(0); };
+$("#follow").onchange = ev => { S.follow = ev.target.checked; };
+document.querySelectorAll("[data-win]").forEach(b => b.onclick = () => setWin(b.dataset.win));
+window.addEventListener("keydown", ev => {
+  if (ev.target && /INPUT|SELECT|TEXTAREA/.test(ev.target.tagName) && ev.target.type !== "range") return;
+  if (!S.D || S.D.kind === "static") return;
+  if (ev.code === "Space") { ev.preventDefault(); S.playing ? pause() : play(); }
+  else if (ev.key === "ArrowLeft") { ev.preventDefault(); stepSample(-1, ev.shiftKey); }
+  else if (ev.key === "ArrowRight") { ev.preventDefault(); stepSample(1, ev.shiftKey); }
+});
+window.addEventListener("resize", () => { for (const sc of SCOPES) sc.baseKey = ""; S.ovBase = null; if (S.D && S.D.kind === "static") drawStatic(); });
+
+/* ---------------- test API ---------------- */
+window.lab = {
+  seek: t => { seek(t, true); return S.t; },
+  play, pause,
+  getReadings: () => { const r = readings(S.t); const o = {}; for (const k in r) o[k] = r[k]; delete o.Pcursor; o.P = r.Pcursor; return o; },
+  getStates: () => { const s = states(readings(S.t)); return { gate: s.gate, igbt: s.igbt, diode: s.diode, cmd: s.cmd }; },
+  getDisplayed: () => { const o = {}; for (const k in MEL) o[k] = MEL[k].textContent; return o; },
+  getCursorX: () => SCOPES.map(sc => { const r = sc.cv.getBoundingClientRect(); return { pageX: r.left + sc.cursorX, localX: sc.cursorX, canvasLeft: r.left }; }),
+  getView: () => ({ x0: S.x0, x1: S.x1, t: S.t, mode: S.mode, slow: slowFactor() }),
+  select: id => { select(id); return S.D.ds.meta.id; },
+  datasets: () => PAY.datasets.map(d => d.meta.id),
+  current: () => S.D.ds.meta.id,
+  setWindow: w => setWin(w),
+};
+
+buildSelector();
+select(PAY.datasets[0].meta.id);
+requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

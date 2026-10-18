@@ -1,0 +1,1540 @@
+26.2.0.3386108 (R2026b)
+----------------------------------------------------------------------
+MATLAB Version: 26.2.0.3386108 (R2026b)
+MATLAB License Number: 40756510
+Operating System: Майкрософт Windows 11 Pro Version 10.0 (Build 26200)
+Java Version: Java is not loaded
+----------------------------------------------------------------------
+MATLAB                                                Version 26.2        (R2026b)
+Simulink                                              Version 26.2        (R2026b)
+MATLAB Copilot                                        Version 26.2        (R2026b)
+Simscape                                              Version 26.2        (R2026b)
+Simscape Electrical                                   Version 26.2        (R2026b)
+Simulink Copilot                                      Version 26.2        (R2026b)
+[Warning: Using find_system without the 'Variants' argument skips inactive Variant Subsystem blocks in the search. This behavior will change in a future release to look at all
+choices of the Variant Subsystem. To find blocks that are active in simulation or code generation, compile the model and use the built-in variant filters with the 'MatchFilter'
+option. To find all blocks use filter '@Simulink.match.allVariants' with the 'MatchFilter' option.] 
+[> In inspect_libraries (line 6)
+In run (line 100)] 
+ee_lib/Additional
+Components/SPICE Semiconductors/SPICE NIGBT
+              AGD: [1×1 struct]
+         AGD_unit: [1×1 struct]
+         AGD_conf: [1×1 struct]
+             AREA: [1×1 struct]
+        AREA_unit: [1×1 struct]
+        AREA_conf: [1×1 struct]
+            SCALE: [1×1 struct]
+       SCALE_unit: [1×1 struct]
+       SCALE_conf: [1×1 struct]
+              MUN: [1×1 struct]
+         MUN_unit: [1×1 struct]
+         MUN_conf: [1×1 struct]
+              MUP: [1×1 struct]
+         MUP_unit: [1×1 struct]
+         MUP_conf: [1×1 struct]
+               NB: [1×1 struct]
+          NB_unit: [1×1 struct]
+          NB_conf: [1×1 struct]
+               KF: [1×1 struct]
+          KF_unit: [1×1 struct]
+          KF_conf: [1×1 struct]
+               KP: [1×1 struct]
+          KP_unit: [1×1 struct]
+          KP_conf: [1×1 struct]
+               VT: [1×1 struct]
+          VT_unit: [1×1 struct]
+          VT_conf: [1×1 struct]
+            THETA: [1×1 struct]
+       THETA_unit: [1×1 struct]
+       THETA_conf: [1×1 struct]
+              TAU: [1×1 struct]
+         TAU_unit: [1×1 struct]
+         TAU_conf: [1×1 struct]
+               WB: [1×1 struct]
+          WB_unit: [1×1 struct]
+          WB_conf: [1×1 struct]
+             JSNE: [1×1 struct]
+        JSNE_unit: [1×1 struct]
+        JSNE_conf: [1×1 struct]
+              BVF: [1×1 struct]
+         BVF_unit: [1×1 struct]
+         BVF_conf: [1×1 struct]
+              BVN: [1×1 struct]
+         BVN_unit: [1×1 struct]
+         BVN_conf: [1×1 struct]
+              CGS: [1×1 struct]
+         CGS_unit: [1×1 struct]
+         CGS_conf: [1×1 struct]
+             COXD: [1×1 struct]
+        COXD_unit: [1×1 struct]
+        COXD_conf: [1×1 struct]
+              VTD: [1×1 struct]
+         VTD_unit: [1×1 struct]
+         VTD_conf: [1×1 struct]
+         IC_given: [1×1 struct]
+    IC_given_unit: [1×1 struct]
+    IC_given_conf: [1×1 struct]
+            ICVGE: [1×1 struct]
+       ICVGE_unit: [1×1 struct]
+       ICVGE_conf: [1×1 struct]
+            ICVCE: [1×1 struct]
+       ICVCE_unit: [1×1 struct]
+       ICVCE_conf: [1×1 struct]
+          T_param: [1×1 struct]
+     T_param_unit: [1×1 struct]
+     T_param_conf: [1×1 struct]
+           TFIXED: [1×1 struct]
+      TFIXED_unit: [1×1 struct]
+      TFIXED_conf: [1×1 struct]
+            TMEAS: [1×1 struct]
+       TMEAS_unit: [1×1 struct]
+       TMEAS_conf: [1×1 struct]
+          TOFFSET: [1×1 struct]
+     TOFFSET_unit: [1×1 struct]
+     TOFFSET_conf: [1×1 struct]
+
+    {'ComponentPath'        }    {'ee.additional.spice_semiconductors.spice_nigbt'    }
+    {'ComponentVariants'    }    {'["ee.additional.spice_semiconductors.spice_nigbt"]'}
+    {'ComponentVariantNames'}    {'["spice_nigbt"]'                                   }
+    {'ClassName'            }    {'spice_nigbt'                                       }
+    {'SchemaVersion'        }    {'1'                                                 }
+    {'AGD'                  }    {'5.0e-6'                                            }
+    {'AGD_unit'             }    {'m^2'                                               }
+    {'AGD_conf'             }    {'compiletime'                                       }
+    {'AREA'                 }    {'1.0e-5'                                            }
+    {'AREA_unit'            }    {'m^2'                                               }
+    {'AREA_conf'            }    {'compiletime'                                       }
+    {'SCALE'                }    {'1'                                                 }
+    {'SCALE_unit'           }    {'1'                                                 }
+    {'SCALE_conf'           }    {'compiletime'                                       }
+    {'MUN'                  }    {'1.5e3'                                             }
+    {'MUN_unit'             }    {'cm^2/(V*s)'                                        }
+    {'MUN_conf'             }    {'compiletime'                                       }
+    {'MUP'                  }    {'4.5e2'                                             }
+    {'MUP_unit'             }    {'cm^2/(V*s)'                                        }
+    {'MUP_conf'             }    {'compiletime'                                       }
+    {'NB'                   }    {'2e14'                                              }
+    {'NB_unit'              }    {'1/cm^3'                                            }
+    {'NB_conf'              }    {'compiletime'                                       }
+    {'KF'                   }    {'1'                                                 }
+    {'KF_unit'              }    {'1'                                                 }
+    {'KF_conf'              }    {'compiletime'                                       }
+    {'KP'                   }    {'0.38'                                              }
+    {'KP_unit'              }    {'A/V^2'                                             }
+    {'KP_conf'              }    {'compiletime'                                       }
+    {'VT'                   }    {'4.7'                                               }
+    {'VT_unit'              }    {'V'                                                 }
+    {'VT_conf'              }    {'compiletime'                                       }
+    {'THETA'                }    {'0.02'                                              }
+    {'THETA_unit'           }    {'1/V'                                               }
+    {'THETA_conf'           }    {'compiletime'                                       }
+    {'TAU'                  }    {'7.1e-6'                                            }
+    {'TAU_unit'             }    {'s'                                                 }
+    {'TAU_conf'             }    {'compiletime'                                       }
+    {'WB'                   }    {'9.0e-5'                                            }
+    {'WB_unit'              }    {'m'                                                 }
+    {'WB_conf'              }    {'compiletime'                                       }
+    {'JSNE'                 }    {'6.5e-13'                                           }
+    {'JSNE_unit'            }    {'A/cm^2'                                            }
+    {'JSNE_conf'            }    {'compiletime'                                       }
+    {'BVF'                  }    {'1'                                                 }
+    {'BVF_unit'             }    {'1'                                                 }
+    {'BVF_conf'             }    {'compiletime'                                       }
+    {'BVN'                  }    {'4'                                                 }
+    {'BVN_unit'             }    {'1'                                                 }
+    {'BVN_conf'             }    {'compiletime'                                       }
+    {'CGS'                  }    {'1.24e-8'                                           }
+    {'CGS_unit'             }    {'F/cm^2'                                            }
+    {'CGS_conf'             }    {'compiletime'                                       }
+    {'COXD'                 }    {'3.5e-8'                                            }
+    {'COXD_unit'            }    {'F/cm^2'                                            }
+    {'COXD_conf'            }    {'compiletime'                                       }
+    {'VTD'                  }    {'1e-3'                                              }
+    {'VTD_unit'             }    {'V'                                                 }
+    {'VTD_conf'             }    {'compiletime'                                       }
+    {'IC_given'             }    {'ee.enum.initialCondition.no'                       }
+    {'IC_given_unit'        }    {'1'                                                 }
+    {'IC_given_conf'        }    {'compiletime'                                       }
+    {'ICVGE'                }    {'0'                                                 }
+    {'ICVGE_unit'           }    {'V'                                                 }
+    {'ICVGE_conf'           }    {'compiletime'                                       }
+    {'ICVCE'                }    {'0'                                                 }
+    {'ICVCE_unit'           }    {'V'                                                 }
+    {'ICVCE_conf'           }    {'compiletime'                                       }
+    {'T_param'              }    {'ee.enum.temperatureDeviceOrFixed.Device'           }
+    {'T_param_unit'         }    {'1'                                                 }
+    {'T_param_conf'         }    {'compiletime'                                       }
+    {'TFIXED'               }    {'300.15'                                            }
+    {'TFIXED_unit'          }    {'K'                                                 }
+    {'TFIXED_conf'          }    {'compiletime'                                       }
+    {'TMEAS'                }    {'300.15'                                            }
+    {'TMEAS_unit'           }    {'K'                                                 }
+    {'TMEAS_conf'           }    {'compiletime'                                       }
+    {'TOFFSET'              }    {'0'                                                 }
+    {'TOFFSET_unit'         }    {'K'                                                 }
+    {'TOFFSET_conf'         }    {'compiletime'                                       }
+
+ee_lib/Additional
+Components/SPICE Sources/DC Voltage Source
+ee_lib/Connectors &
+References/Electrical Reference
+ee_lib/Passive/Resistor
+ee_lib/Semiconductors &
+Converters/Gate Driver
+ee_lib/Semiconductors &
+Converters/IGBT
+(Ideal,
+Switching)
+                                     port_option: [1×1 struct]
+                                port_option_unit: [1×1 struct]
+                                port_option_conf: [1×1 struct]
+                                              Vf: [1×1 struct]
+                                         Vf_unit: [1×1 struct]
+                                         Vf_conf: [1×1 struct]
+                                             Ron: [1×1 struct]
+                                        Ron_unit: [1×1 struct]
+                                        Ron_conf: [1×1 struct]
+                                            Goff: [1×1 struct]
+                                       Goff_unit: [1×1 struct]
+                                       Goff_conf: [1×1 struct]
+                                             Vth: [1×1 struct]
+                                        Vth_unit: [1×1 struct]
+                                        Vth_conf: [1×1 struct]
+                                     diode_param: [1×1 struct]
+                                diode_param_unit: [1×1 struct]
+                                diode_param_conf: [1×1 struct]
+                                        diode_Vf: [1×1 struct]
+                                   diode_Vf_unit: [1×1 struct]
+                                   diode_Vf_conf: [1×1 struct]
+                                       diode_Ron: [1×1 struct]
+                                  diode_Ron_unit: [1×1 struct]
+                                  diode_Ron_conf: [1×1 struct]
+                                      diode_Goff: [1×1 struct]
+                                 diode_Goff_unit: [1×1 struct]
+                                 diode_Goff_conf: [1×1 struct]
+                                         diode_C: [1×1 struct]
+                                    diode_C_unit: [1×1 struct]
+                                    diode_C_conf: [1×1 struct]
+                                       diode_iRM: [1×1 struct]
+                                  diode_iRM_unit: [1×1 struct]
+                                  diode_iRM_conf: [1×1 struct]
+                                        diode_iF: [1×1 struct]
+                                   diode_iF_unit: [1×1 struct]
+                                   diode_iF_conf: [1×1 struct]
+                                      diode_idot: [1×1 struct]
+                                 diode_idot_unit: [1×1 struct]
+                                 diode_idot_conf: [1×1 struct]
+                                 diode_trr_param: [1×1 struct]
+                            diode_trr_param_unit: [1×1 struct]
+                            diode_trr_param_conf: [1×1 struct]
+                                diode_trr_factor: [1×1 struct]
+                           diode_trr_factor_unit: [1×1 struct]
+                           diode_trr_factor_conf: [1×1 struct]
+                                       diode_trr: [1×1 struct]
+                                  diode_trr_unit: [1×1 struct]
+                                  diode_trr_conf: [1×1 struct]
+                                       diode_Qrr: [1×1 struct]
+                                  diode_Qrr_unit: [1×1 struct]
+                                  diode_Qrr_conf: [1×1 struct]
+                                     ice_specify: [1×1 struct]
+                                    ice_priority: [1×1 struct]
+                                             ice: [1×1 struct]
+                                        ice_unit: [1×1 struct]
+                             ice_nominal_specify: [1×1 struct]
+                               ice_nominal_value: [1×1 struct]
+                                ice_nominal_unit: [1×1 struct]
+                                     vce_specify: [1×1 struct]
+                                    vce_priority: [1×1 struct]
+                                             vce: [1×1 struct]
+                                        vce_unit: [1×1 struct]
+                             vce_nominal_specify: [1×1 struct]
+                               vce_nominal_value: [1×1 struct]
+                                vce_nominal_unit: [1×1 struct]
+                                     vge_specify: [1×1 struct]
+                                    vge_priority: [1×1 struct]
+                                             vge: [1×1 struct]
+                                        vge_unit: [1×1 struct]
+                             vge_nominal_specify: [1×1 struct]
+                               vge_nominal_value: [1×1 struct]
+                                vge_nominal_unit: [1×1 struct]
+                             thermal_loss_option: [1×1 struct]
+                        thermal_loss_option_unit: [1×1 struct]
+                        thermal_loss_option_conf: [1×1 struct]
+                                        Von_data: [1×1 struct]
+                                   Von_data_unit: [1×1 struct]
+                                   Von_data_conf: [1×1 struct]
+                                              Tj: [1×1 struct]
+                                         Tj_unit: [1×1 struct]
+                                         Tj_conf: [1×1 struct]
+                                       Iout_data: [1×1 struct]
+                                  Iout_data_unit: [1×1 struct]
+                                  Iout_data_conf: [1×1 struct]
+                                 tabulateWithVce: [1×1 struct]
+                            tabulateWithVce_unit: [1×1 struct]
+                            tabulateWithVce_conf: [1×1 struct]
+                                        Eon_data: [1×1 struct]
+                                   Eon_data_unit: [1×1 struct]
+                                   Eon_data_conf: [1×1 struct]
+                                       Eoff_data: [1×1 struct]
+                                  Eoff_data_unit: [1×1 struct]
+                                  Eoff_data_conf: [1×1 struct]
+                                     Eon_data_3D: [1×1 struct]
+                                Eon_data_3D_unit: [1×1 struct]
+                                Eon_data_3D_conf: [1×1 struct]
+                                    Eoff_data_3D: [1×1 struct]
+                               Eoff_data_3D_unit: [1×1 struct]
+                               Eoff_data_3D_conf: [1×1 struct]
+                                         Tj_loss: [1×1 struct]
+                                    Tj_loss_unit: [1×1 struct]
+                                    Tj_loss_conf: [1×1 struct]
+                                  Iout_data_loss: [1×1 struct]
+                             Iout_data_loss_unit: [1×1 struct]
+                             Iout_data_loss_conf: [1×1 struct]
+                                        Vce_loss: [1×1 struct]
+                                   Vce_loss_unit: [1×1 struct]
+                                   Vce_loss_conf: [1×1 struct]
+                                      Eon_scalar: [1×1 struct]
+                                 Eon_scalar_unit: [1×1 struct]
+                                 Eon_scalar_conf: [1×1 struct]
+                                     Eoff_scalar: [1×1 struct]
+                                Eoff_scalar_unit: [1×1 struct]
+                                Eoff_scalar_conf: [1×1 struct]
+                                            Voff: [1×1 struct]
+                                       Voff_unit: [1×1 struct]
+                                       Voff_conf: [1×1 struct]
+                                     Iout_scalar: [1×1 struct]
+                                Iout_scalar_unit: [1×1 struct]
+                                Iout_scalar_conf: [1×1 struct]
+                     useCurrentFromPreviousCycle: [1×1 struct]
+                useCurrentFromPreviousCycle_unit: [1×1 struct]
+                useCurrentFromPreviousCycle_conf: [1×1 struct]
+                                currentMeasDelay: [1×1 struct]
+                           currentMeasDelay_unit: [1×1 struct]
+                           currentMeasDelay_conf: [1×1 struct]
+                     useVoltageFromPreviousCycle: [1×1 struct]
+                useVoltageFromPreviousCycle_unit: [1×1 struct]
+                useVoltageFromPreviousCycle_conf: [1×1 struct]
+                                voltageMeasDelay: [1×1 struct]
+                           voltageMeasDelay_unit: [1×1 struct]
+                           voltageMeasDelay_conf: [1×1 struct]
+                                  diodeModelType: [1×1 struct]
+                             diodeModelType_unit: [1×1 struct]
+                             diodeModelType_conf: [1×1 struct]
+                                  diodeTableType: [1×1 struct]
+                             diodeTableType_unit: [1×1 struct]
+                             diodeTableType_conf: [1×1 struct]
+                             diode_ReverseIVType: [1×1 struct]
+                        diode_ReverseIVType_unit: [1×1 struct]
+                        diode_ReverseIVType_conf: [1×1 struct]
+                                     diode_IfMat: [1×1 struct]
+                                diode_IfMat_unit: [1×1 struct]
+                                diode_IfMat_conf: [1×1 struct]
+                                     diode_VfMat: [1×1 struct]
+                                diode_VfMat_unit: [1×1 struct]
+                                diode_VfMat_conf: [1×1 struct]
+                                     diode_TjVec: [1×1 struct]
+                                diode_TjVec_unit: [1×1 struct]
+                                diode_TjVec_conf: [1×1 struct]
+                                     diode_VfVec: [1×1 struct]
+                                diode_VfVec_unit: [1×1 struct]
+                                diode_VfVec_conf: [1×1 struct]
+                                     diode_IfVec: [1×1 struct]
+                                diode_IfVec_unit: [1×1 struct]
+                                diode_IfVec_conf: [1×1 struct]
+                                     diode_IrMat: [1×1 struct]
+                                diode_IrMat_unit: [1×1 struct]
+                                diode_IrMat_conf: [1×1 struct]
+                                     diode_VrMat: [1×1 struct]
+                                diode_VrMat_unit: [1×1 struct]
+                                diode_VrMat_conf: [1×1 struct]
+                                     diode_VrVec: [1×1 struct]
+                                diode_VrVec_unit: [1×1 struct]
+                                diode_VrVec_conf: [1×1 struct]
+                                     diode_IrVec: [1×1 struct]
+                                diode_IrVec_unit: [1×1 struct]
+                                diode_IrVec_conf: [1×1 struct]
+                                        diode_Vr: [1×1 struct]
+                                   diode_Vr_unit: [1×1 struct]
+                                   diode_Vr_conf: [1×1 struct]
+                                        diode_Ls: [1×1 struct]
+                                   diode_Ls_unit: [1×1 struct]
+                                   diode_Ls_conf: [1×1 struct]
+                                      diode_Erec: [1×1 struct]
+                                 diode_Erec_unit: [1×1 struct]
+                                 diode_Erec_conf: [1×1 struct]
+                            diode_rec_loss_model: [1×1 struct]
+                       diode_rec_loss_model_unit: [1×1 struct]
+                       diode_rec_loss_model_conf: [1×1 struct]
+                                   diode_ErecVal: [1×1 struct]
+                              diode_ErecVal_unit: [1×1 struct]
+                              diode_ErecVal_conf: [1×1 struct]
+                            diode_scaleWithIandV: [1×1 struct]
+                       diode_scaleWithIandV_unit: [1×1 struct]
+                       diode_scaleWithIandV_conf: [1×1 struct]
+                                   diode_ErecMat: [1×1 struct]
+                              diode_ErecMat_unit: [1×1 struct]
+                              diode_ErecMat_conf: [1×1 struct]
+                                  diodeErecMat3D: [1×1 struct]
+                             diodeErecMat3D_unit: [1×1 struct]
+                             diodeErecMat3D_conf: [1×1 struct]
+                                  diode_TjrecVec: [1×1 struct]
+                             diode_TjrecVec_unit: [1×1 struct]
+                             diode_TjrecVec_conf: [1×1 struct]
+                                  diode_IfrecVec: [1×1 struct]
+                             diode_IfrecVec_unit: [1×1 struct]
+                             diode_IfrecVec_conf: [1×1 struct]
+                                    diodeVrecVec: [1×1 struct]
+                               diodeVrecVec_unit: [1×1 struct]
+                               diodeVrecVec_conf: [1×1 struct]
+                                   diode_IrecVal: [1×1 struct]
+                              diode_IrecVal_unit: [1×1 struct]
+                              diode_IrecVal_conf: [1×1 struct]
+                                   diode_VrecVal: [1×1 struct]
+                              diode_VrecVal_unit: [1×1 struct]
+                              diode_VrecVal_conf: [1×1 struct]
+                                   diode_tFilter: [1×1 struct]
+                              diode_tFilter_unit: [1×1 struct]
+                              diode_tFilter_conf: [1×1 struct]
+                     separateThermalPortForDiode: [1×1 struct]
+                separateThermalPortForDiode_unit: [1×1 struct]
+                separateThermalPortForDiode_conf: [1×1 struct]
+                thermal_network_parameterization: [1×1 struct]
+           thermal_network_parameterization_unit: [1×1 struct]
+           thermal_network_parameterization_conf: [1×1 struct]
+                                             Rth: [1×1 struct]
+                                        Rth_unit: [1×1 struct]
+                                        Rth_conf: [1×1 struct]
+                                       Rth_Cauer: [1×1 struct]
+                                  Rth_Cauer_unit: [1×1 struct]
+                                  Rth_Cauer_conf: [1×1 struct]
+                                      Rth_Foster: [1×1 struct]
+                                 Rth_Foster_unit: [1×1 struct]
+                                 Rth_Foster_conf: [1×1 struct]
+                   thermal_mass_parameterization: [1×1 struct]
+              thermal_mass_parameterization_unit: [1×1 struct]
+              thermal_mass_parameterization_conf: [1×1 struct]
+                                    thermal_mass: [1×1 struct]
+                               thermal_mass_unit: [1×1 struct]
+                               thermal_mass_conf: [1×1 struct]
+                              thermal_mass_Cauer: [1×1 struct]
+                         thermal_mass_Cauer_unit: [1×1 struct]
+                         thermal_mass_Cauer_conf: [1×1 struct]
+                             thermal_mass_Foster: [1×1 struct]
+                        thermal_mass_Foster_unit: [1×1 struct]
+                        thermal_mass_Foster_conf: [1×1 struct]
+                           thermal_time_constant: [1×1 struct]
+                      thermal_time_constant_unit: [1×1 struct]
+                      thermal_time_constant_conf: [1×1 struct]
+                     thermal_time_constant_Cauer: [1×1 struct]
+                thermal_time_constant_Cauer_unit: [1×1 struct]
+                thermal_time_constant_Cauer_conf: [1×1 struct]
+                    thermal_time_constant_Foster: [1×1 struct]
+               thermal_time_constant_Foster_unit: [1×1 struct]
+               thermal_time_constant_Foster_conf: [1×1 struct]
+               thermal_mass_initial_temperatures: [1×1 struct]
+          thermal_mass_initial_temperatures_unit: [1×1 struct]
+          thermal_mass_initial_temperatures_conf: [1×1 struct]
+         thermal_mass_initial_temperatures_Cauer: [1×1 struct]
+    thermal_mass_initial_temperatures_Cauer_unit: [1×1 struct]
+    thermal_mass_initial_temperatures_Cauer_conf: [1×1 struct]
+                           junction_thermal_mass: [1×1 struct]
+                      junction_thermal_mass_unit: [1×1 struct]
+                      junction_thermal_mass_conf: [1×1 struct]
+                             Tvec_initial_Foster: [1×1 struct]
+                        Tvec_initial_Foster_unit: [1×1 struct]
+                        Tvec_initial_Foster_conf: [1×1 struct]
+                                        RthDiode: [1×1 struct]
+                                   RthDiode_unit: [1×1 struct]
+                                   RthDiode_conf: [1×1 struct]
+                                   RthCauerDiode: [1×1 struct]
+                              RthCauerDiode_unit: [1×1 struct]
+                              RthCauerDiode_conf: [1×1 struct]
+                                  RthFosterDiode: [1×1 struct]
+                             RthFosterDiode_unit: [1×1 struct]
+                             RthFosterDiode_conf: [1×1 struct]
+                                thermalMassDiode: [1×1 struct]
+                           thermalMassDiode_unit: [1×1 struct]
+                           thermalMassDiode_conf: [1×1 struct]
+                           thermalMassCauerDiode: [1×1 struct]
+                      thermalMassCauerDiode_unit: [1×1 struct]
+                      thermalMassCauerDiode_conf: [1×1 struct]
+                          thermalMassFosterDiode: [1×1 struct]
+                     thermalMassFosterDiode_unit: [1×1 struct]
+                     thermalMassFosterDiode_conf: [1×1 struct]
+                                 thermalTauDiode: [1×1 struct]
+                            thermalTauDiode_unit: [1×1 struct]
+                            thermalTauDiode_conf: [1×1 struct]
+                            thermalTauCauerDiode: [1×1 struct]
+                       thermalTauCauerDiode_unit: [1×1 struct]
+                       thermalTauCauerDiode_conf: [1×1 struct]
+                           thermalTauFosterDiode: [1×1 struct]
+                      thermalTauFosterDiode_unit: [1×1 struct]
+                      thermalTauFosterDiode_conf: [1×1 struct]
+                        thermalMassInitTempDiode: [1×1 struct]
+                   thermalMassInitTempDiode_unit: [1×1 struct]
+                   thermalMassInitTempDiode_conf: [1×1 struct]
+                   thermalMassInitTempCauerDiode: [1×1 struct]
+              thermalMassInitTempCauerDiode_unit: [1×1 struct]
+              thermalMassInitTempCauerDiode_conf: [1×1 struct]
+                        junctionthermalMassDiode: [1×1 struct]
+                   junctionthermalMassDiode_unit: [1×1 struct]
+                   junctionthermalMassDiode_conf: [1×1 struct]
+                          TVecInitialFosterDiode: [1×1 struct]
+                     TVecInitialFosterDiode_unit: [1×1 struct]
+                     TVecInitialFosterDiode_conf: [1×1 struct]
+                              no_thermal_network: [1×1 struct]
+                         no_thermal_network_unit: [1×1 struct]
+                         no_thermal_network_conf: [1×1 struct]
+               IGBT_junction_temperature_specify: [1×1 struct]
+              IGBT_junction_temperature_priority: [1×1 struct]
+                       IGBT_junction_temperature: [1×1 struct]
+                  IGBT_junction_temperature_unit: [1×1 struct]
+       IGBT_junction_temperature_nominal_specify: [1×1 struct]
+         IGBT_junction_temperature_nominal_value: [1×1 struct]
+          IGBT_junction_temperature_nominal_unit: [1×1 struct]
+              diode_junction_temperature_specify: [1×1 struct]
+             diode_junction_temperature_priority: [1×1 struct]
+                      diode_junction_temperature: [1×1 struct]
+                 diode_junction_temperature_unit: [1×1 struct]
+      diode_junction_temperature_nominal_specify: [1×1 struct]
+        diode_junction_temperature_nominal_value: [1×1 struct]
+         diode_junction_temperature_nominal_unit: [1×1 struct]
+                                      Qj_specify: [1×1 struct]
+                                     Qj_priority: [1×1 struct]
+                                              Qj: [1×1 struct]
+                                         Qj_unit: [1×1 struct]
+                              Qj_nominal_specify: [1×1 struct]
+                                Qj_nominal_value: [1×1 struct]
+                                 Qj_nominal_unit: [1×1 struct]
+              accumulatedSwitchingLosses_specify: [1×1 struct]
+             accumulatedSwitchingLosses_priority: [1×1 struct]
+                      accumulatedSwitchingLosses: [1×1 struct]
+                 accumulatedSwitchingLosses_unit: [1×1 struct]
+
+    {'ComponentPath'                               }    {'ee.semiconductors.ideal.igbt'                                                     }
+    {'ComponentVariants'                           }    {'["ee.semiconductors.ideal.igbt","ee.semiconductors.ideal.igbt_thermal"]'          }
+    {'ComponentVariantNames'                       }    {'["physmod:ee:library:comments:semiconductors:igbts_sscx:NoThermalPort","physmod:…'}
+    {'ClassName'                                   }    {'Simscape variant'                                                                 }
+    {'SchemaVersion'                               }    {'1'                                                                                }
+    {'port_option'                                 }    {'ee.enum.controlport.ps'                                                           }
+    {'port_option_unit'                            }    {'1'                                                                                }
+    {'port_option_conf'                            }    {'compiletime'                                                                      }
+    {'Vf'                                          }    {'0.8'                                                                              }
+    {'Vf_unit'                                     }    {'V'                                                                                }
+    {'Vf_conf'                                     }    {'compiletime'                                                                      }
+    {'Ron'                                         }    {'0.001'                                                                            }
+    {'Ron_unit'                                    }    {'Ohm'                                                                              }
+    {'Ron_conf'                                    }    {'compiletime'                                                                      }
+    {'Goff'                                        }    {'1e-5'                                                                             }
+    {'Goff_unit'                                   }    {'1/Ohm'                                                                            }
+    {'Goff_conf'                                   }    {'compiletime'                                                                      }
+    {'Vth'                                         }    {'6'                                                                                }
+    {'Vth_unit'                                    }    {'V'                                                                                }
+    {'Vth_conf'                                    }    {'compiletime'                                                                      }
+    {'diode_param'                                 }    {'ee.enum.semiconductors.protectionDiode.external'                                  }
+    {'diode_param_unit'                            }    {'1'                                                                                }
+    {'diode_param_conf'                            }    {'compiletime'                                                                      }
+    {'diode_Vf'                                    }    {'0.8'                                                                              }
+    {'diode_Vf_unit'                               }    {'V'                                                                                }
+    {'diode_Vf_conf'                               }    {'compiletime'                                                                      }
+    {'diode_Ron'                                   }    {'0.001'                                                                            }
+    {'diode_Ron_unit'                              }    {'Ohm'                                                                              }
+    {'diode_Ron_conf'                              }    {'compiletime'                                                                      }
+    {'diode_Goff'                                  }    {'1e-5'                                                                             }
+    {'diode_Goff_unit'                             }    {'1/Ohm'                                                                            }
+    {'diode_Goff_conf'                             }    {'compiletime'                                                                      }
+    {'diode_C'                                     }    {'50e-9'                                                                            }
+    {'diode_C_unit'                                }    {'F'                                                                                }
+    {'diode_C_conf'                                }    {'compiletime'                                                                      }
+    {'diode_iRM'                                   }    {'-235'                                                                             }
+    {'diode_iRM_unit'                              }    {'A'                                                                                }
+    {'diode_iRM_conf'                              }    {'compiletime'                                                                      }
+    {'diode_iF'                                    }    {'300'                                                                              }
+    {'diode_iF_unit'                               }    {'A'                                                                                }
+    {'diode_iF_conf'                               }    {'compiletime'                                                                      }
+    {'diode_idot'                                  }    {'-50'                                                                              }
+    {'diode_idot_unit'                             }    {'A/us'                                                                             }
+    {'diode_idot_conf'                             }    {'compiletime'                                                                      }
+    {'diode_trr_param'                             }    {'ee.enum.converters.diodeReverseParam.trr_factor'                                  }
+    {'diode_trr_param_unit'                        }    {'1'                                                                                }
+    {'diode_trr_param_conf'                        }    {'compiletime'                                                                      }
+    {'diode_trr_factor'                            }    {'3'                                                                                }
+    {'diode_trr_factor_unit'                       }    {'1'                                                                                }
+    {'diode_trr_factor_conf'                       }    {'compiletime'                                                                      }
+    {'diode_trr'                                   }    {'15'                                                                               }
+    {'diode_trr_unit'                              }    {'us'                                                                               }
+    {'diode_trr_conf'                              }    {'compiletime'                                                                      }
+    {'diode_Qrr'                                   }    {'1500'                                                                             }
+    {'diode_Qrr_unit'                              }    {'s*uA'                                                                             }
+    {'diode_Qrr_conf'                              }    {'compiletime'                                                                      }
+    {'ice_specify'                                 }    {'off'                                                                              }
+    {'ice_priority'                                }    {'None'                                                                             }
+    {'ice'                                         }    {'0'                                                                                }
+    {'ice_unit'                                    }    {'A'                                                                                }
+    {'ice_nominal_specify'                         }    {'off'                                                                              }
+    {'ice_nominal_value'                           }    {'1'                                                                                }
+    {'ice_nominal_unit'                            }    {'A'                                                                                }
+    {'vce_specify'                                 }    {'off'                                                                              }
+    {'vce_priority'                                }    {'None'                                                                             }
+    {'vce'                                         }    {'0'                                                                                }
+    {'vce_unit'                                    }    {'V'                                                                                }
+    {'vce_nominal_specify'                         }    {'off'                                                                              }
+    {'vce_nominal_value'                           }    {'1'                                                                                }
+    {'vce_nominal_unit'                            }    {'V'                                                                                }
+    {'vge_specify'                                 }    {'off'                                                                              }
+    {'vge_priority'                                }    {'None'                                                                             }
+    {'vge'                                         }    {'0'                                                                                }
+    {'vge_unit'                                    }    {'V'                                                                                }
+    {'vge_nominal_specify'                         }    {'off'                                                                              }
+    {'vge_nominal_value'                           }    {'1'                                                                                }
+    {'vge_nominal_unit'                            }    {'V'                                                                                }
+    {'thermal_loss_option'                         }    {'ee.enum.converters.thermalLossOption.constantvalues'                              }
+    {'thermal_loss_option_unit'                    }    {'1'                                                                                }
+    {'thermal_loss_option_conf'                    }    {'compiletime'                                                                      }
+    {'Von_data'                                    }    {'[0, .1, .6, .8, 1, 1.3, 1.6, 2, 2.4; 0, .1, .7, 1, 1.2, 1.5, 1.9, 2.4, 2.8]'      }
+    {'Von_data_unit'                               }    {'V'                                                                                }
+    {'Von_data_conf'                               }    {'compiletime'                                                                      }
+    {'Tj'                                          }    {'[298.15, 398.15]'                                                                 }
+    {'Tj_unit'                                     }    {'K'                                                                                }
+    {'Tj_conf'                                     }    {'compiletime'                                                                      }
+    {'Iout_data'                                   }    {'[0, .1, 1, 5, 10, 20, 40, 70, 100]'                                               }
+    {'Iout_data_unit'                              }    {'A'                                                                                }
+    {'Iout_data_conf'                              }    {'compiletime'                                                                      }
+    {'tabulateWithVce'                             }    {'false'                                                                            }
+    {'tabulateWithVce_unit'                        }    {'1'                                                                                }
+    {'tabulateWithVce_conf'                        }    {'compiletime'                                                                      }
+    {'Eon_data'                                    }    {'[0, .0024, .024, .12, .2, .48, 1.04, 2.16, 3.24; 0, .003, .03, .15, .25, .6, 1.3…'}
+    {'Eon_data_unit'                               }    {'J'                                                                                }
+    {'Eon_data_conf'                               }    {'compiletime'                                                                      }
+    {'Eoff_data'                                   }    {'[0, .0007, .0066, .033, .066, .17, .33, .83, 1.5; 0, .001, .01, .05, .1, .25, .5…'}
+    {'Eoff_data_unit'                              }    {'J'                                                                                }
+    {'Eoff_data_conf'                              }    {'compiletime'                                                                      }
+    {'Eon_data_3D'                                 }    {'[zeros(2, 9, 3)]'                                                                 }
+    {'Eon_data_3D_unit'                            }    {'J'                                                                                }
+    {'Eon_data_3D_conf'                            }    {'compiletime'                                                                      }
+    {'Eoff_data_3D'                                }    {'[zeros(2, 9, 3)]'                                                                 }
+    {'Eoff_data_3D_unit'                           }    {'J'                                                                                }
+    {'Eoff_data_3D_conf'                           }    {'compiletime'                                                                      }
+    {'Tj_loss'                                     }    {'[298.15, 398.15]'                                                                 }
+    {'Tj_loss_unit'                                }    {'K'                                                                                }
+    {'Tj_loss_conf'                                }    {'compiletime'                                                                      }
+    {'Iout_data_loss'                              }    {'[0, .1, 1, 5, 10, 20, 40, 70, 100]'                                               }
+    {'Iout_data_loss_unit'                         }    {'A'                                                                                }
+    {'Iout_data_loss_conf'                         }    {'compiletime'                                                                      }
+    {'Vce_loss'                                    }    {'[0, 150, 300]'                                                                    }
+    {'Vce_loss_unit'                               }    {'V'                                                                                }
+    {'Vce_loss_conf'                               }    {'compiletime'                                                                      }
+    {'Eon_scalar'                                  }    {'22.86e-3'                                                                         }
+    {'Eon_scalar_unit'                             }    {'J'                                                                                }
+    {'Eon_scalar_conf'                             }    {'compiletime'                                                                      }
+    {'Eoff_scalar'                                 }    {'17.14e-3'                                                                         }
+    {'Eoff_scalar_unit'                            }    {'J'                                                                                }
+    {'Eoff_scalar_conf'                            }    {'compiletime'                                                                      }
+    {'Voff'                                        }    {'300'                                                                              }
+    {'Voff_unit'                                   }    {'V'                                                                                }
+    {'Voff_conf'                                   }    {'compiletime'                                                                      }
+    {'Iout_scalar'                                 }    {'600'                                                                              }
+    {'Iout_scalar_unit'                            }    {'A'                                                                                }
+    {'Iout_scalar_conf'                            }    {'compiletime'                                                                      }
+    {'useCurrentFromPreviousCycle'                 }    {'true'                                                                             }
+    {'useCurrentFromPreviousCycle_unit'            }    {'1'                                                                                }
+    {'useCurrentFromPreviousCycle_conf'            }    {'compiletime'                                                                      }
+    {'currentMeasDelay'                            }    {'0'                                                                                }
+    {'currentMeasDelay_unit'                       }    {'s'                                                                                }
+    {'currentMeasDelay_conf'                       }    {'compiletime'                                                                      }
+    {'useVoltageFromPreviousCycle'                 }    {'true'                                                                             }
+    {'useVoltageFromPreviousCycle_unit'            }    {'1'                                                                                }
+    {'useVoltageFromPreviousCycle_conf'            }    {'compiletime'                                                                      }
+    {'voltageMeasDelay'                            }    {'0'                                                                                }
+    {'voltageMeasDelay_unit'                       }    {'s'                                                                                }
+    {'voltageMeasDelay_conf'                       }    {'compiletime'                                                                      }
+    {'diodeModelType'                              }    {'ee.enum.converters.diodeModelType.pwl'                                            }
+    {'diodeModelType_unit'                         }    {'1'                                                                                }
+    {'diodeModelType_conf'                         }    {'compiletime'                                                                      }
+    {'diodeTableType'                              }    {'ee.enum.diode.tableType.IfMat'                                                    }
+    {'diodeTableType_unit'                         }    {'1'                                                                                }
+    {'diodeTableType_conf'                         }    {'compiletime'                                                                      }
+    {'diode_ReverseIVType'                         }    {'ee.enum.diode.diodeReverseIV.constant'                                            }
+    {'diode_ReverseIVType_unit'                    }    {'1'                                                                                }
+    {'diode_ReverseIVType_conf'                    }    {'compiletime'                                                                      }
+    {'diode_IfMat'                                 }    {'[.07, .12, .19, 1.75, 4.24, 7.32, 11.2; .16, .3, .72, 2.14, 4.02, 6.35, 9.12]'    }
+    {'diode_IfMat_unit'                            }    {'A'                                                                                }
+    {'diode_IfMat_conf'                            }    {'compiletime'                                                                      }
+    {'diode_VfMat'                                 }    {'[.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85; .58, .68, .75, 1.1, 1.38, 1.77, 2.2…'}
+    {'diode_VfMat_unit'                            }    {'V'                                                                                }
+    {'diode_VfMat_conf'                            }    {'compiletime'                                                                      }
+    {'diode_TjVec'                                 }    {'[25, 125]'                                                                        }
+    {'diode_TjVec_unit'                            }    {'degC'                                                                             }
+    {'diode_TjVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_VfVec'                                 }    {'[.5, .7, .9, 1.3, 1.7, 2.1, 2.5]'                                                 }
+    {'diode_VfVec_unit'                            }    {'V'                                                                                }
+    {'diode_VfVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_IfVec'                                 }    {'[.1, .2, .5, 1, 2, 4, 7, 10]'                                                     }
+    {'diode_IfVec_unit'                            }    {'A'                                                                                }
+    {'diode_IfVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_IrMat'                                 }    {'[1e-06, 2e-06, 5e-06, 1e-05, 2.5e-05, 5e-05, .0001; 2e-06, 5e-06, 1e-05, 4e-05, …'}
+    {'diode_IrMat_unit'                            }    {'A'                                                                                }
+    {'diode_IrMat_conf'                            }    {'compiletime'                                                                      }
+    {'diode_VrMat'                                 }    {'[10, 100, 200, 250, 300, 325, 350; 10, 70, 160, 220, 270, 300, 320]'              }
+    {'diode_VrMat_unit'                            }    {'V'                                                                                }
+    {'diode_VrMat_conf'                            }    {'compiletime'                                                                      }
+    {'diode_VrVec'                                 }    {'[10, 20, 40, 50, 70, 80, 100]'                                                    }
+    {'diode_VrVec_unit'                            }    {'V'                                                                                }
+    {'diode_VrVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_IrVec'                                 }    {'[1e-06, 2e-06, 5e-06, 1e-05, 2e-05, 5e-05, .0001]'                                }
+    {'diode_IrVec_unit'                            }    {'A'                                                                                }
+    {'diode_IrVec_conf'                            }    {'compiletime'                                                                      }
+    {'diode_Vr'                                    }    {'-600'                                                                             }
+    {'diode_Vr_unit'                               }    {'V'                                                                                }
+    {'diode_Vr_conf'                               }    {'compiletime'                                                                      }
+    {'diode_Ls'                                    }    {'150'                                                                              }
+    {'diode_Ls_unit'                               }    {'nH'                                                                               }
+    {'diode_Ls_conf'                               }    {'compiletime'                                                                      }
+    {'diode_Erec'                                  }    {'0.03'                                                                             }
+    {'diode_Erec_unit'                             }    {'J'                                                                                }
+    {'diode_Erec_conf'                             }    {'compiletime'                                                                      }
+    {'diode_rec_loss_model'                        }    {'ee.enum.diode.reverseRecoveryModelTabulateUpTo3D.fixed'                           }
+    {'diode_rec_loss_model_unit'                   }    {'1'                                                                                }
+    {'diode_rec_loss_model_conf'                   }    {'compiletime'                                                                      }
+    {'diode_ErecVal'                               }    {'0'                                                                                }
+    {'diode_ErecVal_unit'                          }    {'J'                                                                                }
+    {'diode_ErecVal_conf'                          }    {'compiletime'                                                                      }
+    {'diode_scaleWithIandV'                        }    {'true'                                                                             }
+    {'diode_scaleWithIandV_unit'                   }    {'1'                                                                                }
+    {'diode_scaleWithIandV_conf'                   }    {'compiletime'                                                                      }
+    {'diode_ErecMat'                               }    {'zeros(2, 3)'                                                                      }
+    {'diode_ErecMat_unit'                          }    {'J'                                                                                }
+    {'diode_ErecMat_conf'                          }    {'compiletime'                                                                      }
+    {'diodeErecMat3D'                              }    {'zeros(2, 3, 2)'                                                                   }
+    {'diodeErecMat3D_unit'                         }    {'J'                                                                                }
+    {'diodeErecMat3D_conf'                         }    {'compiletime'                                                                      }
+    {'diode_TjrecVec'                              }    {'[298.15, 398.15]'                                                                 }
+    {'diode_TjrecVec_unit'                         }    {'K'                                                                                }
+    {'diode_TjrecVec_conf'                         }    {'compiletime'                                                                      }
+    {'diode_IfrecVec'                              }    {'[.1, 1, 10]'                                                                      }
+    {'diode_IfrecVec_unit'                         }    {'A'                                                                                }
+    {'diode_IfrecVec_conf'                         }    {'compiletime'                                                                      }
+    {'diodeVrecVec'                                }    {'[0, 100]'                                                                         }
+    {'diodeVrecVec_unit'                           }    {'V'                                                                                }
+    {'diodeVrecVec_conf'                           }    {'compiletime'                                                                      }
+    {'diode_IrecVal'                               }    {'10'                                                                               }
+    {'diode_IrecVal_unit'                          }    {'A'                                                                                }
+    {'diode_IrecVal_conf'                          }    {'compiletime'                                                                      }
+    {'diode_VrecVal'                               }    {'10'                                                                               }
+    {'diode_VrecVal_unit'                          }    {'V'                                                                                }
+    {'diode_VrecVal_conf'                          }    {'compiletime'                                                                      }
+    {'diode_tFilter'                               }    {'1 / 1000 / 100'                                                                   }
+    {'diode_tFilter_unit'                          }    {'s'                                                                                }
+    {'diode_tFilter_conf'                          }    {'compiletime'                                                                      }
+    {'separateThermalPortForDiode'                 }    {'false'                                                                            }
+    {'separateThermalPortForDiode_unit'            }    {'1'                                                                                }
+    {'separateThermalPortForDiode_conf'            }    {'compiletime'                                                                      }
+    {'thermal_network_parameterization'            }    {'ee.enum.thermalNetworkTopology.external'                                          }
+    {'thermal_network_parameterization_unit'       }    {'1'                                                                                }
+    {'thermal_network_parameterization_conf'       }    {'compiletime'                                                                      }
+    {'Rth'                                         }    {'[.08, .5]'                                                                        }
+    {'Rth_unit'                                    }    {'K/W'                                                                              }
+    {'Rth_conf'                                    }    {'compiletime'                                                                      }
+    {'Rth_Cauer'                                   }    {'[.08, .1, .5]'                                                                    }
+    {'Rth_Cauer_unit'                              }    {'K/W'                                                                              }
+    {'Rth_Cauer_conf'                              }    {'compiletime'                                                                      }
+    {'Rth_Foster'                                  }    {'[.08, .14, .22, .16]'                                                             }
+    {'Rth_Foster_unit'                             }    {'K/W'                                                                              }
+    {'Rth_Foster_conf'                             }    {'compiletime'                                                                      }
+    {'thermal_mass_parameterization'               }    {'ee.enum.thermalNetwork.timeconstant'                                              }
+    {'thermal_mass_parameterization_unit'          }    {'1'                                                                                }
+    {'thermal_mass_parameterization_conf'          }    {'compiletime'                                                                      }
+    {'thermal_mass'                                }    {'[.01, .5]'                                                                        }
+    {'thermal_mass_unit'                           }    {'J/K'                                                                              }
+    {'thermal_mass_conf'                           }    {'compiletime'                                                                      }
+    {'thermal_mass_Cauer'                          }    {'[.01, .1, .5]'                                                                    }
+    {'thermal_mass_Cauer_unit'                     }    {'J/K'                                                                              }
+    {'thermal_mass_Cauer_conf'                     }    {'compiletime'                                                                      }
+    {'thermal_mass_Foster'                         }    {'[.001, .005, .05, .5]'                                                            }
+    {'thermal_mass_Foster_unit'                    }    {'J/K'                                                                              }
+    {'thermal_mass_Foster_conf'                    }    {'compiletime'                                                                      }
+    {'thermal_time_constant'                       }    {'[.001, .2]'                                                                       }
+    {'thermal_time_constant_unit'                  }    {'s'                                                                                }
+    {'thermal_time_constant_conf'                  }    {'compiletime'                                                                      }
+    {'thermal_time_constant_Cauer'                 }    {'[.001, .1, .2]'                                                                   }
+    {'thermal_time_constant_Cauer_unit'            }    {'s'                                                                                }
+    {'thermal_time_constant_Cauer_conf'            }    {'compiletime'                                                                      }
+    {'thermal_time_constant_Foster'                }    {'[7e-05, .0007, .01, .08]'                                                         }
+    {'thermal_time_constant_Foster_unit'           }    {'s'                                                                                }
+    {'thermal_time_constant_Foster_conf'           }    {'compiletime'                                                                      }
+    {'thermal_mass_initial_temperatures'           }    {'[25, 25]'                                                                         }
+    {'thermal_mass_initial_temperatures_unit'      }    {'degC'                                                                             }
+    {'thermal_mass_initial_temperatures_conf'      }    {'compiletime'                                                                      }
+    {'thermal_mass_initial_temperatures_Cauer'     }    {'[25, 25, 25]'                                                                     }
+    {'thermal_mass_initial_temperatures_Cauer_unit'}    {'degC'                                                                             }
+    {'thermal_mass_initial_temperatures_Cauer_conf'}    {'compiletime'                                                                      }
+    {'junction_thermal_mass'                       }    {'0.01'                                                                             }
+    {'junction_thermal_mass_unit'                  }    {'J/K'                                                                              }
+    {'junction_thermal_mass_conf'                  }    {'compiletime'                                                                      }
+    {'Tvec_initial_Foster'                         }    {'[25, 25, 25, 25]'                                                                 }
+    {'Tvec_initial_Foster_unit'                    }    {'degC'                                                                             }
+    {'Tvec_initial_Foster_conf'                    }    {'compiletime'                                                                      }
+    {'RthDiode'                                    }    {'[.03, .2]'                                                                        }
+    {'RthDiode_unit'                               }    {'K/W'                                                                              }
+    {'RthDiode_conf'                               }    {'compiletime'                                                                      }
+    {'RthCauerDiode'                               }    {'[.03, .1, .2]'                                                                    }
+    {'RthCauerDiode_unit'                          }    {'K/W'                                                                              }
+    {'RthCauerDiode_conf'                          }    {'compiletime'                                                                      }
+    {'RthFosterDiode'                              }    {'[.03, .2]'                                                                        }
+    {'RthFosterDiode_unit'                         }    {'K/W'                                                                              }
+    {'RthFosterDiode_conf'                         }    {'compiletime'                                                                      }
+    {'thermalMassDiode'                            }    {'[3, 25]'                                                                          }
+    {'thermalMassDiode_unit'                       }    {'J/K'                                                                              }
+    {'thermalMassDiode_conf'                       }    {'compiletime'                                                                      }
+    {'thermalMassCauerDiode'                       }    {'[3, 10, 25]'                                                                      }
+    {'thermalMassCauerDiode_unit'                  }    {'J/K'                                                                              }
+    {'thermalMassCauerDiode_conf'                  }    {'compiletime'                                                                      }
+    {'thermalMassFosterDiode'                      }    {'[33, 50]'                                                                         }
+    {'thermalMassFosterDiode_unit'                 }    {'J/K'                                                                              }
+    {'thermalMassFosterDiode_conf'                 }    {'compiletime'                                                                      }
+    {'thermalTauDiode'                             }    {'[.1, 5]'                                                                          }
+    {'thermalTauDiode_unit'                        }    {'s'                                                                                }
+    {'thermalTauDiode_conf'                        }    {'compiletime'                                                                      }
+    {'thermalTauCauerDiode'                        }    {'[.1, 1, 5]'                                                                       }
+    {'thermalTauCauerDiode_unit'                   }    {'s'                                                                                }
+    {'thermalTauCauerDiode_conf'                   }    {'compiletime'                                                                      }
+    {'thermalTauFosterDiode'                       }    {'[1, 10]'                                                                          }
+    {'thermalTauFosterDiode_unit'                  }    {'s'                                                                                }
+    {'thermalTauFosterDiode_conf'                  }    {'compiletime'                                                                      }
+    {'thermalMassInitTempDiode'                    }    {'[25, 25]'                                                                         }
+    {'thermalMassInitTempDiode_unit'               }    {'degC'                                                                             }
+    {'thermalMassInitTempDiode_conf'               }    {'compiletime'                                                                      }
+    {'thermalMassInitTempCauerDiode'               }    {'[25, 25, 25]'                                                                     }
+    {'thermalMassInitTempCauerDiode_unit'          }    {'degC'                                                                             }
+    {'thermalMassInitTempCauerDiode_conf'          }    {'compiletime'                                                                      }
+    {'junctionthermalMassDiode'                    }    {'0.1'                                                                              }
+    {'junctionthermalMassDiode_unit'               }    {'J/K'                                                                              }
+    {'junctionthermalMassDiode_conf'               }    {'compiletime'                                                                      }
+    {'TVecInitialFosterDiode'                      }    {'[25, 25]'                                                                         }
+    {'TVecInitialFosterDiode_unit'                 }    {'degC'                                                                             }
+    {'TVecInitialFosterDiode_conf'                 }    {'compiletime'                                                                      }
+    {'no_thermal_network'                          }    {'ee.enum.enable.no'                                                                }
+    {'no_thermal_network_unit'                     }    {'1'                                                                                }
+    {'no_thermal_network_conf'                     }    {'compiletime'                                                                      }
+    {'IGBT_junction_temperature_specify'           }    {'off'                                                                              }
+    {'IGBT_junction_temperature_priority'          }    {'None'                                                                             }
+    {'IGBT_junction_temperature'                   }    {'25'                                                                               }
+    {'IGBT_junction_temperature_unit'              }    {'degC'                                                                             }
+    {'IGBT_junction_temperature_nominal_specify'   }    {'off'                                                                              }
+    {'IGBT_junction_temperature_nominal_value'     }    {'1'                                                                                }
+    {'IGBT_junction_temperature_nominal_unit'      }    {'degC'                                                                             }
+    {'diode_junction_temperature_specify'          }    {'off'                                                                              }
+    {'diode_junction_temperature_priority'         }    {'None'                                                                             }
+    {'diode_junction_temperature'                  }    {'25'                                                                               }
+    {'diode_junction_temperature_unit'             }    {'degC'                                                                             }
+    {'diode_junction_temperature_nominal_specify'  }    {'off'                                                                              }
+    {'diode_junction_temperature_nominal_value'    }    {'1'                                                                                }
+    {'diode_junction_temperature_nominal_unit'     }    {'degC'                                                                             }
+    {'Qj_specify'                                  }    {'off'                                                                              }
+    {'Qj_priority'                                 }    {'None'                                                                             }
+    {'Qj'                                          }    {'0'                                                                                }
+    {'Qj_unit'                                     }    {'W'                                                                                }
+    {'Qj_nominal_specify'                          }    {'off'                                                                              }
+    {'Qj_nominal_value'                            }    {'1'                                                                                }
+    {'Qj_nominal_unit'                             }    {'W'                                                                                }
+    {'accumulatedSwitchingLosses_specify'          }    {'off'                                                                              }
+    {'accumulatedSwitchingLosses_priority'         }    {'None'                                                                             }
+    {'accumulatedSwitchingLosses'                  }    {'0'                                                                                }
+    {'accumulatedSwitchingLosses_unit'             }    {'J'                                                                                }
+
+ee_lib/Semiconductors &
+Converters/N-Channel IGBT
+                                      model_type: [1×1 struct]
+                                 model_type_unit: [1×1 struct]
+                                 model_type_conf: [1×1 struct]
+                                            Ices: [1×1 struct]
+                                       Ices_unit: [1×1 struct]
+                                       Ices_conf: [1×1 struct]
+                                            Vces: [1×1 struct]
+                                       Vces_unit: [1×1 struct]
+                                       Vces_conf: [1×1 struct]
+                                             Vth: [1×1 struct]
+                                        Vth_unit: [1×1 struct]
+                                        Vth_conf: [1×1 struct]
+                                         Vce_sat: [1×1 struct]
+                                    Vce_sat_unit: [1×1 struct]
+                                    Vce_sat_conf: [1×1 struct]
+                                         Ice_sat: [1×1 struct]
+                                    Ice_sat_unit: [1×1 struct]
+                                    Ice_sat_conf: [1×1 struct]
+                                         Vge_sat: [1×1 struct]
+                                    Vge_sat_unit: [1×1 struct]
+                                    Vge_sat_conf: [1×1 struct]
+                                           Tmeas: [1×1 struct]
+                                      Tmeas_unit: [1×1 struct]
+                                      Tmeas_conf: [1×1 struct]
+                                         Vge_vec: [1×1 struct]
+                                    Vge_vec_unit: [1×1 struct]
+                                    Vge_vec_conf: [1×1 struct]
+                                         Vce_vec: [1×1 struct]
+                                    Vce_vec_unit: [1×1 struct]
+                                    Vce_vec_conf: [1×1 struct]
+                                           T_vec: [1×1 struct]
+                                      T_vec_unit: [1×1 struct]
+                                      T_vec_conf: [1×1 struct]
+                                          Ic_mat: [1×1 struct]
+                                     Ic_mat_unit: [1×1 struct]
+                                     Ic_mat_conf: [1×1 struct]
+                                       Ic_mat_3D: [1×1 struct]
+                                  Ic_mat_3D_unit: [1×1 struct]
+                                  Ic_mat_3D_conf: [1×1 struct]
+                                         C_param: [1×1 struct]
+                                    C_param_unit: [1×1 struct]
+                                    C_param_conf: [1×1 struct]
+                                            C_GE: [1×1 struct]
+                                       C_GE_unit: [1×1 struct]
+                                       C_GE_conf: [1×1 struct]
+                                            C_GC: [1×1 struct]
+                                       C_GC_unit: [1×1 struct]
+                                       C_GC_conf: [1×1 struct]
+                                            C_CE: [1×1 struct]
+                                       C_CE_unit: [1×1 struct]
+                                       C_CE_conf: [1×1 struct]
+                                           C_ies: [1×1 struct]
+                                      C_ies_unit: [1×1 struct]
+                                      C_ies_conf: [1×1 struct]
+                                           C_res: [1×1 struct]
+                                      C_res_unit: [1×1 struct]
+                                      C_res_conf: [1×1 struct]
+                                           C_oes: [1×1 struct]
+                                      C_oes_unit: [1×1 struct]
+                                      C_oes_conf: [1×1 struct]
+                                        C_GE_vec: [1×1 struct]
+                                   C_GE_vec_unit: [1×1 struct]
+                                   C_GE_vec_conf: [1×1 struct]
+                                        C_GC_vec: [1×1 struct]
+                                   C_GC_vec_unit: [1×1 struct]
+                                   C_GC_vec_conf: [1×1 struct]
+                                       C_Vge_vec: [1×1 struct]
+                                  C_Vge_vec_unit: [1×1 struct]
+                                  C_Vge_vec_conf: [1×1 struct]
+                                        C_CE_vec: [1×1 struct]
+                                   C_CE_vec_unit: [1×1 struct]
+                                   C_CE_vec_conf: [1×1 struct]
+                                       C_ies_vec: [1×1 struct]
+                                  C_ies_vec_unit: [1×1 struct]
+                                  C_ies_vec_conf: [1×1 struct]
+                                       C_res_vec: [1×1 struct]
+                                  C_res_vec_unit: [1×1 struct]
+                                  C_res_vec_conf: [1×1 struct]
+                                       C_oes_vec: [1×1 struct]
+                                  C_oes_vec_unit: [1×1 struct]
+                                  C_oes_vec_conf: [1×1 struct]
+                                       C_Vce_vec: [1×1 struct]
+                                  C_Vce_vec_unit: [1×1 struct]
+                                  C_Vce_vec_conf: [1×1 struct]
+                          charge_linearity_param: [1×1 struct]
+                     charge_linearity_param_unit: [1×1 struct]
+                     charge_linearity_param_conf: [1×1 struct]
+                                            C_OX: [1×1 struct]
+                                       C_OX_unit: [1×1 struct]
+                                       C_OX_conf: [1×1 struct]
+                                          V_C_OX: [1×1 struct]
+                                     V_C_OX_unit: [1×1 struct]
+                                     V_C_OX_conf: [1×1 struct]
+                                              TF: [1×1 struct]
+                                         TF_unit: [1×1 struct]
+                                         TF_conf: [1×1 struct]
+                                              TT: [1×1 struct]
+                                         TT_unit: [1×1 struct]
+                                         TT_conf: [1×1 struct]
+                                          LeadRc: [1×1 struct]
+                                     LeadRc_unit: [1×1 struct]
+                                     LeadRc_conf: [1×1 struct]
+                                          LeadRe: [1×1 struct]
+                                     LeadRe_unit: [1×1 struct]
+                                     LeadRe_conf: [1×1 struct]
+                                          LeadRg: [1×1 struct]
+                                     LeadRg_unit: [1×1 struct]
+                                     LeadRg_conf: [1×1 struct]
+                                              LC: [1×1 struct]
+                                         LC_unit: [1×1 struct]
+                                         LC_conf: [1×1 struct]
+                                              LE: [1×1 struct]
+                                         LE_unit: [1×1 struct]
+                                         LE_conf: [1×1 struct]
+                                              LG: [1×1 struct]
+                                         LG_unit: [1×1 struct]
+                                         LG_conf: [1×1 struct]
+                                              ec: [1×1 struct]
+                                         ec_unit: [1×1 struct]
+                                         ec_conf: [1×1 struct]
+                                             VAF: [1×1 struct]
+                                        VAF_unit: [1×1 struct]
+                                        VAF_conf: [1×1 struct]
+                                              RC: [1×1 struct]
+                                         RC_unit: [1×1 struct]
+                                         RC_conf: [1×1 struct]
+                                              RE: [1×1 struct]
+                                         RE_unit: [1×1 struct]
+                                         RE_conf: [1×1 struct]
+                                              RG: [1×1 struct]
+                                         RG_unit: [1×1 struct]
+                                         RG_conf: [1×1 struct]
+                                              BF: [1×1 struct]
+                                         BF_unit: [1×1 struct]
+                                         BF_conf: [1×1 struct]
+                                         T_param: [1×1 struct]
+                                    T_param_unit: [1×1 struct]
+                                    T_param_conf: [1×1 struct]
+                                         Ices_T2: [1×1 struct]
+                                    Ices_T2_unit: [1×1 struct]
+                                    Ices_T2_conf: [1×1 struct]
+                                              EG: [1×1 struct]
+                                         EG_unit: [1×1 struct]
+                                         EG_conf: [1×1 struct]
+                                      Vce_sat_T2: [1×1 struct]
+                                 Vce_sat_T2_unit: [1×1 struct]
+                                 Vce_sat_T2_conf: [1×1 struct]
+                                          Tmeas2: [1×1 struct]
+                                     Tmeas2_unit: [1×1 struct]
+                                     Tmeas2_conf: [1×1 struct]
+                                             XTI: [1×1 struct]
+                                        XTI_unit: [1×1 struct]
+                                        XTI_conf: [1×1 struct]
+                                             BEX: [1×1 struct]
+                                        BEX_unit: [1×1 struct]
+                                        BEX_conf: [1×1 struct]
+                                        RG_alpha: [1×1 struct]
+                                   RG_alpha_unit: [1×1 struct]
+                                   RG_alpha_conf: [1×1 struct]
+                                         Tdevice: [1×1 struct]
+                                    Tdevice_unit: [1×1 struct]
+                                    Tdevice_conf: [1×1 struct]
+                                      Tdevice_3D: [1×1 struct]
+                                 Tdevice_3D_unit: [1×1 struct]
+                                 Tdevice_3D_conf: [1×1 struct]
+                                      ig_specify: [1×1 struct]
+                                     ig_priority: [1×1 struct]
+                                              ig: [1×1 struct]
+                                         ig_unit: [1×1 struct]
+                              ig_nominal_specify: [1×1 struct]
+                                ig_nominal_value: [1×1 struct]
+                                 ig_nominal_unit: [1×1 struct]
+                                      ic_specify: [1×1 struct]
+                                     ic_priority: [1×1 struct]
+                                              ic: [1×1 struct]
+                                         ic_unit: [1×1 struct]
+                              ic_nominal_specify: [1×1 struct]
+                                ic_nominal_value: [1×1 struct]
+                                 ic_nominal_unit: [1×1 struct]
+                                     vge_specify: [1×1 struct]
+                                    vge_priority: [1×1 struct]
+                                             vge: [1×1 struct]
+                                        vge_unit: [1×1 struct]
+                             vge_nominal_specify: [1×1 struct]
+                               vge_nominal_value: [1×1 struct]
+                                vge_nominal_unit: [1×1 struct]
+                                     vce_specify: [1×1 struct]
+                                    vce_priority: [1×1 struct]
+                                             vce: [1×1 struct]
+                                        vce_unit: [1×1 struct]
+                             vce_nominal_specify: [1×1 struct]
+                               vce_nominal_value: [1×1 struct]
+                                vce_nominal_unit: [1×1 struct]
+                                   v_Cge_specify: [1×1 struct]
+                                  v_Cge_priority: [1×1 struct]
+                                           v_Cge: [1×1 struct]
+                                      v_Cge_unit: [1×1 struct]
+                           v_Cge_nominal_specify: [1×1 struct]
+                             v_Cge_nominal_value: [1×1 struct]
+                              v_Cge_nominal_unit: [1×1 struct]
+                                   v_Cce_specify: [1×1 struct]
+                                  v_Cce_priority: [1×1 struct]
+                                           v_Cce: [1×1 struct]
+                                      v_Cce_unit: [1×1 struct]
+                           v_Cce_nominal_specify: [1×1 struct]
+                             v_Cce_nominal_value: [1×1 struct]
+                              v_Cce_nominal_unit: [1×1 struct]
+                thermal_network_parameterization: [1×1 struct]
+           thermal_network_parameterization_unit: [1×1 struct]
+           thermal_network_parameterization_conf: [1×1 struct]
+                                             Rth: [1×1 struct]
+                                        Rth_unit: [1×1 struct]
+                                        Rth_conf: [1×1 struct]
+                                       Rth_Cauer: [1×1 struct]
+                                  Rth_Cauer_unit: [1×1 struct]
+                                  Rth_Cauer_conf: [1×1 struct]
+                                      Rth_Foster: [1×1 struct]
+                                 Rth_Foster_unit: [1×1 struct]
+                                 Rth_Foster_conf: [1×1 struct]
+                   thermal_mass_parameterization: [1×1 struct]
+              thermal_mass_parameterization_unit: [1×1 struct]
+              thermal_mass_parameterization_conf: [1×1 struct]
+                                    thermal_mass: [1×1 struct]
+                               thermal_mass_unit: [1×1 struct]
+                               thermal_mass_conf: [1×1 struct]
+                              thermal_mass_Cauer: [1×1 struct]
+                         thermal_mass_Cauer_unit: [1×1 struct]
+                         thermal_mass_Cauer_conf: [1×1 struct]
+                             thermal_mass_Foster: [1×1 struct]
+                        thermal_mass_Foster_unit: [1×1 struct]
+                        thermal_mass_Foster_conf: [1×1 struct]
+                           thermal_time_constant: [1×1 struct]
+                      thermal_time_constant_unit: [1×1 struct]
+                      thermal_time_constant_conf: [1×1 struct]
+                     thermal_time_constant_Cauer: [1×1 struct]
+                thermal_time_constant_Cauer_unit: [1×1 struct]
+                thermal_time_constant_Cauer_conf: [1×1 struct]
+                    thermal_time_constant_Foster: [1×1 struct]
+               thermal_time_constant_Foster_unit: [1×1 struct]
+               thermal_time_constant_Foster_conf: [1×1 struct]
+               thermal_mass_initial_temperatures: [1×1 struct]
+          thermal_mass_initial_temperatures_unit: [1×1 struct]
+          thermal_mass_initial_temperatures_conf: [1×1 struct]
+         thermal_mass_initial_temperatures_Cauer: [1×1 struct]
+    thermal_mass_initial_temperatures_Cauer_unit: [1×1 struct]
+    thermal_mass_initial_temperatures_Cauer_conf: [1×1 struct]
+                             Tvec_initial_Foster: [1×1 struct]
+                        Tvec_initial_Foster_unit: [1×1 struct]
+                        Tvec_initial_Foster_conf: [1×1 struct]
+                                         Ic_vec1: [1×1 struct]
+                                    Ic_vec1_unit: [1×1 struct]
+                                    Ic_vec1_conf: [1×1 struct]
+                                        Vce_vec1: [1×1 struct]
+                                   Vce_vec1_unit: [1×1 struct]
+                                   Vce_vec1_conf: [1×1 struct]
+                                         Rmiller: [1×1 struct]
+                                    Rmiller_unit: [1×1 struct]
+                                    Rmiller_conf: [1×1 struct]
+                                            Goff: [1×1 struct]
+                                       Goff_unit: [1×1 struct]
+                                       Goff_conf: [1×1 struct]
+                                            t_on: [1×1 struct]
+                                       t_on_unit: [1×1 struct]
+                                       t_on_conf: [1×1 struct]
+                                          t_rise: [1×1 struct]
+                                     t_rise_unit: [1×1 struct]
+                                     t_rise_conf: [1×1 struct]
+                                           t_off: [1×1 struct]
+                                      t_off_unit: [1×1 struct]
+                                      t_off_conf: [1×1 struct]
+                                          t_fall: [1×1 struct]
+                                     t_fall_unit: [1×1 struct]
+                                     t_fall_conf: [1×1 struct]
+                                          v_meas: [1×1 struct]
+                                     v_meas_unit: [1×1 struct]
+                                     v_meas_conf: [1×1 struct]
+                            vStartTurnOn_specify: [1×1 struct]
+                           vStartTurnOn_priority: [1×1 struct]
+                                    vStartTurnOn: [1×1 struct]
+                               vStartTurnOn_unit: [1×1 struct]
+                            tStartTurnOn_specify: [1×1 struct]
+                           tStartTurnOn_priority: [1×1 struct]
+                                    tStartTurnOn: [1×1 struct]
+                               tStartTurnOn_unit: [1×1 struct]
+                           vStartTurnOff_specify: [1×1 struct]
+                          vStartTurnOff_priority: [1×1 struct]
+                                   vStartTurnOff: [1×1 struct]
+                              vStartTurnOff_unit: [1×1 struct]
+                           tStartTurnOff_specify: [1×1 struct]
+                          tStartTurnOff_priority: [1×1 struct]
+                                   tStartTurnOff: [1×1 struct]
+                              tStartTurnOff_unit: [1×1 struct]
+                                         Tj_vec1: [1×1 struct]
+                                    Tj_vec1_unit: [1×1 struct]
+                                    Tj_vec1_conf: [1×1 struct]
+                                        Vce_mat1: [1×1 struct]
+                                   Vce_mat1_unit: [1×1 struct]
+                                   Vce_mat1_conf: [1×1 struct]
+                                     Tj_vec_loss: [1×1 struct]
+                                Tj_vec_loss_unit: [1×1 struct]
+                                Tj_vec_loss_conf: [1×1 struct]
+                                     Ic_vec_loss: [1×1 struct]
+                                Ic_vec_loss_unit: [1×1 struct]
+                                Ic_vec_loss_conf: [1×1 struct]
+                                  E_turn_on_mat1: [1×1 struct]
+                             E_turn_on_mat1_unit: [1×1 struct]
+                             E_turn_on_mat1_conf: [1×1 struct]
+                                 E_turn_off_mat1: [1×1 struct]
+                            E_turn_off_mat1_unit: [1×1 struct]
+                            E_turn_off_mat1_conf: [1×1 struct]
+                           iStartTurnOff_specify: [1×1 struct]
+                          iStartTurnOff_priority: [1×1 struct]
+                                   iStartTurnOff: [1×1 struct]
+                              iStartTurnOff_unit: [1×1 struct]
+                                 Tdevice_specify: [1×1 struct]
+                                Tdevice_priority: [1×1 struct]
+
+    {'ComponentPath'                               }    {'ee.semiconductors.n_igbt'                                                         }
+    {'ComponentVariants'                           }    {'["ee.semiconductors.n_igbt","ee.semiconductors.n_igbt_thermal","ee.semiconductor…'}
+    {'ComponentVariantNames'                       }    {'["physmod:ee:library:comments:semiconductors:n_igbt_sscx:fullIVAndCapacitanceCha…'}
+    {'ClassName'                                   }    {'Simscape variant'                                                                 }
+    {'SchemaVersion'                               }    {'1'                                                                                }
+    {'model_type'                                  }    {'ee.enum.igbt.parameterization.equation'                                           }
+    {'model_type_unit'                             }    {'1'                                                                                }
+    {'model_type_conf'                             }    {'compiletime'                                                                      }
+    {'Ices'                                        }    {'2'                                                                                }
+    {'Ices_unit'                                   }    {'mA'                                                                               }
+    {'Ices_conf'                                   }    {'compiletime'                                                                      }
+    {'Vces'                                        }    {'600'                                                                              }
+    {'Vces_unit'                                   }    {'V'                                                                                }
+    {'Vces_conf'                                   }    {'compiletime'                                                                      }
+    {'Vth'                                         }    {'6'                                                                                }
+    {'Vth_unit'                                    }    {'V'                                                                                }
+    {'Vth_conf'                                    }    {'compiletime'                                                                      }
+    {'Vce_sat'                                     }    {'2.6'                                                                              }
+    {'Vce_sat_unit'                                }    {'V'                                                                                }
+    {'Vce_sat_conf'                                }    {'compiletime'                                                                      }
+    {'Ice_sat'                                     }    {'400'                                                                              }
+    {'Ice_sat_unit'                                }    {'A'                                                                                }
+    {'Ice_sat_conf'                                }    {'compiletime'                                                                      }
+    {'Vge_sat'                                     }    {'10'                                                                               }
+    {'Vge_sat_unit'                                }    {'V'                                                                                }
+    {'Vge_sat_conf'                                }    {'compiletime'                                                                      }
+    {'Tmeas'                                       }    {'25'                                                                               }
+    {'Tmeas_unit'                                  }    {'degC'                                                                             }
+    {'Tmeas_conf'                                  }    {'compiletime'                                                                      }
+    {'Vge_vec'                                     }    {'[-1, 0, 2, 3, 5, 6, 7, 8, 10, 12, 15, 18, 20]'                                    }
+    {'Vge_vec_unit'                                }    {'V'                                                                                }
+    {'Vge_vec_conf'                                }    {'compiletime'                                                                      }
+    {'Vce_vec'                                     }    {'[0, .25, .5, .75, 1, 1.26, 1.51, 1.76, 2.01, 2.26, 2.51, 2.76, 3.01, 3.27, 3.52,…'}
+    {'Vce_vec_unit'                                }    {'V'                                                                                }
+    {'Vce_vec_conf'                                }    {'compiletime'                                                                      }
+    {'T_vec'                                       }    {'[25, 125]'                                                                        }
+    {'T_vec_unit'                                  }    {'degC'                                                                             }
+    {'T_vec_conf'                                  }    {'compiletime'                                                                      }
+    {'Ic_mat'                                      }    {'[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 0, 0, 0, 0, 0, 0, 0…'}
+    {'Ic_mat_unit'                                 }    {'A'                                                                                }
+    {'Ic_mat_conf'                                 }    {'compiletime'                                                                      }
+    {'Ic_mat_3D'                                   }    {'zeros(13, 20, 2)'                                                                 }
+    {'Ic_mat_3D_unit'                              }    {'A'                                                                                }
+    {'Ic_mat_3D_conf'                              }    {'compiletime'                                                                      }
+    {'C_param'                                     }    {'ee.enum.igbt.capacitanceParam.fixedciss'                                          }
+    {'C_param_unit'                                }    {'1'                                                                                }
+    {'C_param_conf'                                }    {'compiletime'                                                                      }
+    {'C_GE'                                        }    {'23.7'                                                                             }
+    {'C_GE_unit'                                   }    {'nF'                                                                               }
+    {'C_GE_conf'                                   }    {'compiletime'                                                                      }
+    {'C_GC'                                        }    {'2.7'                                                                              }
+    {'C_GC_unit'                                   }    {'nF'                                                                               }
+    {'C_GC_conf'                                   }    {'compiletime'                                                                      }
+    {'C_CE'                                        }    {'0'                                                                                }
+    {'C_CE_unit'                                   }    {'nF'                                                                               }
+    {'C_CE_conf'                                   }    {'compiletime'                                                                      }
+    {'C_ies'                                       }    {'26.4'                                                                             }
+    {'C_ies_unit'                                  }    {'nF'                                                                               }
+    {'C_ies_conf'                                  }    {'compiletime'                                                                      }
+    {'C_res'                                       }    {'2.7'                                                                              }
+    {'C_res_unit'                                  }    {'nF'                                                                               }
+    {'C_res_conf'                                  }    {'compiletime'                                                                      }
+    {'C_oes'                                       }    {'0'                                                                                }
+    {'C_oes_unit'                                  }    {'nF'                                                                               }
+    {'C_oes_conf'                                  }    {'compiletime'                                                                      }
+    {'C_GE_vec'                                    }    {'[25, 31, 26.5, 24.9, 25, 24.9, 24.6, 24.7, 24.8]'                                 }
+    {'C_GE_vec_unit'                               }    {'nF'                                                                               }
+    {'C_GE_vec_conf'                               }    {'compiletime'                                                                      }
+    {'C_GC_vec'                                    }    {'[55, 9, 5.5, 3.1, 2.5, 2.1, 1.9, 1.8, 1.7]'                                       }
+    {'C_GC_vec_unit'                               }    {'nF'                                                                               }
+    {'C_GC_vec_conf'                               }    {'compiletime'                                                                      }
+    {'C_Vge_vec'                                   }    {'0'                                                                                }
+    {'C_Vge_vec_unit'                              }    {'V'                                                                                }
+    {'C_Vge_vec_conf'                              }    {'compiletime'                                                                      }
+    {'C_CE_vec'                                    }    {'[5, 11, 6.5, 4.9, 3.5, 2.7, 2.1, 1.7, 1.4]'                                       }
+    {'C_CE_vec_unit'                               }    {'nF'                                                                               }
+    {'C_CE_vec_conf'                               }    {'compiletime'                                                                      }
+    {'C_ies_vec'                                   }    {'[80, 40, 32, 28, 27.5, 27, 26.5, 26.5, 26.5]'                                     }
+    {'C_ies_vec_unit'                              }    {'nF'                                                                               }
+    {'C_ies_vec_conf'                              }    {'compiletime'                                                                      }
+    {'C_res_vec'                                   }    {'[55, 9, 5.5, 3.1, 2.5, 2.1, 1.9, 1.8, 1.7]'                                       }
+    {'C_res_vec_unit'                              }    {'nF'                                                                               }
+    {'C_res_vec_conf'                              }    {'compiletime'                                                                      }
+    {'C_oes_vec'                                   }    {'[60, 20, 12, 8, 6, 4.8, 4, 3.5, 3.1]'                                             }
+    {'C_oes_vec_unit'                              }    {'nF'                                                                               }
+    {'C_oes_vec_conf'                              }    {'compiletime'                                                                      }
+    {'C_Vce_vec'                                   }    {'[0, 1, 2, 5, 10, 15, 20, 25, 30]'                                                 }
+    {'C_Vce_vec_unit'                              }    {'V'                                                                                }
+    {'C_Vce_vec_conf'                              }    {'compiletime'                                                                      }
+    {'charge_linearity_param'                      }    {'ee.enum.igbt.cgcLinearity.constant'                                               }
+    {'charge_linearity_param_unit'                 }    {'1'                                                                                }
+    {'charge_linearity_param_conf'                 }    {'compiletime'                                                                      }
+    {'C_OX'                                        }    {'20'                                                                               }
+    {'C_OX_unit'                                   }    {'nF'                                                                               }
+    {'C_OX_conf'                                   }    {'compiletime'                                                                      }
+    {'V_C_OX'                                      }    {'-5'                                                                               }
+    {'V_C_OX_unit'                                 }    {'V'                                                                                }
+    {'V_C_OX_conf'                                 }    {'compiletime'                                                                      }
+    {'TF'                                          }    {'0'                                                                                }
+    {'TF_unit'                                     }    {'us'                                                                               }
+    {'TF_conf'                                     }    {'compiletime'                                                                      }
+    {'TT'                                          }    {'0'                                                                                }
+    {'TT_unit'                                     }    {'us'                                                                               }
+    {'TT_conf'                                     }    {'compiletime'                                                                      }
+    {'LeadRc'                                      }    {'0'                                                                                }
+    {'LeadRc_unit'                                 }    {'Ohm'                                                                              }
+    {'LeadRc_conf'                                 }    {'compiletime'                                                                      }
+    {'LeadRe'                                      }    {'0'                                                                                }
+    {'LeadRe_unit'                                 }    {'Ohm'                                                                              }
+    {'LeadRe_conf'                                 }    {'compiletime'                                                                      }
+    {'LeadRg'                                      }    {'0'                                                                                }
+    {'LeadRg_unit'                                 }    {'Ohm'                                                                              }
+    {'LeadRg_conf'                                 }    {'compiletime'                                                                      }
+    {'LC'                                          }    {'0'                                                                                }
+    {'LC_unit'                                     }    {'nH'                                                                               }
+    {'LC_conf'                                     }    {'compiletime'                                                                      }
+    {'LE'                                          }    {'0'                                                                                }
+    {'LE_unit'                                     }    {'nH'                                                                               }
+    {'LE_conf'                                     }    {'compiletime'                                                                      }
+    {'LG'                                          }    {'0'                                                                                }
+    {'LG_unit'                                     }    {'nH'                                                                               }
+    {'LG_conf'                                     }    {'compiletime'                                                                      }
+    {'ec'                                          }    {'1'                                                                                }
+    {'ec_unit'                                     }    {'1'                                                                                }
+    {'ec_conf'                                     }    {'compiletime'                                                                      }
+    {'VAF'                                         }    {'200'                                                                              }
+    {'VAF_unit'                                    }    {'V'                                                                                }
+    {'VAF_conf'                                    }    {'compiletime'                                                                      }
+    {'RC'                                          }    {'0.001'                                                                            }
+    {'RC_unit'                                     }    {'Ohm'                                                                              }
+    {'RC_conf'                                     }    {'compiletime'                                                                      }
+    {'RE'                                          }    {'0.001'                                                                            }
+    {'RE_unit'                                     }    {'Ohm'                                                                              }
+    {'RE_conf'                                     }    {'compiletime'                                                                      }
+    {'RG'                                          }    {'0.001'                                                                            }
+    {'RG_unit'                                     }    {'Ohm'                                                                              }
+    {'RG_conf'                                     }    {'compiletime'                                                                      }
+    {'BF'                                          }    {'50'                                                                               }
+    {'BF_unit'                                     }    {'1'                                                                                }
+    {'BF_conf'                                     }    {'compiletime'                                                                      }
+    {'T_param'                                     }    {'ee.enum.igbt.temperatureParameterization.none'                                    }
+    {'T_param_unit'                                }    {'1'                                                                                }
+    {'T_param_conf'                                }    {'compiletime'                                                                      }
+    {'Ices_T2'                                     }    {'100'                                                                              }
+    {'Ices_T2_unit'                                }    {'mA'                                                                               }
+    {'Ices_T2_conf'                                }    {'compiletime'                                                                      }
+    {'EG'                                          }    {'1.11'                                                                             }
+    {'EG_unit'                                     }    {'eV'                                                                               }
+    {'EG_conf'                                     }    {'compiletime'                                                                      }
+    {'Vce_sat_T2'                                  }    {'3'                                                                                }
+    {'Vce_sat_T2_unit'                             }    {'V'                                                                                }
+    {'Vce_sat_T2_conf'                             }    {'compiletime'                                                                      }
+    {'Tmeas2'                                      }    {'125'                                                                              }
+    {'Tmeas2_unit'                                 }    {'degC'                                                                             }
+    {'Tmeas2_conf'                                 }    {'compiletime'                                                                      }
+    {'XTI'                                         }    {'3'                                                                                }
+    {'XTI_unit'                                    }    {'1'                                                                                }
+    {'XTI_conf'                                    }    {'compiletime'                                                                      }
+    {'BEX'                                         }    {'-1.5'                                                                             }
+    {'BEX_unit'                                    }    {'1'                                                                                }
+    {'BEX_conf'                                    }    {'compiletime'                                                                      }
+    {'RG_alpha'                                    }    {'0'                                                                                }
+    {'RG_alpha_unit'                               }    {'1/K'                                                                              }
+    {'RG_alpha_conf'                               }    {'compiletime'                                                                      }
+    {'Tdevice'                                     }    {'300'                                                                              }
+    {'Tdevice_unit'                                }    {'K'                                                                                }
+    {'Tdevice_conf'                                }    {'compiletime'                                                                      }
+    {'Tdevice_3D'                                  }    {'25'                                                                               }
+    {'Tdevice_3D_unit'                             }    {'degC'                                                                             }
+    {'Tdevice_3D_conf'                             }    {'compiletime'                                                                      }
+    {'ig_specify'                                  }    {'off'                                                                              }
+    {'ig_priority'                                 }    {'None'                                                                             }
+    {'ig'                                          }    {'0'                                                                                }
+    {'ig_unit'                                     }    {'A'                                                                                }
+    {'ig_nominal_specify'                          }    {'off'                                                                              }
+    {'ig_nominal_value'                            }    {'1'                                                                                }
+    {'ig_nominal_unit'                             }    {'A'                                                                                }
+    {'ic_specify'                                  }    {'off'                                                                              }
+    {'ic_priority'                                 }    {'None'                                                                             }
+    {'ic'                                          }    {'0'                                                                                }
+    {'ic_unit'                                     }    {'A'                                                                                }
+    {'ic_nominal_specify'                          }    {'off'                                                                              }
+    {'ic_nominal_value'                            }    {'1'                                                                                }
+    {'ic_nominal_unit'                             }    {'A'                                                                                }
+    {'vge_specify'                                 }    {'off'                                                                              }
+    {'vge_priority'                                }    {'None'                                                                             }
+    {'vge'                                         }    {'0'                                                                                }
+    {'vge_unit'                                    }    {'V'                                                                                }
+    {'vge_nominal_specify'                         }    {'off'                                                                              }
+    {'vge_nominal_value'                           }    {'1'                                                                                }
+    {'vge_nominal_unit'                            }    {'V'                                                                                }
+    {'vce_specify'                                 }    {'off'                                                                              }
+    {'vce_priority'                                }    {'None'                                                                             }
+    {'vce'                                         }    {'0'                                                                                }
+    {'vce_unit'                                    }    {'V'                                                                                }
+    {'vce_nominal_specify'                         }    {'off'                                                                              }
+    {'vce_nominal_value'                           }    {'1'                                                                                }
+    {'vce_nominal_unit'                            }    {'V'                                                                                }
+    {'v_Cge_specify'                               }    {'off'                                                                              }
+    {'v_Cge_priority'                              }    {'High'                                                                             }
+    {'v_Cge'                                       }    {'0'                                                                                }
+    {'v_Cge_unit'                                  }    {'V'                                                                                }
+    {'v_Cge_nominal_specify'                       }    {'off'                                                                              }
+    {'v_Cge_nominal_value'                         }    {'1'                                                                                }
+    {'v_Cge_nominal_unit'                          }    {'V'                                                                                }
+    {'v_Cce_specify'                               }    {'off'                                                                              }
+    {'v_Cce_priority'                              }    {'High'                                                                             }
+    {'v_Cce'                                       }    {'0'                                                                                }
+    {'v_Cce_unit'                                  }    {'V'                                                                                }
+    {'v_Cce_nominal_specify'                       }    {'off'                                                                              }
+    {'v_Cce_nominal_value'                         }    {'1'                                                                                }
+    {'v_Cce_nominal_unit'                          }    {'V'                                                                                }
+    {'thermal_network_parameterization'            }    {'ee.enum.thermalNetworkTopology.junctionCase'                                      }
+    {'thermal_network_parameterization_unit'       }    {'1'                                                                                }
+    {'thermal_network_parameterization_conf'       }    {'compiletime'                                                                      }
+    {'Rth'                                         }    {'[0, 10]'                                                                          }
+    {'Rth_unit'                                    }    {'K/W'                                                                              }
+    {'Rth_conf'                                    }    {'compiletime'                                                                      }
+    {'Rth_Cauer'                                   }    {'[1, 3, 10]'                                                                       }
+    {'Rth_Cauer_unit'                              }    {'K/W'                                                                              }
+    {'Rth_Cauer_conf'                              }    {'compiletime'                                                                      }
+    {'Rth_Foster'                                  }    {'[.08, .14, .22, .16]'                                                             }
+    {'Rth_Foster_unit'                             }    {'K/W'                                                                              }
+    {'Rth_Foster_conf'                             }    {'compiletime'                                                                      }
+    {'thermal_mass_parameterization'               }    {'ee.enum.thermalNetwork.timeconstant'                                              }
+    {'thermal_mass_parameterization_unit'          }    {'1'                                                                                }
+    {'thermal_mass_parameterization_conf'          }    {'compiletime'                                                                      }
+    {'thermal_mass'                                }    {'[0, 1]'                                                                           }
+    {'thermal_mass_unit'                           }    {'J/K'                                                                              }
+    {'thermal_mass_conf'                           }    {'compiletime'                                                                      }
+    {'thermal_mass_Cauer'                          }    {'[.1, .3, 1]'                                                                      }
+    {'thermal_mass_Cauer_unit'                     }    {'J/K'                                                                              }
+    {'thermal_mass_Cauer_conf'                     }    {'compiletime'                                                                      }
+    {'thermal_mass_Foster'                         }    {'[.001, .005, .05, .5]'                                                            }
+    {'thermal_mass_Foster_unit'                    }    {'J/K'                                                                              }
+    {'thermal_mass_Foster_conf'                    }    {'compiletime'                                                                      }
+    {'thermal_time_constant'                       }    {'[0, 10]'                                                                          }
+    {'thermal_time_constant_unit'                  }    {'s'                                                                                }
+    {'thermal_time_constant_conf'                  }    {'compiletime'                                                                      }
+    {'thermal_time_constant_Cauer'                 }    {'[1, 3, 10]'                                                                       }
+    {'thermal_time_constant_Cauer_unit'            }    {'s'                                                                                }
+    {'thermal_time_constant_Cauer_conf'            }    {'compiletime'                                                                      }
+    {'thermal_time_constant_Foster'                }    {'[7e-05, .0007, .01, .08]'                                                         }
+    {'thermal_time_constant_Foster_unit'           }    {'s'                                                                                }
+    {'thermal_time_constant_Foster_conf'           }    {'compiletime'                                                                      }
+    {'thermal_mass_initial_temperatures'           }    {'[25, 25]'                                                                         }
+    {'thermal_mass_initial_temperatures_unit'      }    {'degC'                                                                             }
+    {'thermal_mass_initial_temperatures_conf'      }    {'compiletime'                                                                      }
+    {'thermal_mass_initial_temperatures_Cauer'     }    {'[25, 25, 25]'                                                                     }
+    {'thermal_mass_initial_temperatures_Cauer_unit'}    {'degC'                                                                             }
+    {'thermal_mass_initial_temperatures_Cauer_conf'}    {'compiletime'                                                                      }
+    {'Tvec_initial_Foster'                         }    {'[25, 25, 25, 25]'                                                                 }
+    {'Tvec_initial_Foster_unit'                    }    {'degC'                                                                             }
+    {'Tvec_initial_Foster_conf'                    }    {'compiletime'                                                                      }
+    {'Ic_vec1'                                     }    {'[0, 10, 50, 100, 200, 400, 600]'                                                  }
+    {'Ic_vec1_unit'                                }    {'A'                                                                                }
+    {'Ic_vec1_conf'                                }    {'compiletime'                                                                      }
+    {'Vce_vec1'                                    }    {'[0, 1.1, 1.3, 1.45, 1.75, 2.25, 2.7]'                                             }
+    {'Vce_vec1_unit'                               }    {'V'                                                                                }
+    {'Vce_vec1_conf'                               }    {'compiletime'                                                                      }
+    {'Rmiller'                                     }    {'0.1'                                                                              }
+    {'Rmiller_unit'                                }    {'Ohm'                                                                              }
+    {'Rmiller_conf'                                }    {'compiletime'                                                                      }
+    {'Goff'                                        }    {'1e-5'                                                                             }
+    {'Goff_unit'                                   }    {'1/Ohm'                                                                            }
+    {'Goff_conf'                                   }    {'compiletime'                                                                      }
+    {'t_on'                                        }    {'0.07'                                                                             }
+    {'t_on_unit'                                   }    {'us'                                                                               }
+    {'t_on_conf'                                   }    {'compiletime'                                                                      }
+    {'t_rise'                                      }    {'0.7'                                                                              }
+    {'t_rise_unit'                                 }    {'us'                                                                               }
+    {'t_rise_conf'                                 }    {'compiletime'                                                                      }
+    {'t_off'                                       }    {'0.2'                                                                              }
+    {'t_off_unit'                                  }    {'us'                                                                               }
+    {'t_off_conf'                                  }    {'compiletime'                                                                      }
+    {'t_fall'                                      }    {'0.5'                                                                              }
+    {'t_fall_unit'                                 }    {'us'                                                                               }
+    {'t_fall_conf'                                 }    {'compiletime'                                                                      }
+    {'v_meas'                                      }    {'300'                                                                              }
+    {'v_meas_unit'                                 }    {'V'                                                                                }
+    {'v_meas_conf'                                 }    {'compiletime'                                                                      }
+    {'vStartTurnOn_specify'                        }    {'off'                                                                              }
+    {'vStartTurnOn_priority'                       }    {'None'                                                                             }
+    {'vStartTurnOn'                                }    {'1'                                                                                }
+    {'vStartTurnOn_unit'                           }    {'V'                                                                                }
+    {'tStartTurnOn_specify'                        }    {'off'                                                                              }
+    {'tStartTurnOn_priority'                       }    {'None'                                                                             }
+    {'tStartTurnOn'                                }    {'0'                                                                                }
+    {'tStartTurnOn_unit'                           }    {'s'                                                                                }
+    {'vStartTurnOff_specify'                       }    {'off'                                                                              }
+    {'vStartTurnOff_priority'                      }    {'None'                                                                             }
+    {'vStartTurnOff'                               }    {'0.5'                                                                              }
+    {'vStartTurnOff_unit'                          }    {'V'                                                                                }
+    {'tStartTurnOff_specify'                       }    {'off'                                                                              }
+    {'tStartTurnOff_priority'                      }    {'None'                                                                             }
+    {'tStartTurnOff'                               }    {'0'                                                                                }
+    {'tStartTurnOff_unit'                          }    {'s'                                                                                }
+    {'Tj_vec1'                                     }    {'[298.15, 398.15]'                                                                 }
+    {'Tj_vec1_unit'                                }    {'K'                                                                                }
+    {'Tj_vec1_conf'                                }    {'compiletime'                                                                      }
+    {'Vce_mat1'                                    }    {'[0, 1.1, 1.3, 1.45, 1.75, 2.25, 2.7; 0, 1, 1.15, 1.35, 1.7, 2.35, 3]'             }
+    {'Vce_mat1_unit'                               }    {'V'                                                                                }
+    {'Vce_mat1_conf'                               }    {'compiletime'                                                                      }
+    {'Tj_vec_loss'                                 }    {'[298.15, 398.15]'                                                                 }
+    {'Tj_vec_loss_unit'                            }    {'K'                                                                                }
+    {'Tj_vec_loss_conf'                            }    {'compiletime'                                                                      }
+    {'Ic_vec_loss'                                 }    {'[0, 10, 50, 100, 200, 400, 600]'                                                  }
+    {'Ic_vec_loss_unit'                            }    {'A'                                                                                }
+    {'Ic_vec_loss_conf'                            }    {'compiletime'                                                                      }
+    {'E_turn_on_mat1'                              }    {'[0, .2, 1, 2, 4, 8, 15; 0, .3, 1.3, 2.5, 5, 11, 18] * 1e-3'                       }
+    {'E_turn_on_mat1_unit'                         }    {'J'                                                                                }
+    {'E_turn_on_mat1_conf'                         }    {'compiletime'                                                                      }
+    {'E_turn_off_mat1'                             }    {'[0, .3, 1.5, 3, 6, 15, 25; 0, .7, 3.3, 6.5, 13, 25, 35] * 1e-3'                   }
+    {'E_turn_off_mat1_unit'                        }    {'J'                                                                                }
+    {'E_turn_off_mat1_conf'                        }    {'compiletime'                                                                      }
+    {'iStartTurnOff_specify'                       }    {'off'                                                                              }
+    {'iStartTurnOff_priority'                      }    {'None'                                                                             }
+    {'iStartTurnOff'                               }    {'0'                                                                                }
+    {'iStartTurnOff_unit'                          }    {'A'                                                                                }
+    {'Tdevice_specify'                             }    {'off'                                                                              }
+    {'Tdevice_priority'                            }    {'None'                                                                             }
+
+ee_lib/Sensors &
+Transducers/Current Sensor
+ee_lib/Sensors &
+Transducers/Current Sensor
+(Three-Phase)
+ee_lib/Sensors &
+Transducers/Line Voltage Sensor
+(Three-Phase)
+ee_lib/Sensors &
+Transducers/Phase Voltage Sensor
+(Three-Phase)
+ee_lib/Sensors &
+Transducers/Voltage Sensor
+fl_lib/Electrical/Electrical Elements/Electrical Reference
+fl_lib/Electrical/Electrical Elements/Resistor
+fl_lib/Electrical/Electrical Sensors/Current Sensor
+fl_lib/Electrical/Electrical Sensors/Voltage Sensor
+fl_lib/Electrical/Electrical Sources/DC Voltage Source
+nesl_utility/PS-Simulink
+Converter
+nesl_utility/PS-Simulink
+Converter/EVAL_KEY
+nesl_utility/PS-Simulink
+Converter/EVAL_KEY/Ground
+nesl_utility/PS-Simulink
+Converter/EVAL_KEY/output
+nesl_utility/PS-Simulink
+Converter/input
+nesl_utility/PS-Simulink
+Converter/output
+nesl_utility/Simulink-PS
+Converter
+nesl_utility/Simulink-PS
+Converter/input0
+nesl_utility/Simulink-PS
+Converter/EVAL_KEY
+nesl_utility/Simulink-PS
+Converter/EVAL_KEY/input0
+nesl_utility/Simulink-PS
+Converter/EVAL_KEY/input1
+nesl_utility/Simulink-PS
+Converter/EVAL_KEY/input2
+nesl_utility/Simulink-PS
+Converter/EVAL_KEY/Terminator0
+nesl_utility/Simulink-PS
+Converter/EVAL_KEY/Terminator1
+nesl_utility/Simulink-PS
+Converter/EVAL_KEY/Terminator2
+nesl_utility/Simulink-PS
+Converter/input1
+nesl_utility/Simulink-PS
+Converter/input2
+nesl_utility/Simulink-PS
+Converter/output

@@ -1,0 +1,188 @@
+<title>IGBT Bench Test Cell</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (spec-sheet style), wide tables scroll inside their own frames; a slim header strip carries the document code. */
+:root{
+  --paper:#f6f7f9; --sheet:#ffffff; --ink:#18202b; --muted:#5a6676; --rule:#d6dce4;
+  --accent:#1d5fd0; --accent-soft:#e6eefc;
+  --ok:#17803d; --ok-soft:#e5f4ea; --warn:#a15c00; --warn-soft:#fdf1dc; --bad:#b42318; --bad-soft:#fde8e6;
+  --f-display:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",Roboto,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",Consolas,"Courier New",monospace;
+  --s-1:13px; --s0:15.5px; --s1:18px; --s2:23px; --s3:34px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#0f141b; --sheet:#151c25; --ink:#e4e9f0; --muted:#97a3b3; --rule:#2a3441;
+    --accent:#7aa7ff; --accent-soft:#1b2a45;
+    --ok:#5fd18a; --ok-soft:#14301f; --warn:#f0b357; --warn-soft:#382811; --bad:#ff8a80; --bad-soft:#3a1614;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#0f141b; --sheet:#151c25; --ink:#e4e9f0; --muted:#97a3b3; --rule:#2a3441;
+  --accent:#7aa7ff; --accent-soft:#1b2a45;
+  --ok:#5fd18a; --ok-soft:#14301f; --warn:#f0b357; --warn-soft:#382811; --bad:#ff8a80; --bad-soft:#3a1614;
+}
+body{background:var(--paper);color:var(--ink);font:400 var(--s0)/1.6 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 64px;display:flex;flex-direction:column;gap:40px}
+header{display:flex;flex-direction:column;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:18px}
+.code{font:500 var(--s-1)/1.3 var(--f-mono);color:var(--muted);letter-spacing:.04em;display:flex;flex-wrap:wrap;gap:6px 18px}
+h1{font:700 var(--s3)/1.1 var(--f-display);margin:0;letter-spacing:.005em;text-wrap:balance}
+.lede{font-size:var(--s1);color:var(--muted);margin:0;max-width:62ch}
+h2{font:600 var(--s2)/1.2 var(--f-display);margin:0;text-wrap:balance;display:flex;gap:12px;align-items:baseline}
+h2 .n{font:500 var(--s-1)/1 var(--f-mono);color:var(--accent);letter-spacing:.06em}
+h3{font:600 var(--s1)/1.3 var(--f-display);margin:0}
+section{display:flex;flex-direction:column;gap:14px}
+p{margin:0;max-width:68ch}
+.muted{color:var(--muted)}
+.mono{font-family:var(--f-mono);font-size:.92em}
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
+th{font:600 12px/1.3 var(--f-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--paper)}
+tr:last-child td{border-bottom:0}
+td.num{text-align:right;font-family:var(--f-mono);white-space:nowrap}
+tfoot td{font-weight:600;background:var(--paper)}
+.pill{display:inline-block;font:600 11px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:3px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.warn{background:var(--warn-soft);color:var(--warn)} .pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.info{background:var(--accent-soft);color:var(--accent)}
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:0;border:1px solid var(--rule);border-radius:4px;background:var(--sheet)}
+ol.steps>li{counter-increment:s;display:grid;grid-template-columns:44px 1fr auto;gap:4px 14px;padding:12px 14px;border-bottom:1px solid var(--rule)}
+ol.steps>li:last-child{border-bottom:0}
+ol.steps>li::before{content:counter(s,decimal-leading-zero);font:500 var(--s-1)/1.6 var(--f-mono);color:var(--accent)}
+ol.steps .t{font:500 var(--s-1)/1.6 var(--f-mono);color:var(--muted);white-space:nowrap}
+ol.steps b{font-weight:600}
+ol.steps .d{grid-column:2/4;color:var(--muted);font-size:14.5px}
+.note{border-left:3px solid var(--warn);background:var(--warn-soft);padding:10px 14px;border-radius:0 4px 4px 0;font-size:14.5px}
+.note.hv{border-left-color:var(--bad);background:var(--bad-soft)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.kv{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border:1px solid var(--rule);border-radius:4px;background:var(--sheet)}
+.kv .k{font:600 12px/1.3 var(--f-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.kv .v{font:600 var(--s2)/1.2 var(--f-display);font-variant-numeric:tabular-nums}
+.flow{font:500 var(--s-1)/1.5 var(--f-mono);background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:14px;overflow-x:auto;white-space:pre;color:var(--ink)}
+ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:72ch}
+footer{border-top:1px solid var(--rule);padding-top:14px;font-size:var(--s-1);color:var(--muted)}
+a{color:var(--accent)} a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:560px){ol.steps>li{grid-template-columns:34px 1fr}ol.steps .t{grid-column:2}ol.steps .d{grid-column:2}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="code"><span>NU × WABTEC HACKATHON ’26</span><span>IGBT TEST CELL · PROPOSAL</span><span>REV 2026-10-17</span></div>
+  <h1>IGBT Bench Test Cell</h1>
+  <p class="lede">A bench that checks a traction IGBT module before it goes on a locomotive, gives a PASS / NO-PASS result and writes a report to a laptop. This page answers the four questions on slide 11: which parameters, how long, how to run it, and what it costs.</p>
+</header>
+
+<section>
+  <h2><span class="n">1</span>Which parameters we check</h2>
+  <p>The list follows Wabtec slides 5 and 8 exactly. Each line is one test step on the bench. The right column shows how far our MATLAB/Simscape model of a representative 3.3 kV / 1500 A module (Mitsubishi CM1500HC-66XB, not a confirmed Wabtec part) has covered it.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Slide parameter</th><th>Slide value</th><th>Bench method</th><th>Simulated result</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Gate drive</td><td>+15 V on, −15 V off</td><td>Driver output measured at the gate terminals during the double pulse</td><td class="num">+15.000 / −15.000 V</td><td><span class="pill ok">In limit</span></td></tr>
+      <tr><td>Turn-on threshold</td><td>fully on above ≈ +4 … +7 V</td><td>Gate sweep at V<sub>CE</sub> = 10 V until I<sub>C</sub> = 150 mA</td><td class="num">6.35 V</td><td><span class="pill ok">In limit</span></td></tr>
+      <tr><td>Max di/dt</td><td>0 … 5000 A/µs</td><td>Double pulse at 1800 V, ≈ 1.5 kA; Rogowski coil, 10–90 % slope</td><td class="num">1852 A/µs</td><td><span class="pill ok">In limit</span></td></tr>
+      <tr><td>Free-wheeling diode, forward</td><td>0.2 … 0.8 V</td><td>Diode test at 1 mA (multimeter diode mode)</td><td class="num">0.500 V</td><td><span class="pill ok">In limit</span><br><span class="muted" style="font-size:12px">set by model knee</span></td></tr>
+      <tr><td>Free-wheeling diode, reverse</td><td>open</td><td>Same test, reversed polarity, 3 V</td><td class="num">0.03 µA</td><td><span class="pill ok">In limit</span></td></tr>
+      <tr id="desat-row"><td>Fault protection (desaturation)</td><td>off within 10 µs</td><td>Gate driver DESAT trip with a shorted output (shoot-through case of slide 8)</td><td class="num">detected 7.6 µs<br>gate off +1.9 µs<br>I<sub>C</sub> &lt; 10 % at +24.4 µs</td><td><span class="pill bad">Out of limit</span><br><span class="muted" style="font-size:12px">model current tail</span></td></tr>
+      <tr><td>Driver power</td><td>up to 20 W</td><td>Gate charge × 30 V swing × switching frequency</td><td class="num">0.22 W at 1 kHz</td><td><span class="pill ok">In limit</span><br><span class="muted" style="font-size:12px">frequency assumed</span></td></tr>
+      <tr><td>Busbar insulation</td><td>leakage up to 2 mA</td><td>High-voltage insulation (hipot) test, busbar to heatsink</td><td class="num">—</td><td><span class="pill warn">Hardware only</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Desaturation: the module is switched on into a short at 1800 V (the shoot-through case on slide 8). The slide 8 notes count the 10 µs from fault detection. The simulated DESAT circuit detects the fault 7.6 µs after gate-on and pulls the gate below threshold 1.9 µs later. The collector current then falls slowly because the model's turn-off tail is far too long (see section 6), so it is below 10 % only 24.4 µs after detection. The 17.4 kA peak short-circuit current is a model value and is not validated.</p>
+  <p class="muted">Driver power: 0.223 mJ per switching cycle. The slides give no switching frequency, so 1 kHz is assumed (typical upper end for 3.3 kV traction IGBTs); 20 W would only be reached at about 90 kHz. Driver quiescent losses are not included. The diode forward value passes because the model's diode knee was set inside the slide range; it shows the test logic works, not that a real diode is good. Busbar insulation is a hardware-only check and is not part of the simulated verdict.</p>
+</section>
+
+<section>
+  <h2><span class="n">2</span>How long a check takes</h2>
+  <p>Benchmark: today about 3.5 minutes per IGBT with the module connected to the tester, giving PASS / NO-PASS (Wabtec instruction IM-LE-0008, step 14). A locomotive has 36 modules, one switch each (6 inverters × 3 phases × 2). The electrical tests themselves last microseconds to milliseconds; the connected time goes into the insulation dwell and into charging and discharging the DC link safely.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Automatic step (module connected)</th><th>What limits the time</th><th>Estimate</th></tr></thead>
+    <tbody>
+      <tr><td>Diode forward / reverse</td><td>Relay switching, two readings</td><td class="num">10 s</td></tr>
+      <tr><td>Gate drive ±15 V and threshold sweep</td><td>Gate voltage sweep, settling per point</td><td class="num">20 s</td></tr>
+      <tr><td>Busbar insulation (hipot)</td><td>Ramp, 60 s dwell, discharge</td><td class="num">70 s</td></tr>
+      <tr><td>Charge DC link to 1800 V</td><td>≈ 5 kJ in a ≈ 3 mF bank from a ≈ 1 kW charger</td><td class="num">15 s</td></tr>
+      <tr><td>Double pulse, DESAT trip, evaluation</td><td>Pulses last 1.5 ms and 70 µs; the rest is data transfer</td><td class="num">5 s</td></tr>
+      <tr><td>Active discharge to &lt; 50 V</td><td>Discharge relay into a dump resistor</td><td class="num">5 s</td></tr>
+      <tr><td>PASS / NO-PASS and report to laptop</td><td>File write</td><td class="num">5 s</td></tr>
+    </tbody>
+    <tfoot><tr><td>Connected time per IGBT</td><td>Without the insulation step: ≈ 1 min</td><td class="num">≈ 2.2 min</td></tr></tfoot>
+  </table></div>
+  <div class="grid2">
+    <div class="kv"><span class="k">Connected time per IGBT</span><span class="v">≈ 2.2 min</span><span class="muted">Wabtec benchmark today: 3.5 min</span></div>
+    <div class="kv"><span class="k">Handling per IGBT (not in benchmark)</span><span class="v">≈ 7 min</span><span class="muted">scan, inspect, mount 25 kg module, unmount</span></div>
+  </div>
+  <p><b>Why this is enough.</b> In 2.2 minutes the cell covers every slide 5/8 parameter, including the module at 1800 V and about 1.5 kA and the desaturation protection. A module that passes low-voltage checks can still fail at working voltage; finding that on the bench costs seconds, finding it on the locomotive costs an installation and removal.</p>
+  <p><b>Where time can still be cut.</b> The 60 s insulation dwell is the longest step. It can be run on a sample basis or in a separate station, which brings the connected time to about 1 minute. A thermal cycling or burn-in test would take hours per module, so we suggest it only for modules returned from service.</p>
+</section>
+
+<section>
+  <h2><span class="n">3</span>Test instructions</h2>
+  <div class="note hv"><b>High voltage.</b> The DC link is charged to 1800 V and stores lethal energy. Only trained staff run the cell. The enclosure door is interlocked: opening it removes the charger and closes the discharge relay.</div>
+  <ol class="steps">
+    <li><b>Prepare the cell</b><span class="t">once per shift</span><span class="d">Check the e-stop, door interlock and discharge relay. Run the self-test with the reference module and confirm it passes.</span></li>
+    <li><b>Register the module</b><span class="t">2 min</span><span class="d">Scan the serial on the laptop. Inspect for cracks, discoloured terminals and damaged gate connectors. Reject on visible damage.</span></li>
+    <li><b>Mount the module</b><span class="t">5 min</span><span class="d">Place it on the fixture. Torque the power terminals to the module manufacturer's value. Connect gate leads and the fiber-optic command link. Close the door.</span></li>
+    <li><b>Run the low-voltage block</b><span class="t">30 s</span><span class="d">Press START. The cell measures the diode forward and reverse values, the gate drive levels and the gate threshold. Any value outside the slide range stops the sequence with NO-PASS.</span></li>
+    <li><b>Run the insulation test</b><span class="t">70 s</span><span class="d">The cell ramps the hipot voltage between busbar and heatsink, holds it for 60 s and records leakage. Limit: 2 mA (slide 5).</span></li>
+    <li><b>Run the high-voltage block</b><span class="t">25 s</span><span class="d">The cell charges the DC link to 1800 V, runs a double pulse (gate ±15 V, peak di/dt limit 5000 A/µs), then one DESAT trip (turn-off within 10 µs of detection) and discharges the link.</span></li>
+    <li><b>Read the result</b><span class="t">5 s</span><span class="d">The door unlocks once the panel shows DC link &lt; 50 V. The laptop shows PASS or NO-PASS with every measured value and saves a PDF/CSV report under the serial number.</span></li>
+    <li><b>Release or quarantine</b><span class="t">—</span><span class="d">PASS: label and release for installation. NO-PASS: tag red, attach the report, send for failure analysis.</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="n">4</span>Cell architecture</h2>
+  <div class="flow">Laptop (report, PASS/NO-PASS) ──USB── STM32G474 controller ──fiber── gate drivers (±15 V, DESAT)
+                                          │                              │
+                          relay matrix, ADC, interlocks          phase module on fixture
+                                          │                              │
+              HV charger 0–2.5 kV → DC-link capacitors → laminated busbar → load inductor 300 µH
+                                          │
+                    Rogowski coil + HV differential probe → fast digitiser (≥ 100 MS/s)</div>
+  <p>The STM32G474 runs the test sequence, interlocks and DESAT supervision. Its 12-bit ADC is too slow to resolve sub-microsecond edges, so di/dt and switching times come from the separate fast digitiser. The tester firmware is written in C++ and already runs in simulation against the MATLAB waveforms.</p>
+</section>
+
+<section>
+  <h2><span class="n">5</span>Approximate cost</h2>
+  <p>Order-of-magnitude ranges for new equipment, in US dollars, before vendor quotes. Labour, building and the laptop are not included.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Item</th><th>Why it is needed</th><th>Estimate (USD)</th></tr></thead>
+    <tbody>
+      <tr><td>HV capacitor charger, 0–2.5 kV</td><td>Charges the DC link for the 1800 V double pulse</td><td class="num">3,000 – 8,000</td></tr>
+      <tr><td>DC-link film capacitor bank</td><td>Holds the bus voltage steady during a 1.5 kA pulse</td><td class="num">1,500 – 4,000</td></tr>
+      <tr><td>Load inductor, ≈ 300 µH, air core</td><td>Sets the test current in the double pulse</td><td class="num">500 – 1,500</td></tr>
+      <tr><td>Laminated busbar and module fixture</td><td>Low stray inductance (≈ 100 nH) and safe clamping of a 25 kg module</td><td class="num">1,500 – 4,000</td></tr>
+      <tr><td>Two gate driver boards with DESAT</td><td>±15 V drive and the 10 µs protection under test</td><td class="num">600 – 1,600</td></tr>
+      <tr><td>STM32G474 controller board, relays, fiber links</td><td>Sequence control, low-voltage tests, interlocks</td><td class="num">300 – 1,000</td></tr>
+      <tr><td>Rogowski coil and HV differential probe</td><td>Current and voltage at switching speed</td><td class="num">2,000 – 5,500</td></tr>
+      <tr><td>Fast digitiser or oscilloscope, ≥ 100 MS/s</td><td>di/dt and switching times</td><td class="num">2,000 – 6,000</td></tr>
+      <tr><td>Insulation (hipot) tester</td><td>Busbar leakage check, 2 mA limit</td><td class="num">1,500 – 5,000</td></tr>
+      <tr><td>Enclosure, interlocks, discharge circuit, e-stop</td><td>Operator safety at 1800 V</td><td class="num">2,000 – 5,000</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total</td><td></td><td class="num">≈ 15,000 – 42,000</td></tr></tfoot>
+  </table></div>
+  <p class="muted">These are rough market ranges for planning, not quotes. The largest uncertainty is the HV charger and the measurement chain; reusing an existing oscilloscope and hipot tester brings the total toward the lower end.</p>
+</section>
+
+<section>
+  <h2><span class="n">6</span>What the simulation shows, and what it does not</h2>
+  <p>Every simulated value on this page comes from MATLAB R2026b / Simscape runs that passed their own numerical checks: no solver warnings, energy balance within 6 × 10<sup>−7</sup>, and results unchanged within 3 % when the time step is halved. Run folder: <span class="mono">results/dynamic_20261017_195453_347</span>.</p>
+  <ul class="plain">
+    <li>The device is a representative CM1500HC-66XB built from its datasheet. It is not a confirmed Wabtec part, and no Wabtec acceptance limits were used beyond the values on slides 5 and 8.</li>
+    <li>The model's current tail at turn-off is far too slow: fall time 21.9 µs against the datasheet maximum of 0.70 µs. Three attempts to calibrate it stopped the solver, so it is recorded as a known limitation. Turn-off energy is overestimated, and the simulated desaturation turn-off misses 10 µs because of it.</li>
+    <li>Desaturation run: <span class="mono">results/desat_test_traction_20261017_212553_145</span>, no solver warnings, half-step change 0.04 %. Detection settings (9 V threshold, 7.5 µs blanking) are assumed.</li>
+    <li>The free-wheeling diode has no reverse recovery, so turn-on overshoot is underestimated.</li>
+    <li>Insulation cannot be simulated honestly; it needs the hipot measurement on hardware.</li>
+    <li>The hardware decision stays <b>inconclusive</b> until the cell measures real modules.</li>
+  </ul>
+</section>
+
+<footer>NU × Wabtec Hackathon ’26 · IGBT test cell team · Sources: Wabtec brief slides 5, 8, 11; Mitsubishi CM1500HC-66XB datasheet HVM-1147-B; project simulation results.</footer>
+</div>

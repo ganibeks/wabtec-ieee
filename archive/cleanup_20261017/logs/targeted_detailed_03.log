@@ -1,0 +1,8 @@
+COMPILE PASS: static_v
+INITIALIZATION PASS: static_v
+COMPILE PASS: static_i
+INITIALIZATION PASS: static_i
+COMPILE PASS: dynamic_r
+INITIALIZATION PASS: dynamic_r
+COMPILE PASS: dynamic_rl
+INITIALIZATION PASS: dynamic_rl

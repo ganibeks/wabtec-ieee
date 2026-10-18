@@ -1,0 +1,8 @@
+ELECTROTHERMAL COMPILE PASS
+ELECTROTHERMAL INITIALIZATION PASS
+ELECTROTHERMAL PASS: heat 2.02285e-06 J, junction rise 7.11868e-07 K, thermal balance error 0.000434. C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\electrothermal_20261017_170833_544
+
+ans =
+
+    'C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\electrothermal_20261017_170833_544'
+

@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "checks": "4 fixture compilation and 2 us initialization",
+  "hardware_decision": "INCONCLUSIVE"
+}

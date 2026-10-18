@@ -1,0 +1,115 @@
+{
+  "as_of": "18.10.2026",
+  "sources": [
+    [
+      "S1",
+      "Wabtec: NU IEEE 2026 IGBT test cell_AK_Final.pptx, слайды 5, 6, 8, 11 и заметки докладчика",
+      "references/NU IEEE 2026 IGBT test cell_AK_Final.pptx"
+    ],
+    [
+      "S2",
+      "RIGOL DHO900: DHO924, $769; 4 канала, 250 MHz, до 1,25 GSa/s",
+      "https://www.rigolna.com/products/rigol-digital-oscilloscopes/dho900/"
+    ],
+    [
+      "S3",
+      "RIGOL DP800: DP832, каталог $449; 2 × 30 V / 3 A + канал 5 V",
+      "https://www.rigolna.com/products/dc-power-loads/dp800/dp821a/"
+    ],
+    [
+      "S4",
+      "RIGOL RP1025D: $473, дифференциальный пробник 25 MHz",
+      "https://www.rigolna.com/products/digital-oscilloscopes/1000/"
+    ],
+    [
+      "S5",
+      "SIGLENT CP6030: $2 628, 50 MHz, 30 Arms / 50 A peak; питание включено",
+      "https://siglentna.com/product/cp6030-current-probe/"
+    ],
+    [
+      "S6",
+      "SIGLENT CPL5100: $535, DC–600 kHz, два диапазона 10/100 A",
+      "https://siglentna.com/product/cpl5100-current-probe/"
+    ],
+    [
+      "S7",
+      "RIGOL DM858: $549, настольный DMM, USB/LAN/SCPI",
+      "https://www.rigolna.com/products/digital-multimeters/dm800/"
+    ],
+    [
+      "S8",
+      "DigiKey: NUCLEO-G474RE, цена за 1 шт. $20,13",
+      "https://www.digikey.com/en/products/detail/stmicroelectronics/NUCLEO-G474RE/10231585"
+    ],
+    [
+      "S9",
+      "ST: NUCLEO-G474RE, официальная документация платы",
+      "https://www.st.com/en/evaluation-tools/nucleo-g474re.html"
+    ],
+    [
+      "S10",
+      "Tektronix/Keithley: 2450, $7 880, до 200 V / 1 A / 20 W",
+      "https://www.tek.com/en/products/keithley/source-measure-units/2400-graphical-series-sourcemeter"
+    ],
+    [
+      "S11",
+      "Tektronix: принцип double-pulse test",
+      "https://www.tek.com/power-efficiency/double-pulse-testing"
+    ],
+    [
+      "S12",
+      "Tektronix: deskew токового и напряженческого каналов при DPT",
+      "https://www.tek.com/en/blog/a-new-software-deskew-approach-accelerates-double-pulse-testing"
+    ],
+    [
+      "S13",
+      "TESTEC: допустимые дифференциальные и синфазные напряжения пробников",
+      "https://testec.de/en/products/differential-probes.html"
+    ],
+    [
+      "S14",
+      "Keithley 2657A: каталог $38 500, до 3 kV; предел не покрывает 3,3 kV",
+      "https://www.tek.com/en/products/keithley/source-measure-units/2650-series-high-power-sourcemeter"
+    ],
+    [
+      "S15",
+      "Keysight B1506A: до 3 kV / 1500 A в соответствующих опциях; цена по запросу",
+      "https://www.keysight.com/ca/en/product/B1506A/power-device-analyzer-curve-tracer-circuit-design.html"
+    ],
+    [
+      "S16",
+      "TI UCC21750 EVM: пример изолированного драйвера с DESAT; не утверждённый OEM-адаптер",
+      "https://www.ti.com/product/UCC21750QDWEVM-025/part-details/UCC21750QDWEVM-025"
+    ],
+    [
+      "L1",
+      "Mitsubishi CM1500HC-66XB, HVM-1147-B: представительный прибор, не идентификация Wabtec",
+      "references/cm1500hc-66xb_e.pdf"
+    ],
+    [
+      "L2",
+      "Пересчитанная RL-модель: численные проверки и исходные осциллограммы",
+      "results\\detailed_simulink_20261017_221616_239\\build02"
+    ],
+    [
+      "L3",
+      "Исполненный DESAT-тест: validation.json и desat_waveforms.csv",
+      "results\\desat_test_traction_20261018_000313_736"
+    ],
+    [
+      "L4",
+      "Статические проверки: статус PARTIAL",
+      "results/static_checks_20261017_193726_230/validation.json"
+    ],
+    [
+      "L5",
+      "Диодная проверка представительного прибора",
+      "results/diode_test_traction_20261017_195415_059/validation.json"
+    ],
+    [
+      "L6",
+      "Исследование идентификации 17FM774 / 17FM796",
+      "docs/PART_IDENTIFICATION_20261017_190659.md"
+    ]
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "dynamic_rl": {
+    "scope": "Assumed device numerical validation; no hardware acceptance",
+    "hardware_decision": "INCONCLUSIVE",
+    "record_complete": true,
+    "record_start_s": 0,
+    "record_end_s": 0.0015,
+    "kcl_max_A": 1.7735374058247544E-8,
+    "bus_kcl_max_A": 1.7735374058247544E-8,
+    "bus_energy_J": 870.16364371971679,
+    "load_resistor_energy_J": 54.530766654105435,
+    "stray_resistor_energy_J": 0.070628873728250344,
+    "dut_collector_terminal_energy_J": 131.75924881426187,
+    "dut_gate_terminal_energy_J": 0.00012238457130712925,
+    "diode_terminal_energy_J": 6.7097884530758627,
+    "stray_stored_energy_change_J": -4.6308101917964594E-20,
+    "load_stored_energy_change_J": 677.09395615076653,
+    "inductor_flux_relative_error": 6.4314879108483426E-7,
+    "freewheel_min_current_A": 1566.6460899807839,
+    "freewheel_Ic_to_IL_ratio": 0.0011610575475655186,
+    "energy_balance_error_J": -0.00074522622117001447,
+    "energy_balance_relative_error": 8.5642077389532361E-7,
+    "on_gate_max_error_V": 2.9999692034746239,
+    "off_gate_max_error_V": 0.0001100659549102545,
+    "gate_plateaus_ok": false,
+    "gate_plateau_note": "injected fault run: gate plateau recorded, not asserted",
+    "peak_Vce_V": 1821.6268515656241,
+    "peak_Ic_A": 2203.1324578350291,
+    "peak_Ig_A": 10.800014652015905,
+    "events": [
+      {
+        "command_time_s": 4.9999999999999996E-5,
+        "window_s": [
+          4.7999999999999994E-5,
+          6.5E-5
+        ],
+        "on_event": true,
+        "gross_collector_terminal_energy_J": 0.01911688742872629,
+        "gate_charge_C": 6.94672939942373E-6,
+        "gate_terminal_energy_J": 2.6484938455518058E-5,
+        "Vce_transition_10_90_s": 1.0978448704566764E-6,
+        "command_to_Vce_transition_s": 9.8998272554846629E-7,
+        "Ic_transition_10_90_s": null,
+        "current_clearance_1percent_s": null
+      },
+      {
+        "command_time_s": 0.0003,
+        "window_s": [
+          0.000298,
+          0.00037999999999999997
+        ],
+        "on_event": false,
+        "gross_collector_terminal_energy_J": 49.007239933890709,
+        "gate_charge_C": -6.9456448820053744E-6,
+        "gate_terminal_energy_J": 3.2364966478543792E-5,
+        "Vce_transition_10_90_s": 1.5258336576409357E-5,
+        "command_to_Vce_transition_s": 6.3443897970357735E-6,
+        "Ic_transition_10_90_s": 2.19230710789688E-5,
+        "current_clearance_1percent_s": 6.9501051112204337E-5
+      },
+      {
+        "command_time_s": 0.00039999999999999996,
+        "window_s": [
+          0.00039799999999999997,
+          0.00041499999999999995
+        ],
+        "on_event": true,
+        "gross_collector_terminal_energy_J": 9.5665192266906729,
+        "gate_charge_C": 6.8431133378909738E-6,
+        "gate_terminal_energy_J": 3.218945240857636E-5,
+        "Vce_transition_10_90_s": 3.7156420771296381E-6,
+        "command_to_Vce_transition_s": 2.4474899266962568E-6,
+        "Ic_transition_10_90_s": 1.1184961006071941E-6,
+        "current_clearance_1percent_s": null
+      },
+      {
+        "command_time_s": 0.0005,
+        "window_s": [
+          0.000498,
+          0.00058
+        ],
+        "on_event": false,
+        "gross_collector_terminal_energy_J": 69.21595646273687,
+        "gate_charge_C": -6.8973646041535622E-6,
+        "gate_terminal_energy_J": 3.0770611344066636E-5,
+        "Vce_transition_10_90_s": 1.4669108597777179E-5,
+        "command_to_Vce_transition_s": 5.4723711626408419E-6,
+        "Ic_transition_10_90_s": 2.1900700366896358E-5,
+        "current_clearance_1percent_s": 6.7836038521286142E-5
+      }
+    ],
+    "energy_interpretation": "Gross event terminal integrals include conduction and reactive transfer; not calibrated Eon/Eoff dissipation.",
+    "status": "PASS",
+    "half_step_event_energy_relative_errors": [
+      3.6864423022859561E-6,
+      2.8952505031750693E-5,
+      0.00011645787990010388,
+      3.4445804557374953E-5
+    ],
+    "fine_max_step_s": 1E-7
+  }
+}

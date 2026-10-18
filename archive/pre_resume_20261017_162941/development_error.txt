@@ -1,0 +1,9 @@
+Error using build_baseline>@(a,b)add_line(m,a,b,'autorouting','on') (line 43)
+The points input must only create line connections that follow connection rules of the appropriate Physical Modeling domains
+
+Error in build_baseline (line 45)
+wire(S.LConn(1),R.LConn(1)); wire(R.RConn(1),I.LConn(1)); wire(I.RConn(1),Q.RConn(1));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_development (line 6)
+  build_baseline;
+  ^^^^^^^^^^^^^^^

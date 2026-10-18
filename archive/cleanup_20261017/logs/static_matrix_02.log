@@ -1,0 +1,1639 @@
+STATIC TARGETED PARAMETER RECOVERY: PASS
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 5.0000000000000172e-05. Simulink will continue to simulate with warnings. Please check the
+model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.77636E-19 for 1 consecutive times at time 5E-05.  Solver will continue the simulation
+with the step size restricted to 1.77636E-19 and using an effective relative error tolerance of 3.39855, which is greater than the specified relative error tolerance of 1E-06.
+This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances,
+and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation
+parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00010000000000000024. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 3.55271E-19 for 1 consecutive times at time 0.0001.
+Solver will continue the simulation with the step size restricted to 3.55271E-19 and using an effective relative error tolerance of 0.000422156,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00010000000000000059. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 3.55271E-19 for 2 consecutive times at time 0.0001.
+Solver will continue the simulation with the step size restricted to 3.55271E-19 and using an effective relative error tolerance of 0.000337727,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00010000000000000094. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 3.55271E-19 for 3 consecutive times at time 0.0001.
+Solver will continue the simulation with the step size restricted to 3.55271E-19 and using an effective relative error tolerance of 0.000506601,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00010000000000000129. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 3.55271E-19 for 4 consecutive times at time 0.0001.
+Solver will continue the simulation with the step size restricted to 3.55271E-19 and using an effective relative error tolerance of 0.000337732,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00010000000000000164. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 3.55271E-19 for 5 consecutive times at time 0.0001.
+Solver will continue the simulation with the step size restricted to 3.55271E-19 and using an effective relative error tolerance of 0.00042216,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00015000000000000031. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 5.32907E-19 for 1 consecutive times at time 0.00015.
+Solver will continue the simulation with the step size restricted to 5.32907E-19 and using an effective relative error tolerance of 0.000399649,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00015000000000000085. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 5.32907E-19 for 2 consecutive times at time 0.00015.
+Solver will continue the simulation with the step size restricted to 5.32907E-19 and using an effective relative error tolerance of 0.000299743,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.0001500000000000014. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 5.32907E-19 for 3 consecutive times at time 0.00015.
+Solver will continue the simulation with the step size restricted to 5.32907E-19 and using an effective relative error tolerance of 0.00059954,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00015000000000000194. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 5.32907E-19 for 4 consecutive times at time 0.00015.
+Solver will continue the simulation with the step size restricted to 5.32907E-19 and using an effective relative error tolerance of 0.000199841,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00020000000000000066. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 7.10543E-19 for 1 consecutive times at time 0.0002.
+Solver will continue the simulation with the step size restricted to 7.10543E-19 and using an effective relative error tolerance of 0.0013453, which
+is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00020000000000000136. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 7.10543E-19 for 2 consecutive times at time 0.0002.
+Solver will continue the simulation with the step size restricted to 7.10543E-19 and using an effective relative error tolerance of 0.000672709,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00025000000000000006. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 8.88178E-19 for 1 consecutive times at time 0.00025.
+Solver will continue the simulation with the step size restricted to 8.88178E-19 and using an effective relative error tolerance of 0.00148858,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00025000000000000093. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 8.88178E-19 for 2 consecutive times at time 0.00025.
+Solver will continue the simulation with the step size restricted to 8.88178E-19 and using an effective relative error tolerance of 0.000496223,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00025000000000000179. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 8.88178E-19 for 3 consecutive times at time 0.00025.
+Solver will continue the simulation with the step size restricted to 8.88178E-19 and using an effective relative error tolerance of 0.000744352,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.0003000000000000009. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06581E-18 for 1 consecutive times at time 0.0003.
+Solver will continue the simulation with the step size restricted to 1.06581E-18 and using an effective relative error tolerance of 0.000771947,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00030000000000000198. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06581E-18 for 2 consecutive times at time 0.0003.
+Solver will continue the simulation with the step size restricted to 1.06581E-18 and using an effective relative error tolerance of 0.000514654,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00030000000000000306. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06581E-18 for 3 consecutive times at time 0.0003.
+Solver will continue the simulation with the step size restricted to 1.06581E-18 and using an effective relative error tolerance of 0.000771998,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.0003500000000000001. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.24345E-18 for 1 consecutive times at time 0.00035.
+Solver will continue the simulation with the step size restricted to 1.24345E-18 and using an effective relative error tolerance of 0.000796111,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00035000000000000135. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.24345E-18 for 2 consecutive times at time 0.00035.
+Solver will continue the simulation with the step size restricted to 1.24345E-18 and using an effective relative error tolerance of 0.000530771,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.0003500000000000026. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.24345E-18 for 3 consecutive times at time 0.00035.
+Solver will continue the simulation with the step size restricted to 1.24345E-18 and using an effective relative error tolerance of 0.000796171,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00040000000000000083. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.42109E-18 for 1 consecutive times at time 0.0004.
+Solver will continue the simulation with the step size restricted to 1.42109E-18 and using an effective relative error tolerance of 0.00309064,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00040000000000000224. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.42109E-18 for 2 consecutive times at time 0.0004.
+Solver will continue the simulation with the step size restricted to 1.42109E-18 and using an effective relative error tolerance of 0.00077278,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00045000000000000026. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.59872E-18 for 1 consecutive times at time 0.00045.
+Solver will continue the simulation with the step size restricted to 1.59872E-18 and using an effective relative error tolerance of 0.00125577,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00045000000000000183. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.59872E-18 for 2 consecutive times at time 0.00045.
+Solver will continue the simulation with the step size restricted to 1.59872E-18 and using an effective relative error tolerance of 0.000558138,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.0004500000000000034. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.59872E-18 for 3 consecutive times at time 0.00045.
+Solver will continue the simulation with the step size restricted to 1.59872E-18 and using an effective relative error tolerance of 0.000837244,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00050000000000000109. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.77636E-18 for 1 consecutive times at time 0.0005.
+Solver will continue the simulation with the step size restricted to 1.77636E-18 and using an effective relative error tolerance of 0.00269311,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00050000000000000283. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.77636E-18 for 2 consecutive times at time 0.0005.
+Solver will continue the simulation with the step size restricted to 1.77636E-18 and using an effective relative error tolerance of 0.00080807,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 5.0000000000000138e-05. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.77636E-19 for 1 consecutive times at time 5E-05.  Solver
+will continue the simulation with the step size restricted to 1.77636E-19 and using an effective relative error tolerance of 3.39855, which is
+greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00010000000000000019. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 3.55271E-19 for 1 consecutive times at time 0.0001.
+Solver will continue the simulation with the step size restricted to 3.55271E-19 and using an effective relative error tolerance of 0.000368522,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00010000000000000055. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 3.55271E-19 for 2 consecutive times at time 0.0001.
+Solver will continue the simulation with the step size restricted to 3.55271E-19 and using an effective relative error tolerance of 0.000276395,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.0001000000000000009. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 3.55271E-19 for 3 consecutive times at time 0.0001.
+Solver will continue the simulation with the step size restricted to 3.55271E-19 and using an effective relative error tolerance of 0.000552822,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00010000000000000125. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 3.55271E-19 for 4 consecutive times at time 0.0001.
+Solver will continue the simulation with the step size restricted to 3.55271E-19 and using an effective relative error tolerance of 0.000184271,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00015000000000000037. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 5.32907E-19 for 1 consecutive times at time 0.00015.
+Solver will continue the simulation with the step size restricted to 5.32907E-19 and using an effective relative error tolerance of 0.000457813,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00015000000000000091. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 5.32907E-19 for 2 consecutive times at time 0.00015.
+Solver will continue the simulation with the step size restricted to 5.32907E-19 and using an effective relative error tolerance of 0.000366257,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00015000000000000145. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 5.32907E-19 for 3 consecutive times at time 0.00015.
+Solver will continue the simulation with the step size restricted to 5.32907E-19 and using an effective relative error tolerance of 0.000549402,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00015000000000000199. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 5.32907E-19 for 4 consecutive times at time 0.00015.
+Solver will continue the simulation with the step size restricted to 5.32907E-19 and using an effective relative error tolerance of 0.000366264,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00015000000000000253. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 5.32907E-19 for 5 consecutive times at time 0.00015.
+Solver will continue the simulation with the step size restricted to 5.32907E-19 and using an effective relative error tolerance of 0.00045782,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00019999999999999887. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 7.10543E-19 for 1 consecutive times at time
+0.0002. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00019999999999999958. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 7.10543E-19 for 2 consecutive times at time
+0.0002. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00020000000000000028. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 7.10543E-19 for 3 consecutive times at time 0.0002.
+Solver will continue the simulation with the step size restricted to 7.10543E-19 and using an effective relative error tolerance of 0.0013453, which
+is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00020000000000000099. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 7.10543E-19 for 4 consecutive times at time 0.0002.
+Solver will continue the simulation with the step size restricted to 7.10543E-19 and using an effective relative error tolerance of 0.000672709,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00025000000000000044. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 8.88178E-19 for 1 consecutive times at time 0.00025.
+Solver will continue the simulation with the step size restricted to 8.88178E-19 and using an effective relative error tolerance of 0.0014886, which
+is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00025000000000000131. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 8.88178E-19 for 2 consecutive times at time 0.00025.
+Solver will continue the simulation with the step size restricted to 8.88178E-19 and using an effective relative error tolerance of 0.000620268,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00025000000000000217. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 8.88178E-19 for 3 consecutive times at time 0.00025.
+Solver will continue the simulation with the step size restricted to 8.88178E-19 and using an effective relative error tolerance of 0.000827043,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00025000000000000304. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 8.88178E-19 for 4 consecutive times at time 0.00025.
+Solver will continue the simulation with the step size restricted to 8.88178E-19 and using an effective relative error tolerance of 0.000676662,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00025000000000000391. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 8.88178E-19 for 5 consecutive times at time 0.00025.
+Solver will continue the simulation with the step size restricted to 8.88178E-19 and using an effective relative error tolerance of 0.000930532,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00025000000000000478. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 8.88178E-19 for 6 consecutive times at time 0.00025.
+Solver will continue the simulation with the step size restricted to 8.88178E-19 and using an effective relative error tolerance of 0.000372219,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00030000000000000068. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06581E-18 for 1 consecutive times at time 0.0003.
+Solver will continue the simulation with the step size restricted to 1.06581E-18 and using an effective relative error tolerance of 0.000771949,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00030000000000000176. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06581E-18 for 2 consecutive times at time 0.0003.
+Solver will continue the simulation with the step size restricted to 1.06581E-18 and using an effective relative error tolerance of 0.000643304,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00030000000000000285. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06581E-18 for 3 consecutive times at time 0.0003.
+Solver will continue the simulation with the step size restricted to 1.06581E-18 and using an effective relative error tolerance of 0.000857764,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00030000000000000393. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06581E-18 for 4 consecutive times at time 0.0003.
+Solver will continue the simulation with the step size restricted to 1.06581E-18 and using an effective relative error tolerance of 0.000701794,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00030000000000000502. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06581E-18 for 5 consecutive times at time 0.0003.
+Solver will continue the simulation with the step size restricted to 1.06581E-18 and using an effective relative error tolerance of 0.000965118,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.0003000000000000061. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.06581E-18 for 6 consecutive times at time 0.0003.
+Solver will continue the simulation with the step size restricted to 1.06581E-18 and using an effective relative error tolerance of 0.000386055,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00035000000000000059. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.24345E-18 for 1 consecutive times at time 0.00035.
+Solver will continue the simulation with the step size restricted to 1.24345E-18 and using an effective relative error tolerance of 0.000542352,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00035000000000000184. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.24345E-18 for 2 consecutive times at time 0.00035.
+Solver will continue the simulation with the step size restricted to 1.24345E-18 and using an effective relative error tolerance of 0.000433897,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00035000000000000309. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.24345E-18 for 3 consecutive times at time 0.00035.
+Solver will continue the simulation with the step size restricted to 1.24345E-18 and using an effective relative error tolerance of 0.000650892,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00035000000000000433. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.24345E-18 for 4 consecutive times at time 0.00035.
+Solver will continue the simulation with the step size restricted to 1.24345E-18 and using an effective relative error tolerance of 0.000433917,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00035000000000000558. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.24345E-18 for 5 consecutive times at time 0.00035.
+Solver will continue the simulation with the step size restricted to 1.24345E-18 and using an effective relative error tolerance of 0.000542369,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00039999999999998658. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 1 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00039999999999998798. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 2 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00039999999999998939. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 3 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.0003999999999999908. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 4 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00039999999999999221. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 5 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00039999999999999362. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 6 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00039999999999999503. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 7 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00039999999999999644. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 8 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00039999999999999785. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 9 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00039999999999999926. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.42109E-18 for 10 consecutive times at time
+0.0004. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system.
+Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the system or
+increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00040000000000000067. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.42109E-18 for 11 consecutive times at time 0.0004.
+Solver will continue the simulation with the step size restricted to 1.42109E-18 and using an effective relative error tolerance of 0.00309061,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00040000000000000208. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.42109E-18 for 12 consecutive times at time 0.0004.
+Solver will continue the simulation with the step size restricted to 1.42109E-18 and using an effective relative error tolerance of 0.00077278,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.0004500000000000008. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.59872E-18 for 1 consecutive times at time 0.00045.
+Solver will continue the simulation with the step size restricted to 1.59872E-18 and using an effective relative error tolerance of 0.00125579,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00045000000000000237. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.59872E-18 for 2 consecutive times at time 0.00045.
+Solver will continue the simulation with the step size restricted to 1.59872E-18 and using an effective relative error tolerance of 0.000697651,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00045000000000000395. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.59872E-18 for 3 consecutive times at time 0.00045.
+Solver will continue the simulation with the step size restricted to 1.59872E-18 and using an effective relative error tolerance of 0.000930241,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00045000000000000552. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.59872E-18 for 4 consecutive times at time 0.00045.
+Solver will continue the simulation with the step size restricted to 1.59872E-18 and using an effective relative error tolerance of 0.000761086,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00045000000000000709. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.59872E-18 for 5 consecutive times at time 0.00045.
+Solver will continue the simulation with the step size restricted to 1.59872E-18 and using an effective relative error tolerance of 0.00104674,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00045000000000000866. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.59872E-18 for 6 consecutive times at time 0.00045.
+Solver will continue the simulation with the step size restricted to 1.59872E-18 and using an effective relative error tolerance of 0.000418708,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00050000000000000034. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.77636E-18 for 1 consecutive times at time 0.0005.
+Solver will continue the simulation with the step size restricted to 1.77636E-18 and using an effective relative error tolerance of 0.000970761,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00050000000000000207. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.77636E-18 for 2 consecutive times at time 0.0005.
+Solver will continue the simulation with the step size restricted to 1.77636E-18 and using an effective relative error tolerance of 0.000465984,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00050000000000000381. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.77636E-18 for 3 consecutive times at time 0.0005.
+Solver will continue the simulation with the step size restricted to 1.77636E-18 and using an effective relative error tolerance of 0.000699047,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00050000000000000554. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.77636E-18 for 4 consecutive times at time 0.0005.
+Solver will continue the simulation with the step size restricted to 1.77636E-18 and using an effective relative error tolerance of 0.000466015,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 0.00050000000000000727. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.77636E-18 for 5 consecutive times at time 0.0005.
+Solver will continue the simulation with the step size restricted to 1.77636E-18 and using an effective relative error tolerance of 0.000582489,
+which is greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.static_case (line 10)
+In testcell.run_static (line 18)] 
+{Error using assert
+Static point did not settle; extend dwell.
+
+Error in testcell.static_case (line 21)
+assert(all(points.settling_range_A<max(1e-7,abs(points.Ic_A)*1e-3)),'Static point did not settle; extend dwell.');
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in testcell.run_static (line 18)
+  pts=testcell.static_case(rig,[0 .5 1 1.5 2 3 4 5 7 10 15],gate,T,label,folder);
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

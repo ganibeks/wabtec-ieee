@@ -1,0 +1,8 @@
+Presentation drawing of the saved dynamic RL fixture, not a replacement simulation model.
+Source: results\dynamic_20261017_195453_347
+Power topology: bus -> Ibus -> [diode cathode branch] -> IL -> R -> L -> SW -> Lsigma/Rsigma -> Ic -> IGBT -> return.
+Diode anode connects to SW through Id; diode capacitance is parallel after Id.
+Driver source reference connects to emitter return. Auxiliary sensor wiring, solver block and internal gate resistance omitted for clarity.
+Gate command trace is the saved stimulus schedule; it is not a measured gate-voltage waveform.
+The representative device is Mitsubishi CM1500HC-66XB, not an identified Wabtec assembly.
+No integrated DESAT or real hardware DAQ is implied. Numerical/reference validation is unchanged.

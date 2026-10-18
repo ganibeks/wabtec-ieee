@@ -1,0 +1,47 @@
+                                    scope: 'Electrical-only assumed-device assessment'
+                        simulation_status: 'Executed reference electrical tests PASS; full characterization incomplete'
+                        hardware_decision: 'INCONCLUSIVE'
+                        acceptance_limits: 'Not supplied'
+                         static_reference: 'C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\static25_20261017_165838_504'
+                        dynamic_reference: 'C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\dynamic_20261017_165933_696'
+                       static_points_used: 61
+                                gate_on_V: 15
+                               gate_off_V: -15
+                              Vce_at20A_V: 2.0001
+                 conduction_power_at20A_W: 40.0013
+            apparent_Vce_over_I_at20A_Ohm: 0.1000
+    incremental_on_resistance_10to30A_Ohm: 0.0836
+                          leakage_at48V_A: 8.2915e-06
+                         leakage_at100V_A: 1.0008e-05
+                               peak_Vce_V: 51.1427
+                     overshoot_above48V_V: 3.1427
+                                peak_Ic_A: 10.3949
+                                peak_Ig_A: 4.1667
+             external_gate_resistance_Ohm: 4.7000
+        total_nominal_gate_resistance_Ohm: 7.2000
+                         simple_gate_RC_s: 3.6000e-08
+             expected_initial_gate_peak_A: 4.1667
+      normal_turnoff_clearance_1percent_s: [4.8363e-05 4.8345e-05]
+       second_turnon_voltage_transition_s: 1.8542e-07
+       second_turnon_current_transition_s: 6.4429e-07
+       positive_gate_charge_minus15to15_C: 1.6435e-07
+                          supply_energy_J: 0.1146
+              collector_terminal_energy_J: 0.0130
+            energy_balance_relative_error: 1.5145e-08
+        max_half_step_event_energy_change: 0.0012
+                   electrical_limitations: {1×6 cell}
+
+    Vge_V    interpolated_Ic_at_Vce2V_A
+    _____    __________________________
+
+      5              6.7745e-06        
+      7                 0.91462        
+     10                   8.609        
+     15                  19.999        
+
+ELECTRICAL ASSESSMENT: C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\electrical_assessment_20261017_171813_439
+
+ans =
+
+    'C:\Users\ganib\OneDrive\Документы\Wabtec_IGBT_Test_Cell\results\electrical_assessment_20261017_171813_439'
+

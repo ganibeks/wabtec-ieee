@@ -1,0 +1,6 @@
+﻿{
+  "review_status": "NOT_VALIDATED",
+  "supersedes_scope_of": "validation.json",
+  "reason": "The external thermal RC balance passed, but the detailed device retained its default internal thermal network. The external Tj label therefore did not measure the actual junction and the external heat integral omitted internally stored thermal energy.",
+  "required_correction": "Configure one thermal network explicitly, then validate full electrical-to-thermal energy balance including stored electrical energy. Preserve this run as diagnostic evidence."
+}

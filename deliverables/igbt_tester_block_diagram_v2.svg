@@ -1,0 +1,345 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="'Times New Roman', Times, serif" fill="none" stroke="#000">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000" stroke="none"/>
+    </marker>
+    <style>
+      .blk  { stroke:#000; stroke-width:1.4; fill:#fff; }
+      .sub  { stroke:#000; stroke-width:1.1; fill:#fff; }
+      .pwr  { stroke:#000; stroke-width:2.6; fill:none; }
+      .ctl  { stroke:#000; stroke-width:1.2; fill:none; }
+      .flt  { stroke:#000; stroke-width:2.0; fill:none; }
+      .msr  { stroke:#000; stroke-width:1.2; fill:none; stroke-dasharray:6 4; }
+      .bar  { stroke:#000; stroke-width:1.1; fill:none; stroke-dasharray:10 3 2 3; }
+      .dut  { stroke:#000; stroke-width:1.1; fill:none; stroke-dasharray:9 5; }
+      .t    { fill:#000; stroke:none; font-size:15px; }
+      .tb   { fill:#000; stroke:none; font-size:16px; font-weight:bold; letter-spacing:0.3px; }
+      .ts   { fill:#000; stroke:none; font-size:13px; }
+      .ti   { fill:#000; stroke:none; font-size:13px; font-style:italic; }
+      .dot  { fill:#000; stroke:none; }
+      .term { fill:#fff; stroke:#000; stroke-width:1.2; }
+      .num  { fill:#fff; stroke:#000; stroke-width:1.2; }
+      .numt { fill:#000; stroke:none; font-size:12px; font-weight:bold; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="1600" height="900" fill="#fff" stroke="none"/>
+  <text class="tb" x="785" y="24" text-anchor="end">DOMAIN A</text>
+  <text class="ti" x="785" y="40" text-anchor="end">control side, earth-referenced (24 V / 3.3 V)</text>
+  <text class="tb" x="815" y="24">DOMAIN B</text>
+  <text class="ti" x="815" y="40">module / DC-link side (isolated)</text>
+  <text class="ts" x="3" y="80" style="font-size:10.5px">~230 V</text>
+  <line class="ctl" x1="6" y1="88" x2="40" y2="88" stroke-width="1.6"/>
+  <rect class="blk" x="40" y="55" width="210" height="70"/>
+  <text class="tb" x="145" y="80" text-anchor="middle">POWER SUPPLY</text>
+  <text class="t" x="145" y="100" text-anchor="middle">AC/DC  ~230 V / =24 V</text>
+  <text class="ti" x="145" y="117" text-anchor="middle">low-voltage DC</text>
+  <line class="ctl" x1="250" y1="88" x2="410" y2="88" stroke-width="1.6"/>
+  <circle cx="420" cy="88" r="10" fill="#fff" stroke="#000" stroke-width="1.3"/>
+  <line class="ctl" x1="430" y1="88" x2="720" y2="88" marker-end="url(#arr)" stroke-width="1.6"/>
+  <line class="ctl" x1="406" y1="88" x2="434" y2="88" stroke-width="1.6"/>
+  <text class="t" x="270" y="81">+24 V</text>
+  <line class="ctl" x1="145" y1="125" x2="145" y2="160" stroke-width="1.6"/>
+  <rect class="blk" x="40" y="160" width="210" height="55"/>
+  <text class="tb" x="145" y="184" text-anchor="middle">DC/DC  =24 V / 3.3 V</text>
+  <text class="ti" x="145" y="203" text-anchor="middle">MCU and logic supply</text>
+  <polyline class="ctl" points="250,188 400,188 400,250" marker-end="url(#arr)" stroke-width="1.6"/>
+  <text class="t" x="270" y="181">+3.3 V</text>
+  <path class="msr" d="M420,238 L406,238 A6,6 0 0 0 394,238 L330,238"/>
+  <path class="msr" d="M420,98 L420,238"/>
+  <path class="msr" d="M330,238 L330,250" marker-end="url(#arr)"/>
+  <text class="ts" x="426" y="170">I<tspan font-size="10" dy="3">GDPC</tspan><tspan dy="-3"></tspan></text>
+  <rect class="blk" x="720" y="60" width="160" height="80"/>
+  <text class="tb" x="712" y="78" text-anchor="end">ISOLATED DC/DC</text>
+  <text class="ti" x="684" y="112" text-anchor="end">GDPC supply</text>
+  <text class="t" x="758" y="92" text-anchor="middle">=24 V</text>
+  <text class="ti" x="758" y="110" text-anchor="middle">primary</text>
+  <text class="ts" x="758" y="128" text-anchor="middle">EN</text>
+  <text class="ts" x="842" y="92" text-anchor="middle">isolated</text>
+  <text class="ts" x="842" y="108" text-anchor="middle">DC bus</text>
+  <line class="ctl" x1="880" y1="100" x2="905" y2="100" marker-end="url(#arr)" stroke-width="1.6"/>
+  <rect class="blk" x="905" y="60" width="200" height="80"/>
+  <text class="tb" x="1005" y="80" text-anchor="middle">GDPC EMULATOR</text>
+  <text class="ts" x="1005" y="99" text-anchor="middle">100 VAC / 25 kHz, one output</text>
+  <text class="ts" x="1005" y="116" text-anchor="middle">supply current monitored</text>
+  <text class="ts" x="1005" y="132" text-anchor="middle">on primary (I<tspan font-size="10" dy="3">GDPC</tspan><tspan dy="-3"></tspan>, ADC5)</text>
+  <rect class="blk" x="300" y="250" width="200" height="598"/>
+  <text class="tb" x="400" y="395" text-anchor="middle">STM32</text>
+  <text class="tb" x="400" y="415" text-anchor="middle">MICROCONTROLLER</text>
+  <text class="ti" x="400" y="437" text-anchor="middle">test sequencer, timers,</text>
+  <text class="ti" x="400" y="453" text-anchor="middle">ADC, USB, fault log</text>
+  <text class="ts" x="308" y="266">ADC5</text>
+  <text class="ts" x="492" y="266" text-anchor="end">GDPC ENABLE</text>
+  <text class="ts" x="492" y="310" text-anchor="end">COMMAND T1 (upper)</text>
+  <text class="ts" x="492" y="498" text-anchor="end">COMMAND T2 (lower)</text>
+  <text class="ts" x="492" y="512" text-anchor="end" style="font-size:11px;">(to fiber TX)</text>
+  <text class="ts" x="492" y="604" text-anchor="end">FAULT (EXTI)</text>
+  <text class="ts" x="492" y="634" text-anchor="end">LATCH RESET</text>
+  <text class="ts" x="492" y="764" text-anchor="end">ADC1</text>
+  <text class="ts" x="492" y="789" text-anchor="end">ADC2</text>
+  <text class="ts" x="492" y="814" text-anchor="end">ADC3</text>
+  <text class="ts" x="492" y="839" text-anchor="end">ADC4</text>
+  <text class="t" x="308" y="724">USB</text>
+  <rect class="blk" x="40" y="650" width="210" height="140"/>
+  <text class="tb" x="145" y="676" text-anchor="middle">PC / LAPTOP</text>
+  <text class="t" x="55" y="701">• test configuration</text>
+  <text class="t" x="55" y="723">• data acquisition</text>
+  <text class="t" x="55" y="745">• results visualization</text>
+  <text class="t" x="55" y="767">• PASS / FAIL report</text>
+  <line class="ctl" x1="250" y1="720" x2="300" y2="720" marker-end="url(#arr)" marker-start="url(#arr)" stroke-width="1.5"/>
+  <text class="t" x="275" y="712" text-anchor="middle">USB</text>
+  <polyline class="ctl" points="500,262 690,262 690,125 720,125" marker-end="url(#arr)"/>
+  <line class="ctl" x1="500" y1="306" x2="590" y2="306" marker-end="url(#arr)"/>
+  <rect class="blk" x="590" y="296" width="50" height="40"/>
+  <text class="tb" x="615" y="322" text-anchor="middle">&amp;</text>
+  <line class="ctl" x1="640" y1="316" x2="720" y2="316" marker-end="url(#arr)"/>
+  <path class="ctl" d="M500,506 L559,506 A6,6 0 0 1 571,506 L590,506" marker-end="url(#arr)"/>
+  <rect class="blk" x="590" y="496" width="50" height="40"/>
+  <text class="tb" x="615" y="522" text-anchor="middle">&amp;</text>
+  <path class="ctl" d="M640,516 L674,516 A6,6 0 0 1 686,516 L720,516" marker-end="url(#arr)"/>
+  <text class="ti" x="615" y="352" text-anchor="middle">interlock</text>
+  <polyline class="flt" points="565,570 565,326 590,326" marker-end="url(#arr)"/>
+  <line class="flt" x1="565" y1="526" x2="590" y2="526" marker-end="url(#arr)"/>
+  <circle class="dot" cx="565" cy="526" r="3"/>
+  <text class="ts" x="571" y="470" style="font-size:11px;">CMD_EN</text>
+  <polyline class="flt" points="720,336 680,336 680,570" marker-end="url(#arr)"/>
+  <polyline class="flt" points="720,536 700,536 700,570" marker-end="url(#arr)"/>
+  <text class="ts" x="675" y="452" text-anchor="end" style="font-size:11px;">STATUS</text>
+  <rect class="blk" x="530" y="570" width="200" height="76"/>
+  <text class="tb" x="630" y="588" text-anchor="middle">FAULT LATCH (HW)</text>
+  <text class="ts" x="540" y="606">Status FAULT or OC → latched</text>
+  <text class="ts" x="540" y="622">blocks Command pulses (&amp;)</text>
+  <text class="ts" x="540" y="638">cleared only by LATCH RESET</text>
+  <line class="flt" x1="530" y1="600" x2="500" y2="600" marker-end="url(#arr)"/>
+  <line class="ctl" x1="500" y1="630" x2="530" y2="630" marker-end="url(#arr)"/>
+  <rect class="blk" x="540" y="660" width="190" height="40"/>
+  <text class="ts" x="635" y="677" text-anchor="middle" style="font-size:12px;">OVERCURRENT COMPARATOR</text>
+  <text class="ts" x="635" y="693" text-anchor="middle">I<tspan font-size="10" dy="3">C</tspan><tspan dy="-3"></tspan> &gt; I<tspan font-size="10" dy="3">lim</tspan><tspan dy="-3"></tspan></text>
+  <line class="flt" x1="705" y1="660" x2="705" y2="646" marker-end="url(#arr)"/>
+  <circle class="dot" cx="705" cy="785" r="3"/>
+  <path class="msr" d="M705,785 L705,766 A6,6 0 0 0 705,754 L705,700" marker-end="url(#arr)"/>
+  <rect class="blk" x="720" y="296" width="160" height="260"/>
+  <text class="tb" x="712" y="284" text-anchor="end" style="font-size:14px;">FIBER-OPTIC INTERFACE</text>
+  <text class="ts" x="758" y="420" text-anchor="middle">TMC</text>
+  <text class="ts" x="758" y="436" text-anchor="middle">emulator</text>
+  <text class="ts" x="842" y="420" text-anchor="middle">optical</text>
+  <text class="ts" x="842" y="436" text-anchor="middle">TX / RX</text>
+  <text class="ts" x="876" y="312" text-anchor="end" style="font-size:10px;">TX1</text>
+  <text class="ts" x="876" y="350" text-anchor="end" style="font-size:10px;">RX1</text>
+  <text class="ts" x="876" y="512" text-anchor="end" style="font-size:10px;">TX2</text>
+  <text class="ts" x="876" y="550" text-anchor="end" style="font-size:10px;">RX2</text>
+  <rect class="dut" x="1000" y="212" width="290" height="393"/>
+  <text class="tb" x="1008" y="228" style="font-size:12px;">MODULE UNDER TEST (DUT)</text>
+  <text class="ti" x="1008" y="243" style="font-size:12px;">dual: 2 × (IGBT + driver)</text>
+  <text class="ti" x="1020" y="280" style="font-size:11px;">T1 upper: IGBT + driver 1</text>
+  <rect class="sub" x="1022" y="305" width="115" height="62"/>
+  <text class="ts" x="1080" y="321" text-anchor="middle" style="font-size:11px;">Integrated gate</text>
+  <text class="ts" x="1080" y="335" text-anchor="middle" style="font-size:11px;">driver (Wabtec)</text>
+  <text class="ts" x="1044" y="356" style="font-size:10px;">DESAT</text>
+  <text class="ts" x="1104" y="356" style="font-size:10px;">soft-off</text>
+  <circle class="term" cx="1000" cy="316" r="3.5"/>
+  <line class="ctl" x1="1003.5" y1="316" x2="1022" y2="316"/>
+  <circle class="term" cx="1000" cy="336" r="3.5"/>
+  <line class="ctl" x1="1003.5" y1="336" x2="1022" y2="336"/>
+  <polyline class="ctl" points="1118,305 1118,294 1150,294"/>
+  <path d="M1150,288 L1150,300 L1161,294 z" fill="#fff" stroke="#000" stroke-width="1.1"/>
+  <line class="ctl" x1="1161" y1="288" x2="1161" y2="300" stroke-width="1.4"/>
+  <line class="ctl" x1="1161" y1="294" x2="1200" y2="294"/>
+  <circle class="dot" cx="1200" cy="294" r="3"/>
+  <line class="ctl" x1="1137" y1="330" x2="1139" y2="330" stroke-width="1.6"/>
+  <rect class="sub" x="1139" y="324" width="16" height="12"/>
+  <text class="ts" x="1147" y="349" text-anchor="middle" style="font-size:11px;">R<tspan font-size="10" dy="3">G</tspan><tspan dy="-3"></tspan></text>
+  <line class="ctl" x1="1155" y1="330" x2="1163" y2="330" stroke-width="1.6"/>
+  <text class="ts" x="1166" y="324" style="font-size:11px;">G</text>
+  <line class="ctl" x1="1163" y1="308" x2="1163" y2="352" stroke-width="1.8"/>
+  <line class="ctl" x1="1171" y1="302" x2="1171" y2="358" stroke-width="3"/>
+  <line class="pwr" x1="1171" y1="314" x2="1200" y2="298"/>
+  <line class="pwr" x1="1200" y1="298" x2="1200" y2="250"/>
+  <line class="pwr" x1="1171" y1="346" x2="1200" y2="362"/>
+  <path d="M1200,362 L1186,361 L1193,351 z" fill="#000" stroke="none"/>
+  <line class="pwr" x1="1200" y1="362" x2="1200" y2="400"/>
+  <text class="t" x="1207" y="312">C</text>
+  <text class="t" x="1207" y="350">E</text>
+  <polyline class="ctl" points="1200,276 1262,276 1262,314" stroke-width="1.6"/>
+  <line class="ctl" x1="1251" y1="314" x2="1273" y2="314" stroke-width="1.8"/>
+  <path d="M1252,334 L1272,334 L1262,314 z" fill="#fff" stroke="#000" stroke-width="1.3"/>
+  <polyline class="ctl" points="1262,334 1262,382 1200,382" stroke-width="1.6"/>
+  <circle class="dot" cx="1200" cy="276" r="3"/>
+  <circle class="dot" cx="1200" cy="382" r="3"/>
+  <text class="ti" x="1020" y="480" style="font-size:11px;">T2 lower: IGBT + driver 2</text>
+  <rect class="sub" x="1022" y="505" width="115" height="62"/>
+  <text class="ts" x="1080" y="521" text-anchor="middle" style="font-size:11px;">Integrated gate</text>
+  <text class="ts" x="1080" y="535" text-anchor="middle" style="font-size:11px;">driver (Wabtec)</text>
+  <text class="ts" x="1044" y="556" style="font-size:10px;">DESAT</text>
+  <text class="ts" x="1104" y="556" style="font-size:10px;">soft-off</text>
+  <circle class="num" cx="1034" cy="553" r="7"/><text class="numt" x="1034" y="557" text-anchor="middle" style="font-size:10px">1</text>
+  <circle class="num" cx="1095" cy="553" r="7"/><text class="numt" x="1095" y="557" text-anchor="middle" style="font-size:10px">2</text>
+  <circle class="term" cx="1000" cy="516" r="3.5"/>
+  <line class="ctl" x1="1003.5" y1="516" x2="1022" y2="516"/>
+  <circle class="term" cx="1000" cy="536" r="3.5"/>
+  <line class="ctl" x1="1003.5" y1="536" x2="1022" y2="536"/>
+  <polyline class="ctl" points="1118,505 1118,494 1150,494"/>
+  <path d="M1150,488 L1150,500 L1161,494 z" fill="#fff" stroke="#000" stroke-width="1.1"/>
+  <line class="ctl" x1="1161" y1="488" x2="1161" y2="500" stroke-width="1.4"/>
+  <line class="ctl" x1="1161" y1="494" x2="1200" y2="494"/>
+  <circle class="dot" cx="1200" cy="494" r="3"/>
+  <line class="ctl" x1="1137" y1="530" x2="1139" y2="530" stroke-width="1.6"/>
+  <rect class="sub" x="1139" y="524" width="16" height="12"/>
+  <text class="ts" x="1147" y="549" text-anchor="middle" style="font-size:11px;">R<tspan font-size="10" dy="3">G</tspan><tspan dy="-3"></tspan></text>
+  <line class="ctl" x1="1155" y1="530" x2="1163" y2="530" stroke-width="1.6"/>
+  <text class="ts" x="1166" y="524" style="font-size:11px;">G</text>
+  <line class="ctl" x1="1163" y1="508" x2="1163" y2="552" stroke-width="1.8"/>
+  <line class="ctl" x1="1171" y1="502" x2="1171" y2="558" stroke-width="3"/>
+  <line class="pwr" x1="1171" y1="514" x2="1200" y2="498"/>
+  <line class="pwr" x1="1200" y1="498" x2="1200" y2="450"/>
+  <line class="pwr" x1="1171" y1="546" x2="1200" y2="562"/>
+  <path d="M1200,562 L1186,561 L1193,551 z" fill="#000" stroke="none"/>
+  <line class="pwr" x1="1200" y1="562" x2="1200" y2="600"/>
+  <text class="t" x="1207" y="512">C</text>
+  <text class="t" x="1207" y="550">E</text>
+  <polyline class="ctl" points="1200,476 1262,476 1262,514" stroke-width="1.6"/>
+  <line class="ctl" x1="1251" y1="514" x2="1273" y2="514" stroke-width="1.8"/>
+  <path d="M1252,534 L1272,534 L1262,514 z" fill="#fff" stroke="#000" stroke-width="1.3"/>
+  <polyline class="ctl" points="1262,534 1262,582 1200,582" stroke-width="1.6"/>
+  <circle class="dot" cx="1200" cy="476" r="3"/>
+  <circle class="dot" cx="1200" cy="582" r="3"/>
+  <line class="pwr" x1="1200" y1="250" x2="1200" y2="215.5"/>
+  <circle class="term" cx="1200" cy="212" r="4"/>
+  <line class="pwr" x1="1200" y1="400" x2="1200" y2="450"/>
+  <circle class="dot" cx="1200" cy="425" r="3.5"/>
+  <line class="pwr" x1="1200" y1="425" x2="1286" y2="425"/>
+  <circle class="term" cx="1290" cy="425" r="4"/>
+  <text class="ts" x="1266" y="419" style="font-size:11px;">AC</text>
+  <text class="ts" x="1215" y="442" style="font-size:11px;">phase node</text>
+  <circle class="term" cx="1200" cy="605" r="4"/>
+  <circle class="term" cx="1000" cy="556" r="3.5"/>
+  <line class="ctl" x1="1003.5" y1="556" x2="1022" y2="556"/>
+  <circle class="dot" cx="1010" cy="556" r="3"/>
+  <path class="ctl" d="M1010,556 L1010,542 A6,6 0 0 0 1010,530 L1010,522 A6,6 0 0 0 1010,510 L1010,356"/>
+  <line class="ctl" x1="1010" y1="356" x2="1022" y2="356"/>
+  <circle class="dot" cx="1159" cy="530" r="3"/>
+  <polyline class="msr" points="1159,530 1159,588 1003.5,588"/>
+  <circle class="term" cx="1000" cy="588" r="3.5" stroke-dasharray="2 2"/>
+  <text class="ti" x="1006" y="620" style="font-size:11px;">V<tspan font-size="10" dy="3">GE</tspan><tspan dy="-3"></tspan> test point (if accessible)</text>
+  <path class="ctl" d="M880,316 L954,316 A6,6 0 0 1 966,316 L996,316" marker-end="url(#arr)"/>
+  <path class="ctl" d="M996,336 L966,336 A6,6 0 0 0 954,336 L880,336" marker-end="url(#arr)"/>
+  <path class="ctl" d="M880,516 L954,516 A6,6 0 0 1 966,516 L996,516" marker-end="url(#arr)"/>
+  <path class="ctl" d="M996,536 L966,536 A6,6 0 0 0 954,536 L880,536" marker-end="url(#arr)"/>
+  <text class="ts" x="884" y="311" style="font-size:11px;">Command</text>
+  <text class="ts" x="884" y="349" style="font-size:11px;">Status</text>
+  <text class="ts" x="884" y="511" style="font-size:11px;">Command</text>
+  <text class="ts" x="884" y="549" style="font-size:11px;">Status</text>
+  <path class="ctl" d="M960,140 L960,310 A6,6 0 0 1 960,322 L960,330 A6,6 0 0 1 960,342 L960,510 A6,6 0 0 1 960,522 L960,530 A6,6 0 0 1 960,542 L960,556"/>
+  <line class="ctl" x1="960" y1="556" x2="996" y2="556" marker-end="url(#arr)"/>
+  <text class="ts" x="974" y="260" transform="rotate(-90 974 260)" style="font-size:11px;">100 VAC</text>
+  <circle class="num" cx="912" cy="566" r="9"/><text class="numt" x="912" y="570" text-anchor="middle" style="font-size:12px">3</text>
+  <polyline class="pwr" points="1200,208 1200,203 1470,203"/>
+  <line class="pwr" x1="1200" y1="609" x2="1200" y2="615"/>
+  <circle cx="1200" cy="624" r="9" fill="#fff" stroke="#000" stroke-width="1.3"/>
+  <line class="pwr" x1="1200" y1="633" x2="1200" y2="640"/>
+  <line class="pwr" x1="1200" y1="640" x2="1470" y2="640"/>
+  <line class="pwr" x1="1293.5" y1="425" x2="1326" y2="425"/>
+  <circle cx="1335" cy="425" r="9" fill="#fff" stroke="#000" stroke-width="1.3"/>
+  <polyline class="pwr" points="1344,425 1380,425 1380,400"/>
+  <path class="ctl" d="M1380,400 a10,10 0 0 1 0,-20 a10,10 0 0 1 0,-20 a10,10 0 0 1 0,-20 a10,10 0 0 1 0,-20" stroke-width="1.8"/>
+  <polyline class="pwr" points="1380,320 1380,310 1398,310"/>
+  <text class="ts" x="1300" y="356" style="font-size:12px;font-weight:bold;">LOAD</text>
+  <text class="ts" x="1300" y="372" style="font-size:12px;font-weight:bold;">INDUCTOR</text>
+  <rect class="sub" x="1398" y="282" width="64" height="56"/>
+  <text class="ts" x="1430" y="299" text-anchor="middle" style="font-size:10px;">L RETURN</text>
+  <text class="ts" x="1430" y="312" text-anchor="middle" style="font-size:10px;">RELAY</text>
+  <text class="ts" x="1430" y="329" text-anchor="middle" style="font-size:10px;">DC+ / DC−</text>
+  <line class="pwr" x1="1430" y1="282" x2="1430" y2="203"/>
+  <circle class="dot" cx="1430" cy="203" r="3"/>
+  <line class="pwr" x1="1430" y1="338" x2="1430" y2="640"/>
+  <circle class="dot" cx="1430" cy="640" r="3"/>
+  <text class="ti" x="1436" y="250" style="font-size:10px;">test T2</text>
+  <text class="ti" x="1436" y="470" style="font-size:10px;">test T1</text>
+  <rect class="blk" x="1470" y="198" width="110" height="462"/>
+  <text class="tb" x="1478" y="222" style="font-size:13px;">DC+</text>
+  <text class="tb" x="1478" y="646" style="font-size:13px;">DC−</text>
+  <text class="tb" x="1525" y="380" text-anchor="middle" style="font-size:14px;">CONTROLLED</text>
+  <text class="tb" x="1525" y="398" text-anchor="middle" style="font-size:14px;">DC LINK</text>
+  <text class="ti" x="1525" y="418" text-anchor="middle">(conceptual)</text>
+  <text class="ts" x="1525" y="444" text-anchor="middle">current-limited,</text>
+  <text class="ts" x="1525" y="460" text-anchor="middle">interlocked,</text>
+  <text class="ts" x="1525" y="476" text-anchor="middle">auto-discharge</text>
+  <text class="tb" x="1005" y="652" style="font-size:12px;">MEASUREMENT SENSORS</text>
+  <rect class="dut" x="915" y="660" width="545" height="80"/>
+  <rect class="sub" x="930" y="668" width="100" height="62"/>
+  <text class="t" x="980.0" y="690" text-anchor="middle">V<tspan font-size="10" dy="3">GE</tspan><tspan dy="-3"></tspan> (opt.)</text>
+  <text class="ts" x="980.0" y="710" text-anchor="middle" style="font-size:12px;">test point</text>
+  <rect class="sub" x="1120" y="668" width="100" height="62"/>
+  <text class="t" x="1170.0" y="690" text-anchor="middle">I<tspan font-size="10" dy="3">C</tspan><tspan dy="-3"></tspan></text>
+  <text class="ts" x="1170.0" y="710" text-anchor="middle" style="font-size:12px;">current sensor</text>
+  <rect class="sub" x="1260" y="668" width="88" height="62"/>
+  <text class="t" x="1304.0" y="690" text-anchor="middle">I<tspan font-size="10" dy="3">L</tspan><tspan dy="-3"></tspan></text>
+  <text class="ts" x="1304.0" y="710" text-anchor="middle" style="font-size:12px;">load inductor</text>
+  <rect class="sub" x="1355" y="668" width="98" height="62"/>
+  <text class="t" x="1404.0" y="690" text-anchor="middle">V<tspan font-size="10" dy="3">AC</tspan><tspan dy="-3"></tspan> / V<tspan font-size="10" dy="3">CE</tspan><tspan dy="-3"></tspan></text>
+  <text class="ts" x="1404.0" y="710" text-anchor="middle" style="font-size:12px;">HV div. + clamp</text>
+  <polyline class="msr" points="996.5,588 980,588 980,668" marker-end="url(#arr)"/>
+  <polyline class="msr" points="1191,624 1170,624 1170,668" marker-end="url(#arr)"/>
+  <path class="msr" d="M1335,434 L1335,634 A6,6 0 0 1 1335,646 L1335,668" marker-end="url(#arr)"/>
+  <circle class="dot" cx="1362" cy="425" r="3"/>
+  <path class="msr" d="M1362,425 L1362,634 A6,6 0 0 1 1362,646 L1362,668" marker-end="url(#arr)"/>
+  <circle class="dot" cx="1446" cy="640" r="3"/>
+  <line class="msr" x1="1446" y1="640" x2="1446" y2="668" marker-end="url(#arr)"/>
+  <polyline class="msr" points="980,730 980,760 880,760" marker-end="url(#arr)"/>
+  <text class="ts" x="890" y="752" style="font-size:12px;">V<tspan font-size="10" dy="3">GE</tspan><tspan dy="-3"></tspan> (opt.)</text>
+  <line class="msr" x1="720" y1="760" x2="500" y2="760" marker-end="url(#arr)"/>
+  <text class="ts" x="520" y="752" style="font-size:12px;">V<tspan font-size="10" dy="3">GE</tspan><tspan dy="-3"></tspan> (opt.)</text>
+  <polyline class="msr" points="1170,730 1170,785 880,785" marker-end="url(#arr)"/>
+  <text class="ts" x="890" y="777" style="font-size:12px;">I<tspan font-size="10" dy="3">C</tspan><tspan dy="-3"></tspan></text>
+  <line class="msr" x1="720" y1="785" x2="500" y2="785" marker-end="url(#arr)"/>
+  <text class="ts" x="520" y="777" style="font-size:12px;">I<tspan font-size="10" dy="3">C</tspan><tspan dy="-3"></tspan></text>
+  <polyline class="msr" points="1304,730 1304,810 880,810" marker-end="url(#arr)"/>
+  <text class="ts" x="890" y="802" style="font-size:12px;">I<tspan font-size="10" dy="3">L</tspan><tspan dy="-3"></tspan></text>
+  <line class="msr" x1="720" y1="810" x2="500" y2="810" marker-end="url(#arr)"/>
+  <text class="ts" x="520" y="802" style="font-size:12px;">I<tspan font-size="10" dy="3">L</tspan><tspan dy="-3"></tspan></text>
+  <polyline class="msr" points="1404,730 1404,835 880,835" marker-end="url(#arr)"/>
+  <text class="ts" x="890" y="827" style="font-size:12px;">V<tspan font-size="10" dy="3">CE</tspan><tspan dy="-3"></tspan></text>
+  <line class="msr" x1="720" y1="835" x2="500" y2="835" marker-end="url(#arr)"/>
+  <text class="ts" x="520" y="827" style="font-size:12px;">V<tspan font-size="10" dy="3">CE</tspan><tspan dy="-3"></tspan></text>
+  <rect class="blk" x="720" y="748" width="160" height="100"/>
+  <text class="tb" x="690" y="740" text-anchor="end" style="font-size:14px;">ISOLATION AMPLIFIERS</text>
+  <text class="ts" x="758" y="800" text-anchor="middle">filter,</text>
+  <text class="ts" x="758" y="816" text-anchor="middle">scaling</text>
+  <text class="ts" x="842" y="800" text-anchor="middle">input</text>
+  <text class="ts" x="842" y="816" text-anchor="middle">stage</text>
+  <line class="bar" x1="797" y1="46" x2="797" y2="850"/>
+  <line class="bar" x1="803" y1="46" x2="803" y2="850"/>
+  <circle class="num" cx="612" cy="556" r="9"/><text class="numt" x="612" y="560" text-anchor="middle" style="font-size:12px">4</text>
+  <circle class="num" cx="515" cy="586" r="9"/><text class="numt" x="515" y="590" text-anchor="middle" style="font-size:12px">5</text>
+  <rect class="sub" x="1120" y="46" width="460" height="146"/>
+  <text class="tb" x="1132" y="66" style="font-size:14px;">SHORT-CIRCUIT / DESAT RESPONSE CHAIN</text>
+  <circle class="num" cx="1141" cy="82" r="8"/><text class="numt" x="1141" y="86" text-anchor="middle" style="font-size:12px">1</text>
+  <text class="ts" x="1156" y="86" style="font-size:12.5px;">DESAT detected inside the DUT's integrated driver.</text>
+  <circle class="num" cx="1141" cy="101" r="8"/><text class="numt" x="1141" y="105" text-anchor="middle" style="font-size:12px">2</text>
+  <text class="ts" x="1156" y="105" style="font-size:12.5px;">DUT driver turns the IGBT off by itself (no tester in the loop).</text>
+  <circle class="num" cx="1141" cy="120" r="8"/><text class="numt" x="1141" y="124" text-anchor="middle" style="font-size:12px">3</text>
+  <text class="ts" x="1156" y="124" style="font-size:12.5px;">Fault reported on the fiber Status link.</text>
+  <circle class="num" cx="1141" cy="139" r="8"/><text class="numt" x="1141" y="143" text-anchor="middle" style="font-size:12px">4</text>
+  <text class="ts" x="1156" y="143" style="font-size:12.5px;">HW latch blocks Command pulses (&amp;); overcurrent (I<tspan font-size="9" dy="3">C</tspan><tspan dy="-3">) uses it too.</tspan></text>
+  <circle class="num" cx="1141" cy="158" r="8"/><text class="numt" x="1141" y="162" text-anchor="middle" style="font-size:12px">5</text>
+  <text class="ts" x="1156" y="162" style="font-size:12.5px;">STM32 gets FAULT interrupt, logs timestamps, resets latch after inspection.</text>
+  <text class="ti" x="1132" y="183" style="font-size:12.5px;">Measured: ① → ② → I<tspan font-size="10" dy="3">C</tspan><tspan dy="-3"></tspan> below 1 %, compared with the Wabtec ≈ 10 µs reference.</text>
+  <g transform="translate(40,862)">
+    <line class="pwr" x1="0" y1="0" x2="36" y2="0"/>
+    <text class="ts" x="42" y="5">power path (conceptual)</text>
+    <line class="ctl" x1="190" y1="0" x2="226" y2="0" marker-end="url(#arr)"/>
+    <text class="ts" x="232" y="5">control signal / fiber link</text>
+    <line class="flt" x1="400" y1="0" x2="436" y2="0" marker-end="url(#arr)"/>
+    <text class="ts" x="442" y="5">fault / protection signal</text>
+    <line class="msr" x1="590" y1="0" x2="626" y2="0"/>
+    <text class="ts" x="632" y="5">measurement signal</text>
+    <line class="bar" x1="760" y1="-3" x2="796" y2="-3"/><line class="bar" x1="760" y1="3" x2="796" y2="3"/>
+    <text class="ts" x="802" y="5">isolation boundary</text>
+    <rect class="dut" x="920" y="-7" width="36" height="14"/>
+    <text class="ts" x="962" y="5">module / sensor group</text>
+    <line class="ctl" x1="1110" y1="0" x2="1130" y2="0"/><path class="ctl" d="M1120,-6 A6,6 0 0 1 1120,6"/>
+    <text class="ts" x="1136" y="5">crossing, not connected</text>
+  </g>
+  <text class="t" x="40" y="890">Fig. 1.  Functional block diagram of the STM32-based IGBT test system (conceptual architecture; not a construction drawing).</text>
+  <text class="ti" x="1580" y="880" text-anchor="end" style="font-size:12px;">Assumed: Wabtec slides 5–8 and team input (dual module, one shared 100 VAC input);</text>
+  <text class="ti" x="1580" y="895" text-anchor="end" style="font-size:12px;">fiber protocol, connector pinout and gate test-point access to be confirmed with Wabtec.</text>
+</svg>

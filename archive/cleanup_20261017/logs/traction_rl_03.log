@@ -1,0 +1,21 @@
+TARGETED COMPILE PASS: dynamic_rl
+[Warning: Solver is encountering difficulty in simulating model 'tc_dynamic_rl' at time 5.0568119563169357e-05. Simulink will continue to simulate with warnings. Please check the
+model for errors.] 
+[> In testcell.run_dynamic (line 10)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.79654E-19 for 1 consecutive times at time 5.05681E-05. This usually may be
+caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances
+for computing consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In testcell.run_dynamic (line 10)] 
+{Error using assert
+Simulation produced warnings; inspect diagnostics before validation.
+
+Error in testcell.assert_no_solver_warnings (line 4)
+assert(isempty(d),'testcell:SolverDiagnostics','Simulation produced warnings; inspect diagnostics before validation.');
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in testcell.run_dynamic (line 11)
+ testcell.assert_no_solver_warnings(out);
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

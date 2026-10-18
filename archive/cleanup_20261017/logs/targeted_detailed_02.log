@@ -1,0 +1,63 @@
+COMPILE PASS: static_v
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 1.8524427165501382e-15. Simulink will continue to simulate with warnings. Please check the
+model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.targeted_checks (line 9)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 6.5812E-30 for 1 consecutive times at time 1.85244E-15. This usually may be
+caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances
+for computing consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.targeted_checks (line 9)] 
+[Warning: Solver is encountering difficulty in simulating model 'tc_static_v' at time 5.3620588588049582e-15. Simulink will continue to simulate with
+warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.targeted_checks (line 9)] 
+[Warning: Solver was unable to reduce the step size without violating minimum step size of 1.90499E-29 for 1 consecutive times at time 5.36206E-15.
+Solver will continue the simulation with the step size restricted to 1.90499E-29 and using an effective relative error tolerance of 0.5, which is
+greater than the specified relative error tolerance of 1E-06. This usually may be caused by violating algebraic constraints in the
+differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances for computing
+consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In testcell.targeted_checks (line 9)] 
+{Error using testcell.targeted_checks (line 9)
+['tc_static_v/Solver']: Transient initialization at time 5.362058858804958e-15, solving for consistent states and modes, failed to converge.
+Caused by:
+    Error using Simulink.Simulation.internal.DesktopSimHelper
+    Nonlinear solver: failed to converge, residual norm too large. - Show complete stack trace
+        Error using Simulink.Simulation.internal.DesktopSimHelper
+        These components have equations that did not converge:
+
+        <a href="matlab:das_dv_hyperlink('DAS', 'mdl', 'tc_static_v/DUT/IGBT')">'tc_static_v/DUT/IGBT'</a>
+        Equation location is:
+        'ee.semiconductors.bjt'(no line number info)
+
+        <a href="matlab:das_dv_hyperlink('DAS', 'mdl', 'tc_static_v/DUT/IGBT')">'tc_static_v/DUT/IGBT'</a>
+        Equation location is:
+        'ee.semiconductors.bjt'(no line number info)
+
+        <a href="matlab:das_dv_hyperlink('DAS', 'mdl', 'tc_static_v/DUT/IGBT')">'tc_static_v/DUT/IGBT'</a>
+        Equation location is:
+        'ee.semiconductors.bjt'(no line number info)
+
+        <a href="matlab:das_dv_hyperlink('DAS', 'mdl', 'tc_static_v/DUT/IGBT')">'tc_static_v/DUT/IGBT'</a>
+        Equation location is:
+        <a href="matlab:opentoline(which('foundation.electrical.branch'), 23)"> 'foundation.electrical.branch'</a> (line 23)
+
+        <a href="matlab:das_dv_hyperlink('DAS', 'mdl', 'tc_static_v/DUT/IGBT')">'tc_static_v/DUT/IGBT'</a>
+        Equation location is:
+        <a href="matlab:opentoline(which('foundation.electrical.branch'), 23)"> 'foundation.electrical.branch'</a> (line 23) - Show complete stack trace
+} 

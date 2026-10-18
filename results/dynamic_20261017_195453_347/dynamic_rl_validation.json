@@ -1,0 +1,95 @@
+{
+  "scope": "Assumed device numerical validation; no hardware acceptance",
+  "hardware_decision": "INCONCLUSIVE",
+  "kcl_max_A": 4.1891780711011961E-8,
+  "bus_kcl_max_A": 4.1891780711011961E-8,
+  "bus_energy_J": 888.03117589563283,
+  "load_resistor_energy_J": 56.229618453875695,
+  "stray_resistor_energy_J": 0.07317974100154559,
+  "dut_collector_terminal_energy_J": 124.61470386001319,
+  "dut_gate_terminal_energy_J": 0.00013840838404282247,
+  "diode_terminal_energy_J": 6.8962825666718075,
+  "stray_stored_energy_change_J": -4.6118089361601425E-20,
+  "load_stored_energy_change_J": 700.21790507159051,
+  "inductor_flux_relative_error": 4.4594613672330023E-7,
+  "freewheel_min_current_A": 1572.3967043542734,
+  "freewheel_Ic_to_IL_ratio": 0.0012160469114875902,
+  "energy_balance_error_J": -0.00051379751994318212,
+  "energy_balance_relative_error": 5.7858049794815644E-7,
+  "on_gate_max_error_V": 2.3873216417058529E-5,
+  "off_gate_max_error_V": 0.00011548035030806147,
+  "peak_Vce_V": 1821.9723841620905,
+  "peak_Ic_A": 2240.2753452937709,
+  "peak_Ig_A": 12.000015259601073,
+  "events": [
+    {
+      "command_time_s": 4.9999999999999996E-5,
+      "window_s": [
+        4.7999999999999994E-5,
+        6.5E-5
+      ],
+      "on_event": true,
+      "gross_collector_terminal_energy_J": 0.018586813748944594,
+      "gate_charge_C": 7.43883448026891E-6,
+      "gate_terminal_energy_J": 3.8537197878544388E-5,
+      "Vce_transition_10_90_s": 6.9817386868217324E-7,
+      "command_to_Vce_transition_s": 7.88530374593148E-7,
+      "Ic_transition_10_90_s": null,
+      "current_clearance_1percent_s": null
+    },
+    {
+      "command_time_s": 0.0003,
+      "window_s": [
+        0.000298,
+        0.00037999999999999997
+      ],
+      "on_event": false,
+      "gross_collector_terminal_energy_J": 49.184711540262,
+      "gate_charge_C": -7.43992183456044E-6,
+      "gate_terminal_energy_J": 2.5996027957869804E-5,
+      "Vce_transition_10_90_s": 1.5294234726434368E-5,
+      "command_to_Vce_transition_s": 6.8212094484512665E-6,
+      "Ic_transition_10_90_s": 2.1922651460592134E-5,
+      "current_clearance_1percent_s": 7.0192265115658E-5
+    },
+    {
+      "command_time_s": 0.00039999999999999996,
+      "window_s": [
+        0.00039799999999999997,
+        0.00041499999999999995
+      ],
+      "on_event": true,
+      "gross_collector_terminal_energy_J": 4.0325250141213438,
+      "gate_charge_C": 7.4395917046098742E-6,
+      "gate_terminal_energy_J": 4.8032434644630668E-5,
+      "Vce_transition_10_90_s": 3.2826873172446904E-6,
+      "command_to_Vce_transition_s": 1.2004336281497469E-6,
+      "Ic_transition_10_90_s": 6.9127712573250179E-7,
+      "current_clearance_1percent_s": null
+    },
+    {
+      "command_time_s": 0.0005,
+      "window_s": [
+        0.000498,
+        0.00058
+      ],
+      "on_event": false,
+      "gross_collector_terminal_energy_J": 70.286360356124845,
+      "gate_charge_C": -7.4397163841127344E-6,
+      "gate_terminal_energy_J": 2.5901457595303309E-5,
+      "Vce_transition_10_90_s": 1.5372730415010851E-5,
+      "command_to_Vce_transition_s": 6.75385400838687E-6,
+      "Ic_transition_10_90_s": 2.1899845829910589E-5,
+      "current_clearance_1percent_s": 6.9826960727999046E-5
+    }
+  ],
+  "energy_interpretation": "Gross event terminal integrals include conduction and reactive transfer; not calibrated Eon/Eoff dissipation.",
+  "status": "PASS",
+  "half_step_event_energy_relative_errors": [
+    2.283912024817905E-6,
+    2.7388488234163364E-5,
+    6.7549183039550354E-5,
+    1.0100413625018579E-5
+  ],
+  "fine_max_step_s": 1E-7
+}

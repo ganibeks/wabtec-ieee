@@ -1,0 +1,27 @@
+Result folders deleted on 2026-10-18 at the user's explicit request (one-time exception to the CLAUDE.md
+"never delete anything in results/" rule). None was used by the tester or the reports.
+
+desat_test_traction_20261017_203205_672   DESAT attempt interrupted before simulation (no results)
+desat_test_traction_20261017_205653_975   DESAT attempt 1: solver stalled at 0.33 us (DC-equilibrium start), killed
+desat_test_traction_20261017_211303_494   DESAT diagnostic with 90 s timeout (stalled at 0.33 us)
+desat_test_traction_20261017_212218_351   DESAT attempt 2: stalled at 0.21 us with ramp from 0 V
+dynamic_20261017_182435_834               traction run incomplete (no CSV / validation)
+dynamic_20261017_194005_609               traction run incomplete (ode23t min-step failure)
+dynamic_20261017_182654_290               SUPERSEDED: Vth referenced at 125 C (VGE(th) 7.80 V)
+dynamic_20261017_194219_720               SUPERSEDED: diode knee 1.0 V outside slide 5
+dynamic_20261018_001722_232               CONTAMINATED: two sessions shared the folder (params gate_leak, data vth_shift)
+diag_tf_sweep_20261017_195618_785         TF calibration attempt 1 (zero-crossing stall)
+diag_tf_sweep_nozc_20261017_195855_576    TF calibration attempt 2 (zero crossing disabled, rejected)
+diag_tf_sweep_adaptzc_20261017_200004_555 TF calibration attempt 3 (adaptive zero crossing, stalled)
+static_checks_20261017_193416_029         SUPERSEDED static checks of the 125 C-referenced parameterisation
+diode_test_traction_20261017_195315_476   SUPERSEDED diode test with knee 1.0 V
+The failures themselves are recorded in PROJECT_STATUS.md, the compressed logs in archive/logs_20261018/,
+and the SUPERSEDED table in virtual_lab/datasets.py.
+
+Deleted later on 2026-10-18 (user request "remove excess things"):
+dynamic_20261018_011754_448               driver_slow_off attempt 1: analyze_dynamic UnresolvedClearance (incomplete)
+dynamic_20261018_012138_581               driver_slow_off attempt 2: struct field mismatch in analyze_dynamic (incomplete)
+
+Deleted on 2026-10-18 at user request: all 239 raw MATLAB *.mat files in results/ (299052154 bytes).
+The tester, bench and reports use the CSV/JSON/PNG files, which are kept. MATLAB helpers that load *_raw.mat
+(diagnose_rl.m, recover_static25.m, tests/verify_dynamic_records.m) need a re-run of the simulation first.

@@ -1,0 +1,132 @@
+ee.semiconductors.n_igbt_thermal
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.2620e+03
+       RConn: [3.2630e+03 3.2640e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+fl_lib/Thermal/Thermal Elements/Thermal Mass
+ComponentPath = foundation.thermal.elements.mass
+mass_type = foundation.enum.constant_variable.constant
+mass_type_unit = 1
+mass = 1
+mass_unit = kg
+sp_heat = 447
+sp_heat_unit = J/(K*kg)
+mass_min = 1e-6
+mass_min_unit = kg
+num_ports = foundation.enum.numPorts2.one
+num_ports_unit = 1
+m_specify = off
+m_priority = High
+m = 1
+m_unit = kg
+T_specify = off
+T_priority = High
+T = 300
+T_unit = K
+Q_specify = off
+Q_priority = None
+Q = 0
+Q_unit = W
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.2660e+03
+       RConn: []
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+fl_lib/Thermal/Thermal Elements/Thermal Resistance
+ComponentPath = foundation.thermal.elements.resistance
+resistance = 1
+resistance_unit = K/W
+T_specify = off
+T_priority = None
+T = 0
+T_unit = K
+Q_specify = off
+Q_priority = None
+Q = 0
+Q_unit = W
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.2680e+03
+       RConn: 3.2690e+03
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+fl_lib/Thermal/Thermal Sources/Temperature Source
+ComponentPath = foundation.thermal.sources.temperature
+temperature = 293.15
+temperature_unit = K
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.2710e+03
+       RConn: []
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+fl_lib/Thermal/Thermal Sources/Controlled Heat Flow Rate Source
+ComponentPath = foundation.thermal.sources.controlled_heat_flow
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.2730e+03
+       RConn: [3.2740e+03 3.2750e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+fl_lib/Thermal/Thermal Sensors/Temperature Sensor
+ComponentPath = foundation.thermal.sensors.temperature
+temperature_measure = foundation.enum.MeasurementReference.difference
+temperature_measure_unit = 1
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.2770e+03
+       RConn: [3.2780e+03 3.2790e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+
+
+fl_lib/Thermal/Thermal Sensors/Heat Flow Rate Sensor
+ComponentPath = foundation.thermal.sensors.heat_flow
+      Inport: []
+     Outport: []
+      Enable: []
+     Trigger: []
+       State: []
+       LConn: 3.2810e+03
+       RConn: [3.2820e+03 3.2830e+03]
+    Ifaction: []
+       Reset: []
+       Event: []
+

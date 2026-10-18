@@ -1,0 +1,58 @@
+{
+  "scope": "Simulated static checks at datasheet conditions; model built from the same datasheet",
+  "hardware_decision": "INCONCLUSIVE",
+  "limits_source": "Mitsubishi CM1500HC-66XB datasheet HVM-1147-B (Dec 2025) min/max; representative device, not Wabtec acceptance",
+  "errors": [
+    "ICES 25 C: ICES calibration recovery failed at 25 C"
+  ],
+  "VGEth_V": 7.645999999999999,
+  "VGEth_at_Ic_A": 0.14994060716460908,
+  "VGEth_at_Vce_V": 10.00000593928354,
+  "VGEth_points": 17,
+  "VGEth_model_input_V": 7.6,
+  "VGEth_within_datasheet": false,
+  "ICES": [
+    {
+      "T_C": 125,
+      "Ic_A": 0.0040028873060469154,
+      "Vce_V": 3299.99959971127,
+      "calibration_target_A": 0.004,
+      "recovery_rel_error": 0.00072182651172881737
+    },
+    {
+      "T_C": 150,
+      "Ic_A": 0.026002831402225868,
+      "Vce_V": 3299.99739971686,
+      "calibration_target_A": null,
+      "recovery_rel_error": null
+    }
+  ],
+  "VCEsat": [
+    {
+      "T_C": 25,
+      "Vce_V": 2.6003000066981716,
+      "Ic_A": 1500,
+      "calibration_target_V": 2.6,
+      "recovery_abs_error_V": 0.00030000669817153991
+    },
+    {
+      "T_C": 125,
+      "Vce_V": 3.1997011465635441,
+      "Ic_A": 1500,
+      "calibration_target_V": 3.2,
+      "recovery_abs_error_V": 0.00029885343645608131
+    },
+    {
+      "T_C": 150,
+      "Vce_V": 3.3480447804379332,
+      "Ic_A": 1500,
+      "calibration_target_V": null,
+      "recovery_abs_error_V": null
+    }
+  ],
+  "VCEsat150_V": 3.3480447804379332,
+  "VCEsat150_within_datasheet": true,
+  "VCEsat150_note": "150 C is a model prediction (calibrated at 25/125 C); datasheet typ 3.30 V, max 3.70 V",
+  "status": "PARTIAL",
+  "numerical_checks": "DC drift (static_case), bisection to 0.1 % of 150 mA, ICES/VCEsat calibration recovery (5 % / 0.05 V)"
+}

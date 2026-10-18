@@ -1,0 +1,11 @@
+DETAILED RL COMPILE PASS
+DETAILED RL INITIALIZATION PASS
+{Arrays have incompatible sizes for this operation.
+
+Error in testcell.plot_dynamic (line 19)
+  nexttile(tile); ix=x.t>edge-1e-6 & x.t<edge+80e-6;
+                        ^
+Error in testcell.build_detailed_models (line 147)
+testcell.plot_dynamic(out,p,'dynamic_rl',folder);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

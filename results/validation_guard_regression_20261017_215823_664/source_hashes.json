@@ -1,0 +1,42 @@
+﻿[
+    {
+        "file":  "+testcell/analyze_dynamic.m",
+        "sha256":  "0B1BFA5D0A6AB8A26FC1DADBE3658E49B3899251087A5E755AEB2F73AB6E218B"
+    },
+    {
+        "file":  "+testcell/measurements.m",
+        "sha256":  "8613AF6A6960147D6B358B0B260ACCE865CC3AF66896B5C2720E33A3F0CA1853"
+    },
+    {
+        "file":  "virtual_lab/tester.py",
+        "sha256":  "C194A67ECC1085D9EB45722AB35095ACF41190EF3BD89339E166FFDD9563B1BE"
+    },
+    {
+        "file":  "virtual_lab/datasets.py",
+        "sha256":  "A8776482939375990E6D7CC2B2E0C5F4D52A93135246D5AC2A7601E1FAE379C8"
+    },
+    {
+        "file":  "virtual_lab/features.py",
+        "sha256":  "02B3AFAE6591B153A1C3463751C190AD2E9481230AE0CF789FD883978DE0F594"
+    },
+    {
+        "file":  "app_virtual_lab.py",
+        "sha256":  "D151AF6EE387E561C8807EDF9256311FC5CB5980D0E85A444E3F219BD885D2FD"
+    },
+    {
+        "file":  "tests/test_verdict.py",
+        "sha256":  "A65641F89644C8AE41BF23FD357F9EDCEB929FDE0EB1768E32CFAC16811109B0"
+    },
+    {
+        "file":  "tests/test_dashboard_verdict.py",
+        "sha256":  "B92F7EB3438368650F4E28ACABB069EC4AE3FA3B86B957091B9EB0777F389E70"
+    },
+    {
+        "file":  "tests/verify_dynamic_records.m",
+        "sha256":  "D88B236906B3A2DB3E3AC434A9948B3E94240A224EF9C6A9A9F9C1599C4BD092"
+    },
+    {
+        "file":  "tests/README.md",
+        "sha256":  "25E89D1B0200B899C52245E3C8D198995EB9D8AC17F4F1FA2FC6D53AC100BA20"
+    }
+]

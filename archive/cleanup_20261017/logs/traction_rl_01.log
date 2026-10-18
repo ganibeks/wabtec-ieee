@@ -1,0 +1,6 @@
+{Error using testcell.run_dynamic (line 8)
+Error compiling Simscape network for model tc_dynamic_rl.
+Caused by:
+    Error using ee.semiconductors.n_igbt_base> (line 578)
+    ['tc_dynamic_rl/DUT/IGBT']: Calculated Energy gap EG must be greater than zero.
+} 

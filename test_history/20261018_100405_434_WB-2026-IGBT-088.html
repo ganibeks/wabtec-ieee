@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Test report WB-2026-IGBT-088</title>
+<style>
+@page{size:A4;margin:14mm 12mm}
+body{font:13px/1.45 'Segoe UI',Roboto,Arial,sans-serif;color:#1a1414;margin:0;padding:24px;max-width:1000px}
+.bar{height:5px;background:#d0021b;margin:-24px -24px 18px}
+.eb{font:600 11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d0021b}
+h1{font:800 28px/1.1 Arial,sans-serif;margin:4px 0 14px} h1 em{font-style:normal;color:#d0021b}
+h2{font:700 15px Arial,sans-serif;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.06em;color:#d0021b}
+.verdict{display:flex;gap:22px;align-items:center;padding:14px 18px;border:1px solid #e8e1e1;margin-bottom:14px}
+.verdict b{font:800 36px/1 Arial,sans-serif;letter-spacing:.03em}
+.verdict.pass{border-left:8px solid #1f7a45} .verdict.pass b{color:#1f7a45}
+.verdict.nopass{background:#d0021b;color:#fff;border-color:#d0021b}
+.verdict.unv{border-left:8px solid #b06a00} .verdict.unv b{color:#b06a00}
+table{border-collapse:collapse;width:100%;margin-bottom:6px}
+th,td{text-align:left;vertical-align:top;padding:6px 8px;border-bottom:1px solid #e8e1e1}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6b5f5f;border-bottom:2px solid #1a1414}
+.meta th{width:170px;color:#6b5f5f;font-weight:600}
+td.num{font-family:Consolas,'IBM Plex Mono',monospace;white-space:nowrap}
+td.note{font-size:11.5px;color:#4a3f3f} .prov{color:#8a7e7e;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em}
+.tag{font:700 10.5px Arial,sans-serif;padding:3px 6px;white-space:nowrap}
+.tag.ok{background:#e8f5ed;color:#1f7a45} .tag.bad{background:#d0021b;color:#fff} .tag.na{background:#f1eded;color:#6b5f5f}
+.sign{display:flex;gap:40px;margin-top:28px} .sign div{flex:1;border-top:1px solid #1a1414;padding-top:4px;font-size:11px;color:#6b5f5f}
+.foot{margin-top:18px;font-size:11px;color:#6b5f5f}
+@media print{body{padding:0} .bar{margin:0 0 14px} tr{break-inside:avoid}}
+</style></head><body>
+<div class="bar"></div>
+<div class="eb">NU × Wabtec Hackathon 2026 · pre-installation test cell</div>
+<h1>IGBT Bench <em>Tester</em> — test report</h1>
+<div class="verdict pass"><b>PASS</b><div>All 8 simulated checks inside the Wabtec slide 5/8 values<br>
+<small>Simulation only, not a hardware decision (hardware decision: INCONCLUSIVE).</small></div></div>
+<table class="meta"><tr><th>Module serial</th><td>WB-2026-IGBT-088</td></tr><tr><th>Module under test</th><td>1.8 kV / 1.5 kA RL double pulse - CM1500HC-66XB (representative)</td></tr><tr><th>Hardware decision</th><td>INCONCLUSIVE</td></tr><tr><th>Data source</th><td>SIMULATED — MATLAB R2026b / Simscape Electrical</td></tr><tr><th>Simulation run</th><td>dynamic_20261017_195453_347</td></tr><tr><th>Report generated</th><td>2026-10-18 10:04:05</td></tr></table>
+<h2>Checks in the verdict</h2>
+<table><thead><tr><th>Check</th><th>Value</th><th>Limit</th><th>Result</th><th>How obtained and source</th></tr></thead>
+<tbody><tr><td><b>Gate drive ±15 V</b></td><td class='num'>15 V</td><td>+15 / −15 V (SLIDE 5/8); tolerance 0.02 V = model check in analyze_dynamic.m</td><td><span class='tag ok'>IN LIMIT</span></td><td class='note'>terminal Vge ON 15.0000 V, OFF -15.0001 V (dynamic run dynamic_20261017_195453_347)<br><span class='prov'>SIMULATED</span></td></tr><tr><td><b>Turn-on threshold</b></td><td class='num'>6.35 V</td><td>+4 … +7 V (SLIDE 8)</td><td><span class='tag ok'>IN LIMIT</span></td><td class='note'>VGE at Ic = 0.1499 A, Vce = 10 V, 25 °C (datasheet 5.8–6.8 V); static_checks_20261017_193726_230<br><span class='prov'>SIMULATED</span></td></tr><tr><td><b>Max di/dt</b></td><td class='num'>1852 A/µs</td><td>≤ 5000 A/µs (SLIDE 5)</td><td><span class='tag ok'>IN LIMIT</span></td><td class='note'>0.8·I/t(10–90 %): turn-on 1852 A/µs at 1600 A, turn-off 52.58 A/µs; Ic fall tf = 21.9 µs<br><span class='prov'>SIMULATED</span></td></tr><tr><td><b>Diode forward</b></td><td class='num'>0.5 V</td><td>0.2 … 0.8 V (SLIDE 5)</td><td><span class='tag ok'>IN LIMIT</span></td><td class='note'>at 1 mA (ASSUMED DMM test current); Piecewise-linear diode: V(1 mA) = Vf + Ron*1mA = 0.500001 V by construction; the result reflects the diode parameters. diode_test_traction_20261017_195415_059<br><span class='prov'>SIMULATED</span></td></tr><tr><td><b>Diode reverse</b></td><td class='num'>0.03 µA</td><td>open (SLIDE 5)</td><td><span class='tag ok'>IN LIMIT</span></td><td class='note'>0.03 µA at -3 V: cannot carry the 1 mA DMM test current → open<br><span class='prov'>SIMULATED</span></td></tr><tr><td><b>Driver power</b></td><td class='num'>0.2232 W</td><td>≤ 20 W (SLIDE 5)</td><td><span class='tag ok'>IN LIMIT</span></td><td class='note'>Qg·ΔV = 7.44 µC × 30 V per cycle × f_sw 1 kHz (ASSUMED; slides give none). Gate-charge power only, driver quiescent losses not modelled. 20 W reached at f_sw ≈ 89.61 kHz<br><span class='prov'>SIMULATED + ASSUMED f_sw</span></td></tr><tr><td><b>DESAT detection</b></td><td class='num'>7.6 µs</td><td>trips during the short circuit</td><td><span class='tag ok'>IN LIMIT</span></td><td class='note'>fault latched 7.6 µs after gate-on into a short at 1800 V (threshold 9 V, blanking 7.5 µs, both ASSUMED). desat_test_traction_20261018_000313_736<br><span class='prov'>SIMULATED</span></td></tr><tr><td><b>DESAT gate turn-off</b></td><td class='num'>1.944 µs</td><td>≤ 10 µs after detection (SLIDE 5/8 + slide 8 notes)</td><td><span class='tag ok'>IN LIMIT</span></td><td class='note'>detection → VGE below Vth (6.3 V): the driver has switched the IGBT channel off (R_off 27 Ω). Gate turn-off only; current interruption is shown separately. desat_test_traction_20261018_000313_736<br><span class='prov'>SIMULATED</span></td></tr></tbody></table>
+
+<h2>Safety interlocks — operator confirmation</h2><table><tbody><tr><td>Test-cell door closed, interlock OK</td><td><span class='tag ok'>CONFIRMED</span></td></tr><tr><td>E-stop released and tested</td><td><span class='tag ok'>CONFIRMED</span></td></tr><tr><td>DC link discharged &lt; 50 V (panel reading)</td><td><span class='tag ok'>CONFIRMED</span></td></tr><tr><td>PPE worn: insulating gloves, face shield</td><td><span class='tag ok'>CONFIRMED</span></td></tr><tr><td>Module locked in fixture, terminals torqued</td><td><span class='tag ok'>CONFIRMED</span></td></tr></tbody></table><p class='note'>All interlocks confirmed. Confirmed by the operator, not measured; the hard-wired interlocks act independently of the software.</p>
+<div class="sign"><div>Operator</div><div>Date</div><div>Signature</div></div>
+<div class="foot">Limits: Wabtec brief slides 5 and 8. Device: representative Mitsubishi CM1500HC-66XB, not a confirmed Wabtec part.
+Every value comes from MATLAB/Simscape result files (dynamic_20261017_195453_347 and the linked static, diode and DESAT runs).
+Generated 2026-10-18 10:04:05 by IGBT Bench Tester. To save as PDF: open in a browser, Ctrl+P, “Save as PDF”.</div>
+</body></html>

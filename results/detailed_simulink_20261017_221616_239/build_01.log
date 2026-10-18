@@ -1,0 +1,3 @@
+{Error using testcell.build_detailed_models (line 30)
+The destination port already has a line connection
+} 

@@ -1,0 +1,37 @@
+[Warning: Solver is encountering difficulty in simulating model 'tc_dynamic_rl' at time 5.0568119563169357e-05. Simulink will continue to simulate with warnings. Please check the
+model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In diag_traction (line 16)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.79654E-19 for 1 consecutive times at time 5.05681E-05. This usually may be
+caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the system. Try tightening the error tolerances, and/or the tolerances
+for computing consistent conditions. If the problem persists, please check the system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In diag_traction (line 16)] 
+VARIANT as_is              warnings=1  Vce(65us)=0.8684 V  Ic(65us)=83.64 A
+[Warning: Solver is encountering difficulty in simulating model 'tc_dynamic_rl' at time 5.0563803487966946e-05. Simulink will continue to simulate
+with warnings. Please check the model for errors.] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In diag_traction (line 16)] 
+[Warning: Solver was unable to reduce the step size without violating the minimum step size value of 1.79639E-19 for 1 consecutive times at time
+5.05638E-05. This usually may be caused by violating algebraic constraints in the differential-algebraic system or by the high stiffness of the
+system. Try tightening the error tolerances, and/or the tolerances for computing consistent conditions. If the problem persists, please check the
+system or increase the solver Number of consecutive min steps violation parameter.
+Suggested Actions:
+    • Open Solver Profiler to explore such issues - Open
+] 
+[> In Simulink.Simulation.internal.DesktopSimHelper
+In Simulink.Simulation.internal.DesktopSimHelper.sim
+In Simulink/SimulationInput/sim
+In diag_traction (line 16)] 
+VARIANT abstol_1e-10       warnings=1  Vce(65us)=0.8684 V  Ic(65us)=83.64 A
+VARIANT ices25_3uA_floor   warnings=0  Vce(65us)=0.7914 V  Ic(65us)=83.6 A
+VARIANT ode15s             warnings=0  Vce(65us)=0.8666 V  Ic(65us)=83.61 A
